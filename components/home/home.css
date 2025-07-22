@@ -1,0 +1,116 @@
+.content-prueba {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    color: black;
+    background-image: url(/resources/fondo-blanco-figuras.jpg);
+}
+
+.section-start-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-content-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.start-content-text h1 {
+    color: black;
+
+}
+
+.section-start-tarjeta {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-image: url(/resources/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 65vh;
+    padding: 20px;
+    position: relative;
+}
+
+.section-start-tarjeta-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-tarjeta-a a {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #171c1e;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    width: auto;
+}
+
+.content-tarjeta-a a:hover {
+    background-color: #ececec;
+    width: 400px;
+    color: #171c1e;
+}
+
+
+
+.section-start-ubicacion {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 65vh;
+    padding: 20px;
+    position: relative;
+}
+
+.section-start-tarjeta-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-ubicacion-a a {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #171c1e;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    width: auto;
+}
+
+.content-ubicacion-a a:hover {
+    background-color: #ececec;
+    width: 400px;
+    color: #171c1e;
+}
+
+.parahacer {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-image: url(/resources/fondo-blanco-figuras.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 65vh;
+    position: relative;
+}

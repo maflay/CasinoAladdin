@@ -1,0 +1,771 @@
+.sliderC {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapperC {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100vw;
+    height: 80vh;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.slider-wrapperC:active{
+  cursor: grabbing;
+}
+
+.slideC {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/s1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/s2-test.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/s3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+input[name="slider-radioC"] {
+    display: none;
+}
+
+.slider-controlsC label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsC {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsC input[type="radio"]:checked+label {
+    background: white;
+}
+
+
+.arrowC {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowC-left {
+    left: 0px;
+}
+
+.arrowC-right {
+    right: 0px;
+}
+
+.card-casinos {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 10px;
+}
+
+.card-casinos .card-content-title {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 12;
+}
+
+.card-casinos-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+}
+
+.card-casinos-rigth {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+}
+
+
+
+/* slider cali */
+
+.content-slider-cali {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliderCali {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapperCali {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+    /* permite swipe horizontal */
+    user-select: none;
+}
+
+.slideCali {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1Cali {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/cali-mi-tierra-300x169.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg2Cali {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/cali_aladdin_terminal_2-300x169.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3Cali {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/cali_aladdin_terminal-300x169.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg4Cali {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/cali-aladdin_19-300x169.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg5Cali {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/cali-A7-300x169.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg6Cali {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/cali-aladdin_cosmocentro-300x168.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg7Cali {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/cali-aladdin_calima-300x168.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+input[name="slider-radioCali"] {
+    display: none;
+}
+
+.slider-controlsCali label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsCali {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsCali input[type="radio"]:checked+label {
+    background: white;
+}
+
+.arrowCali {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowCali-left {
+    left: 0px;
+}
+
+.arrowCali-right {
+    right: 0px;
+}
+
+
+
+
+/* slider pereira */
+
+.content-slider-pereira {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliderPereira {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapperPereira {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.slider-wrapperPereira:active{
+  cursor: grabbing;
+}
+
+.slidePereira {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1Pereira {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/PEREIRA-UNICENTRO-300x169.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2Pereira {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/Aladdin-el-lago-300x169.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3Pereira {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/PEREIRA-CENTRO-300x168.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg4Pereira {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/Pereira-Aladdin_18-300x168.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input[name="slider-radioPereira"] {
+    display: none;
+}
+
+.slider-controlsPereira label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsPereira {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsPereira input[type="radio"]:checked+label {
+    background: white;
+}
+
+.arrowPereira {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowPereira-left {
+    left: 0px;
+}
+
+.arrowPereira-right {
+    right: 0px;
+}
+
+
+
+
+/* slider bogota */
+
+.content-slider-bogota {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliderBogota {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapperBogota {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.slider-wrapperBogota:active{
+  cursor: grabbing;
+}
+
+.slideBogota {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1Bogota {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/IMG-1-300x168.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2Bogota {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/bogota-centro_internacional-300x168.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input[name="slider-radioBogota"] {
+    display: none;
+}
+
+.slider-controlsBogota label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsBogota {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsBogota input[type="radio"]:checked+label {
+    background: white;
+}
+
+.arrowBogota {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowBogota-left {
+    left: 0px;
+}
+
+.arrowBogota-right {
+    right: 0px;
+}
+
+
+
+/* slider barranquilla */
+
+.content-slider-barranquilla {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliderBarranquilla {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapperBarranquilla {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+    user-select: none;
+    /* cursor: grab; */
+}
+
+/* .slider-wrapperBarranquilla:active{
+  cursor: grabbing;
+} */
+
+.slideBarranquilla {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1Barranquilla {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/barranquilla_dragon_fenix-300x169.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2Barranquilla {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/s2-test.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3Barranquilla {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/s3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input[name="slider-radioBarranquilla"] {
+    display: none;
+}
+
+.slider-controlsBarranquilla label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsBarranquilla {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsBarranquilla input[type="radio"]:checked+label {
+    background: white;
+}
+
+.arrowBarranquilla {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowBarranquilla-left {
+    left: 0px;
+}
+
+.arrowBarranquilla-right {
+    right: 0px;
+}
+
+
+
+/* slider tulua */
+
+.content-slider-tulua {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliderTulua {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapperTulua {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+    user-select: none;
+}
+
+.slideTulua {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1Tulua {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/tulua-calle_sarmiento-300x169.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2Tulua {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/tulua-calle_sarmiento-300x169.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3Tulua {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/s3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input[name="slider-radioTulua"] {
+    display: none;
+}
+
+.slider-controlsTulua label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsTulua {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsTulua input[type="radio"]:checked+label {
+    background: white;
+}
+
+.arrowTulua {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowTulua-left {
+    left: 0px;
+}
+
+.arrowTulua-right {
+    right: 0px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .card-casinos {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-casinos-left {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .card-casinos-rigth {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .controls-sliderC {
+        display: none;
+    }
+
+}
+
+@media (max-width: 376px) {
+    .section-casinos-ciudad .section-casinos-content-text {
+        bottom: 60px;
+    }
+}

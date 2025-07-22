@@ -1,0 +1,258 @@
+.footer {
+  background-color: #000000;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  width: 100%;
+  position: absolute;
+}
+
+.footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer .footer-logo {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .footer-logo a {
+  text-align: center;
+}
+
+.footer .footer-logo img {
+  width: 250px;
+}
+
+.footer .footer-logo small {
+  width: 400px;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+
+.footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer .footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer .footer-section ul li a:hover {
+  opacity: 0.4;
+}
+
+.footer .footer-bottom {
+  text-align: center;
+  opacity: 0.6;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer .footer-icons a:hover {
+  color: rgb(170, 91, 250);
+}
+
+.footer .footer-icons {
+  display: flex;
+  justify-content: center;
+  padding: 0px 0px 0px 0px;
+}
+
+
+.footer .footer-subscriber {
+  display: grid;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+  height: 100px;
+}
+
+.footer .footer-subscriber-email {
+  display: flex;
+}
+
+.footer .footer-subscriber label {
+  justify-self: center;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.footer .footer-subscriber input {
+  width: 600px;
+  height: 60px;
+  border-radius: 10px 0px 0px 10px;
+  border: 0;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.footer .footer-subscriber .boton-suscribete {
+  background-color: #fff;
+  color: #5000fc;
+  width: auto;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+  height: 60px;
+  justify-self: start;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .footer-subscriber .boton-suscribete:hover {
+  background-color: #fff;
+  color: #5000fc;
+  background-color: #5000fc;
+  color: white;
+}
+
+.footer .footer-logos-legales {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+@media (max-width :1300px) {
+
+  .footer .footer-logo {
+    margin-right: 50px;
+  }
+
+  .footer .footer-subscriber input {
+    width: 100%;
+    height: 60px;
+  }
+
+  .footer .footer-logo small {
+    width: 100%;
+    font-size: 0.8rem;
+    color: gray;
+  }
+}
+
+@media (max-width :1104px) {
+  .footer {
+    height: auto;
+  }
+
+  .footer .footer-subscriber button {
+    height: auto;
+  }
+
+  .footer .footer-content {
+    display: flex;
+    font-size: 100%;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    line-height: 0.8rem;
+  }
+
+  .footer .footer-section {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .footer {
+    height: auto;
+    padding: 60px 0;
+  }
+
+
+  .footer .footer-subscriber {
+    margin-bottom: 30px;
+    height: auto;
+  }
+
+  .footer .footer-subscriber input {
+    font-size: 20px;
+    height: 50px;
+  }
+
+  .footer .footer-subscriber .boton-suscribete {
+    height: 50px;
+  }
+
+  .footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 100%;
+    gap: 30px;
+  }
+
+  .footer .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer .footer-logo img {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section ul {
+    padding: 0;
+    line-height: 1.5rem;
+  }
+
+  .footer .footer-logos-legales {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .footer-logos-legales img {
+    width: 100%;
+  }
+
+  .footer .footer-bottom {
+    text-align: center;
+  }
+
+
+  .footer .content-footer-info {
+    width: 100%;
+    height: auto;
+  }
+
+}

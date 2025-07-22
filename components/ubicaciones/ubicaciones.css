@@ -1,0 +1,155 @@
+.content-info-casino {
+    margin-top: 8%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content-info-casino .content-info-casino-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.content-info-casino .content-info-casino-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-info-casino-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(32, 32, 32);
+    padding: 20px;
+    width: 95%;
+    height: 300px;
+    bottom: -10px;
+}
+
+.content-info-col {
+    display: flex;
+    width: 100%;
+}
+
+.content-info-col h3 {
+    color: gray;
+    margin-right: 5px;
+}
+
+.content-info-col .content-title {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.content-info-col .content-text {
+    display: flex;
+    width: 50%;
+    text-align: justify;
+    flex-direction: column;
+    color: #ececec;
+}
+
+.content-info-casino-text .btn-ubicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.content-info-casino-text .btn-ubicacion button {
+    margin-top: 2%;
+    width: auto;
+}
+
+.text-casino {
+    position: relative;
+    text-align: justify;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: rgb(32, 32, 32);
+}
+
+
+.navigation-ubicaciones {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel-infinite {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel-infinite h1 {
+    color: #171c1e;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 60s linear infinite;
+    width: max-content;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slide {
+    min-width: 250px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.slide p {
+    color: rgb(32, 32, 32);
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.slide img {
+    width: 250px;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+@media (max-width:768px) {
+    .content-info-casino {
+        margin-top: 15%;
+    }
+
+    .content-info-casino-text {
+        position: relative;
+        height: auto;
+        padding: 10px;
+    }
+}

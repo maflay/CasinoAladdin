@@ -1,0 +1,117 @@
+.fondo-game {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.fondo-game img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.title-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+    background-image: url(/resources/fondo-blanco-abstracto.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title-game h1 {
+    color: black;
+}
+
+.start-game-text {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.type1-h1 {
+    font-size: 4rem;
+    color: black;
+    margin: 0;
+}
+
+.acerca-game {
+    width: 100%;
+    text-align: center;
+}
+
+.content-desc-game {
+    padding: 20px;
+}
+
+.desc-game-text p {
+    font-weight: bold;
+    color: black;
+}
+
+.content-media-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+.card-media-game {
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+
+.reverse-card {
+    flex-direction: row-reverse;
+}
+
+.card-media-l {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.card-media-r {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.card-media-r iframe {
+    width: 100%;
+    height: 350px;
+}
+
+@media (max-width: 768px) {
+    .card-media-game {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-media-l {
+        width: 100%;
+    }
+
+    .card-media-r {
+        width: 100%;
+    }
+
+    .card-media-r iframe {
+        width: 100%;
+        height: 200px;
+    }
+}

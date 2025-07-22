@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'MAGIC';
+  src: url('/fonts/MAGIC-DAFONT.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Interphases Regular';
+  src: url('/fonts/TT-Interphases-Pro-Trial-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Interphases DemiBold';
+  src: url('/fonts/TT-Interphases-Pro-Trial-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Interphases ExtraLigth';
+  src: url('/fonts/TT-Interphases-Pro-Trial-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}

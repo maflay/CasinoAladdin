@@ -1,0 +1,359 @@
+.Navbar {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    transition: background-color 0.6s ease;
+    background-color: #171c1eb7;
+}
+
+.Navbar.navbar-scrolled {
+    background-color: #171c1e;
+}
+
+.Navbar>.nav-logo {
+    font-weight: 700;
+    font-size: 21px;
+    margin: 15px;
+    color: #ffffff;
+}
+
+.Navbar .nav-items a {
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 15px;
+    position: relative;
+    opacity: 0.9;
+}
+
+.Navbar .nav-items a.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    transition: all 0.4s;
+}
+
+
+.Navbar .nav-items a:hover {
+    opacity: 1;
+}
+
+.Navbar .nav-items a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: all .40s;
+}
+
+.Navbar .nav-items a:hover::before {
+    width: 100%;
+}
+
+.Navbar .nav-toggle {
+    display: none;
+}
+
+.logo-menu {
+    width: 100px;
+    left: 0;
+    position: relative;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.nav-link img {
+    width: 80px;
+    height: 100%;
+}
+
+.logo-menu.logo-down {
+    width: 200px;
+    left: 0;
+    position: relative;
+    top: 0;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 50px;
+}
+
+.nav-toggle {
+    position: absolute;
+    right: 20px;
+}
+
+.nav-logo img {
+    visibility: hidden;
+    width: 1px;
+}
+
+.nav-logo2 img {
+    visibility: hidden;
+    top: 1px;
+    left: 1px;
+    width: 1px;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 999;
+    min-width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.submenu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown:hover .submenu,
+.dropdown.active .submenu {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: auto;
+}
+
+
+.prueba-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 20vh;
+    background-color: #171c1e;
+    transition: all 0.4s ease;
+    position: relative;
+    left: 20px;
+}
+
+.prueba-logo.scrold {
+    height: 0;
+    background-color: transparent;
+}
+
+.Navbar.page-contacto {
+    background-color: #fff;
+    color: #000;
+}
+
+.Navbar.page-contacto a {
+    color: black;
+}
+
+.Navbar.page-contacto .nav-items a::before {
+    background: #000000;
+}
+
+
+@media (max-width: 1320px) {
+    .Navbar {
+        transition: background-color 0.3s ease;
+        background-color: #171c1eee;
+        height: 35px;
+    }
+
+    .Navbar.navbar-scrolled {
+        background-color: #171c1e;
+    }
+
+    .Navbar .nav-items {
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(120deg, #171c1e, #272727, #171c1e, #272727, #171c1e, #272727, #171c1e, #272727);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        gap: 0;
+    }
+
+    .nav-items img {
+        display: none;
+    }
+
+    .Navbar>.nav-items>a {
+        font-size: 20px;
+    }
+
+    .Navbar .nav-items.open {
+        transform: translateY(0);
+        overflow-y: hidden;
+    }
+
+    .card-divider-menu {
+        height: 2px;
+        background-color: white;
+        width: 90%;
+    }
+
+    .nav-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-logo img {
+        visibility: visible;
+        position: relative;
+        width: 60%;
+        bottom: 60%;
+    }
+
+    .nav-logo2 img {
+        visibility: visible;
+        position: relative;
+        top: 120px;
+        left: 10%;
+        width: 80%;
+    }
+
+    .Navbar .nav-toggle {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0px;
+        width: 40px;
+        height: 34px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .logo-menu {
+        width: 120px;
+        left: 0;
+        position: relative;
+    }
+
+    .nav-toggle .bar {
+        width: 20px;
+        height: 3px;
+        background: white;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .nav-toggle .bar::before,
+    .nav-toggle .bar::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        background: white;
+        width: 100%;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-toggle .bar::before {
+        top: -8px;
+    }
+
+    .nav-toggle .bar::after {
+        bottom: -8px;
+    }
+
+    .nav-toggle.open .bar {
+        background: transparent;
+    }
+
+    .nav-toggle.open .bar::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav-toggle.open .bar::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .prueba-logo img {
+        width: 100%;
+    }
+
+    .logo-menu {
+        width: 200px;
+        left: 0;
+        position: relative;
+        top: 0;
+        transition: all 0.6s ease;
+    }
+
+    .logo-menu.logo-down {
+        width: 200px;
+        left: 0;
+        position: relative;
+        top: 0;
+    }
+
+    .prueba-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        background-color: transparent;
+        transition: all 0.4s ease;
+        position: relative;
+        left: 0;
+    }
+
+    .prueba-logo.scrold {
+        height: 0;
+        background-color: transparent;
+    }
+
+    .Navbar.page-contacto {
+        color: #fff;
+        background-color: #000;
+    }
+
+    .Navbar.page-contacto a {
+        color: white;
+    }
+
+    .Navbar.page-contacto .nav-items a::before {
+        background: #fff;
+    }
+
+
+}

@@ -1,0 +1,59 @@
+
+.navigation-ubicaciones {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel-infinite {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel-infinite h1{
+    padding: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 60s linear infinite;
+    width: max-content;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slide-ubi {
+    min-width: 250px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-ubi p {
+    color: rgb(32, 32, 32);
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.slide-ubi img {
+    width: 250px;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
