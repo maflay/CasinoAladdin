@@ -1,4 +1,3 @@
-
 .sliderC {
     position: relative;
     width: 100%;
@@ -15,8 +14,8 @@
     cursor: grab;
 }
 
-.slider-wrapperC:active{
-  cursor: grabbing;
+.slider-wrapperC:active {
+    cursor: grabbing;
 }
 
 .slideC {
@@ -28,24 +27,21 @@
 
 .bg1C {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)
-        ), url(/resources/banner-aladdin-38-1200x300.jpg);
+            rgba(0, 0, 0, 0.7)), url(/resources/banner-aladdin-38-1200x300.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg2C {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)
-        ), url(/resources/DSC_0371.jpg);
+            rgba(0, 0, 0, 0.7)), url(/resources/DSC_0371.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg3C {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)
-        ), url(/resources/CARRUSEL_3.jpg);
+            rgba(0, 0, 0, 0.7)), url(/resources/CARRUSEL_3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -112,26 +108,26 @@ input[name="slider-radioC"] {
     right: 0px;
 }
 
-.content-title-page{
+.content-title-page {
     position: absolute;
     bottom: 80px;
     text-align: center;
     pointer-events: none;
 }
+
 .content-title-page p,
-.content-title-page h1{
-color: #fff;
-text-shadow: #fff 0 0 0px;
-}
-
-
-@media(max-width:768px){
-.content-title-page{
-    padding: 0 10px;
-    left: 0;
-}
-
 .content-title-page h1 {
-    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: #fff 0 0 0px;
 }
+
+@media(max-width:768px) {
+    .content-title-page {
+        padding: 0 10px;
+        left: 0;
+    }
+
+    .content-title-page h1 {
+        font-size: 1.8rem;
+    }
 }

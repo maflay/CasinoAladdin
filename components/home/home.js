@@ -32,7 +32,6 @@
       estilo.rel = "stylesheet";
       estilo.href = "/components/promociones/promocion-view/promocion-view.css";
       document.head.appendChild(estilo);
-      // Cargar script dinámicamente
       const script = document.createElement("script");
       script.src = "/components/promociones/promocion-view/promocion-view.js";
       script.onload = () => {
@@ -48,7 +47,6 @@ function toPromociones() {
   navegarA("promociones");
 }
 
-// Lista de URLs públicas de posts/reels (permalinks)
 window.IG_POSTS ??= [
   "https://www.instagram.com/p/DM3DlWOs7qU/",
   "https://www.instagram.com/p/DMv39TTS_PY/",
@@ -56,7 +54,6 @@ window.IG_POSTS ??= [
   "https://www.instagram.com/p/DMiPbJbM8ET/",
 ];
 
-// Carga el script oficial una sola vez
 function ensureInstagramScript() {
   if (
     !document.querySelector('script[src^="https://www.instagram.com/embed.js"]')
@@ -119,7 +116,6 @@ function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
     if (window.instgrm?.Embeds?.process) {
       window.instgrm.Embeds.process();
 
-      // 🔄 Esperar a que al menos un iframe se genere
       const checkLoaded = setInterval(() => {
         const iframes = container.querySelectorAll("iframe");
         if (iframes.length > 0) {
@@ -135,5 +131,4 @@ function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
   tryProcess();
 }
 
-// Llama DESPUÉS de insertar la vista en tu SPA:
 renderInstagramEmbeds("ig-feed", IG_POSTS);

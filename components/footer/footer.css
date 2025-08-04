@@ -1,58 +1,66 @@
 .footer {
-  background-color: #000000;
+  background-color: #000;
   background-size: cover;
   background-attachment: fixed;
   color: #ffffff;
-  padding: 40px 20px 20px;
   width: 100%;
   position: absolute;
 }
 
 .footer .footer-content {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 100%;
-  height: auto;
+  align-items: center;
+  width: 100%;
 }
 
 .footer .footer-logo {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  align-items: center;
+}
+
+.footer .footer-logo img {
+  width: 200px;
+}
+
+.content-logos-legales{
+  display: flex;
+  gap: 20px;
+}
+
+.content-logos-legales .content-logos-legales-img{
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.footer .footer-logo a {
-  text-align: center;
+.content-logos-legales .content-logos-legales-img img{
+  width: 120px;
 }
 
-.footer .footer-logo img {
-  width: 250px;
-}
-
-.footer .footer-logo small {
-  width: 400px;
-  font-size: 0.8rem;
+.footer .footer-logos-legales small {
   color: gray;
 }
 
-
-.footer .footer-section ul {
+.footer .footer-logo ul {
   list-style: none;
   padding: 0;
 }
 
-.footer .footer-section ul li {
+.footer .footer-logo ul li {
   margin-bottom: 8px;
 }
 
-.footer .footer-section ul li a {
+.footer .footer-logo ul li a {
   color: #ffffff;
   text-decoration: none;
   transition: opacity 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer .footer-logo ul li a:hover {
   opacity: 0.4;
 }
 
@@ -67,6 +75,9 @@
 
 .footer a {
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer .footer-icons a:hover {
@@ -83,7 +94,6 @@
 .footer .footer-subscriber {
   display: grid;
   justify-content: center;
-  margin-top: 30px;
   width: 100%;
   height: 100px;
 }
@@ -134,29 +144,78 @@
 
 .footer .footer-logos-legales {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: auto;
-  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
 }
 
-@media (max-width :1300px) {
-
-  .footer .footer-logo {
-    margin-right: 50px;
-  }
-
-  .footer .footer-subscriber input {
-    width: 100%;
-    height: 60px;
-  }
-
-  .footer .footer-logo small {
-    width: 100%;
-    font-size: 0.8rem;
-    color: gray;
-  }
+.img-legal .img-vig{
+display: flex;
+justify-content: start;
+align-items: center;
 }
+
+.img-legal .img-vig img {
+  width: 80%;
+}
+
+
+
+.img-legal .img-col{
+display: flex;
+justify-content: end;
+align-items: center;
+}
+
+.img-legal .img-col img {
+  width: 80%;
+}
+
+.footer-logo-responsable {
+  display: flex;
+  justify-content: end;
+  text-align: center;
+  width: 400px;
+  padding: 20px;
+}
+
+.footer-logo-responsable-info small{
+color: rgb(236, 236, 236);
+font-size: 0.55rem;
+text-align: justify;
+}
+
+.social-container {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-container p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.icons{
+  display: flex;
+  gap: 10px;
+}
+
+.icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.icons a:hover {
+  color: #aaa;
+}
+
+
 
 @media (max-width :1104px) {
   .footer {
@@ -178,8 +237,8 @@
     line-height: 0.8rem;
   }
 
-  .footer .footer-section {
-    text-align: center;
+  .footer .footer-bottom {
+    margin-top: 20%;
   }
 
 }
@@ -188,7 +247,7 @@
 
   .footer {
     height: auto;
-    padding: 60px 0;
+    padding: 40px 20px;
   }
 
 
@@ -220,6 +279,7 @@
     align-items: center;
     text-align: center;
     margin: 0;
+    width: 100%;
   }
 
   .footer .footer-logo img {
@@ -237,8 +297,11 @@
   }
 
   .footer .footer-logos-legales {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
   }
 
   .footer .footer-logos-legales img {
@@ -247,12 +310,11 @@
 
   .footer .footer-bottom {
     text-align: center;
+    margin-top: 20%;
   }
 
-
-  .footer .content-footer-info {
-    width: 100%;
-    height: auto;
-  }
+  .content-logos-legales .content-logos-legales-img img{
+  width: 100%;
+}
 
 }
