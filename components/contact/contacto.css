@@ -13,7 +13,7 @@
     padding: 30px;
 }
 
-.section-start-contacto h1{
+.section-start-contacto h1 {
     color: white;
 }
 
@@ -185,6 +185,25 @@ select:focus {
     border: solid #171c1e;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
+}
+
+
+.mi-popup {
+    background-color: #1F253A;
+    color: white;
+    border-radius: 20px;
+    font-size: 1rem;
+    width: 450px;
+}
+
+.mi-titulo {
+    font-size: 2rem;
+}
+
+.mi-boton {
+    background-color: #efb810;
+    color: #1F253A;
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {

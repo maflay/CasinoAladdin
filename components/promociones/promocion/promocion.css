@@ -109,12 +109,11 @@
     margin-top: 20px;
 }
 
-
 .to-promo {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 10vh;
+    height: auto;
     color: white;
     border-radius: 30px;
     overflow: hidden;
@@ -132,24 +131,24 @@
     transition: background 0.2s ease;
 }
 
-.to-promo .next-to-promo img {
-    width: 70px;
+.to-promo .next-to-promo img{
+    width: 50px;
     margin-left: 10px;
 }
 
-.to-promo .next-to-promo h2 {
+.to-promo .next-to-promo h2{
     color: white;
-    font-size: 2rem;
 }
 
 .next-to-promo:hover {
-    background: #920000;
+    background: #970404;
 }
 
 .to-promo a {
     text-decoration: none;
     color: white;
 }
+
 
 
 .vigencia {

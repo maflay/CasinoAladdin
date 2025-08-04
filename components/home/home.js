@@ -121,6 +121,12 @@ function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
         if (iframes.length > 0) {
           clearInterval(checkLoaded);
           loaderLocal.innerHTML = ``;
+
+          // 🔧 Aplicar border-radius a cada iframe
+          iframes.forEach((iframe) => {
+            iframe.style.borderRadius = "8px";
+            iframe.style.overflow = "hidden"; // por seguridad visual
+          });
         }
       }, 300);
     } else {

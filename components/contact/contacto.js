@@ -22,7 +22,8 @@ function infoSendContacto() {
   const descripcionVal = descripcion.value;
   const condicionesVal = condiciones.value;
   const ciudadVal = ciudad.value;
-  const url = "";
+  const url =
+    "https://script.google.com/macros/s/AKfycbxQwgizhuzNx4gA1zmIzOkK2FmIycbU786vkvyPVZCWZ8HrNwAmCyfA-k7AN3RxTYok/exec";
 
   const fechaCompleta = new Date().toLocaleString("es-CO", {
     timeZone: "America/Bogota",
@@ -60,6 +61,27 @@ function infoSendContacto() {
   })
     .then((response) => response.text())
     .then(() => {
+      nombre.value = "";
+      correo.value = "";
+      numero.value = "";
+      ciudad.value = "";
+      opcion.value = "";
+      descripcion.value = "";
+      condiciones.checked = false;
+      setTimeout(() => {
+        loader.style.display = "none";
+        Swal.fire({
+          icon: "success",
+          title: "EXITO",
+          text: "El envio de la información fue exitoso.",
+          confirmButtonColor: "#1F253A",
+          customClass: {
+            popup: "mi-popup",
+            title: "mi-titulo",
+            confirmButton: "btn-Send mi-boton",
+          },
+        });
+      }, 2000);
       console.log("entro a la supuesta creacion");
     })
     .catch((error) => {
