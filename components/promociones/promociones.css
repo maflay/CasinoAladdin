@@ -1,160 +1,137 @@
-.promo-section {
+
+.sliderC {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapperC {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100vw;
+    height: 450px;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.slider-wrapperC:active{
+  cursor: grabbing;
+}
+
+.slideC {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        ), url(/resources/banner-aladdin-38-1200x300.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        ), url(/resources/DSC_0371.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        ), url(/resources/CARRUSEL_3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 60vh;
-    background-image: url(/resources/fondo-blanco-figuras.jpg);
-}
-
-.detail-all-promo p {
-    font-weight: 600;
-    color: #86868b;
-    font-size: 25px;
-    text-align: center;
-}
-
-.content-promociones {
-    display: flex;
-    flex-direction: column;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    padding: 20px;
-    width: 100%;
-    gap: 30px;
-    margin-bottom: 20px;
-}
-
-.card-promociones {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    gap: 25px;
-}
-
-.card-promociones h1 {
-    color: #171c1e;
-}
-
-.card-content-img {
-    width: 100%;
-    height: 750px;
-    overflow: hidden;
-    border-radius: 20px;
-
-}
-
-.card-content-img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    opacity: 0.4;
-    z-index: 2;
-    pointer-events: none;
-    border-radius: 20px;
 }
 
-.card-content-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+input[name="slider-radioC"] {
+    display: none;
 }
 
-.card-content-text {
-    display: flex;
-    height: auto;
-    flex-direction: column;
+.slider-controlsC label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsC {
     position: absolute;
-    z-index: 10;
-    width: 50%;
-    padding: 20px;
-    left: 20px;
     bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
 }
 
-.card-content-text h2 {
-    color: white;
-    text-shadow: 2px 2px 2px #171c1e;
+.slider-controlsC input[type="radio"]:checked+label {
+    background: white;
 }
 
-.card-content-text a {
-    text-decoration: none;
-    padding: 10px;
-    font-weight: bold;
-    background-color: #fff;
-    color: #171c1e;
-    transition: all 0.2s ease;
-    width: 20%;
-}
 
-.card-content-text a:hover {
-    color: #fff;
-    width: 22%;
-    background-color: #171c1e;
-}
-
-.link-flecha {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.link-flecha::after {
-    content: ">";
+.arrowC {
     position: absolute;
-    opacity: 0;
-    right: -20px;
-    transition: all 0.3s ease;
+    top: 40%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
 }
 
-.link-flecha:hover::after {
-    opacity: 1;
-    right: 10px;
+.arrowC-left {
+    left: 0px;
+}
+
+.arrowC-right {
+    right: 0px;
+}
+
+.content-title-page{
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    pointer-events: none;
+}
+.content-title-page p,
+.content-title-page h1{
+color: #fff;
+text-shadow: #fff 0 0 0px;
 }
 
 
-@media (max-width: 768px) {
+@media(max-width:768px){
+.content-title-page{
+    padding: 0 10px;
+    left: 0;
+}
 
-    .promo-section {
-        text-align: center;
-    }
-
-    .card-promociones {
-        flex-direction: column;
-    }
-
-    .card-promociones-reverse {
-        flex-direction: column;
-    }
-
-    .card-content-img {
-        width: 100%;
-        height: 250px;
-    }
-
-    .card-content-text {
-        width: auto;
-    }
-
-    .card-content-text a {
-        text-decoration: none;
-        padding: 10px;
-        font-weight: bold;
-        background-color: #fff;
-        color: #171c1e;
-        transition: all 0.2s ease;
-        width: auto;
-    }
-
-
+.content-title-page h1 {
+    font-size: 1.8rem;
+}
 }

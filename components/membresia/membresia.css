@@ -3,17 +3,22 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 70vh;
-    padding: 20px;
-    background-image: url(/resources/fondo.jpg);
-    background-size: cover;
-    background-position: center;
+    height: auto;
+    background-color: #CB0404;
 }
 
-.banner-membresia img {
-    width: 40%;
-    height: 100%;
+
+.content-img-mymawi-al {
+    display: flex;
+    overflow: hidden;
 }
+
+.content-img-mymawi-al img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 
 .tarjeta-mymawi {
     width: 100%;
@@ -25,253 +30,286 @@
     gap: 20px;
 }
 
-.content-img-mymawi {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    overflow: hidden;
-}
-
-.content-img-mymawi img {
-    width: 50%;
-    object-fit: cover;
-}
-
-.content-text-mymawi {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-}
-
-.content-text-mymawi h1 {
-    line-height: 5.5rem;
-}
-
-.content-text-mymawi p {
-    font-weight: 600;
-    color: #86868b;
-    font-size: 25px;
-}
-
-.mymawi-beneficios {
+.content-acordeon-mymawi {
     display: flex;
     width: 100%;
-    padding: 20px;
-    gap: 20px;
-    background-color: rgb(23, 28, 30);
-}
-
-.beneficios-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    color: white;
-}
-
-
-.beneficios-img {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.beneficios-img iframe {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-}
-
-.porque-si-y-no {
-    padding: 20px;
-    display: flex;
-    height: auto;
-    gap: 20px;
-}
-
-.porque-si-y-no-img {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.porque-si-y-no-img iframe {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-}
-
-.porque-si-y-no-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    line-height: 1.2rem;
-}
-
-.dinero-promocional {
-    padding: 20px;
-    display: flex;
-    height: auto;
-    gap: 20px;
-    background-color: rgb(23, 28, 30);
-    margin-bottom: 20px;
-    border-radius: 0 0 20px 20px;
-}
-
-.dinero-promocional-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    color: white;
-}
-
-.dinero-promocional-img {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.dinero-promocional-img iframe {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-}
-
-
-.video-container-membresia {
     position: relative;
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
-    margin-bottom: 10px;
 }
 
-.background-video-membresia {
+.acordeon-mymawi {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 450px;
+    overflow: hidden;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    top: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
     pointer-events: none;
 }
 
-.video-container-membresia::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.acordeon-mymawi img {
     width: 100%;
     height: 100%;
-    background-color: #000;
-    opacity: 0.8;
+    object-fit: cover;
+}
+
+.content-title-mymawi {
+    position: relative;
     z-index: 2;
     pointer-events: none;
 }
 
-
-.content-text-membresia {
-    display: flex;
-    justify-content: start;
-    align-content: center;
+.content-text-mymawi {
     text-align: center;
-    position: relative;
-    height: 100%;
-    z-index: 3;
+    padding: 40px 0;
 }
 
-.content-info-membresia {
+.background-mymawi {
+    background-color: #CB0404;
+}
+
+.content-beneficios-mymawi {
     display: flex;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.beneficios-left {
+    width: 50%;
+}
+
+.beneficios-left img {
     width: 100%;
     height: 100%;
 }
 
-.content-info-reverse-membresia {
-    flex-direction: row-reverse;
+.beneficios-rigth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 
-.content-desc-membresia {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    width: 50%;
-    height: 100%;
+.beneficios-rigth p{
+    text-align: justify;
+}
+
+.beneficios-rigth h2 {
+    text-align: start;
     color: white;
 }
 
-.content-desc-membresia p {
-    text-shadow: 2px 2px 2px #171c1e;
-    font-size: 1.2rem;
+.beneficios-rigth ul {
+    padding-left: 30px;
 }
 
-.content-desc-membresia ul {
-    font-size: 1.2rem;
-    text-align: left;
-    text-shadow: 2px 2px 2px #171c1e;
+.background-mymawi h2 .background-mymawi p {
+    color: white;
 }
 
+.beneficios-reverse {
+    flex-direction: row-reverse;
+}
 
-.content-text-title-membresia {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* 
+
+.sliderC {
     position: relative;
-    width: 50%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapperC {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100vw;
+    height: 600px;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.slider-wrapperC:active {
+    cursor: grabbing;
+}
+
+.slideC {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/DSC_0083_V2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/imagen-membresia.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.733),
+            rgba(0, 0, 0, 0.5)), url(/resources/DSC_0371.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+    width: 100%;
     height: 100%;
 }
 
-.content-card-title-membresia {
-    width: auto;
-    text-align: center;
-    height: auto;
-    padding: 20px;
+.content-slide h2 {
+    color: white;
 }
 
-@media (max-width: 768px) {
+.content-slide-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content-slide-img h2 {
+    color: white;
+}
+
+.content-slide-img img {
+    width: 200px;
+}
+
+.content-slide-rigth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content-slide-rigth h2 {
+    color: white;
+}
+
+
+input[name="slider-radioC"] {
+    display: none;
+}
+
+.slider-controlsC label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsC {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsC input[type="radio"]:checked+label {
+    background: white;
+}
+
+
+.arrowC {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowC-left {
+    left: 0px;
+}
+
+.arrowC-right {
+    right: 0px;
+} */
+
+@media(max-width:1366px) {
+    .beneficios-rigth h2 {
+        font-size: 1.8rem;
+    }
+
+    .beneficios-rigth {
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width:880px) {
+    .beneficios-rigth h2 {
+        font-size: 2rem;
+    }
+
+    .beneficios-rigth {
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .content-beneficios-mymawi.content-beneficios-mymawi {
+        flex-direction: column;
+    }
+
     .banner-membresia {
-        height: 40vh;
+        height: auto;
+        padding: 20px 0;
     }
 
-    .content-text-mymawi h1 {
-        line-height: 2rem;
-    }
-
-    .content-info-membresia {
-        flex-direction: column-reverse;
-    }
-
-    .content-desc-membresia {
+    .beneficios-left {
         width: 100%;
     }
 
-    .content-text-title-membresia {
+    .beneficios-rigth {
         width: 100%;
-        height: auto;
     }
 
-    .video-container-membresia {
-        height: auto;
-        padding: 20px;
+    .beneficios-rigth h2 {
+        text-align: center;
     }
 
-    .content-card-title-membresia {
-        padding: 0;
+    .content-acordeon-mymawi {
+        pointer-events: none;
     }
+
+    .acordeon-mymawi {
+        top: 0;
+    }
+
 }

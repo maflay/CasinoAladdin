@@ -9,8 +9,8 @@
 html {
     overflow-x: hidden;
     scroll-behavior: auto;
-    font-family: 'TT Interphases Regular', sans-serif;
-    background-color: rgb(240, 240, 240);
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(244, 244, 244);
 }
 
 .container {
@@ -56,7 +56,7 @@ html {
     width: 100%;
     /* Asegura que ocupe todo el ancho de la barra */
     height: 100%;
-    --c: no-repeat linear-gradient(#fff 0 0);
+    --c: no-repeat linear-gradient(red 0 0);
     background: var(--c), var(--c), #c5c5c5;
     background-size: 60% 100%;
     animation: l16 3s infinite;
@@ -77,61 +77,70 @@ html {
 }
 
 .type1-h1 {
-    color: #fff;
+    color: #CB0404;
     font-size: 55px;
     font-weight: 300;
-    font-family: 'TT Interphases DemiBold', sans-serif;
-    text-shadow: 1px 1px 1px #171c1e;
+    font-family: 'Quicksand', sans-serif !important;
 }
 
 .type1-h1-bold {
-    color: #fff;
-    font-size: 96px;
+    color: #CB0404;
+    font-size: 80px;
     font-weight: 700;
-    text-shadow: 1px 1px 1px #171c1e;
-    font-family: 'TT Interphases DemiBold', sans-serif;
+    font-family: 'Quicksand', sans-serif !important;
 }
 
 .type2-h1 {
-    color: #fff;
+    color: #CB0404;
     font-size: 25px;
     font-weight: 750;
-    -webkit-text-stroke-color: #171c1e;
-    stroke: #171c1e;
+    font-family: 'Quicksand', sans-serif !important;
+    -webkit-text-stroke-color: #CB0404;
+    stroke: #CB0404;
 }
 
 .type3-h1 {
-    color: #171c1e;
+    color: #CB0404;
     font-size: 15px;
     font-weight: 650;
-    -webkit-text-stroke-color: #171c1e;
-    stroke: #171c1e;
+    -webkit-text-stroke-color: #CB0404;
+    stroke: #CB0404;
+    font-family: 'lovelace',sans-serif !important;
+}
+
+.type4-h1 {
+    color: #CB0404;
+    font-size: 15px;
+    font-weight: 650;
+    -webkit-text-stroke-color: #CB0404;
+    stroke: #CB0404;
+    font-family: 'Quicksand',sans-serif !important;
 }
 
 
 .btn-design1 {
     padding: 8px 16px;
-    background-color: #171c1e;
+    background-color: #CB0404;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     width: auto;
     font-size: 14px;
-    font-weight: 1000;
+    font-weight: 100;
     transition: background-color 0.3s ease;
     text-decoration: none;
 }
 
 .btn-design1:hover {
-    background-color: white;
-    color: #171c1e;
+    color: white;
+    background-color: #990000;
     transition: background-color 0.3s ease;
 }
 
 .btn-design2 {
     padding: 8px 16px;
-    color: #171c1e;
+    color: #CB0404;
     background-color: white;
     border: none;
     border-radius: 10px;
@@ -144,7 +153,7 @@ html {
 }
 
 .btn-design2:hover {
-    background-color: #171c1e;
+    background-color: #8a0000;
     color: white;
     transition: background-color 0.3s ease;
 }
@@ -171,23 +180,13 @@ html {
 
 .btn-primary {
     color: #fff;
-    background-color: #171c1e;
-    border-color: #171c1e;
+    background-color: #CB0404;
     margin-top: 10px;
 }
 
 .btn-primary:hover {
-    color: #fff;
-    background-color: #272e31b7;
-    border-color: #272e31b7;
-}
-
-.btn-primary:focus {
-    color: #fff;
-    background-color: #272e31b7;
-    border-color: #272e31b7;
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(59, 65, 73, 0.5);
+    background-color: #fff;
+    color: #CB0404;
 }
 
 /* ANIMACIONES */
@@ -254,6 +253,16 @@ html {
     50% {
         transform: translateY(8px) rotate(45deg);
         opacity: 1;
+    }
+}
+
+@media(max-width:1366px) {
+    .container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
     }
 }
 

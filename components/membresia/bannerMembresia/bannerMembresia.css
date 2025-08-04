@@ -1,0 +1,64 @@
+
+.content-membresia-entretenimiento-a {
+    width: 100%;
+    background-color: #CB0404;
+    height: auto;
+}
+
+.content-info-membresia-entretenimiento-a {
+    display: flex;
+    position: relative;
+}
+
+.card-view-entretenimiento-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 33%;
+}
+
+.card-view-entretenimiento-a img {
+    width: 50%;
+}
+
+.info-card-entretenimiento-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 33%;
+    color: white;
+}
+
+.actions-card-entretenimiento-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 33%;
+}
+
+.actions-card-entretenimiento-a a {
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.actions-card-entretenimiento-a a:hover {
+    color: #b1880f;
+}
+
+@media(max-width:768px){
+.content-info-membresia-entretenimiento-a{
+    display: flex;
+}
+
+.card-view-entretenimiento-a img{
+    width: 100%;
+}
+
+.info-card-entretenimiento-a{
+    font-size: 0.8rem;
+    text-align: center;
+}
+}

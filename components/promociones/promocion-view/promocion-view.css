@@ -27,6 +27,7 @@
   align-items: center;
   overflow: hidden;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .promocion-container .card-image {
@@ -42,6 +43,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+  -webkit-transition: -webkit-transform 0.4s ease;
+}
+
+.promocion-container .card-image img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .promocion-container .card-content {
@@ -53,14 +61,29 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
   flex: 1;
+  transition: all 1s ease;
 }
 
+a {
+  text-decoration: none;
+}
 
+.card-promo h2 {
+  color: #171c1e;
+}
+
+.card-promo:hover h2 {
+  color: #CB0404;
+}
 
 .promocion-container .card-content p {
-  font-size: 14px;
+  padding-top: 10px;
+  font-size: 0.7rem;
   color: #1f253a;
+  text-align: start;
 }
 
 .content-a {
@@ -77,16 +100,17 @@
   padding: 10px;
   font-weight: bold;
   color: #fff;
-  background-color: #171c1e;
+  background-color: #CB0404;
+  border-radius: 10px;
   transition: all 0.2s ease;
   cursor: pointer;
   width: auto;
 }
 
 .content-a a:hover {
-  background-color: #ececec;
+  background-color: #a00101;
   width: 200px;
-  color: #171c1e;
+  color: white;
 }
 
 .link-flecha {
@@ -128,9 +152,9 @@
 }
 
 .content-a-promo a:hover {
-  background-color: #d3d3d3;
+  color: #fff;
   width: 130px;
-  color: #171c1e;
+  background-color: #CB0404;
 }
 
 

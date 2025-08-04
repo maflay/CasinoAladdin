@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    height: 80vh;
+    height: 500px;
+    background-color:  #CB0404;
 }
 
 .info-game-entretenimiento {
@@ -28,7 +29,7 @@
 }
 
 .content-info-game-entretenimiento a:hover {
-    color: #707070;
+    color: #CB0404;
 }
 
 
@@ -41,12 +42,13 @@
     width: 100%;
     height: auto;
     line-height: 5rem;
+    padding-top: 35px;
 }
 
 .section-mesas-entretenimiento h1 {
     color: #fff;
     text-shadow:
-        0 0 8px #fff,
+        0 0 15px #fff,
         0 0 1px #fff,
         0 0 1px #fff,
         0 0 1px #fff,
@@ -218,53 +220,10 @@
     padding: 20px;
 }
 
-.content-membresia-entretenimiento {
-    width: 100%;
-    background-color: #1d1d1f;
-    height: auto;
+.content-card-title-entretenimiento h2{
+    color: #fff;
 }
 
-.content-info-membresia-entretenimiento {
-    display: flex;
-}
-
-.card-view-entretenimiento {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    width: 33%;
-}
-
-.card-view-entretenimiento img {
-    width: 50%;
-}
-
-.info-card-entretenimiento {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    width: 33%;
-    color: white;
-}
-
-.actions-card-entretenimiento {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    width: 33%;
-}
-
-.actions-card-entretenimiento a {
-    color: white;
-    transition: all 0.4s ease;
-}
-
-.actions-card-entretenimiento a:hover {
-    color: rgb(168, 168, 168);
-}
 
 @media (max-width:768px) {
 

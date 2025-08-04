@@ -59,6 +59,10 @@
     height: 100%;
 }
 
+.content-slide h1{
+    color: white;
+}
+
 input[name="slider-radioC"] {
     display: none;
 }

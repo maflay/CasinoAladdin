@@ -68,6 +68,8 @@ const PageLoader = {
     fetch(ruta.html)
       .then((response) => response.text())
       .then((html) => {
+        actualizarMenuActivo();
+        actualizarColorNavbar();
         if (ruta.css) cargarEstiloVista(ruta.css);
         if (ruta.js) cargarScriptVista(ruta.js);
 
@@ -258,6 +260,9 @@ function cargarHeaderYFooter() {
           }
         });
       });
+
+      actualizarMenuActivo();
+      actualizarColorNavbar();
     })
     .catch((error) => {
       console.error("Error al cargar el header:", error);
@@ -340,18 +345,13 @@ function actualizarColorNavbar() {
   // Por defecto, logo claro
   logo.src = "/resources/logo-aladdin.png";
 
+  // if (hash === "#contacto") {
+  //   navbar.classList.add("page-contacto");
+  //   logo.src = "/resources/logo-aladdin-negro.png";
+  // }
+
   if (hash === "#contacto") {
     navbar.classList.add("page-contacto");
-    logo.src = "/resources/logo-aladdin-negro.png"; // Cambia logo al negro
+    logo.src = "/resources/logo-aladdin-negro.png";
   }
 }
-
-window.addEventListener("load", () => {
-  actualizarMenuActivo();
-  actualizarColorNavbar();
-});
-
-window.addEventListener("hashchange", () => {
-  actualizarMenuActivo();
-  actualizarColorNavbar();
-});

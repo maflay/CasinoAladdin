@@ -1,7 +1,9 @@
 .promo {
     position: relative;
+    /* Necesario para que ::before funcione bien */
     z-index: 0;
     min-height: 100vh;
+    /* Asegura que tenga suficiente altura para que se vea */
 }
 
 
@@ -12,6 +14,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    /* background-image: url(/resources/fondo-color-global3.png); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,8 +25,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: auto;
     color: white;
+    padding-top: 8%;
 }
 
 .promocion-content {
@@ -36,35 +40,34 @@
 }
 
 .promocion-img {
-    width: 600px;
-    height: 80%;
-    object-fit: cover;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 400px;
 }
 
 .promocion-img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     border-radius: 45px;
-    transition: transform 0.4s ease;
+    transition: all 0.4s ease;
     -webkit-transition: -webkit-transform 0.4s ease;
 }
 
-.promocion-img img:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+.promocion-text h1 {
+    color: #CB0404;
 }
 
 .terminos-condiciones {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 10vh;
+    color: white;
 }
 
 .terminos-condiciones h1 {
-    color: #171c1e;
+    color: #CB0404;
 }
 
 
@@ -109,8 +112,9 @@
 
 .to-promo {
     display: flex;
+    justify-content: center;
     width: 100%;
-    height: auto;
+    height: 10vh;
     color: white;
     border-radius: 30px;
     overflow: hidden;
@@ -118,10 +122,9 @@
 
 .to-promo .next-to-promo {
     width: 50%;
-    padding: 20px;
+    padding: 10px;
     object-fit: cover;
-    color: #fff;
-    background: #171c1e;
+    background: #CB0404;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,9 +132,18 @@
     transition: background 0.2s ease;
 }
 
+.to-promo .next-to-promo img {
+    width: 70px;
+    margin-left: 10px;
+}
+
+.to-promo .next-to-promo h2 {
+    color: white;
+    font-size: 2rem;
+}
+
 .next-to-promo:hover {
-    color: #171c1e;
-    background: #fff;
+    background: #920000;
 }
 
 .to-promo a {
@@ -144,54 +156,56 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 15vh;
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
+    background: linear-gradient(90deg, #CB0404, #8a0303, #CB0404, #8a0303, #CB0404, #8a0303, #CB0404, #8a0303, #CB0404, #8a0303, #CB0404, #8a0303, #CB0404, #8a0303);
 
 }
+
+/* .content-vigencia
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
 .date-vigencia {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: auto;
-    padding: 10px;
+    height: 10vh;
     border-radius: 50px;
-    border: 7px solid #242424;
+    border: 7px solid #e3e4e5;
 }
 
 .section-vigencia {
     width: auto;
     height: auto;
-    color: #242424;
+    color: #e3e4e5;
     align-items: center;
 }
 
 
 .scroll-down-indicator {
     display: flex;
-    position: absolute;
-    top: 75vh;
-    left: 50%;
-    transform: translateX(-50%);
     flex-direction: column;
     align-items: center;
-    gap: 6px;
-    animation: float 2s ease-in-out infinite;
-    z-index: 50;
+    gap: 8px;
+    margin-top: 20px;
+    animation: float 1.5s ease-in-out infinite;
 }
 
 .arrow {
-    width: 24px;
-    height: 24px;
-    border: solid #e3e4e5;
-    border-width: 0 4px 4px 0;
-    transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    transform: rotate(-45deg);
+    animation: bounce 1.5s infinite;
     opacity: 0.7;
-    animation: bounce 1.2s infinite ease-in-out;
-    transition: opacity 0.3s ease;
 }
 
 .arrow:nth-child(2) {
@@ -206,15 +220,16 @@
 
     0%,
     100% {
-        transform: translateY(0) rotate(45deg);
+        transform: translateY(0) rotate(-45deg);
         opacity: 0.7;
     }
 
     50% {
-        transform: translateY(10px) rotate(45deg);
+        transform: translateY(10px) rotate(-45deg);
         opacity: 1;
     }
 }
+
 
 
 
@@ -267,18 +282,28 @@ td {
 }
 
 .border-limit {
-    border-left: 5px solid #171c1e;
+    border-left: 5px solid black;
     padding-left: 10px;
     margin-bottom: 10px;
 }
 
+@media(max-width:1366px) {
+    .to-promo .next-to-promo h2 {
+        font-size: 1rem;
+    }
 
+    .to-promo .next-to-promo img {
+        width: 10%;
+        margin-left: 10px;
+    }
+}
 
 
 @media (max-width: 767px) {
 
     .promocion {
-        height: 95vh;
+        padding-top: 15%;
+        height: auto;
     }
 
     .promocion-content {
@@ -296,6 +321,10 @@ td {
     .terminos-condiciones {
         text-align: center;
         margin-bottom: 20px;
+    }
+
+    .to-promo .next-to-promo {
+        width: 100%;
     }
 }
 

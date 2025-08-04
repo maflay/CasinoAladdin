@@ -47,6 +47,29 @@
 })();
 
 (() => {
+  fetch("/components/membresia/bannerMembresia/bannerMembresia.html")
+    .then((res) => res.text())
+    .then((html) => {
+      const contenedor = document.getElementById("content-banner-membresia");
+      contenedor.innerHTML = html;
+
+      const estilo = document.createElement("link");
+      estilo.rel = "stylesheet";
+      estilo.href = "/components/membresia/bannerMembresia/bannerMembresia.css";
+      document.head.appendChild(estilo);
+      // Cargar script dinámicamente
+      const script = document.createElement("script");
+      script.src = "/components/membresia/bannerMembresia/bannerMembresia.js";
+      script.onload = () => {
+        if (typeof window.inicializarSliderUbicaciones === "function") {
+          window.inicializarSliderUbicaciones();
+        }
+      };
+      document.body.appendChild(script);
+    });
+})();
+
+(() => {
   const btntoBlackJack = document.getElementById("toBlackJack");
   const btntoRuleta = document.getElementById("toRuleta");
   const btntoBaccarat = document.getElementById("toBaccarat");

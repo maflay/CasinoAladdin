@@ -7,62 +7,66 @@
 
 <body>
     <section class="background-contact">
-    <section class="container">
-        <section class="item section-start-contacto">
-            <h1  class="type1-h1-bold">Contáctanos</h1>
-            <div class="section-start-contacto-direccion">
-                <p class="type1-p">Para nosotros es muy importante lo que tienes para decirnos, a través de este
-                    formulario puedes
-                    hacernos llegar tus peticiones, quejas, reclamos, sugerencias o felicitaciones acerca de nuestro
-                    servicio. Si deseas enviar algún elemento físico puedes hacerlo en la siguiente dirección:</p>
-                <br />
-                <p class="type1-p">Carrera 4 # 10 - 67, Edificio Ardila.</p>
-                <br />
-                <p class="type1-p">Teléfono: (602) 885 7458 Ext: 101.</p>
-                <br />
-                <p class="type1-p">Cali - Colombia.</p>
-            </div>
-            <form class="section-start-contacto-form">
-                <div class="input-group">
-                    <input id="nombre" type="text" required />
-                    <label>Nombre y apellido : <strong style="color: red;">*</strong></label>
+        <section class="container">
+            <section class="item section-start-contacto">
+                <h1 class="type1-h1-bold">Contáctanos</h1>
+                <div class="section-start-contacto-direccion">
+                    <p class="type1-p">Para nosotros es muy importante lo que tienes para decirnos, a través de este
+                        formulario puedes
+                        hacernos llegar tus peticiones, quejas, reclamos, sugerencias o felicitaciones acerca de nuestro
+                        servicio. Si deseas enviar algún elemento físico puedes hacerlo en la siguiente dirección:</p>
+                    <br />
+                    <p class="type1-p">Carrera 4 # 10 - 67, Edificio Ardila.</p>
+                    <br />
+                    <p class="type1-p">Teléfono: (602) 885 7458 Ext: 101.</p>
+                    <br />
+                    <p class="type1-p">Cali - Colombia.</p>
                 </div>
-                <div class="input-group">
-                    <input id="nombre" type="text" required />
-                    <label>Tu correo electrónico : <strong style="color: red;">*</strong></label>
-                </div>
-                <div class="input-group">
-                    <input id="nombre" type="text" required />
-                    <label>Número de contacto<strong style="color: red;">*</strong></label>
-                </div>
-                <div class="custom-select-container">
-                    <label>Motivo de su mensaje. <span style="color: red;">*</span></label>
-                    <div class="select-contacto">
-                        <select id="casino-select" class="form-control">
-                            <option value="0">Preguntas</option>
-                            <option value="1">Quejas</option>
-                            <option value="2">Reclamos</option>
-                            <option value="3">Sugerencias</option>
-                            <option value="4">Felicitaciones</option>
-                        </select>
-                        <span class="fled">▼</span>
+                <div class="section-start-contacto-form">
+                    <div class="input-group">
+                        <input id="nombre" type="text" required />
+                        <label>Nombre y apellido : <strong style="color: red;">*</strong></label>
+                    </div>
+                    <div class="input-group">
+                        <input id="correo" type="text" required />
+                        <label>Tu correo electrónico : <strong style="color: red;">*</strong></label>
+                    </div>
+                    <div class="input-group">
+                        <input id="numero" type="text" required />
+                        <label>Número de contacto<strong style="color: red;">*</strong></label>
+                    </div>
+                    <div class="input-group">
+                        <input id="ciudad" type="text" required />
+                        <label>Ciudad<strong style="color: red;">*</strong></label>
+                    </div>
+                    <div class="custom-select-container">
+                        <label>Motivo de su mensaje. <span style="color: red;">*</span></label>
+                        <div class="select-contacto">
+                            <select id="opcion" class="form-control">
+                                <option value="">Preguntas</option>
+                                <option value="Quejas">Quejas</option>
+                                <option value="Reclamos">Reclamos</option>
+                                <option value="Sugerencias">Sugerencias</option>
+                                <option value="Felicitaciones">Felicitaciones</option>
+                            </select>
+                            <span class="fled">▼</span>
+                        </div>
+                    </div>
+                    <div class="motivo-mensaje">
+                        <label>Mensaje : <strong style="color: red;">*</strong></label>
+                        <br />
+                        <textarea id="descripcion" placeholder="ejemplo"></textarea>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="condiciones" value="acepto" />
+                        <label for="condiciones">He leído y acepto los términos y condiciones de uso</label>
+                    </div>
+                    <div class="content-button-send">
+                        <button onclick="infoSendContacto()" class="btn-design1">Enviar</button>
                     </div>
                 </div>
-                <div class="motivo-mensaje">
-                    <label>Mensaje : <strong style="color: red;">*</strong></label>
-                    <br />
-                    <textarea placeholder="ejemplo"></textarea>
-                </div>
-                <div class="checkbox-wrapper">
-                    <input type="checkbox" id="condiciones" />
-                    <label for="condiciones">He leído y acepto los términos y condiciones de uso</label>
-                </div>
-                <div class="content-button-send">
-                    <button class="btn-design1">Enviar</button>
-                </div>
-            </form>
+            </section>
         </section>
-    </section>
     </section>
 </body>
 

@@ -150,7 +150,9 @@ function sliderhome() {
   track.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
     deltaX = e.pageX - startX;
-    track.style.transform = `translateX(calc(-${currentIndex * 100}vw + ${deltaX}px))`;
+    track.style.transform = `translateX(calc(-${
+      currentIndex * 100
+    }vw + ${deltaX}px))`;
   });
 
   track.addEventListener("mouseup", () => {
@@ -168,18 +170,28 @@ function sliderhome() {
     }
   });
 
-  track.addEventListener("touchstart", (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    deltaX = 0;
-    track.style.transition = "none";
-  }, { passive: true });
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      deltaX = 0;
+      track.style.transition = "none";
+    },
+    { passive: true }
+  );
 
-  track.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    deltaX = e.touches[0].clientX - startX;
-    track.style.transform = `translateX(calc(-${currentIndex * 100}vw + ${deltaX}px))`;
-  }, { passive: true });
+  track.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!isDragging) return;
+      deltaX = e.touches[0].clientX - startX;
+      track.style.transform = `translateX(calc(-${
+        currentIndex * 100
+      }vw + ${deltaX}px))`;
+    },
+    { passive: true }
+  );
 
   track.addEventListener("touchend", () => {
     if (!isDragging) return;
@@ -201,7 +213,6 @@ function sliderhome() {
 
   goToSlide(currentIndex);
 }
-
 
 sliderhome();
 
@@ -256,7 +267,6 @@ function sliderCali() {
 
   interval = setInterval(nextSlide, 11000);
 
-  
   let startX = 0;
   let isDragging = false;
   let deltaX = 0;
@@ -389,7 +399,6 @@ function sliderPereira() {
 
   interval = setInterval(nextSlide, 11000);
 
-  
   let startX = 0;
   let isDragging = false;
   let deltaX = 0;
@@ -522,7 +531,6 @@ function sliderBogota() {
 
   interval = setInterval(nextSlide, 11000);
 
-  
   let startX = 0;
   let isDragging = false;
   let deltaX = 0;
@@ -659,7 +667,6 @@ function sliderBarranquilla() {
 
   interval = setInterval(nextSlide, 11000);
 
-  
   // let startX = 0;
   // let isDragging = false;
   // let deltaX = 0;
@@ -884,9 +891,34 @@ sliderTulua();
       estilo.rel = "stylesheet";
       estilo.href = "/components/promociones/promocion-view/promocion-view.css";
       document.head.appendChild(estilo);
-      
+
       const script = document.createElement("script");
       script.src = "/components/promociones/promocion-view/promocion-view.js";
+      script.onload = () => {
+        if (typeof window.inicializarSliderUbicaciones === "function") {
+          window.inicializarSliderUbicaciones();
+        }
+      };
+      document.body.appendChild(script);
+    });
+})();
+
+(() => {
+  fetch("/components/juegos/juegos-view/juegos-view.html")
+    .then((res) => res.text())
+    .then((html) => {
+      const contenedor = document.getElementById("juegos-view-seccion");
+      contenedor.innerHTML = html;
+
+      // Cargar CSS dinámicamente
+      const estilo = document.createElement("link");
+      estilo.rel = "stylesheet";
+      estilo.href = "/components/juegos/juegos-view/juegos-view.css";
+      document.head.appendChild(estilo);
+
+      // Cargar script dinámicamente
+      const script = document.createElement("script");
+      script.src = "/components/juegos/juegos-view/juegos-view.js";
       script.onload = () => {
         if (typeof window.inicializarSliderUbicaciones === "function") {
           window.inicializarSliderUbicaciones();

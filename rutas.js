@@ -89,6 +89,16 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicaciones.css",
     js: "/components/ubicaciones/ubicaciones.js",
   },
+   casinomonteria: {
+    html: "/components/ubicaciones/monteria/monteria.html",
+    css: "/components/ubicaciones/ubicaciones.css",
+    js: "/components/ubicaciones/ubicaciones.js",
+  },
+     casinobuga: {
+    html: "/components/ubicaciones/buga/buga.html",
+    css: "/components/ubicaciones/ubicaciones.css",
+    js: "/components/ubicaciones/ubicaciones.js",
+  },
   casinocallesarmiento: {
     html: "/components/ubicaciones/tulua/calle-sarmiento.html",
     css: "/components/ubicaciones/ubicaciones.css",
@@ -209,4 +219,39 @@ const rutasLimpias = {
     css: "/components/nosotros/nosotros.css",
     js: "/components/nosotros/nosotros.js",
   },
+  ubicacionCali: {
+    html: "/components/ubicaciones/ubicacionCiudad/ubicacionCali.html",
+    css: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.css",
+    js: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.js",
+  },
+  ubicacionPereira: {
+    html: "/components/ubicaciones/ubicacionCiudad/ubicacionPereira.html",
+    css: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.css",
+    js: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.js",
+  },
+  ubicacionBogota: {
+    html: "/components/ubicaciones/ubicacionCiudad/ubicacionBogota.html",
+    css: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.css",
+    js: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.js",
+  },
+  casinokaraoke: {
+    html: "/components/ubicaciones/cali/karaoke.html",
+    css: "/components/ubicaciones/ubicaciones.css",
+    js: "/components/ubicaciones/ubicaciones.js",
+  },
+  trenpremios: {
+    html: "/components/promociones/promocion/tren-premios.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/tren-premios.js",
+  },
+  blackjackexpress: {
+    html: "/components/promociones/promocion/blackjack-express.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/blackjack-express.js",
+  },
+  casinomallplazacali:{
+    html:"/components/ubicaciones/cali/mallplazacali.html",
+    css:"/components/ubicaciones/ubicaciones.css",
+    js:"/components/ubicaciones/ubicaciones.js",
+  }
 };

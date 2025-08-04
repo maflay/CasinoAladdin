@@ -34,3 +34,13 @@ function toBingolocura(){
 function toSuperbingo(){
   navegarA("superbingo");
 }
+
+(()=> {
+document.getElementById("toBlackjackexpress").addEventListener("click", ()=> {
+  navegarA("blackjackexpress");
+})
+
+document.getElementById("toTrenpremios").addEventListener("click", ()=> {
+  navegarA("trenpremios");
+})
+})();

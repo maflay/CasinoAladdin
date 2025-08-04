@@ -23,3 +23,21 @@
   font-weight: 200;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'HeadLineBrush';
+  src: url('/fonts/Headline-Brush-Demo.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'lovelace';
+  src: url('/fonts/Zetafonts-Lovelace-Text-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-weight: 600;
+}
+

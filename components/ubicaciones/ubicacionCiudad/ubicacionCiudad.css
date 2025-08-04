@@ -1,0 +1,79 @@
+
+.ubicaciones-o {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.content-card-ubicacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.card-ubicacion {
+    width: 400px;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card-ubicacion-img {
+    width: 100%;
+    height: 50%;
+}
+
+.card-ubicacion-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-ubicacion-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.card-ubicacion-text h3 {
+    color: #27314F;
+    align-items: center;
+}
+
+.card-ubicacion-text p {
+    color: #27314F;
+    font-size: 0.78rem;
+}
+
+.card-ubicacion-text small {
+    color: gray;
+    font-size: 0.65rem;
+}
+
+.a {
+    color: gray;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+.card-ubicacion-text>small>a {
+    color: gray;
+    transition: all 0.4s ease;
+}
+
+.card-ubicacion:hover h3 {
+    color: #CB0404;
+}
+
+
+.card-ubicacion-text>small>a:hover {
+    text-decoration: none;
+    color: #CB0404;
+}
