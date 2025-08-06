@@ -1,5 +1,6 @@
 .background-home {
-    background-image: linear-gradient(180deg, #ffffff6b, #ffffff88), url(/resources/fondo-home.jpg);
+    background-image: linear-gradient(180deg, #ffffff6b 10%, rgb(244, 244, 244) 90%),
+        url(/resources/fondo-home.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,16 +16,29 @@
 
 .section-ini img,
 .section-ini p {
-    padding-right: 100px;
     color: #CB0404;
 }
 
 .content-title-home {
+    width: 300px;
+    height: 300px;
     line-height: 1.4rem;
+    background-color: #CB0404;
+    transform: rotate(45deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.content-title-home img {
+    width: 200px;
+}
+
+
 .content-title-home p {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .ubicaciones-o {
@@ -88,7 +102,7 @@
 
 .card-ubicacion-text p {
     color: #27314F;
-    font-size: 0.78rem;
+    font-size: 0.7rem;
 }
 
 .card-ubicacion-text small {
@@ -132,7 +146,6 @@
 /* TARJETA-MYMAWI */
 .container-tarjeta {
     width: 100vw;
-    height: 100%;
     position: relative;
     background-color: #CB0404;
     overflow: hidden;
@@ -209,7 +222,7 @@
     margin-bottom: 15px;
 }
 
-.ig-grid iframe{
+.ig-grid iframe {
     border-radius: 8px;
 }
 
@@ -223,9 +236,7 @@
 
 .story-container a {
     text-decoration: none;
-    /* quita subrayado */
     color: inherit;
-    /* hereda el color sin modificar */
     display: inline-block;
 }
 
@@ -418,14 +429,19 @@
 
 @media(max-width: 1366px) {
 
-    .content-title-home p {
-        font-size: 2.2rem;
+    .content-title-home {
+        width: 230px;
+        height: 230px;
     }
 
-    .section-ini img,
-    .section-ini p {
-        padding-right: 40px;
-        color: #CB0404;
+    .content-parahacer-acordeon {
+        height: 400px;
+    }
+
+    .box-container-tarjeta {
+        display: flex;
+        width: 100%;
+        height: 420px;
     }
 }
 
@@ -449,7 +465,7 @@
     }
 
     .content-title-home {
-        line-height: 3rem;
+        line-height: 1rem;
     }
 
     .box-container-tarjeta {
@@ -538,20 +554,20 @@
         margin-bottom: 20px;
     }
 
-    .content-logo-social img{
+    .content-logo-social img {
         width: 180px;
     }
 
-    .story-name{
+    .story-name {
         font-size: 0.7rem;
     }
 
-    .story-img{
+    .story-img {
         width: 40px;
         height: 40px;
     }
 
-    .story-ring{
+    .story-ring {
         width: 50px;
         height: 50px;
     }

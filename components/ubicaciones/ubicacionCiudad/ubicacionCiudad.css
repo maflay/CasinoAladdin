@@ -1,10 +1,15 @@
-
 .ubicaciones-o {
     width: 100%;
-    padding: 20px 0;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
 }
 
-.content-card-ubicacion {
+.content-card-ubicacion-ciudad {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,24 +18,33 @@
     padding: 0 20px;
 }
 
-.card-ubicacion {
+.card-ubicacion-ciudad {
     width: 400px;
     height: 430px;
     overflow: hidden;
     border-radius: 8px;
 }
 
-.card-ubicacion-img {
+.card-ubicacion-img-ciudad {
     width: 100%;
     height: 50%;
+    overflow: hidden;
 }
 
-.card-ubicacion-img img {
+.card-ubicacion-img-ciudad img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    -webkit-transition: -webkit-transform 0.4s ease;
 }
 
-.card-ubicacion-text {
+.card-ubicacion-ciudad:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card-ubicacion-text-ciudad {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,17 +55,17 @@
     overflow: hidden;
 }
 
-.card-ubicacion-text h3 {
+.card-ubicacion-text-ciudad h3 {
     color: #27314F;
     align-items: center;
 }
 
-.card-ubicacion-text p {
+.card-ubicacion-text-ciudad p {
     color: #27314F;
-    font-size: 0.78rem;
+    font-size: 0.7rem;
 }
 
-.card-ubicacion-text small {
+.card-ubicacion-text-ciudad small {
     color: gray;
     font-size: 0.65rem;
 }
@@ -63,17 +77,27 @@
 }
 
 
-.card-ubicacion-text>small>a {
+.card-ubicacion-text-ciudad>small>a {
     color: gray;
     transition: all 0.4s ease;
 }
 
-.card-ubicacion:hover h3 {
+.card-ubicacion-ciudad:hover h3 {
     color: #CB0404;
 }
 
 
-.card-ubicacion-text>small>a:hover {
+.card-ubicacion-text-ciudad>small>a:hover {
     text-decoration: none;
     color: #CB0404;
+}
+
+.content-a-card-ciudad {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-a-card-ciudad a {
+    display: flex;
+    justify-content: flex-end;
 }

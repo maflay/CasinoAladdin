@@ -82,7 +82,6 @@ function infoSendContacto() {
           },
         });
       }, 2000);
-      console.log("entro a la supuesta creacion");
     })
     .catch((error) => {
       console.warn(error);

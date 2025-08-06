@@ -190,12 +190,12 @@
 @media (max-width: 1320px) {
     .Navbar {
         transition: background-color 0.3s ease;
-        background-color: red;
+        background-color: #CB0404;
         height: 35px;
     }
 
     .Navbar.navbar-scrolled {
-        background-color: red;
+        background-color: #CB0404;
     }
 
     .Navbar .nav-items {

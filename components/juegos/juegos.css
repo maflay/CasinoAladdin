@@ -95,7 +95,7 @@
     z-index: -1;
     height: 100%;
     position: absolute;
-    background-image: url(/resources/ruleta-juego.png);
+    background-image: url(/resources/juego-ruleta-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,7 +106,7 @@
     z-index: -1;
     height: 100%;
     position: absolute;
-    background-image: url(/resources/blackjack-juego.png);
+    background-image: url(/resources/juego-blakcjack.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -117,7 +117,7 @@
     z-index: -1;
     height: 100%;
     position: absolute;
-    background-image: url(/resources/baccarat-juego.png);
+    background-image: url(/resources/juego-baccarat-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,7 +128,7 @@
     z-index: -1;
     height: 100%;
     position: absolute;
-    background-image: url(/resources/ruletaE-juego.png);
+    background-image: url(/resources/juego-ruleta-4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -139,7 +139,7 @@
     z-index: -1;
     height: 100%;
     position: absolute;
-    background-image: url(/resources/hipodromo-juego.png);
+    background-image: url(/resources/juego-hipodromo.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -150,7 +150,7 @@
     z-index: -1;
     height: 100%;
     position: absolute;
-    background-image: url(/resources/dados-juego.png);
+    background-image: url(/resources/juegos-bingo-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
