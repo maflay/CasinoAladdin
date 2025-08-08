@@ -20,6 +20,11 @@
     align-items: center;
     overflow: hidden;
     cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.content-juegos-casinos-card:hover h1{
+    color: #CB0404;
 }
 
 .content-juegos-casinos-card .content-juego-img {

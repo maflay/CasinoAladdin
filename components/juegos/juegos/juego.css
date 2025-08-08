@@ -1,45 +1,31 @@
-.fondo-game {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.fondo-game img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
 .title-game {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 85vh;
-    background-image: url(/resources/fondo-blanco-abstracto.jpg);
+    height: auto;
+    /* background-image: url(/resources/fondo-blanco-abstracto.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
-.title-game h1 {
-    color: black;
-}
 
 .start-game-text {
+    width: 100%;
     text-align: center;
-    padding: 100px 20px;
 }
 
-.type1-h1 {
-    font-size: 4rem;
-    color: black;
-    margin: 0;
+.content-img-game {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.content-img-game img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .acerca-game {
@@ -48,12 +34,92 @@
 }
 
 .content-desc-game {
-    padding: 20px;
+    padding: 5px 20px;
 }
 
-.desc-game-text p {
-    font-weight: bold;
-    color: black;
+.desc-game-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.content-desc-game-text {
+    display: flex;
+}
+
+.content-desc-game-text p {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+
+.content-card-game {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-game-info {
+    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.img-card-game {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.img-card-game img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.img-card-game img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+.text-card-game {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: start;
+    background-color: #fff;
+    position: relative;
+    text-align: start;
+}
+
+.text-card-game>span {
+    color: #7c7c7c;
+    font-size: 0.7rem;
+}
+
+.content-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 3px;
+}
+
+.content-icon svg {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    color: rgb(209, 209, 209);
 }
 
 .content-media-game {
@@ -96,6 +162,12 @@
     height: 350px;
 }
 
+@media(max-width:1366px) {
+    .card-game-info {
+        width: 400px;
+    }
+}
+
 @media (max-width: 768px) {
     .card-media-game {
         flex-direction: column;
@@ -113,5 +185,27 @@
     .card-media-r iframe {
         width: 100%;
         height: 200px;
+    }
+
+    .start-game-text h1 {
+        padding-top: 20px;
+    }
+
+    .content-desc-game {
+        padding: 0;
+    }
+
+    .content-desc-game-text {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .content-desc-game-text p {
+        border-top: #000 1px solid;
+        width: 100%;
+    }
+
+    .content-card-game {
+        width: 100%;
     }
 }

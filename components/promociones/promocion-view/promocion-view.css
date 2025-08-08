@@ -72,7 +72,7 @@ a {
 }
 
 .card-promo h2 {
-  color: #171c1e;
+  color: #27314F;
 }
 
 .card-promo:hover h2 {
@@ -82,7 +82,7 @@ a {
 .promocion-container .card-content p {
   padding-top: 10px;
   font-size: 0.7rem;
-  color: #1f253a;
+  color: #27314F;
   text-align: start;
 }
 

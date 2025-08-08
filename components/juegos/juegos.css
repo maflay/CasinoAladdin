@@ -167,6 +167,16 @@
     background-size: cover;
 }
 
+.fondo-bingoDi {
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    background-image: url(/resources/dinamica.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .content-text-entretenimiento {
     display: flex;
