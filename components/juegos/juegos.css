@@ -4,7 +4,8 @@
     justify-content: center;
     align-content: center;
     height: 500px;
-    background-color:  #CB0404;
+    background-color: #171c1e;
+
 }
 
 .info-game-entretenimiento {
@@ -54,237 +55,103 @@
         0 0 1px #fff,
         0 0 1px #fff,
         0 0 1px #fff,
-        0 0 1px #fff;
+        0 0 1px #ffff;
 }
 
-.video-container-entretenimiento {
-    position: relative;
+.content-card-juegos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 70vh;
-    overflow: hidden;
-    margin-bottom: 10px;
+    padding: 20px 0;
+    gap: 32px;
 }
 
-.background-video-entretenimiento {
+.card-juegos:hover .card-juegos-text>h2{
+    color: #CB0404;
+}
+
+.card-juegos:hover .card-juegos-img img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.card-juegos {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 350px;
+}
+
+.card-juegos-img {
+    width: 300px;
+    height: 175px;
+    overflow: hidden;
+}
+
+.card-juegos-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    pointer-events: none;
+      transition: transform 0.4s ease;
+  -webkit-transition: -webkit-transform 0.4s ease;
 }
 
-
-.video-container-entretenimiento::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: 2;
-    pointer-events: none;
+.card-juegos-img img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-.fondo-ruleta {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/juego-ruleta-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-blackjack {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/juego-blakcjack.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-baccarat {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/juego-baccarat-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-ruletaE {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/juego-ruleta-4.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-hipodromo {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/juego-hipodromo.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-bingoE {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/juegos-bingo-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-maquinas-indi {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/maquina-individual-juego.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-bingoDi {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/dinamica.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.content-text-entretenimiento {
+.card-juegos-text {
     display: flex;
-    justify-content: start;
-    align-content: center;
-    text-align: center;
+    flex-direction: column;
     position: relative;
-    height: 100%;
-    z-index: 3;
+    width: 300px;
+    height: 175px;
+    padding: 20px 0;
 }
 
-.content-info-entretenimiento {
-    display: flex;
+.card-juegos-text>h2 {
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
+
+.card-juegos-text p {
+    font-size: 0.7rem;
+    color: rgb(153, 153, 153);
+}
+
+.divider-card {
+    position: absolute;
+    bottom: 40px;
     width: 100%;
-    height: 100%;
+    height: 1px;
+    background-color: #c2c2c2;
 }
 
-.content-info-reverse-entretenimiento {
-    flex-direction: row-reverse;
-}
-
-.content-desc-entretenimiento {
+.content-btn-game {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    width: 50%;
-    height: 100%;
-    color: white;
+    justify-content: end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
-
-.content-desc-entretenimiento p {
-    text-shadow: 2px 2px 2px #171c1e;
-    font-size: 1.2rem;
-}
-
-
-.content-text-title-entretenimiento {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 50%;
-    height: 100%;
-}
-
-.content-card-title-entretenimiento {
-    width: auto;
-    text-align: center;
-    height: auto;
-    padding: 20px;
-}
-
-.content-card-title-entretenimiento h2{
-    color: #fff;
-}
-
 
 @media (max-width:768px) {
-
-    .content-banner-entretenimiento {
-        height: 40vh;
+    .card-juegos {
+        width: 90%;
+        border-radius: 15px;
     }
 
-    .content-info-reverse-entretenimiento {
-        flex-direction: row;
+    .card-juegos-img {
+        width: 100%;
     }
 
+    .card-juegos-text {
+        width: 100%;
+    }
     .section-mesas-entretenimiento {
         line-height: 2rem;
-    }
-
-    .content-info-membresia-entretenimiento {
-        flex-direction: column;
-    }
-
-    .card-view-entretenimiento {
-        width: 100%;
-    }
-
-    .card-view-entretenimiento img {
-        width: 90%;
-    }
-
-    .info-card-entretenimiento {
-        width: 100%;
-    }
-
-    .actions-card-entretenimiento {
-        width: 100%;
-    }
-
-    .content-info-entretenimiento {
-        flex-direction: column-reverse;
-    }
-
-    .content-desc-entretenimiento {
-        width: 100%;
-    }
-
-    .content-text-title-entretenimiento {
-        width: 100%;
-    }
-
-
-
-    .video-container-entretenimiento {
-        padding: 40px;
-        height: auto;
     }
 }

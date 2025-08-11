@@ -187,7 +187,7 @@
 }
 
 
-@media (max-width: 1320px) {
+@media (max-width: 980px) {
     .Navbar {
         transition: background-color 0.3s ease;
         background-color: #CB0404;

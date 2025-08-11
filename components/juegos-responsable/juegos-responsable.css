@@ -45,13 +45,18 @@ h2 {
 }
 
 .section-que-es-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     text-align: center;
     width: 50%;
+    overflow: hidden;
 }
 
 .section-que-es-img img {
     width: 50%;
-    height: 100%;
+    object-fit: cover;
 }
 
 .section-que-es-text {
@@ -157,11 +162,12 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 50%;
+    overflow: hidden;
 }
 
 .section-factores-riesgos-img img {
     width: 50%;
-    height: 100%;
+    object-fit: cover;
 }
 
 .section-autoexclusion {
@@ -347,6 +353,16 @@ h2 {
 .content-brand-1 a {
     width: 100%;
     text-align: center;
+}
+
+@media(max-width:1366px) {
+    .text-juego-resposble p {
+        font-size: 0.7rem;
+    }
+
+    .section-que-es-text p {
+        font-size: 0.8rem;
+    }
 }
 
 

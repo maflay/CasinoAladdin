@@ -1,4 +1,3 @@
-
 .section-juegos-casinos {
     text-align: center;
 }
@@ -23,7 +22,7 @@
     transition: all 0.4s ease;
 }
 
-.content-juegos-casinos-card:hover h1{
+.content-juegos-casinos-card:hover h1 {
     color: #CB0404;
 }
 
@@ -65,4 +64,22 @@
 
 .content-juegos-casinos-card .content-juegos-text a:hover {
     color: #CB0404;
+}
+
+@media(max-width:1366px) {
+
+    .content-juegos-casinos-card {
+        width: 290px;
+        height: 250px;
+    }
+}
+
+@media(max-width:768px) {
+    .content-juegos-casinos{
+        gap: 10px;
+    }
+    .content-juegos-casinos-card {
+        width: 100%;
+        height: auto;
+    }
 }

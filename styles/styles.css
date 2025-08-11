@@ -105,7 +105,7 @@ html {
     font-weight: 650;
     -webkit-text-stroke-color: #CB0404;
     stroke: #CB0404;
-    font-family: 'lovelace',sans-serif !important;
+    font-family: 'lovelace', sans-serif !important;
 }
 
 .type4-h1 {
@@ -114,7 +114,7 @@ html {
     font-weight: 650;
     -webkit-text-stroke-color: #CB0404;
     stroke: #CB0404;
-    font-family: 'Quicksand',sans-serif !important;
+    font-family: 'Quicksand', sans-serif !important;
 }
 
 
@@ -264,6 +264,27 @@ html {
         padding: 0 20px;
         position: relative;
     }
+
+    .type1-h1 {
+        font-size: 40px;
+    }
+
+    .type1-h1-bold {
+        font-size: 65px;
+    }
+
+    .type2-h1 {
+        font-size: 25px;
+    }
+
+    .type3-h1 {
+        font-size: 15px;
+    }
+
+    .type4-h1 {
+        font-size: 15px;
+    }
+
 }
 
 

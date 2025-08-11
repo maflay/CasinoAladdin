@@ -166,12 +166,20 @@
     .card-game-info {
         width: 400px;
     }
+
+    .img-card-game{
+        height: 205px;
+    }
 }
 
 @media (max-width: 768px) {
     .card-media-game {
         flex-direction: column;
         height: auto;
+    }
+
+    .content-img-game{
+        height: 200px;
     }
 
     .card-media-l {
@@ -207,5 +215,9 @@
 
     .content-card-game {
         width: 100%;
+    }
+
+     .img-card-game{
+        height: 250px;
     }
 }

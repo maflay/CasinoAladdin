@@ -318,8 +318,13 @@
     width: 100%;
 }
 
-.content-logo-social img {
-    width: 300px;
+
+.logo-inst-social-media {
+    width: 50px;
+}
+
+.logo-casino-social-media {
+    width: 250px;
 }
 
 .content-parahacer-acordeon {
@@ -434,6 +439,38 @@
         height: 230px;
     }
 
+    .card-ubicacion {
+        width: 350px;
+    }
+
+    .card-ubicacion-text p {
+        font-size: 0.55rem;
+    }
+
+    .card-ubicacion-text small {
+        font-size: 0.55rem;
+    }
+
+
+    .logo-inst-social-media {
+        width: 30px;
+    }
+
+    .logo-casino-social-media {
+        width: 150px;
+    }
+
+    .story-ring{
+        width: 55px;
+        height: 55px;
+    }
+
+
+    .story-img{
+        width: 100%;
+        height: 100%;
+    }
+
     .content-parahacer-acordeon {
         height: 400px;
     }
@@ -466,6 +503,19 @@
 
     .content-title-home {
         line-height: 1rem;
+    }
+
+    .card-ubicacion {
+        width: 100%;
+    }
+
+
+    .card-ubicacion-text p {
+        font-size: 0.7rem;
+    }
+
+    .card-ubicacion-text small {
+        font-size: 0.7rem;
     }
 
     .box-container-tarjeta {
@@ -555,9 +605,6 @@
         margin-bottom: 20px;
     }
 
-    .content-logo-social img {
-        width: 180px;
-    }
 
     .story-name {
         font-size: 0.7rem;
