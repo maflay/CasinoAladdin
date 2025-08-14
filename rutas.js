@@ -89,6 +89,11 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicaciones.css",
     js: "/components/ubicaciones/ubicaciones.js",
   },
+    casinomallplazabarra: {
+    html: "/components/ubicaciones/barranquilla/mallplazabar.html",
+    css: "/components/ubicaciones/ubicaciones.css",
+    js: "/components/ubicaciones/ubicaciones.js",
+  },
    casinomonteria: {
     html: "/components/ubicaciones/monteria/monteria.html",
     css: "/components/ubicaciones/ubicaciones.css",
@@ -231,6 +236,11 @@ const rutasLimpias = {
   },
   ubicacionBogota: {
     html: "/components/ubicaciones/ubicacionCiudad/ubicacionBogota.html",
+    css: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.css",
+    js: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.js",
+  },
+    ubicacionBarranquilla: {
+    html: "/components/ubicaciones/ubicacionCiudad/ubicacionBarranquilla.html",
     css: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.css",
     js: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.js",
   },
