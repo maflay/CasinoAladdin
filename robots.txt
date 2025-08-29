@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://casinoaladdin.netlify.app/sitemap.xml

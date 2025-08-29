@@ -3,6 +3,7 @@
   const btnTomapComomitierra = document.getElementById("toMapCosmitierra");
   const btnTojuegos = document.getElementById("toJuegos");
   const btntoDragonfenix = document.getElementById("toDragonfenix");
+  const btntoMallPlazaBarran = document.getElementById("toMallPlazaBarran");
   const btntoSeptima = document.getElementById("toSeptima");
   const btntoTequendama = document.getElementById("toTequendama");
   const btntoCalima = document.getElementById("toCalima");
@@ -40,6 +41,12 @@
       ),
         "_blank";
     });
+  }
+
+  if(btntoMallPlazaBarran){
+btntoMallPlazaBarran.addEventListener("click",()=> {
+  window.open("https://www.google.com/maps/place/Centro+Comercial+Mallplaza+Buenavista/@11.0161995,-74.8283157,17z/data=!4m6!3m5!1s0x8ef42c4cd175908d:0x9b9bfcb63575d493!8m2!3d11.0150707!4d-74.8277407!16s%2Fg%2F11c5xsk0vh?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"), "_blank";
+});
   }
 
   if (btntoSeptima) {

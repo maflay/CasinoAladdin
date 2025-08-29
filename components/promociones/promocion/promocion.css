@@ -74,6 +74,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
+    color: #636363;
 }
 
 .container-termi h1 {
@@ -91,19 +92,24 @@
     font-size: 20px;
 }
 
-.container-termi ul {
+.container-termi strong {
+    color: black;
+}
+
+.container-termi ul,
+.container-termi ol {
     padding-left: 20px;
 }
 
-.container-termi ul li {
+.container-termi ul li,
+.container-termi ol li {
     margin-bottom: 8px;
 }
 
-.container-termi .nota {
-    font-size: 14px;
-    color: #666;
-    margin-top: 20px;
+.note {
+    color: rgba(128, 128, 128, 0.733);
 }
+
 
 .to-promo {
     display: flex;
@@ -127,12 +133,12 @@
     transition: background 0.2s ease;
 }
 
-.to-promo .next-to-promo img{
+.to-promo .next-to-promo img {
     width: 50px;
     margin-left: 10px;
 }
 
-.to-promo .next-to-promo h2{
+.to-promo .next-to-promo h2 {
     color: white;
 }
 
@@ -294,7 +300,7 @@ td {
 
     .terminos-condiciones h1 {
         padding-bottom: 20px;
-}
+    }
 
 }
 
@@ -326,10 +332,10 @@ td {
         width: 100%;
     }
 
-    
+
     .terminos-condiciones h1 {
         padding-bottom: 0;
-}
+    }
 }
 
 @media (max-width: 389px) {
@@ -337,5 +343,4 @@ td {
         font-size: 1rem;
         font-weight: 700;
     }
-
 }

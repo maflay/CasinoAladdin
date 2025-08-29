@@ -86,6 +86,12 @@ a {
   text-align: start;
 }
 
+.content-btn-promo{
+width: 100%;
+text-align: end;margin-top: 20px;
+}
+
+
 .content-a {
   display: flex;
   justify-content: center;
