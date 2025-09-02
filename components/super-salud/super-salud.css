@@ -1,0 +1,48 @@
+.content_info_super_salud{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    padding: 20px 0 0;
+}
+
+.content_card_s_s{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    gap: 30px;
+}
+
+.card_s_s{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 260px;
+    background-color: #CB0404;
+    border-radius: 8px;
+}
+
+.card_s_s>img,
+.card_s_s>h2{
+    margin-bottom: 25px;
+}
+
+.card_s_s>img{
+    width: 200px;
+}
+
+.card_s_s>a{
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.card_s_s>a:hover{
+    color: rgb(202, 202, 202);
+}

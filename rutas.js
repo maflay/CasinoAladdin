@@ -273,5 +273,10 @@ const rutasLimpias = {
     html:"/components/ubicaciones/cali/mallplazacali.html",
     css:"/components/ubicaciones/ubicaciones.css",
     js:"/components/ubicaciones/ubicaciones.js",
+  },
+    supersalud:{
+    html:"/components/super-salud/super-salud.html",
+    css:"/components/super-salud/super-salud.css",
+    js:"/components/super-salud/super-salud.js",
   }
 };
