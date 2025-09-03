@@ -47,6 +47,7 @@
 .content-desc-casino p {
     width: 50%;
     color: #171c1e;
+    font-size: 1.6rem;
 }
 
 .btn-ubicacion {
@@ -101,7 +102,7 @@
 .content-info-col h3,
 .content-info-col h2 {
     color: #171c1e;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     padding: 0 10px;
 }
 
@@ -318,7 +319,6 @@
     .content-info-col h3,
     .content-info-col h2 {
         color: #171c1e;
-        font-size: 0.7rem;
         padding: 0 5px;
     }
 
@@ -391,7 +391,6 @@
     .content-info-col h3,
     .content-info-col h2 {
         color: #171c1e;
-        font-size: 1rem;
         padding: 0 5px;
     }
 

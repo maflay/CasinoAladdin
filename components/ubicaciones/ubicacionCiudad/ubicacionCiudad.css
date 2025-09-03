@@ -20,7 +20,7 @@
 
 .card-ubicacion-ciudad {
     width: 400px;
-    height: 430px;
+    height: 570px;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -58,16 +58,17 @@
 .card-ubicacion-text-ciudad h3 {
     color: #27314F;
     align-items: center;
+    font-size: 1.6rem;
 }
 
 .card-ubicacion-text-ciudad p {
     color: #27314F;
-    font-size: 0.7rem;
+    font-size: 1.6rem;
 }
 
 .card-ubicacion-text-ciudad small {
     color: gray;
-    font-size: 0.65rem;
+    font-size: 1.6rem;
 }
 
 .a {
@@ -110,8 +111,6 @@
     }
 
     .card-ubicacion-ciudad {
-        width: 300px;
-        height: 360px;
         overflow: hidden;
         border-radius: 8px;
     }
@@ -123,12 +122,10 @@
 
     .card-ubicacion-text-ciudad p {
         color: #27314F;
-        font-size: 0.55rem;
     }
 
     .card-ubicacion-text-ciudad small {
         color: gray;
-        font-size: 0.55rem;
     }
 
 
