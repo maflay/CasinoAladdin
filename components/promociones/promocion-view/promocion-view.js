@@ -35,12 +35,12 @@ function toSuperbingo(){
   navegarA("superbingo");
 }
 
-(()=> {
-document.getElementById("toBlackjackexpress").addEventListener("click", ()=> {
-  navegarA("blackjackexpress");
-})
+// (()=> {
+// document.getElementById("toBlackjackexpress").addEventListener("click", ()=> {
+//   navegarA("blackjackexpress");
+// })
 
-document.getElementById("toTrenpremios").addEventListener("click", ()=> {
-  navegarA("trenpremios");
-})
-})();
+// document.getElementById("toTrenpremios").addEventListener("click", ()=> {
+//   navegarA("trenpremios");
+// })
+// })();

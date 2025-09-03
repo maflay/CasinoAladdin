@@ -53,6 +53,7 @@
     display: flex;
     align-items: center;
     text-align: justify;
+    font-size: 1.6rem;
 }
 
 .content-card-game {
@@ -104,7 +105,7 @@
 
 .text-card-game>span {
     color: #7c7c7c;
-    font-size: 0.7rem;
+    font-size: 1.2rem;
 }
 
 .content-icon {

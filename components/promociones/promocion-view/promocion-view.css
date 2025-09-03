@@ -81,14 +81,15 @@ a {
 
 .promocion-container .card-content p {
   padding-top: 10px;
-  font-size: 0.7rem;
+  font-size: 1.6rem;
   color: #27314F;
   text-align: start;
 }
 
 .content-btn-promo{
 width: 100%;
-text-align: end;margin-top: 20px;
+text-align: end;
+margin-top: 20px;
 }
 
 
@@ -111,6 +112,7 @@ text-align: end;margin-top: 20px;
   transition: all 0.2s ease;
   cursor: pointer;
   width: auto;
+  font-size: 1.6rem;
 }
 
 .content-a a:hover {
@@ -217,7 +219,8 @@ text-align: end;margin-top: 20px;
   }
 
   .card-content h1 {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
+    color: #CB0404;
   }
 
   .card-content p {

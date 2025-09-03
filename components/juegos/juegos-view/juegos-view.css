@@ -60,6 +60,7 @@
     text-decoration: none;
     color: rgb(32, 32, 32);
     transition: all 0.3s ease;
+    font-size: 1.6rem;
 }
 
 .content-juegos-casinos-card .content-juegos-text a:hover {

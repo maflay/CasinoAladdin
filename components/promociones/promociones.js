@@ -69,6 +69,31 @@
     });
 })();
 
+(() => {
+  fetch("/components/juegos/juegos-view/juegos-view.html")
+    .then((res) => res.text())
+    .then((html) => {
+      const contenedor = document.getElementById("juegos-view-seccion");
+      contenedor.innerHTML = html;
+
+      // Cargar CSS dinámicamente
+      const estilo = document.createElement("link");
+      estilo.rel = "stylesheet";
+      estilo.href = "/components/juegos/juegos-view/juegos-view.css";
+      document.head.appendChild(estilo);
+
+      // Cargar script dinámicamente
+      const script = document.createElement("script");
+      script.src = "/components/juegos/juegos-view/juegos-view.js";
+      script.onload = () => {
+        if (typeof window.inicializarSliderUbicaciones === "function") {
+          window.inicializarSliderUbicaciones();
+        }
+      };
+      document.body.appendChild(script);
+    });
+})();
+
 
 function sliderhome() {
   const track = document.getElementById("sliderTrackC");

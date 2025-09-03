@@ -27,6 +27,10 @@
     margin-bottom: 50px;
 }
 
+.section-start-contacto-direccion>p{
+    font-size: 1.6rem;
+}
+
 .section-start-contacto-form {
     width: 60%;
     padding: 40px;
@@ -88,6 +92,7 @@
 
 .custom-select-container label {
     margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 
 .select-contacto {
@@ -168,6 +173,10 @@ select:focus {
     cursor: pointer;
     margin-right: 10px;
     vertical-align: middle;
+}
+
+.checkbox-wrapper label {
+    font-size: 1.2rem;
 }
 
 .checkbox-wrapper input[type="checkbox"]:checked {

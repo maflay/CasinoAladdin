@@ -37,7 +37,7 @@
 
 
 .content-title-home p {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: white;
 }
 
@@ -57,7 +57,7 @@
 
 .card-ubicacion {
     width: 400px;
-    height: 430px;
+    height: 520px;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -102,12 +102,12 @@
 
 .card-ubicacion-text p {
     color: #27314F;
-    font-size: 0.7rem;
+    font-size: 1.6rem;
 }
 
 .card-ubicacion-text small {
     color: gray;
-    font-size: 0.65rem;
+    font-size: 1.6rem;
 }
 
 .a {
@@ -206,7 +206,7 @@
 }
 
 .parahacer-left p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #CB0404;
 }
 
@@ -244,6 +244,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.story>p{
+    font-size: 1.6rem;
 }
 
 .story-ring {
@@ -338,13 +342,13 @@
     align-items: end;
 }
 
+
 .content-parahacer-acordeon:hover {
     width: 55%;
 }
 
 .content-parahacer-img {
     position: absolute;
-    z-index: -1;
     width: 100%;
     height: 100%;
 }
@@ -379,7 +383,7 @@
     box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
     pointer-events: none;
     transform: translateY(100%);
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 350;
     z-index: 3;
 }
@@ -392,12 +396,14 @@
     color: #CB0404;
 }
 
-.content-parahacer-acordeon p {
-    font-size: 1.2rem;
+.content-parahacer-acordeon>p {
+    font-size: 1.6rem;
     padding: 20px;
     position: absolute;
     color: white;
+    z-index: 2;
 }
+
 
 .close-section {
     display: flex;
@@ -430,6 +436,7 @@
 
 .close-rigth p {
     text-align: justify;
+    font-size: 1.6rem;
 }
 
 @media(max-width: 1366px) {
@@ -439,17 +446,8 @@
         height: 230px;
     }
 
-    .card-ubicacion {
-        width: 350px;
-    }
 
-    .card-ubicacion-text p {
-        font-size: 0.68rem;
-    }
 
-    .card-ubicacion-text small {
-        font-size: 0.6rem;
-    }
 
 
     .logo-inst-social-media {
@@ -460,13 +458,13 @@
         width: 150px;
     }
 
-    .story-ring{
+    .story-ring {
         width: 55px;
         height: 55px;
     }
 
 
-    .story-img{
+    .story-img {
         width: 100%;
         height: 100%;
     }
@@ -499,6 +497,7 @@
     .section-ini img,
     .section-ini p {
         padding-right: 0;
+        font-size: 2.2rem;
     }
 
     .content-title-home {
@@ -511,11 +510,11 @@
 
 
     .card-ubicacion-text p {
-        font-size: 0.7rem;
+        font-size: 1.6rem;
     }
 
     .card-ubicacion-text small {
-        font-size: 0.7rem;
+        font-size: 1.6rem;
     }
 
     .box-container-tarjeta {
@@ -605,6 +604,9 @@
         margin-bottom: 20px;
     }
 
+    .story>p{
+        font-size: 1.6rem;
+    }
 
     .story-name {
         font-size: 0.7rem;
