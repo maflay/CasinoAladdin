@@ -246,7 +246,7 @@
     align-items: center;
 }
 
-.story>p{
+.story>p {
     font-size: 1.6rem;
 }
 
@@ -446,10 +446,6 @@
         height: 230px;
     }
 
-
-
-
-
     .logo-inst-social-media {
         width: 30px;
     }
@@ -477,6 +473,10 @@
         display: flex;
         width: 100%;
         height: 420px;
+    }
+    
+    .content-title-home p{
+        font-size: 1.8rem;
     }
 }
 
@@ -604,7 +604,7 @@
         margin-bottom: 20px;
     }
 
-    .story>p{
+    .story>p {
         font-size: 1.6rem;
     }
 
