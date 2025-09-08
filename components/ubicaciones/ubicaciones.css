@@ -304,6 +304,15 @@
     border-radius: 20px;
 }
 
+.aladdin_ubicacion{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+}
+
 
 @media(max-width:1366px) {
     .content-info-casino .content-info-casino-img {
