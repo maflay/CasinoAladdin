@@ -266,21 +266,21 @@ input[name="slider-radioC"] {
 
 @media(max-width:1366px) {
     .beneficios-rigth h2 {
-        font-size: 1.8rem;
+        font-size: 2.8rem;
     }
 
     .beneficios-rigth {
-        font-size: 0.8rem;
+        font-size: 1.6rem;
     }
 }
 
 @media(max-width:880px) {
     .beneficios-rigth h2 {
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
 
     .beneficios-rigth {
-        font-size: 0.8rem;
+        font-size: 1.6rem;
     }
 }
 

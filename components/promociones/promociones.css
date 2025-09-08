@@ -108,22 +108,28 @@ input[name="slider-radioC"] {
     right: 0px;
 }
 
+.title_promo_page {
+        position: absolute;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .content-title-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    position: absolute;
-    width: 100%;
-    bottom: 80px;
-    text-align: center;
-    pointer-events: none;
+
 }
 
 
 .content-title-page h1 {
     color: #fff;
-    text-shadow: #fff 0 0 0px;
+    filter: drop-shadow(1px 1px 1px #000);
 }
 
 .content-title-page p{
