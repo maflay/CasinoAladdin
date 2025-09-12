@@ -48,10 +48,10 @@ function toPromociones() {
 }
 
 window.IG_POSTS ??= [
+  "https://www.instagram.com/p/DOhJgOdEqSe/",
   "https://www.instagram.com/p/DObPSNSDdRD/?img_index=1",
   "https://www.instagram.com/p/DOW8KVljYC-/",
   "https://www.instagram.com/p/DOOdM59DSVK/?img_index=1",
-  "https://www.instagram.com/p/DOKDcR4DQ5s/",
 ];
 
 function ensureInstagramScript() {

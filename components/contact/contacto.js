@@ -77,7 +77,6 @@ function infoSendContacto() {
     terminos: condicionesVal,
   };
 
-  console.log(data, "data");
 
   loader.style.display = "flex";
   fetch(url, {
@@ -111,6 +110,5 @@ function infoSendContacto() {
     })
     .catch((error) => {
       console.warn(error);
-      console.log("valiendo mierda");
     });
 }
