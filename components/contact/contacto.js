@@ -14,7 +14,6 @@ function infoSendContacto() {
   const condiciones = document.getElementById("condiciones");
   const ciudad = document.getElementById("ciudad");
   const loader = document.getElementById("loading");
-  loader.style.display = "flex";
   const nombreVal = nombre.value;
   const correoVal = correo.value;
   const numeroVal = numero.value;
@@ -35,6 +34,36 @@ function infoSendContacto() {
     second: "2-digit",
   });
 
+  if (!condiciones.checked) {
+    Swal.fire({
+      icon: "warning",
+      title: "Advertencia",
+      html: `Para poder enviar la información debes aceptar los terminos y condiciones, te invitamos a leer los <a target="_Blank" class="a_modal" href="#tratamiento_datos">Terminos y Condiciones</a>.`,
+      confirmButtonColor: "#1F253A",
+      customClass: {
+        popup: "mi-popup",
+        title: "mi-titulo",
+        confirmButton: "btn-Send mi-boton",
+      },
+    });
+    return;
+  }
+
+  if (
+    nombreVal == "" ||
+    correoVal == "" ||
+    numeroVal == "" ||
+    opcionVal == "" ||
+    descripcionVal == ""
+  ) {
+    Swal.fire({
+      icon: "warning",
+      title: "Campos en blanco",
+      html: "Antes de enviar tu información por favor completa el formulario.",
+    });
+    return;
+  }
+
   const [fecha, hora] = fechaCompleta.split(", ");
 
   const data = {
@@ -50,10 +79,7 @@ function infoSendContacto() {
 
   console.log(data, "data");
 
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 4000);
-
+  loader.style.display = "flex";
   fetch(url, {
     method: "POST",
     mode: "no-cors",
