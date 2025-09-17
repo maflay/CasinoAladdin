@@ -92,6 +92,13 @@
     font-size: 20px;
 }
 
+.container-termi h3 {
+    color: #000;
+    margin-bottom: -5px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
 .container-termi p{
     font-size: 1.6rem;
     color: #000;
@@ -104,12 +111,14 @@
 .container-termi ul,
 .container-termi ol {
     padding-left: 20px;
+    color: black;
 }
 
 .container-termi ul li,
 .container-termi ol li {
     margin-bottom: 8px;
     font-size: 1.6rem;
+    color: black;
 }
 
 .note {
