@@ -40,6 +40,8 @@
     });
   }
 
+  document.getElementById("next-to-hacemos-grande").addEventListener("click", ()=> navegarA("hacemosgrande"));
+
 })();
 
 function toPromos(){

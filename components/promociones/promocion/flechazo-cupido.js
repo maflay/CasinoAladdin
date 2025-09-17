@@ -1,6 +1,6 @@
-(()=>{
+(() => {
   const idpromo = 3;
-  console.log(idpromo,"idpromo");
+  console.log(idpromo, "idpromo");
 })();
 
 (() => {
@@ -13,12 +13,14 @@
       // Cargar CSS dinámicamente
       const estilo = document.createElement("link");
       estilo.rel = "stylesheet";
-      estilo.href = "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.css";
+      estilo.href =
+        "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.css";
       document.head.appendChild(estilo);
 
       // Cargar script dinámicamente
       const script = document.createElement("script");
-      script.src = "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.js";
+      script.src =
+        "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.js";
       script.onload = () => {
         if (typeof window.inicializarSliderUbicaciones === "function") {
           window.inicializarSliderUbicaciones();
@@ -28,8 +30,6 @@
     });
 })();
 
-
-
 (() => {
   const btnNext1 = document.getElementById("next-to-tren-premios");
 
@@ -38,8 +38,11 @@
       navegarA("matchperfecto");
     });
   }
+  document
+    .getElementById("next-to-hacemos-grande")
+    .addEventListener("click", () => navegarA("hacemosgrande"));
 })();
 
-function toPromos(){
+function toPromos() {
   navegarA("promociones");
 }

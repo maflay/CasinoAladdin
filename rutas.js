@@ -89,17 +89,17 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicaciones.css",
     js: "/components/ubicaciones/ubicaciones.js",
   },
-    casinomallplazabarra: {
+  casinomallplazabarra: {
     html: "/components/ubicaciones/barranquilla/mallplazabar.html",
     css: "/components/ubicaciones/ubicaciones.css",
     js: "/components/ubicaciones/ubicaciones.js",
   },
-   casinomonteria: {
+  casinomonteria: {
     html: "/components/ubicaciones/monteria/monteria.html",
     css: "/components/ubicaciones/ubicaciones.css",
     js: "/components/ubicaciones/ubicaciones.js",
   },
-     casinobuga: {
+  casinobuga: {
     html: "/components/ubicaciones/buga/buga.html",
     css: "/components/ubicaciones/ubicaciones.css",
     js: "/components/ubicaciones/ubicaciones.js",
@@ -239,7 +239,7 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.css",
     js: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.js",
   },
-    ubicacionBarranquilla: {
+  ubicacionBarranquilla: {
     html: "/components/ubicaciones/ubicacionCiudad/ubicacionBarranquilla.html",
     css: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.css",
     js: "/components/ubicaciones/ubicacionCiudad/ubicacionCiudad.js",
@@ -259,24 +259,29 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/blackjack-express.js",
   },
-     matchperfecto: {
+  matchperfecto: {
     html: "/components/promociones/promocion/match-perfecto.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/match-perfecto.js",
   },
-     flechazocupido: {
+  flechazocupido: {
     html: "/components/promociones/promocion/flechazo-cupido.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/flechazo-cupido.js",
   },
-  casinomallplazacali:{
-    html:"/components/ubicaciones/cali/mallplazacali.html",
-    css:"/components/ubicaciones/ubicaciones.css",
-    js:"/components/ubicaciones/ubicaciones.js",
+   hacemosgrande: {
+    html: "/components/promociones/promocion/hacemos-grande.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/hacemos-grande.js",
   },
-    supersalud:{
-    html:"/components/super-salud/super-salud.html",
-    css:"/components/super-salud/super-salud.css",
-    js:"/components/super-salud/super-salud.js",
-  }
+  casinomallplazacali: {
+    html: "/components/ubicaciones/cali/mallplazacali.html",
+    css: "/components/ubicaciones/ubicaciones.css",
+    js: "/components/ubicaciones/ubicaciones.js",
+  },
+  supersalud: {
+    html: "/components/super-salud/super-salud.html",
+    css: "/components/super-salud/super-salud.css",
+    js: "/components/super-salud/super-salud.js",
+  },
 };
