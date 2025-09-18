@@ -21,7 +21,6 @@
   if (btnTocasinos) {
     btnTocasinos.addEventListener("click", () => {
       navegarA("casinos");
-      console.log("prueba");
     });
   }
 

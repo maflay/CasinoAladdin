@@ -1,8 +1,3 @@
-(()=>{
-  const idpromo = 1;
-  console.log(idpromo,"idpromo");
-})();
-
 (() => {
   fetch("/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.html")
     .then((res) => res.text())
