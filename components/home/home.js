@@ -47,16 +47,14 @@ function toPromociones() {
   navegarA("promociones");
 }
 
-
-
-(()=> {
-
-const IG_FETCH_URL = "https://script.google.com/macros/s/AKfycbzpdTzpGkoR_2qUuJwUDR-y5wE2QCCWAxUdpNlfCXDl6PlcW9PALiCnA43zWuuqu8Y/exec";
+(() => {
+  const IG_FETCH_URL =
+    "https://script.google.com/macros/s/AKfycbyUUfvNpSQI8bSOZTO9mJ5IvQyVk3jz_U3E6Zu84j--eb3rbsE5vT_f5q6Don_2sxUl7w/exec";
 
   window.IG_POSTS = [];
-   const loaderLocal = document.getElementById("loader-local");
+  const loaderLocal = document.getElementById("loader-local");
 
-    loaderLocal.innerHTML = `
+  loaderLocal.innerHTML = `
       <div class="loader-local">
         <div class="spinner"></div>
         <p>Cargando multimedia ...</p>
@@ -64,34 +62,30 @@ const IG_FETCH_URL = "https://script.google.com/macros/s/AKfycbzpdTzpGkoR_2qUuJw
     `;
   // --- fetch posts desde Apps Script ---
   fetch(IG_FETCH_URL)
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       console.log("Respuesta Apps Script:", data);
 
-      let posts = [];
-      if (Array.isArray(data)) {
-        posts = data;
-      } else if (Array.isArray(data.data)) {
-        posts = data.data;
-      } else if (Array.isArray(data.posts)) {
-        posts = data.posts;
-      }
-
-      // Solo strings, por si vienen objetos {link:"..."}
-      posts = posts.reverse().slice(0,4).map(item =>
-        typeof item === "string" ? item : item.link || ""
-      );
+      // si data ya es un array [{url:"..."}, ...]
+      const posts = data
+      .reverse()
+        .slice(0 ,4) // 👈 copia para no mutar el array original
+        .map((item) => normalizeIgUrl(item.url));
 
       console.log("Posts normalizados:", posts);
 
       window.IG_POSTS = posts;
       renderInstagramEmbeds("ig-feed", window.IG_POSTS);
     })
-    .catch(err => console.error("Error cargando IG posts:", err));
+    .catch((err) => console.error("Error cargando IG posts:", err));
 
   // --- helpers ---
   function ensureInstagramScript() {
-    if (!document.querySelector('script[src^="https://www.instagram.com/embed.js"]')) {
+    if (
+      !document.querySelector(
+        'script[src^="https://www.instagram.com/embed.js"]'
+      )
+    ) {
       const s = document.createElement("script");
       s.src = "https://www.instagram.com/embed.js";
       s.async = true;
@@ -112,7 +106,6 @@ const IG_FETCH_URL = "https://script.google.com/macros/s/AKfycbzpdTzpGkoR_2qUuJw
   function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
     ensureInstagramScript();
 
-
     const container = document.getElementById(containerId);
     if (!container) return;
 
@@ -121,7 +114,10 @@ const IG_FETCH_URL = "https://script.google.com/macros/s/AKfycbzpdTzpGkoR_2qUuJw
     const invalid = normalized.filter((u) => !VALID_POST.test(u));
 
     if (invalid.length) {
-      console.warn("URLs IG omitidas (no son permalinks de post/reel/tv):", invalid);
+      console.warn(
+        "URLs IG omitidas (no son permalinks de post/reel/tv):",
+        invalid
+      );
     }
 
     container.innerHTML = valid
