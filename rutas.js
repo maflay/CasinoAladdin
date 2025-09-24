@@ -274,6 +274,16 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/hacemos-grande.js",
   },
+    halloweenmisterioso: {
+    html: "/components/promociones/promocion/halloweenmisterioso.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/halloweenmisterioso.js",
+  },
+  losnueveportales: {
+    html: "/components/promociones/promocion/losnueveportales.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/losnueveportales.js",
+  },
   casinomallplazacali: {
     html: "/components/ubicaciones/cali/mallplazacali.html",
     css: "/components/ubicaciones/ubicaciones.css",
