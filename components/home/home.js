@@ -64,7 +64,7 @@ function toPromociones() {
   fetch(IG_FETCH_URL)
     .then((res) => res.json())
     .then((data) => {
-      console.log("Respuesta Apps Script:", data);
+      // console.log("Respuesta Apps Script:", data);
 
       // si data ya es un array [{url:"..."}, ...]
       const posts = data
@@ -72,7 +72,7 @@ function toPromociones() {
         .slice(0 ,4) // 👈 copia para no mutar el array original
         .map((item) => normalizeIgUrl(item.url));
 
-      console.log("Posts normalizados:", posts);
+      // console.log("Posts normalizados:", posts);
 
       window.IG_POSTS = posts;
       renderInstagramEmbeds("ig-feed", window.IG_POSTS);
