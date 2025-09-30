@@ -15,23 +15,23 @@ function toDadosPoker() {
   navegarA("dadospoker");
 }
 
-function toMymawitepremia(){
-navegarA("mymawitepremia");
+function toMymawitepremia() {
+  navegarA("mymawitepremia");
 }
 
-function toCascadapremios(){
+function toCascadapremios() {
   navegarA("cascadapremios");
 }
 
-function toGanaya(){
+function toGanaya() {
   navegarA("ganaya");
 }
 
-function toBingolocura(){
+function toBingolocura() {
   navegarA("bingolocura");
 }
 
-function toSuperbingo(){
+function toSuperbingo() {
   navegarA("superbingo");
 }
 
@@ -44,3 +44,20 @@ function toSuperbingo(){
 //   navegarA("trenpremios");
 // })
 // })();
+
+(() => {
+  const solofechaCompleta = new Date().toLocaleString("es-CO", {
+    month: "long",
+  });
+
+  const cubo1 = document.getElementById("cubo1-ala");
+  const cubo2 = document.getElementById("cubo2-ala");
+
+  if (solofechaCompleta == "septiembre") {
+    cubo1.style.display = "flex";
+    cubo2.style.display = "none";
+  } else if (solofechaCompleta == "octubre") {
+    cubo1.style.display = "none";
+    cubo2.style.display = "flex";
+  }
+})();

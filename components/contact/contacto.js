@@ -5,6 +5,15 @@ document.querySelector(".fled").addEventListener("click", () => {
     .dispatchEvent(new MouseEvent("mousedown"));
 });
 
+  // const correoCali = document.getElementById("correoCali");
+  // const correoBarra = document.getElementById("correoBarra");
+  // const correoBogota = document.getElementById("correoBogota");
+  // const correoPereira = document.getElementById("correoPereira");
+  // correoCali.style.display = "none";
+  // correoBarra.style.display = "none";
+  // correoBogota.style.display = "none";
+  // correoPereira.style.display = "none";
+
 function infoSendContacto() {
   const nombre = document.getElementById("nombre");
   const correo = document.getElementById("correo");

@@ -12,7 +12,6 @@
 
 .promocion-container .card-view .content-card-promo {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   width: 100%;
@@ -86,10 +85,10 @@ a {
   text-align: start;
 }
 
-.content-btn-promo{
-width: 100%;
-text-align: end;
-margin-top: 20px;
+.content-btn-promo {
+  width: 100%;
+  text-align: end;
+  margin-top: 20px;
 }
 
 
@@ -188,6 +187,11 @@ margin-top: 20px;
   right: 5px;
 }
 
+@media(max-width: 1366px) {
+  .promocion-container .card-view .content-card-promo {
+    flex-wrap: wrap;
+  }
+}
 
 @media (max-width: 768px) {
   .promocion-container {
