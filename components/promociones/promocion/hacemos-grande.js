@@ -8,12 +8,6 @@ function toPromos() {
   navegarA("promociones");
 }
 
-confetti({
-  particleCount: 200,
-  spread: 70,
-  origin: { y: 0.6 },
-});
-
 function actionEfect() {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -41,4 +35,12 @@ function sparkleBurst(x, y, count = 20) {
   }
 }
 
-actionEfect();
+setTimeout(() => {
+  actionEfect();
+
+  confetti({
+    particleCount: 200,
+    spread: 70,
+    origin: { y: 0.6 },
+  });
+}, 800);
