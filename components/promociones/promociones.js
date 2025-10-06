@@ -214,3 +214,14 @@ function sliderhome() {
 
 
 sliderhome();
+
+window.addEventListener("scroll", function () {
+        const item = document.getElementById("halloween_item");
+        if (item) {
+          if (window.scrollY > 0) {
+            item.classList.add("mostrar");
+          } else {
+            item.classList.remove("mostrar");
+          }
+        }
+      });

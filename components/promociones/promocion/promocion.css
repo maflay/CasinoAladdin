@@ -30,6 +30,37 @@
     padding-top: 8%;
 }
 
+.content_head_grande {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content_modelo_hed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50%;
+}
+
+.content_modelo_hed img {
+    width: 300px;
+}
+
+.content_hed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.content_hed img {
+    width: 300px;
+}
+
 .promocion-content {
     display: flex;
     flex-direction: column;
@@ -99,7 +130,7 @@
     font-size: 20px;
 }
 
-.container-termi p{
+.container-termi p {
     font-size: 1.6rem;
     color: #000;
 }
@@ -205,7 +236,7 @@
     align-items: center;
 }
 
-.section-vigencia>h3{
+.section-vigencia>h3 {
     font-size: 1.6rem;
 }
 
@@ -307,6 +338,219 @@ td {
     margin-bottom: 10px;
 }
 
+.content_title_promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.section_content_promo_mes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px !important;
+    padding: 40px 0;
+    background-color: rgba(175, 175, 175, 0.212);
+    border-radius: 20px;
+    position: relative;
+}
+
+.content_1_promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content_1_promo img {
+    width: 400px;
+}
+
+.content_2_promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.content_2_promo ul {
+    margin-left: 10px;
+}
+
+.content_2_promo li {
+    margin-left: 20px;
+}
+
+.divider_promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1px;
+    background-color: #1F253A;
+    margin: 20px 0;
+}
+
+
+/* HALLOWEEN */
+
+.background_halloween_promo {
+    position: relative;
+    background-image: linear-gradient(180deg, #490000 , #49000071, #490000);
+    height: 750px;
+}
+
+.halloween_movil {
+    display: none;
+}
+
+.content_head_grand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.img_modelo {
+    position: relative;
+    left: 110px;
+    top: 87px;
+    width: 550px;
+}
+
+.content_grand_halloween {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white !important;
+    padding-top: 10%;
+}
+
+.content_grand_halloween img {
+    width: 600px;
+}
+
+.content_grand_halloween>h2 {
+    color: white;
+}
+
+.img_fantasma {
+    width: 40px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.img_fantasma img {
+    width: 100%;
+}
+
+.img_fantasma_1 {
+    top: 8px;
+    right: 8px;
+}
+
+.content_fantasma_hed {
+    position: absolute;
+    width: 250px;
+    pointer-events: none;
+    animation: img-transparent 2s infinite;
+}
+
+.content_fantasma_hed img {
+    width: 100%;
+}
+
+.fantasma_head_1 {
+    left: 20px;
+}
+
+.fantasma_head_2 {
+    right: 20px;
+}
+
+
+@keyframes img-transparent {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 0.4;
+    }
+
+    70% {
+        opacity: 0.3;
+    }
+
+    80% {
+        opacity: 0.2;
+    }
+
+    90% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle at 30% 30%, #fff, #ffe27a 45%, transparent 60%);
+    transform: translate(-50%, -50%) scale(.6);
+    animation: sparkle .6s ease-out forwards;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.3);
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1.25);
+    }
+}
+
 @media(max-width:1366px) {
     .to-promo .next-to-promo img {
         width: 10%;
@@ -317,6 +561,17 @@ td {
         padding-bottom: 20px;
     }
 
+    .content_1_promo img {
+        width: 280px;
+    }
+
+    .img_modelo {
+        left: 0;
+    }
+
+    .content_grand_halloween>img {
+        width: 480px;
+    }
 }
 
 
@@ -350,6 +605,27 @@ td {
 
     .terminos-condiciones h1 {
         padding-bottom: 0;
+    }
+
+    .section_content_promo_mes {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .content_fantasma_hed {
+        display: none;
+    }
+
+    .content_1_promo img {
+        width: 180px;
+    }
+
+    .background_halloween_promo {
+        display: none;
+    }
+
+    .halloween_movil {
+        display: flex;
     }
 }
 
