@@ -22,26 +22,26 @@
   align-items: center;
 }
 
-.footer .footer-logo>p{
+.footer .footer-logo>p {
   font-size: 1.6rem;
 }
 
-.footer .footer-logo img {
+.logo_footer {
   width: 200px;
 }
 
-.content-logos-legales{
+.content-logos-legales {
   display: flex;
   gap: 20px;
 }
 
-.content-logos-legales .content-logos-legales-img{
+.content-logos-legales .content-logos-legales-img {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.content-logos-legales .content-logos-legales-img img{
+.content-logos-legales .content-logos-legales-img img {
   width: 120px;
 }
 
@@ -75,6 +75,7 @@
   bottom: 0;
   right: 0;
   width: 100%;
+  padding: 26px 0;
 }
 
 .footer .footer-bottom p {
@@ -157,10 +158,10 @@
   padding: 20px 0;
 }
 
-.img-legal .img-vig{
-display: flex;
-justify-content: start;
-align-items: center;
+.img-legal .img-vig {
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .img-legal .img-vig img {
@@ -169,10 +170,10 @@ align-items: center;
 
 
 
-.img-legal .img-col{
-display: flex;
-justify-content: end;
-align-items: center;
+.img-legal .img-col {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .img-legal .img-col img {
@@ -187,10 +188,10 @@ align-items: center;
   padding: 20px;
 }
 
-.footer-logo-responsable-info small{
-color: rgb(236, 236, 236);
-font-size: 1rem;
-text-align: justify;
+.footer-logo-responsable-info small {
+  color: rgb(236, 236, 236);
+  font-size: 1rem;
+  text-align: justify;
 }
 
 .social-container {
@@ -206,7 +207,7 @@ text-align: justify;
   letter-spacing: 1px;
 }
 
-.icons{
+.icons {
   display: flex;
   gap: 10px;
 }
@@ -223,7 +224,25 @@ text-align: justify;
   color: #aaa;
 }
 
+.content_icono_abierto {
+  padding: 5px 0;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  padding: 20px 0;
+}
 
+.content_icono_abierto a {
+  text-decoration: none;
+}
+
+.content_icono_abierto:hover {
+  opacity: 0.7;
+}
+
+.icono_abierto {
+  width: 14px;
+  padding-left: 5px;
+}
 
 @media (max-width :1104px) {
   .footer {
@@ -247,6 +266,7 @@ text-align: justify;
 
   .footer .footer-bottom {
     margin-top: 20%;
+    padding: 0;
   }
 
 }
@@ -290,11 +310,6 @@ text-align: justify;
     width: 100%;
   }
 
-  .footer .footer-logo img {
-    width: 80%;
-    margin-bottom: 10px;
-  }
-
   .footer-section {
     text-align: center;
   }
@@ -319,10 +334,11 @@ text-align: justify;
   .footer .footer-bottom {
     text-align: center;
     margin-top: 20%;
+    padding: 0;
   }
 
-  .content-logos-legales .content-logos-legales-img img{
-  width: 100%;
-}
+  .content-logos-legales .content-logos-legales-img img {
+    width: 100%;
+  }
 
 }

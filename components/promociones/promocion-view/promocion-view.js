@@ -52,6 +52,8 @@ function toSuperbingo() {
 
   const cubo1 = document.getElementById("cubo1-ala");
   const cubo2 = document.getElementById("cubo2-ala");
+  cubo1.style.display = "none";
+  cubo2.style.display = "flex";
 
   if (solofechaCompleta == "septiembre") {
     cubo1.style.display = "flex";
