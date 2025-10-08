@@ -232,10 +232,11 @@
 }
 
 .content_icono_abierto a {
+  transition: all 0.4s ease;
   text-decoration: none;
 }
 
-.content_icono_abierto:hover {
+.content_icono_abierto a:hover {
   opacity: 0.7;
 }
 
