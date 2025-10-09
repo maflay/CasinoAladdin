@@ -82,6 +82,11 @@
   font-size: 1.6rem;
 }
 
+.footer .footer-bottom img {
+  width: 15px;
+  opacity: 1 !important;
+}
+
 .footer a {
   color: white;
   display: flex;
@@ -266,8 +271,8 @@
   }
 
   .footer .footer-bottom {
-    margin-top: 20%;
-    padding: 0;
+    /* margin-top: 20%; */
+    /* padding: 0; */
   }
 
 }
@@ -334,8 +339,8 @@
 
   .footer .footer-bottom {
     text-align: center;
-    margin-top: 20%;
-    padding: 0;
+    /* margin-top: 20%; */
+    /* padding: 0; */
   }
 
   .content-logos-legales .content-logos-legales-img img {

@@ -217,7 +217,7 @@ const rutasLimpias = {
   politicadatos: {
     html: "/components/institucional/politica-datos.html",
     css: "/components/institucional/politica.css",
-    js: "/components/institucional/politica.css",
+    js: "/components/institucional/politica.js",
   },
   nosotros: {
     html: "/components/nosotros/nosotros.html",
