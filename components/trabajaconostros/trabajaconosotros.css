@@ -1,0 +1,170 @@
+.content_main_tcn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 0 20px 0;
+}
+
+.content_head_tcn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
+}
+
+.content_title_talento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.content_title_talento h2 {
+    color: white;
+}
+
+.content_title_talento img {
+    width: 250px;
+}
+
+.people_talento_1 {
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    width: 250px;
+}
+
+.people_talento_2 {
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    width: 345px;
+}
+
+.card_contacto_talento {
+    background-image: linear-gradient(150deg, #e22e2e18 10%, #b4050521 90%);
+    width: 100%;
+    height: 400px;
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.card_contacto_talento h2 {
+    color: #e22e2e;
+}
+
+.card_content_img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+}
+
+.card_content_text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: start;
+    color: #e22e2e !important;
+    width: 50%;
+    position: relative;
+}
+
+.card_content_text a {
+    text-decoration: none;
+    color: #27314F;
+    transition: all 0.4s ease;
+}
+
+.card_content_text a:hover {
+    opacity: 0.7;
+}
+
+.content_msn_talento {
+    width: 500px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    color: black;
+    opacity: 0.7;
+    font-size: 1rem;
+}
+
+.content_asunto_talento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
+}
+
+.content_asunto_talento p,
+.content_asunto_talento h2 {
+    color: white;
+}
+
+@media(max-width:768px) {
+
+    .content_head_tcn {
+        height: 300px;
+    }
+
+    .content_title_talento {
+        bottom: 50px;
+    }
+
+    .card_contacto_talento {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .card_content_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card_content_text {
+        bottom: 30px;
+        width: 100%;
+    }
+
+    .card_content_text p {
+        font-size: 1.5rem;
+    }
+
+    .content_title_talento h2 {
+        font-size: 2rem;
+    }
+
+    .people_talento_1 {
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+        width: 100px;
+    }
+
+    .people_talento_2 {
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+        width: 125px;
+    }
+
+    .content_msn_talento {
+        width: 250px;
+        font-size: 1rem;
+        right: -10px;
+        bottom: -24px;
+    }
+}

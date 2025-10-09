@@ -400,7 +400,7 @@ td {
 
 .background_halloween_promo {
     position: relative;
-    background-image: linear-gradient(180deg, #490000 , #49000071, #490000);
+    background-image: linear-gradient(180deg, #490000, #49000071, #4900007c);
     height: 750px;
 }
 
@@ -476,19 +476,19 @@ td {
     right: 20px;
 }
 
-.content_msg_grand{
+.content_msg_grand {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 300px;
-    background-image: linear-gradient(150deg,  #e22e2eb7 10%, #b40505 90%);
+    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
     border-radius: 20px;
     color: white !important;
     font-size: 16px !important;
 }
 
-.content_msg_grand img{
+.content_msg_grand img {
     width: 200px;
 }
 
@@ -641,6 +641,18 @@ td {
 
     .halloween_movil {
         display: flex;
+    }
+
+    .content_msg_grand {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .content_msg_grand img {
+        width: 190px;
     }
 }
 

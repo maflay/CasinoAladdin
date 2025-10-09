@@ -269,12 +269,12 @@ const rutasLimpias = {
   //   css: "/components/promociones/promocion/promocion.css",
   //   js: "/components/promociones/promocion/flechazo-cupido.js",
   // },
-   hacemosgrande: {
+  hacemosgrande: {
     html: "/components/promociones/promocion/hacemos-grande.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/hacemos-grande.js",
   },
-    halloweenmisterioso: {
+  halloweenmisterioso: {
     html: "/components/promociones/promocion/halloweenmisterioso.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/halloweenmisterioso.js",
@@ -293,5 +293,10 @@ const rutasLimpias = {
     html: "/components/super-salud/super-salud.html",
     css: "/components/super-salud/super-salud.css",
     js: "/components/super-salud/super-salud.js",
+  },
+  trabajaconosotros: {
+    html: "/components/trabajaconostros/trabajaconosotros.html",
+    css: "/components/trabajaconostros/trabajaconosotros.css",
+    js: "/components/trabajaconostros/trabajaconosotros.js",
   },
 };
