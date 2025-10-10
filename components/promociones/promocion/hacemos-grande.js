@@ -1,13 +1,3 @@
-document
-  .getElementById("next-to-tren-premios")
-  .addEventListener("click", () => navegarA("matchperfecto"));
-document
-  .getElementById("next-to-flechazo-cupido")
-  .addEventListener("click", () => navegarA("flechazocupido"));
-function toPromos() {
-  navegarA("promociones");
-}
-
 function actionEfect() {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -71,3 +61,22 @@ setTimeout(() => {
       document.body.appendChild(script);
     });
 })();
+
+  document
+    .getElementById("next-to-halloween-misterioso")
+    .addEventListener("click", tomatchperfecto);
+
+  function tomatchperfecto() {
+    navegarA("halloweenmisterioso");
+  }
+  document
+    .getElementById("next-to-nueve-portales")
+    .addEventListener("click", toflechazocupido);
+
+  function toflechazocupido() {
+    navegarA("losnueveportales");
+  }
+
+  function toPromos() {
+    navegarA("promociones");
+  }

@@ -36,6 +36,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .content_modelo_hed {
@@ -400,8 +401,9 @@ td {
 
 .background_halloween_promo {
     position: relative;
-    background-image: linear-gradient(180deg, #490000, #49000071, #4900007c);
-    height: 750px;
+    background-image: linear-gradient(150deg, #b40505 10%, #e22e2eb7 90%);
+    margin-top: 100px;
+    height: 550px;
 }
 
 .halloween_movil {
@@ -419,22 +421,22 @@ td {
 .img_modelo {
     position: relative;
     left: 110px;
-    top: 87px;
+    top: -13px;
     width: 550px;
 }
 
 .content_grand_halloween {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     color: white !important;
-    padding-top: 10%;
 }
 
 .content_grand_halloween img {
+    border-radius: 45px;
     width: 600px;
 }
 
@@ -568,7 +570,7 @@ td {
 
 @media(max-width:1366px) {
     .to-promo .next-to-promo img {
-        width: 10%;
+        width: 50px;
         margin-left: 10px;
     }
 
@@ -581,11 +583,17 @@ td {
     }
 
     .img_modelo {
-        left: 0;
+        width: 420px;
+        left: 30px;
+        top: -10px;
+    }
+
+    .background_halloween_promo{
+        max-height: 420px;
     }
 
     .content_grand_halloween>img {
-        width: 480px;
+        width: 420px;
     }
 }
 
@@ -614,6 +622,9 @@ td {
     }
 
     .to-promo .next-to-promo {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
         width: 100%;
     }
 

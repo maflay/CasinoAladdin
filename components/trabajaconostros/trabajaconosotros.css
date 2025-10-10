@@ -49,7 +49,7 @@
 .card_contacto_talento {
     background-image: linear-gradient(150deg, #e22e2e18 10%, #b4050521 90%);
     width: 100%;
-    height: 400px;
+    height: 250px;
     display: flex;
     gap: 10px;
     position: relative;
@@ -114,6 +114,32 @@
     color: white;
 }
 
+@media(max-width:1366px) {
+
+    .content_head_tcn {
+        height: 420px;
+    }
+
+
+    .content_title_talento {
+        bottom: 70px;
+    }
+
+    .people_talento_1 {
+        position: absolute;
+        left: 60px;
+        bottom: 0;
+        width: 200px;
+    }
+
+    .people_talento_2 {
+        position: absolute;
+        right: 60px;
+        bottom: 0;
+        width: 280px;
+    }
+}
+
 @media(max-width:768px) {
 
     .content_head_tcn {
@@ -122,6 +148,10 @@
 
     .content_title_talento {
         bottom: 50px;
+    }
+
+    .content_title_talento h2 {
+        font-size: 2rem;
     }
 
     .card_contacto_talento {
@@ -143,9 +173,6 @@
         font-size: 1.5rem;
     }
 
-    .content_title_talento h2 {
-        font-size: 2rem;
-    }
 
     .people_talento_1 {
         position: absolute;
