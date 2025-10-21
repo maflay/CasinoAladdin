@@ -19,3 +19,22 @@ function toDowgame() {
     "_blank"
   );
 }
+
+// (()=> {
+
+  
+//   const selectElem = document.querySelector("select");
+//   const startBtn = document.querySelector("button");
+//   const divElem = document.querySelector(".content_item>div");
+//   const barra = document.getElementById("test_barra_inclinada");
+  
+//   function pruebaAnimacion() {
+//     barra.classList.remove("animar-inclinacion");
+//     void barra.offsetWidth; // reflow para reiniciar animación
+//     barra.classList.add("animar-inclinacion");
+//   }
+  
+//   setTimeout(() => {
+//     pruebaAnimacion();
+//   }, 120);
+// })();

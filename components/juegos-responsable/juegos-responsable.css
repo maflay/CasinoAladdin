@@ -1,3 +1,42 @@
+.head_juego_responsable {
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
+}
+
+.content_logo_info {
+    position: relative;
+}
+
+.content_logo_info>img {
+    position: relative;
+    bottom: 20px;
+    width: 320px;
+}
+
+.jr_logo_jr {
+    position: relative;
+}
+
+.jr_logo_jr img {
+    width: 320px;
+}
+
+.model_head_jr {
+    position: relative;
+    bottom: -40px;
+}
+
+.model_head_jr img {
+    width: 340px;
+}
+
 .section-start-juego-responsable {
     margin-top: 8%;
     display: flex;
@@ -38,7 +77,7 @@ h2 {
 
 .section-que-es {
     width: 100%;
-    background-color: #171c1e;
+    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
     height: auto;
     border-radius: 20px;
     padding: 20px;
@@ -68,6 +107,11 @@ h2 {
     width: 50%;
     text-align: center;
     font-size: 1.6rem;
+}
+
+.section-que-es-text>p{
+    color: rgb(231, 226, 183);
+    font-style: italic;
 }
 
 .text-juego-resposble p {
@@ -118,7 +162,7 @@ h2 {
     text-align: center;
     gap: 15px;
     width: 100%;
-    background-color: #171c1e;
+    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
     border-radius: 20px;
     height: auto;
     padding: 20px;
@@ -183,13 +227,17 @@ h2 {
     text-align: center;
     width: 100%;
     height: auto;
-    background-color: #171c1e;
+    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
     border-radius: 20px 20px 0 0;
     font-size: 1.6rem;
 }
 
 .section-autoexclusion p {
     color: white;
+}
+
+.section-autoexclusion button {
+    background-color: #171c1e;
 }
 
 .section-content-autoexclusion {
@@ -216,7 +264,7 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: #171c1e;
+    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
     padding: 20px;
     gap: 15px;
     margin-top: 20px;
@@ -313,14 +361,14 @@ h2 {
 }
 
 .content-ips a {
-    color: gray;
+    color: white;
     text-decoration: none;
     font-size: 1.6rem;
     transition: all 0.4s ease;
 }
 
 .content-ips a:hover {
-    color: white;
+    color: rgb(206, 206, 206);
 }
 
 .section-toma-control {
@@ -511,6 +559,35 @@ h2 {
     .content-brand-1 {
         width: 100%;
     }
+
+
+    .head_juego_responsable {
+        margin-top: 14%;
+    }
+
+    .content_logo_info {
+        position: absolute;
+        top: 50px;
+    }
+
+    .jr_logo_jr {
+        position: absolute;
+        left: 0;
+    }
+
+    .jr_logo_jr img {
+        width: 190px;
+    }
+
+    .model_head_jr {
+        position: absolute;
+        right: 5px;
+        bottom: -2px;
+    }
+
+    .model_head_jr img {
+        width: 270px;
+    }
 }
 
 @media (max-width: 378px) {
@@ -518,4 +595,144 @@ h2 {
         height: 69px;
     }
 
+}
+
+
+
+
+
+.test_barra_inclinada {
+    position: relative;
+    width: 300px;
+    height: 20px;
+    background-image: url(/resources/balanza_test.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 80px auto 50px;
+    transform-origin: center center;
+    transition: transform 0.4s ease;
+    overflow: visible;
+}
+
+/* extremos “pegados” a los bordes */
+.end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform-origin: center center;
+    color: white;
+    font-size: 16px;
+}
+
+/* izquierda y derecha */
+.end-left {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.end-right {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+/* animación de la barra */
+@keyframes inclinacion {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(-15deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animar-inclinacion {
+    animation: inclinacion 2s ease-in-out forwards;
+}
+
+/* --- compensar rotación: los items rotan al revés --- */
+.test_barra_inclinada.animar-inclinacion .end {
+    animation: compensar 2s ease-in-out forwards;
+}
+
+@keyframes compensar {
+    0% {
+        transform: translate(var(--x, 0), -50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(var(--x, 0), -50%) rotate(-15deg);
+    }
+
+    50% {
+        transform: translate(var(--x, 0), -50%) rotate(15deg);
+    }
+
+    75% {
+        transform: translate(var(--x, 0), -50%) rotate(-10deg);
+    }
+
+    100% {
+        transform: translate(var(--x, 0), -50%) rotate(0deg);
+    }
+}
+
+/* variables para la compensación según el lado */
+.end-left {
+    --x: -50%;
+    position: absolute;
+    top: -30px;
+    left: 25px;
+    border-radius: 50%;
+}
+
+.end-right {
+    --x: 50%;
+    position: absolute;
+    top: -30px;
+    right: 25px;
+    border-radius: 50%;
+}
+
+.content_animacion_burro {
+    width: 100%;
+    position: relative;
+    top: 60px;
+    text-align: center;
+}
+
+.content_animacion_burro button {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.base_barra {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+}
+
+.base_barra img {
+    width: 120px;
 }

@@ -1,0 +1,534 @@
+* {
+    color: white !important;
+
+}
+
+.blackjack_main {
+    width: 100vw;
+    background-image: linear-gradient(75deg, #011801 10%, #044d04e5 60%, #011801 100%);
+}
+
+.content_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.btn_rules {
+    position: absolute;
+    right: 0;
+}
+
+.blackjack_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 650px;
+    gap: 20px;
+}
+
+.title_game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.img_game {
+    width: 80px;
+    padding: 2px;
+}
+
+.board_blackjack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    /* background-color: rgba(7, 39, 26, 0.171); */
+    background-image: url(/resources/cartas/background-blackjack-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: #003d004d 10px solid;
+    padding: 20px;
+    gap: 15px;
+}
+
+.control_blackjack {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    width: 30%;
+    height: 100%;
+    padding: 20px 0;
+    background-color: rgba(66, 34, 34, 0.603);
+    border: 8px solid #7c2a24;
+    font-size: 10px !important;
+}
+
+.content_info_ficha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+}
+
+.content_info_ficha>small {
+    font-size: .8rem;
+    opacity: 0.7;
+    position: absolute;
+    top: 10px;
+}
+
+.content_fichas_menos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    max-height: 96px;
+    overflow-y: auto;
+    position: absolute;
+    top: 230px;
+}
+
+.content_fichas_menos img {
+    width: 40px;
+    transition: all 0.4s ease;
+}
+
+.content_fichas_menos img:hover {
+    scale: calc(1.1);
+    cursor: pointer;
+}
+
+.content_apuesta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 5px;
+    background-color: #1f253aab;
+    width: 100%;
+    height: 150px;
+}
+
+.mensaje_apuesta {
+    display: none;
+    font-size: 32px;
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #7c2a24d5;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+.content_fichas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    gap: 8px;
+    padding: 10px;
+}
+
+.content_fichas img {
+    width: 60px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.content_fichas img:hover {
+    transform: scale(1.1);
+}
+
+.content_fichas>span {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.7;
+}
+
+.content_btn_actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.content_board_dealer {
+    width: 100%;
+    height: 50%;
+    /* background-color: blueviolet; */
+    position: relative;
+    font-size: 2rem;
+}
+
+.content_board_dealer>h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.score {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+.board_dealer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.content_board_player {
+    width: 100%;
+    height: 50%;
+    /* background-color: brown; */
+    position: relative;
+    font-size: 2rem;
+}
+
+
+.content_board_player>h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.board_player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.card {
+    width: 90px;
+    height: 130px;
+    margin: 5px;
+    opacity: 0;
+    transform: translate(-220px, 0) scale(0.9) rotate(-10deg);
+    transition: transform 0.6s cubic-bezier(.25, .8, .25, 1), opacity 0.6s ease;
+    will-change: transform, opacity;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+}
+
+.card.back {
+    filter: brightness(0.8);
+}
+
+.card.volteando {
+    transform: rotateY(90deg);
+    transition: transform 0.4s ease;
+}
+
+.btn_disable {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.mi-popup {
+    background-color: #1F253A;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    width: 450px;
+}
+
+
+
+/* 
+.card-wrapper {
+  width: 90px;
+  height: 130px;
+  margin: 5px;
+  perspective: 800px;
+  display: inline-block;
+  position: relative;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
+}
+
+.card.show {
+  opacity: 1;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.card.volteada {
+  transform: rotateY(180deg);
+} */
+
+.body-lock {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* MODAL */
+
+.modal_reglas_blackjack {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.content_modal_blackjack {
+    display: flex;
+    width: 650px;
+    height: 100%;
+    max-height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+}
+
+.content_all_modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.content_head_modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.content_head_modal h2 {
+    color: #CB0404 !important;
+}
+
+.content_head_modal p {
+    position: absolute;
+    color: #1F253A !important;
+    right: 4px;
+    top: -30px;
+    font-size: 2rem;
+}
+
+.content_head_modal p:hover {
+    color: #1f253a9f !important;
+    cursor: pointer;
+}
+
+.content_info_juego {
+    width: 100%;
+    padding: 10px 0;
+    overflow-y: auto;
+}
+
+.content_info_juego ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #1F253A !important;
+    padding-left: 20px;
+}
+
+.content_info_juego li {
+    list-style: inherit;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #1F253A !important;
+    font-size: 1.6rem;
+}
+
+.content_info_juego h2 {
+    color: #CB0404 !important;
+}
+
+.content_info_juego p {
+    color: #011801 !important;
+    font-size: 1.6rem;
+}
+
+.content_mazo {
+    position: absolute;
+    left: 30px;
+}
+
+.content_mazo img {
+    width: 100px;
+}
+
+.zapato_cartas {
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+.zapato_cartas img {
+    width: 150px;
+}
+
+.view_pre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(75deg, #011801 10%, #044d04 60%, #011801 100%);
+}
+
+.view_pre img {
+    width: 350px;
+}
+
+#content_game_all {
+    display: none;
+}
+
+.content_juego_open {
+    padding: 80px 0;
+}
+
+@media(max-width: 1366px) {
+    .content_fichas {
+        margin-top: 130px;
+    }
+}
+
+@media(max-width: 768px) {
+    .content_head {
+        justify-content: start;
+    }
+
+    .img_game {
+        width: 40px;
+    }
+
+    .blackjack_content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .board_blackjack {
+        width: 100%;
+        height: 550px;
+    }
+
+    .content_board_dealer {
+        height: 100%;
+    }
+
+    .content_board_player {
+        height: 100%;
+    }
+
+    .control_blackjack {
+        width: 100%;
+    }
+
+    .content_btn_actions button {
+        font-size: 1rem !important;
+    }
+
+    .content_modal_blackjack {
+        max-height: 100vh;
+        border-radius: 0;
+    }
+
+    .content_info_juego {
+        padding-right: 20px;
+    }
+
+    .content_mazo {
+        position: absolute;
+        left: 0px;
+        opacity: 0.7;
+    }
+
+    .content_mazo img {
+        width: 50px;
+    }
+
+    .zapato_cartas {
+        position: absolute;
+        right: 0;
+    }
+
+    .zapato_cartas img {
+        width: 100px;
+    }
+
+    .view_pre {
+        position: relative;
+        top: 0;
+        height: 100vh;
+        padding: 10px;
+    }
+
+    .card {
+        width: 57px;
+        height: 80px;
+        margin: -3px;
+    }
+
+}

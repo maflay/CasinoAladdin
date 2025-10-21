@@ -1,0 +1,33 @@
+* {
+    color: white !important;
+}
+
+.content_main_baccarat {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(75deg, #011801 10%, #044d04e5 60%, #011801 100%);
+
+}
+
+.pre_view_bac{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    gap: 40px;
+    background-image: linear-gradient(75deg, #011801 10%, #044d04e5 60%, #011801 100%);
+}
+
+.content_game_all {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.pre_view_bac img {
+    width: 350px;
+}

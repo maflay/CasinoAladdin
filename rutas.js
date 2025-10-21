@@ -299,4 +299,14 @@ const rutasLimpias = {
     css: "/components/trabajaconostros/trabajaconosotros.css",
     js: "/components/trabajaconostros/trabajaconosotros.js",
   },
+  juegoBlackJack: {
+    html: "/components/juegos/juegosinteractivos/juegoBlackJack/juegoBlackJack.html",
+    css: "/components/juegos/juegosinteractivos/juegoBlackJack/juegoBlackJack.css",
+    js: "/components/juegos/juegosinteractivos/juegoBlackJack/juegoBlackjack.js",
+  },
+  juegoBaccarat: {
+    html: "/components/juegos/juegosinteractivos/juegoBaccarat/juegoBaccarat.html",
+    css: "/components/juegos/juegosinteractivos/juegoBaccarat/juegoBaccarat.css",
+    js: "/components/juegos/juegosinteractivos/juegoBaccarat/juegoBaccarat.js",
+  }
 };

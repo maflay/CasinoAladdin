@@ -201,7 +201,6 @@ body {
     will-change: transform, opacity;
 }
 
-
 .item {
     animation: aparecer 0.8s ease forwards;
 }
