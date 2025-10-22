@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Entrevista Digital</title>
+</head>
+
+<body>
+    <section id="content_main_e_digital" class="content_main_e_digital">
+        <div class="container">
+            <div class="content_img_entrevista">
+                <h2 class="type1-h1">Formulario Entrevista Digital</h2>
+            </div>
+            <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+            <br />
+            <div class="content_form_entrevista">
+                <p class="type2-h1">Estas preguntas son para identificarte.</p>
+                <span class="alert_preguntas_obligatorias">las preguntas con <strong
+                        class="pregunta_obligatoria">*</strong> son obligatorias.</span>
+                <br />
+                <div class="datos_personales">
+                    <span>Nombre<strong class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input id="nombre" placeholder="Nombre" type="text">
+                        <input id="apellido" placeholder="Apellidos" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>Cédula o documento de identidad<strong class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <select name="tipo_documento" id="tipo_documento">
+                            <option value="">Selecccionar...</option>
+                            <option value="cedula">Cedula de Ciudadania</option>
+                            <option value="cedula_extrajera">Documento extranjero</option>
+                            <option value="cedula_extrajera">Pasaporte</option>
+                            <option value="cedula_extrajera">Credenciales validas para votar</option>
+                        </select>
+                        <input id="num_documento" placeholder="Numero de Documento" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <div class="content_input_entrevista">
+                        <div class="content_campo_entre">
+                            <span>Fecha de Nacimiento<strong class="pregunta_obligatoria"> *</strong></span>
+                            <input id="fecha_nacimiento" placeholder="Fecha de nacimiento" type="date">
+
+                        </div>
+                        <div class="content_campo_entre">
+                            <span>Correo<strong class="pregunta_obligatoria"> *</strong></span>
+                            <input id="correo_entrevista" placeholder="Correo" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <div class="content_input_entrevista">
+                        <div class="content_campo_entre">
+                            <span>Ciudad<strong class="pregunta_obligatoria"> *</strong></span>
+                            <!-- <input id="ciudad_referencia" placeholder="Ciudad de referencia" type="text"> -->
+                            <select name="ciudad_referencia" id="ciudad_referencia">
+                                <option value="">Seleccionar...</option>
+                                <option value="cali">Cali</option>
+                                <option value="bogota">Bogotá</option>
+                                <option value="barranquilla">Barranquilla</option>
+                                <option value="pereira">Pereira</option>
+                                <option value="tulua">Tuluá</option>
+                                <option value="buga">Buga</option>
+                                <option value="monteria">Monteria</option>
+                            </select>
+                        </div>
+                        <div class="content_campo_entre">
+                            <span>Telefono<strong class="pregunta_obligatoria"> *</strong></span>
+                            <input id="tel_numero" placeholder="Telefono o WhatsApp" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>Cargo al que aspira<strong class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input style="width: 100%;" id="cargo_aspira" placeholder="Cargo al que aspira" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>Sube tu foto para reconocerte<strong class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="foto_entre view_btn_foto_entre" id="foto_entre" type="file">
+                        <div class="btn_tomar_foto">Subir / Tomar Foto</div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+            <br />
+            <div class="content_form_entrevista">
+                <p class="type2-h1">Formación Academica.</p>
+                <br />
+                <div class="datos_personales">
+                    <div class="content_input_entrevista">
+                        <div class="content_campo_entre">
+                            <span>Estudio Alcanzado<strong class="pregunta_obligatoria"> *</strong></span>
+                            <input id="ultimo_grado" placeholder="Último nivel de Estudios alcanzado" type="text">
+                        </div>
+                        <div class="content_campo_entre">
+                            <span>Institución Educativa<strong class="pregunta_obligatoria"> *</strong></span>
+                            <input id="institucion_entre" placeholder="Institución Educativa" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <div class="content_input_entrevista">
+                        <div class="content_campo_entre">
+                            <span>Profesión<strong class="pregunta_obligatoria"> *</strong></span>
+                            <input id="titulo_obt" placeholder="Profesión" type="text">
+                        </div>
+                        <div class="content_campo_entre">
+                            <span>Otros cursos relevantes<strong class="pregunta_obligatoria"> *</strong></span>
+                            <input id="cursos_obt" placeholder="Otros cursos relevantes" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+            <br />
+            <div class="content_form_entrevista">
+                <p class="type2-h1">Experiencia Laboral.</p>
+                <br />
+                <div class="datos_personales">
+                    <span>¿En qué empresa trabajó más recientemente?<strong class="pregunta_obligatoria">
+                            *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="ultimo_trabajo"
+                            placeholder="¿En qué empresa trabajó más recientemente?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Cuál era su cargo y funciones principales?<strong class="pregunta_obligatoria">
+                            *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="funciones_ultimo_trabajo"
+                            placeholder="¿Cuál era su cargo y funciones principales?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Cuánto tiempo laboró allí?<strong class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="tiempo_laborado" placeholder="¿Cuánto tiempo laboró allí?"
+                            type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Por qué motivo dejó su último empleo?<strong class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="motivo_ultimo_trabajo"
+                            placeholder="¿Por qué motivo dejó su último empleo?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>Mencione una experiencia laboral que considere destacada.</span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="exp_considerada" placeholder="Describa sus experiencias"
+                            type="text">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+            <br />
+            <div class="content_form_entrevista">
+                <p class="type2-h1">Competencias y habilidades.</p>
+                <br />
+                <div class="datos_personales">
+                    <span>¿Cuáles considera que son sus principales fortalezas?<strong class="pregunta_obligatoria">
+                            *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="fortalezas"
+                            placeholder="¿Cuáles considera que son sus principales fortalezas?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Qué aspectos cree que debe mejorar?</span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="aspecto_mejorar"
+                            placeholder="¿Qué aspectos cree que debe mejorar?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Qué herramientas o programas maneja con fluidez?</span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="uso_herramientas"
+                            placeholder="¿Qué herramientas o programas maneja con fluidez?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Cómo maneja el trabajo bajo presión?<strong class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="menejo_presion"
+                            placeholder="¿Cómo maneja el trabajo bajo presión?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Prefiere trabajar en equipo o de manera individual? ¿Por qué?<strong
+                            class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="trabajo_en_equipo"
+                            placeholder="¿Prefiere trabajar en equipo o de manera individual? ¿Por qué?" type="text">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+            <br />
+            <div class="content_form_entrevista">
+                <p class="type2-h1">Motivación y objetivos.</p>
+                <br />
+                <div class="datos_personales">
+                    <span>¿Qué lo motiva a postularse a este cargo?<strong class="pregunta_obligatoria">
+                            *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="motivo_postulacion"
+                            placeholder="¿Qué lo motiva a postularse a este cargo?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Qué espera lograr profesionalmente en los próximos dos años?</span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="logro_profesional"
+                            placeholder="¿Qué espera lograr profesionalmente en los próximos dos años?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Qué conoce de nuestra empresa o del sector?<strong class="pregunta_obligatoria">
+                            *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="saber_de_la_empresa"
+                            placeholder="¿Qué conoce de nuestra empresa o del sector?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Qué l@ hace diferente de otros candidatos?</span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="diferencia_otros"
+                            placeholder="¿Qué lo hace diferente de otros candidatos?" type="text">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+            <br />
+            <div class="content_form_entrevista">
+                <p class="type2-h1">Disponibilidad y condiciones.</p>
+                <br />
+                <div class="datos_personales">
+                    <span>¿Está actualmente empleado?<strong class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <select class="all_espace" name="actual_empleo" id="actual_empleo">
+                            <option value="">Seleccionar...</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Cuál es su disponibilidad para iniciar labores?<strong class="pregunta_obligatoria">
+                            *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="disponibilidad_inicio"
+                            placeholder="¿Cuál es su disponibilidad para iniciar labores?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Cuál es su aspiración salarial?<strong class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="aspiracion_salarial"
+                            placeholder="¿Cuál es su aspiración salarial?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Está dispuesto a trabajar fines de semana o turnos rotativos?<strong
+                            class="pregunta_obligatoria"> *</strong></span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="trabajar_fines"
+                            placeholder="¿Está dispuesto a trabajar fines de semana o turnos rotativos?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <span>¿Tiene disponibilidad para trasladarse o viajar?<strong class="pregunta_obligatoria">
+                            *</strong></span>
+                    <div class="content_input_entrevista">
+                        <select class="all_espace" name="disponible_traslado" id="disponible_traslado">
+                            <option value="">Seleccionar...</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+            <br />
+            <div class="content_form_entrevista">
+                <p class="type2-h1">Cierre.</p>
+                <br />
+                <div class="datos_personales">
+                    <span>¿Desea agregar algún comentario adicional?</span>
+                    <div class="content_input_entrevista">
+                        <input class="all_espace" id="comentario_adicional"
+                            placeholder="¿Desea agregar algún comentario adicional?" type="text">
+                    </div>
+                </div>
+                <div class="datos_personales">
+                    <div style="justify-content: start;" class="content_input_entrevista">
+                        <span class="all_espace">Autorización para tratamiento de datos personales<strong
+                                class="pregunta_obligatoria"> *</strong>.</span>
+                        <input id="autorizo_entre" type="checkbox">
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+            <br />
+            <div class="content_btn_submit">
+                <button id="btn_send_entrevista" class="btn-design1">Enviar</button>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

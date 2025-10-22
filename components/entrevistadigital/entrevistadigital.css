@@ -1,0 +1,153 @@
+.content_main_e_digital {
+    position: relative;
+    width: 100%;
+}
+
+.content_img_entrevista {
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content_img_entrevista h2 {
+    color: #CB0404;
+}
+
+.content_form_entrevista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 16px !important;
+}
+
+.datos_personales {
+    width: 100%;
+    max-width: 1000px;
+    padding: 10px 0;
+}
+
+.content_input_entrevista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.content_campo_entre {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.content_main_e_digital select,
+.content_main_e_digital input {
+    width: 100%;
+    border-radius: 8px;
+    border: #eee solid 1px;
+    outline: none;
+    padding: 12px 8px;
+}
+
+.content_input_entrevista input:focus {
+    border: #aaaaaa solid 1px;
+}
+
+.all_espace {
+    width: 100% !important;
+}
+
+.content_btn_submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.alert_preguntas_obligatorias {
+    color: rgb(136, 136, 136);
+    font-size: 10px;
+}
+
+.pregunta_obligatoria {
+    color: #CB0404;
+}
+
+.mi-popup {
+    background-color: #1F253A;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    width: 450px;
+}
+
+.mi-titulo {
+    font-size: 4rem;
+}
+
+.mi-boton {
+    background-color: #efb810;
+    color: #1F253A;
+    border-radius: 10px;
+}
+
+.mi-boton:hover {
+    color: #efb810;
+    background-color: #1F253A;
+}
+
+.view_btn_foto_entre {
+    position: relative;
+    z-index: 2;
+}
+
+.btn_tomar_foto {
+    cursor: pointer;
+    width: auto;
+    height: 38px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 2px 10px;
+    pointer-events: none;
+}
+
+@media(max-width: 768px) {
+    .content_img_entrevista {
+        margin-top: 14%;
+    }
+
+    .content_form_entrevista>p {
+        text-align: center;
+    }
+
+    .content_input_entrevista {
+        flex-direction: column;
+    }
+
+    .content_input_entrevista>select,
+    .content_input_entrevista>input {
+        width: 100%;
+    }
+
+    .btn_tomar_foto{
+        display: none;
+    }
+}

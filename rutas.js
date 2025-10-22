@@ -308,5 +308,10 @@ const rutasLimpias = {
     html: "/components/juegos/juegosinteractivos/juegoBaccarat/juegoBaccarat.html",
     css: "/components/juegos/juegosinteractivos/juegoBaccarat/juegoBaccarat.css",
     js: "/components/juegos/juegosinteractivos/juegoBaccarat/juegoBaccarat.js",
-  }
+  },
+  // entrevistadigital: {
+  //   html: "/components/entrevistadigital/entrevistadigital.html",
+  //   css: "/components/entrevistadigital/entrevistadigital.css",
+  //   js: "/components/entrevistadigital/entrevistadigital.js",
+  // },
 };
