@@ -79,7 +79,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5, // activa cuando el 50% del elemento es visible
+    threshold: 0.2, // activa cuando el 50% del elemento es visible
   }
 );
 
