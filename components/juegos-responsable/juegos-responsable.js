@@ -19,6 +19,10 @@ function toDowgame() {
     "_blank"
   );
 }
+
+
+(()=> {
+
 const divElem = document.querySelector(".content_item>div");
 const mensaje_end_ = document.getElementById("mensaje_end_");
 const barra = document.getElementById("test_barra_inclinada");
@@ -79,7 +83,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.2, // activa cuando el 50% del elemento es visible
+    threshold: 0.5, // activa cuando el 50% del elemento es visible
   }
 );
 
@@ -107,3 +111,5 @@ if(content_logo_info) observer.observe(content_logo_info);
 //     pruebaAnimacion();
 //   }, 120);
 // })();
+
+})();

@@ -21,9 +21,7 @@
     "motivo_ultimo_trabajo"
   );
   const exp_considerada = document.getElementById("exp_considerada");
-  const experiencia_considerada = document.getElementById(
-    "fortalezas"
-  );
+  const experiencia_considerada = document.getElementById("fortalezas");
   const aspecto_mejorar = document.getElementById("aspecto_mejorar");
   const uso_herramientas = document.getElementById("uso_herramientas");
   const menejo_presion = document.getElementById("menejo_presion");
@@ -58,9 +56,9 @@
   const [fecha, hora] = fechaCompleta.split(", ");
   const loader = document.getElementById("loading");
 
-  let formulario = document.getElementById('content_main_e_digital');
+  let formulario = document.getElementById("content_main_e_digital");
   const url =
-    "https://script.google.com/macros/s/AKfycbyvPNBagTzfTGHVoza5QFStxdmZiiBJxga7q-NkRvc8KE0vcxCjNEUoIspqgvgp0uxZ/exec";
+    "https://script.google.com/macros/s/AKfycbxoFGhwkXwOjwtKpqJE4kO3H9LLO1eFhcoqMA39HQCa-evw6hxMkNp9vJ3k8cQ5zIY/exec";
 
   function fileToDataURL(file) {
     return new Promise((resolve, reject) => {
@@ -76,21 +74,21 @@
   });
 
   async function handleSubmit() {
-    let val_correo="";
-    if(ciudad_referencia.value == "cali"){
+    let val_correo = "";
+    if (ciudad_referencia.value == "cali") {
       // val_correo = "seleccion@vivealaddin.com";
       val_correo = "pruebajfdm@gmail.com";
-    } else if(ciudad_referencia.value == "bogota"){
+    } else if (ciudad_referencia.value == "bogota") {
       val_correo = "bog_auxnomina@vivealaddin.com";
-    } else if(ciudad_referencia.value == "barranquilla"){
+    } else if (ciudad_referencia.value == "barranquilla") {
       val_correo = "baq_operativo@vivealaddin.com";
-    } else if(ciudad_referencia.value == "pereira"){
+    } else if (ciudad_referencia.value == "pereira") {
       val_correo = "per_asisadtvo@vivealaddin.com";
-    } else if(ciudad_referencia.value == "tulua"){
+    } else if (ciudad_referencia.value == "tulua") {
       val_correo = "dir.a09@vivealaddin.com";
-    } else if(ciudad_referencia.value == "buga"){
+    } else if (ciudad_referencia.value == "buga") {
       val_correo = "dir.A38@vivealaddin.com";
-    } else if(ciudad_referencia.value == "monteria"){
+    } else if (ciudad_referencia.value == "monteria") {
       val_correo = "carlosg@vivealaddin.com";
     }
     let nombre_val = nombre.value;
@@ -128,6 +126,50 @@
     let disponible_traslado_val = disponible_traslado.value;
     let comentario_adicional_val = comentario_adicional.value;
     let autorizo_entre_val = autorizo_entre.checked;
+
+    if (
+      nombre_val == "" ||
+      apellido_val == "" ||
+      tipo_documento_val == "" ||
+      num_documento_val == "" ||
+      fecha_nacimiento_val == "" ||
+      correo_entrevista_val == "" ||
+      ciudad_referencia_val == "" ||
+      tel_numero_val == "" ||
+      cargo_aspira_val == "" ||
+      ultimo_grado_val == "" ||
+      institucion_entre_val == "" ||
+      titulo_obt_val == "" ||
+      ultimo_trabajo_val == "" ||
+      funciones_ultimo_trabajo_val == "" ||
+      tiempo_laborado_val == "" ||
+      motivo_ultimo_trabajo_val == "" ||
+      experiencia_considerada_val == "" || //Fortalezas
+      aspecto_mejorar_val == "" ||
+      menejo_presion_val == "" ||
+      trabajo_en_equipo_val == "" ||
+      motivo_postulacion_val == "" ||
+      saber_de_la_empresa_val == "" ||
+      actual_empleo_val == "" ||
+      disponibilidad_inicio_val == "" ||
+      aspiracion_salarial_val == "" ||
+      trabajar_fines_val == "" ||
+      disponible_traslado_val == "" ||
+      autorizo_entre_val == false ||
+      !foto_entre_val
+    ) {
+      Swal.fire({
+        title: "Antes de Enviar!",
+        text: "Por favor completa todos los campos obligatorios.",
+        icon: "warning",
+        allowOutsideClick: false,
+        customClass: {
+          popup: "mi-popup",
+          title: "mi-titulo",
+        },
+      });
+      return;
+    }
 
     const base64 = await fileToDataURL(foto_entre_val);
 
@@ -169,7 +211,7 @@
       valor_34: comentario_adicional_val,
       valor_35: autorizo_entre_val,
       valor_36: base64,
-      valor_37: val_correo
+      valor_37: val_correo,
     };
 
     console.log(data);
@@ -201,11 +243,14 @@
             let inputs = formulario.querySelectorAll(
               'input[type="text"], select, date, file, checkbox'
             );
+            foto_entre.value = "";
+            fecha_nacimiento.value = "";
+            autorizo_entre.checked = false;
 
             inputs.forEach((input) => {
               input.value = "";
             });
-            loader.style.display= "none";
+            loader.style.display = "none";
             Swal.fire({
               title: "Exito!",
               text: "Tu entrevista fue enviada de manera exitosa.",
@@ -216,7 +261,8 @@
                 title: "mi-titulo",
               },
             });
-          }).catch((error ) => {
+          })
+          .catch((error) => {
             console.log("No creo el registro");
           });
       }

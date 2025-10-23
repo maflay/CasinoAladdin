@@ -68,16 +68,16 @@ h2 {
     color: #fff;
     font-size: 1.8rem;
     font-weight: 500;
-    font-style: italic;
+    /* font-style: italic; */
     letter-spacing: -0.5px;
     -webkit-text-stroke-color: #171c1e;
     stroke: #171c1e;
-    text-shadow: 2px 2px 5px #171c1e;
+    /* text-shadow: 2px 2px 5px #171c1e; */
 }
 
 .section-que-es {
     width: 100%;
-    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
+    /* background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%); */
     height: auto;
     border-radius: 20px;
     padding: 20px;
@@ -110,7 +110,7 @@ h2 {
 }
 
 .section-que-es-text>p {
-    color: rgb(231, 226, 183);
+    color: rgb(94, 94, 94);
     font-style: italic;
 }
 
@@ -121,7 +121,7 @@ h2 {
 
 .text-juego-resposble p {
     text-align: justify;
-    color: white;
+    color: #171c1e;
 }
 
 .section-consecuencias {
@@ -143,7 +143,7 @@ h2 {
 }
 
 .section-consecuencias-text h1 {
-    text-align: center;
+    text-align: start;
 }
 
 .section-consecuencias-text p {
@@ -168,7 +168,7 @@ h2 {
     gap: 15px;
     width: 100%;
     background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     height: auto;
     padding: 20px;
     font-size: 1.6rem;
@@ -232,18 +232,15 @@ h2 {
     text-align: center;
     width: 100%;
     height: auto;
-    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
+    /* background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%); */
     border-radius: 20px 20px 0 0;
     font-size: 1.6rem;
 }
 
 .section-autoexclusion p {
-    color: white;
+    color: #171c1e !important;
 }
 
-.section-autoexclusion button {
-    background-color: #171c1e;
-}
 
 .section-content-autoexclusion {
     display: flex;
@@ -270,7 +267,7 @@ h2 {
     flex-direction: column;
     text-align: center;
     position: relative;
-    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
+    /* background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%); */
     padding: 20px;
     gap: 15px;
     margin-top: 20px;
@@ -284,7 +281,7 @@ h2 {
     text-align: justify;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: white;
+    color: #171c1e;
     font-size: 1.6rem;
 }
 
@@ -367,14 +364,14 @@ h2 {
 }
 
 .content-ips a {
-    color: white;
+    color: #171c1e;
     text-decoration: none;
     font-size: 1.6rem;
     transition: all 0.4s ease;
 }
 
 .content-ips a:hover {
-    color: rgb(206, 206, 206);
+    color: #b40505;
 }
 
 .section-toma-control {
@@ -434,39 +431,39 @@ h2 {
     background-position: center;
     background-size: cover;
     border-radius: 50%;
-    top: 25px;
+    top: 0px;
     animation: 3s infinite alternate;
 }
 
 
 @keyframes move-right {
     from {
-        top: 25px;
+        top: 0px;
         left: 10%;
     }
 
     to {
-        top: 25px;
-        left: 90%;
+        top: 0px;
+        left: 95%;
     }
 }
 
 @keyframes move-top {
     from {
-        left: 90%;
-        top: 25px;
+        left: 95%;
+        top: 0px;
     }
 
     to {
-        left: 90%;
-        top: 550px;
+        left: 95%;
+        top: 500px;
     }
 }
 
 .last_posicion {
     position: absolute !important;
-    left: 90% !important;
-    top: 550px !important;
+    left: 95% !important;
+    top: 500px !important;
 }
 
 @keyframes desaparecer {
@@ -545,6 +542,10 @@ h2 {
 
     .section-factores-riesgos-text {
         width: 100%;
+    }
+
+    .section-factores-riesgos-text>h1 {
+        text-align: center;
     }
 
     .section-factores-riesgos-img {
@@ -647,6 +648,18 @@ h2 {
     .model_head_jr img {
         width: 270px;
     }
+
+    .content_item {
+        display: none;
+    }
+
+    .mensaje_end_ {
+        display: none;
+    }
+
+    .section-consecuencias-text h1 {
+        text-align: center;
+    }
 }
 
 @media (max-width: 378px) {
@@ -669,11 +682,7 @@ h2 {
     width: 140px;
 }
 
-@media(max-width:768px){
-    .mensaje_end_{
-        display: none;
-    }
-}
+
 
 .globo_msg_ {
     display: flex;
@@ -709,6 +718,31 @@ h2 {
 
     to {
         opacity: 1;
+    }
+}
+
+@media(max-width:1366px) {
+    .mensaje_end_ img {
+        width: 100px;
+    }
+
+    .globo_msg_ {
+        width: 150px;
+        height: 120px;
+        right: -120px;
+    }
+
+    .globo_msg_ img {
+        width: 40px;
+        position: relative;
+        top: 2px;
+    }
+}
+
+
+@media(max-width:768px) {
+    .mensaje_end_ {
+        display: none;
     }
 }
 

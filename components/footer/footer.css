@@ -343,12 +343,12 @@
 
   .footer .footer-bottom {
     text-align: center;
-    /* margin-top: 20%; */
+    margin-bottom: 0;
     /* padding: 0; */
   }
 
   .content-logos-legales .content-logos-legales-img img {
-    width: 100%;
+    width: 150px;
   }
 
 }
