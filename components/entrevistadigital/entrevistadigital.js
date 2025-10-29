@@ -41,6 +41,15 @@
   const autorizo_entre = document.getElementById("autorizo_entre");
   const foto_entre = document.getElementById("foto_entre");
 
+  // preguntas destreza
+  const logica_test = document.getElementById("logica_test");
+  const memoria_test = document.getElementById("memoria_test");
+  const razonamiento_test = document.getElementById("razonamiento_test");
+  const matematica_test = document.getElementById("matematica_test");
+  const compresion_test = document.getElementById("compresion_test");
+  const observacion_test = document.getElementById("observacion_test");
+  const patron_test = document.getElementById("patron_test");
+
   const btn_send_entrevista = document.getElementById("btn_send_entrevista");
 
   const fechaCompleta = new Date().toLocaleString("es-CO", {
@@ -58,7 +67,7 @@
 
   let formulario = document.getElementById("content_main_e_digital");
   const url =
-    "https://script.google.com/macros/s/AKfycbxoFGhwkXwOjwtKpqJE4kO3H9LLO1eFhcoqMA39HQCa-evw6hxMkNp9vJ3k8cQ5zIY/exec";
+    "https://script.google.com/macros/s/AKfycby5F3BDXV7MoYQOacWU-cUIiTlIw_QJ84dwTzsQE1Ge6ZoIB6nRkqqb7XNKY7hqp2k/exec";
 
   function fileToDataURL(file) {
     return new Promise((resolve, reject) => {
@@ -69,11 +78,65 @@
     });
   }
 
-  btn_send_entrevista.addEventListener("click", () => {
-    handleSubmit();
+  const memoria_test_num = document.getElementById("memoria_test_num");
+  const codigo = Math.floor(10000 + Math.random() * 90000);
+  memoria_test_num.textContent = "Mostrar";
+  memoria_test_num.style.cursor = "Pointer";
+
+  memoria_test_num.addEventListener("click", () => {
+    memoria_test_num.textContent = codigo;
+    setTimeout(() => {
+      memoria_test_num.textContent = "";
+    }, 4500);
   });
 
+  btn_send_entrevista.addEventListener("click", () => {
+    const identidad = validateIndetidad();
+    if (identidad > 40) {
+      if (ultimo_grado.value == "Primaria") {
+        loader.style.display = "flex";
+        setTimeout(() => {
+          loader.style.display = "none";
+          Swal.fire({
+            title: "Gracias por tu Participación!",
+            text: "Se reviso tu información y no cumples con unos requisitos.",
+            icon: "success",
+            allowOutsideClick: false,
+            customClass: {
+              popup: "mi-popup",
+              title: "mi-titulo",
+            },
+          });
+        }, 3000);
+        return;
+      } else {
+        handleSubmit();
+        return;
+      }
+    } else {
+      handleSubmit();
+    }
+  });
+
+  function validateIndetidad() {
+    const fechaValor = fecha_nacimiento.value;
+    const ultimoGrado = ultimo_grado.value;
+    if (fechaValor) {
+      const fecha = new Date(fechaValor);
+      const anio = fecha.getFullYear(); // Ej: 2002 (entero)
+
+      // console.log("Año de nacimiento:", anio);
+
+      // Ejemplo de operación (calcular edad)
+      const anioActual = new Date().getFullYear();
+      const edad = anioActual - anio;
+      // console.log("Edad:", edad);
+      return edad;
+    }
+  }
+
   async function handleSubmit() {
+    validateIndetidad();
     let val_correo = "";
     if (ciudad_referencia.value == "cali") {
       // val_correo = "seleccion@vivealaddin.com";
@@ -126,6 +189,13 @@
     let disponible_traslado_val = disponible_traslado.value;
     let comentario_adicional_val = comentario_adicional.value;
     let autorizo_entre_val = autorizo_entre.checked;
+    let logica_test_val = logica_test.value;
+    let memoria_test_val = memoria_test.value;
+    let razonamiento_test_val = razonamiento_test.value;
+    let matematica_test_val = matematica_test.value;
+    let compresion_test_val = compresion_test.value;
+    let observacion_test_val = observacion_test.value;
+    let patron_test_val = patron_test.value;
 
     if (
       nombre_val == "" ||
@@ -136,27 +206,25 @@
       correo_entrevista_val == "" ||
       ciudad_referencia_val == "" ||
       tel_numero_val == "" ||
-      cargo_aspira_val == "" ||
       ultimo_grado_val == "" ||
-      institucion_entre_val == "" ||
-      titulo_obt_val == "" ||
       ultimo_trabajo_val == "" ||
-      funciones_ultimo_trabajo_val == "" ||
-      tiempo_laborado_val == "" ||
-      motivo_ultimo_trabajo_val == "" ||
       experiencia_considerada_val == "" || //Fortalezas
       aspecto_mejorar_val == "" ||
-      menejo_presion_val == "" ||
-      trabajo_en_equipo_val == "" ||
       motivo_postulacion_val == "" ||
       saber_de_la_empresa_val == "" ||
       actual_empleo_val == "" ||
       disponibilidad_inicio_val == "" ||
-      aspiracion_salarial_val == "" ||
       trabajar_fines_val == "" ||
       disponible_traslado_val == "" ||
       autorizo_entre_val == false ||
-      !foto_entre_val
+      !foto_entre_val ||
+      logica_test_val == "" || //inico test
+      memoria_test_val == "" ||
+      razonamiento_test_val == "" ||
+      matematica_test_val == "" ||
+      compresion_test_val == "" ||
+      observacion_test_val == "" ||
+      patron_test_val == ""
     ) {
       Swal.fire({
         title: "Antes de Enviar!",
@@ -212,9 +280,15 @@
       valor_35: autorizo_entre_val,
       valor_36: base64,
       valor_37: val_correo,
+      valor_38: logica_test_val == "2" ? logica_test_val+" - Correcto" : logica_test_val+ " - Incorrecto",
+      valor_39: memoria_test_val == memoria_test_num.textContent ? memoria_test_val+" - Correcto" : memoria_test_val+" - Incorrecto" ,
+      valor_40: razonamiento_test_val == "2" ? razonamiento_test_val+" - Correcto" : razonamiento_test_val+" - Incorrecto",
+      valor_41: matematica_test_val == "3" ? matematica_test_val+" - Correcto" : matematica_test_val+" - Incorrecto",
+      valor_42: compresion_test_val == "3" ? compresion_test_val+"- Correcto" : compresion_test_val+" - Incorrecto",
+      valor_43: observacion_test_val == "3" ? observacion_test_val+" - Correcto" : observacion_test_val+" - Incorrecto",
+      valor_44: patron_test_val == "2" ? patron_test_val+" - Correcto" : patron_test_val+" - Incorrecto",
     };
 
-    console.log(data);
 
     Swal.fire({
       title: "Estas Seguro?",
@@ -263,7 +337,17 @@
             });
           })
           .catch((error) => {
-            console.log("No creo el registro");
+            loader.style.display = "none";
+            Swal.fire({
+              title: "Error en el envio!",
+              html: `No se pudo enviar el registro por favor intentalo mas tarde, o puedes dirigirte a la sección<a href="#trabajaconosotros"></a> .`,
+              icon: "success",
+              allowOutsideClick: false,
+              customClass: {
+                popup: "mi-popup",
+                title: "mi-titulo",
+              },
+            });
           });
       }
     });

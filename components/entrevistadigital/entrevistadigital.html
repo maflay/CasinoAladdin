@@ -16,10 +16,11 @@
             <div class="content_form_entrevista">
                 <p class="type2-h1">Estas preguntas son para identificarte.</p>
                 <span class="alert_preguntas_obligatorias">las preguntas con <strong
-                        class="pregunta_obligatoria">*</strong> son obligatorias.</span>
+                        class="pregunta_obligatoria">*</strong> son obligatorias.<br />
+                    Cuanta más información suministres mejor para el proceso.</span>
                 <br />
                 <div class="datos_personales">
-                    <span>Nombre<strong class="pregunta_obligatoria"> *</strong></span>
+                    <span>Nombres<strong class="pregunta_obligatoria"> *</strong></span>
                     <div class="content_input_entrevista">
                         <input id="nombre" placeholder="Nombre" type="text">
                         <input id="apellido" placeholder="Apellidos" type="text">
@@ -32,10 +33,9 @@
                             <option value="">Selecccionar...</option>
                             <option value="cedula">Cedula de Ciudadania</option>
                             <option value="cedula_extrajera">Documento extranjero</option>
-                            <option value="cedula_extrajera">Pasaporte</option>
-                            <option value="cedula_extrajera">Credenciales validas para votar</option>
+                            <option value="cedula_extrajera">Permiso por Proteccion Laboral</option>
                         </select>
-                        <input id="num_documento" placeholder="Numero de Documento" type="text">
+                        <input id="num_documento" placeholder="Numero de Documento" type="number">
                     </div>
                 </div>
                 <div class="datos_personales">
@@ -43,11 +43,10 @@
                         <div class="content_campo_entre">
                             <span>Fecha de Nacimiento<strong class="pregunta_obligatoria"> *</strong></span>
                             <input id="fecha_nacimiento" placeholder="Fecha de nacimiento" type="date">
-
                         </div>
                         <div class="content_campo_entre">
-                            <span>Correo<strong class="pregunta_obligatoria"> *</strong></span>
-                            <input id="correo_entrevista" placeholder="Correo" type="text">
+                            <span>Correo Electronico<strong class="pregunta_obligatoria"> *</strong></span>
+                            <input id="correo_entrevista" placeholder="Correo Electronico / Email" type="text">
 
                         </div>
                     </div>
@@ -55,29 +54,30 @@
                 <div class="datos_personales">
                     <div class="content_input_entrevista">
                         <div class="content_campo_entre">
-                            <span>Ciudad<strong class="pregunta_obligatoria"> *</strong></span>
+                            <span>Ciudad donde te gustaría laborar<strong class="pregunta_obligatoria">
+                                    *</strong></span>
                             <!-- <input id="ciudad_referencia" placeholder="Ciudad de referencia" type="text"> -->
                             <select name="ciudad_referencia" id="ciudad_referencia">
                                 <option value="">Seleccionar...</option>
-                                <option value="cali">Cali</option>
                                 <option value="bogota">Bogotá</option>
                                 <option value="barranquilla">Barranquilla</option>
+                                <option value="buga">Buga</option>
+                                <option value="cali">Cali</option>
+                                <option value="monteria">Monteria</option>
                                 <option value="pereira">Pereira</option>
                                 <option value="tulua">Tuluá</option>
-                                <option value="buga">Buga</option>
-                                <option value="monteria">Monteria</option>
                             </select>
                         </div>
                         <div class="content_campo_entre">
-                            <span>Telefono<strong class="pregunta_obligatoria"> *</strong></span>
-                            <input id="tel_numero" placeholder="Telefono o WhatsApp" type="text">
+                            <span>Teléfono<strong class="pregunta_obligatoria"> *</strong></span>
+                            <input id="tel_numero" placeholder="Teléfono o WhatsApp" type="text">
                         </div>
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>Cargo al que aspira<strong class="pregunta_obligatoria"> *</strong></span>
+                    <span>Regálanos tu usuario de redes sociales (Ej. Instagram ...)</strong></span>
                     <div class="content_input_entrevista">
-                        <input style="width: 100%;" id="cargo_aspira" placeholder="Cargo al que aspira" type="text">
+                        <input style="width: 100%;" id="cargo_aspira" placeholder="Usuario redes sociales" type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
@@ -92,16 +92,25 @@
             <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
             <br />
             <div class="content_form_entrevista">
-                <p class="type2-h1">Formación Academica.</p>
+                <p class="type2-h1">Formación Académica.</p>
                 <br />
                 <div class="datos_personales">
                     <div class="content_input_entrevista">
                         <div class="content_campo_entre">
-                            <span>Estudio Alcanzado<strong class="pregunta_obligatoria"> *</strong></span>
-                            <input id="ultimo_grado" placeholder="Último nivel de Estudios alcanzado" type="text">
+                            <span>Nivel Académico<strong class="pregunta_obligatoria"> *</strong></span>
+                            <select name="ultimo_grado" id="ultimo_grado">
+                                <option value="">Seleccionar...</option>
+                                <option value="Primaria">Primaria</option>
+                                <option value="Bachillerato">Secundaria</option>
+                                <option value="Tecnico">Técnico</option>
+                                <option value="Tecnologo">Tecnólogo</option>
+                                <option value="Profesional">Profesional</option>
+                                <option value="PreGrado">PreGrado</option>
+                                <option value="PostGrado">PostGrado</option>
+                            </select>
                         </div>
                         <div class="content_campo_entre">
-                            <span>Institución Educativa<strong class="pregunta_obligatoria"> *</strong></span>
+                            <span>Institución Educativa</span>
                             <input id="institucion_entre" placeholder="Institución Educativa" type="text">
                         </div>
                     </div>
@@ -109,7 +118,7 @@
                 <div class="datos_personales">
                     <div class="content_input_entrevista">
                         <div class="content_campo_entre">
-                            <span>Profesión<strong class="pregunta_obligatoria"> *</strong></span>
+                            <span>Profesión u Oficio</span>
                             <input id="titulo_obt" placeholder="Profesión" type="text">
                         </div>
                         <div class="content_campo_entre">
@@ -125,8 +134,13 @@
             <div class="content_form_entrevista">
                 <p class="type2-h1">Experiencia Laboral.</p>
                 <br />
+                <div class="content_oportunidad_laboral">
+                    <p>Somos Grande generadores de oportunidad de primer empleo, donde el talento y la magia puede estar
+                        en ti.</p>
+                </div>
+                <br />
                 <div class="datos_personales">
-                    <span>¿En qué empresa trabajó más recientemente?<strong class="pregunta_obligatoria">
+                    <span>¿Ultima empresa donde laboro?<strong class="pregunta_obligatoria">
                             *</strong></span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="ultimo_trabajo"
@@ -134,22 +148,21 @@
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Cuál era su cargo y funciones principales?<strong class="pregunta_obligatoria">
-                            *</strong></span>
+                    <span>¿Cuál era su cargo y funciones principales?</span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="funciones_ultimo_trabajo"
                             placeholder="¿Cuál era su cargo y funciones principales?" type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Cuánto tiempo laboró allí?<strong class="pregunta_obligatoria"> *</strong></span>
+                    <span>¿Cuánto tiempo laboró allí?</span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="tiempo_laborado" placeholder="¿Cuánto tiempo laboró allí?"
                             type="text">
                     </div>
                 </div>
-                <div class="datos_personales">
-                    <span>¿Por qué motivo dejó su último empleo?<strong class="pregunta_obligatoria"> *</strong></span>
+                <div style="display: none;" class="datos_personales">
+                    <span>¿Por qué motivo dejó su último empleo?</span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="motivo_ultimo_trabajo"
                             placeholder="¿Por qué motivo dejó su último empleo?" type="text">
@@ -170,11 +183,11 @@
                 <p class="type2-h1">Competencias y habilidades.</p>
                 <br />
                 <div class="datos_personales">
-                    <span>¿Cuáles considera que son sus principales fortalezas?<strong class="pregunta_obligatoria">
+                    <span>¿Cuáles considera para usted sus Competencias y habilidades?<strong
+                            class="pregunta_obligatoria">
                             *</strong></span>
                     <div class="content_input_entrevista">
-                        <input class="all_espace" id="fortalezas"
-                            placeholder="¿Cuáles considera que son sus principales fortalezas?" type="text">
+                        <input class="all_espace" id="fortalezas" placeholder="Competencias y habilidades." type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
@@ -192,14 +205,16 @@
                             placeholder="¿Qué herramientas o programas maneja con fluidez?" type="text">
                     </div>
                 </div>
-                <div class="datos_personales">
+
+
+                <div style="display: none;" class="datos_personales">
                     <span>¿Cómo maneja el trabajo bajo presión?<strong class="pregunta_obligatoria"> *</strong></span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="menejo_presion"
                             placeholder="¿Cómo maneja el trabajo bajo presión?" type="text">
                     </div>
                 </div>
-                <div class="datos_personales">
+                <div style="display: none;" class="datos_personales">
                     <span>¿Prefiere trabajar en equipo o de manera individual? ¿Por qué?<strong
                             class="pregunta_obligatoria"> *</strong></span>
                     <div class="content_input_entrevista">
@@ -215,7 +230,7 @@
                 <p class="type2-h1">Motivación y objetivos.</p>
                 <br />
                 <div class="datos_personales">
-                    <span>¿Qué lo motiva a postularse a este cargo?<strong class="pregunta_obligatoria">
+                    <span>¿Qué l@ motiva a postularse a esta Empresa?<strong class="pregunta_obligatoria">
                             *</strong></span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="motivo_postulacion"
@@ -223,7 +238,7 @@
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Qué espera lograr profesionalmente en los próximos dos años?</span>
+                    <span>¿Qué espera lograr laboralmente en los próximos dos años?</span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="logro_profesional"
                             placeholder="¿Qué espera lograr profesionalmente en los próximos dos años?" type="text">
@@ -269,7 +284,7 @@
                             placeholder="¿Cuál es su disponibilidad para iniciar labores?" type="text">
                     </div>
                 </div>
-                <div class="datos_personales">
+                <div style="display: none;" class="datos_personales">
                     <span>¿Cuál es su aspiración salarial?<strong class="pregunta_obligatoria"> *</strong></span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="aspiracion_salarial"
@@ -277,11 +292,14 @@
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Está dispuesto a trabajar fines de semana o turnos rotativos?<strong
-                            class="pregunta_obligatoria"> *</strong></span>
+                    <span>¿Disponible para trabajar turnos rotativos?<strong class="pregunta_obligatoria">
+                            *</strong></span>
                     <div class="content_input_entrevista">
-                        <input class="all_espace" id="trabajar_fines"
-                            placeholder="¿Está dispuesto a trabajar fines de semana o turnos rotativos?" type="text">
+                        <select name="trabajar_fines" id="trabajar_fines">
+                            <option value="">Seleccionar...</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
                     </div>
                 </div>
                 <div class="datos_personales">
@@ -299,16 +317,141 @@
             <br />
             <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
             <br />
+
             <div class="content_form_entrevista">
-                <p class="type2-h1">Cierre.</p>
+                <p class="type2-h1">Preguntas para tener una idea de tu destreza.</p>
                 <br />
                 <div class="datos_personales">
+                    <span>Lógica</span>
+                    <br />
+                    <br />
+                    <span>Si un tren tarda 2 horas en recorrer 120 km, ¿cuál es su velocidad promedio?</span>
+                    <div class="content_input_entrevista">
+                        <select name="logica_test" id="logica_test">
+                            <option value="Seleccionar">Seleccionar...</option>
+                            <option value="40">40 km/h</option>
+                            <option value="60">60 km/h</option>
+                            <option value="80">80 km/h</option>
+                            <option value="100">100 km/h</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+                <br />
+                <div class="datos_personales">
+                    <span>Memoria</span>
+                    <br />
+                    <br />
+                    <span>Observa este número durante 5 segundos y luego escríbelo sin ver: <span style="color: #CB0404;"
+                            id="memoria_test_num"></span></span>
+                    <div class="content_input_entrevista">
+                        <input type="text" name="memoria_test" id="memoria_test">
+                    </div>
+                </div>
+                <br />
+                <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+                <br />
+                <div class="datos_personales">
+                    <span>Razonamiento Espacial</span>
+                    <br />
+                    <br />
+                    <span>¿Qué figura continua esta secuencia? 🔺⚫🔺⚫🔺…</span>
+                    <div class="content_input_entrevista">
+                        <select name="razonamiento_test" id="razonamiento_test">
+                            <option value="Seleccionar">Seleccionar...</option>
+                            <option value="1">🔺</option>
+                            <option value="2">⚫</option>
+                            <option value="3">🔷</option>
+                            <option value="4">Ninguna de las anteriores</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+                <br />
+                <div class="datos_personales">
+                    <span>Cálculo Matemático</span>
+                    <br />
+                    <br />
+                    <span>¿Cuál es el resultado de: 15 × 4 − 6 ÷ 2</span>
+                    <div class="content_input_entrevista">
+                        <select name="razonamiento_test" id="matematica_test">
+                            <option value="Seleccionar">Seleccionar...</option>
+                            <option value="1">54</option>
+                            <option value="2">60</option>
+                            <option value="3">57</option>
+                            <option value="4">62</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+                <br />
+                <div class="datos_personales">
+                    <span>Comprensión Verbal</span>
+                    <br />
+                    <br />
+                    <span>¿Qué palabra NO pertenece al grupo? <br />“Cuchara – Tenedor – Plato – Cuchillo”</span>
+                    <div class="content_input_entrevista">
+                        <select name="razonamiento_test" id="compresion_test">
+                            <option value="Seleccionar">Seleccionar...</option>
+                            <option value="1">Cuchara</option>
+                            <option value="2">Tenedor</option>
+                            <option value="3">Plato</option>
+                            <option value="4">Cuchillo</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+                <br />
+                <div class="datos_personales">
+                    <span>Observación</span>
+                    <br />
+                    <br />
+                    <span>Si hoy es miércoles, ¿qué día será dentro de 9 días?</span>
+                    <div class="content_input_entrevista">
+                        <select name="razonamiento_test" id="observacion_test">
+                            <option value="Seleccionar">Seleccionar...</option>
+                            <option value="1">Jueves</option>
+                            <option value="2">Sábado</option>
+                            <option value="3">Viernes</option>
+                            <option value="4">Domingo</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
+                <br />
+                <div class="datos_personales">
+                    <span>Patrón Numérico</span>
+                    <br />
+                    <br />
+                    <span>Completa la secuencia:<br />
+                        3 – 6 – 12 – 24 – ?</span>
+                    <div class="content_input_entrevista">
+                        <select name="razonamiento_test" id="patron_test">
+                            <option value="Seleccionar">Seleccionar...</option>
+                            <option value="1">36</option>
+                            <option value="2">48</option>
+                            <option value="3">72</option>
+                            <option value="4">50</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content_form_entrevista">
+                <p class="type2-h1"></p>
+                <div style="display: none;" class="datos_personales">
                     <span>¿Desea agregar algún comentario adicional?</span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="comentario_adicional"
                             placeholder="¿Desea agregar algún comentario adicional?" type="text">
                     </div>
                 </div>
+                <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
                 <div class="datos_personales">
                     <div style="justify-content: start;" class="content_input_entrevista">
                         <span class="all_espace">Autorización para tratamiento de datos personales<strong
@@ -319,7 +462,6 @@
 
             </div>
             <br />
-            <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
             <br />
             <div class="content_btn_submit">
                 <button title="Enviar Entrevista Digital" id="btn_send_entrevista" class="btn-design1">Enviar</button>

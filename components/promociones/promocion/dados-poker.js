@@ -30,13 +30,13 @@
 
   if (btnNext1) {
     btnNext1.addEventListener("click", () => {
-      navegarA("lampara");
+      navegarA("acumulaygana");
     });
   }
 
   if (btnNext2) {
     btnNext2.addEventListener("click", () => {
-      navegarA("girodorado");
+      navegarA("ruledelasuerte");
     });
   }
 
