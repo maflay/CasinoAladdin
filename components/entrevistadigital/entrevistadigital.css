@@ -142,6 +142,74 @@
     background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
 }
 
+
+.table-scrolld {
+    max-height: 450px;
+}
+
+
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 800px;
+}
+
+.styled-table thead {
+    background: #e22e2e;
+    color: #fff;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.styled-table tbody tr {
+    background-color: #fff;
+    color: #000;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-result {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.content_hacer_test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.content_hacer_test p{
+    font-size: 16px;
+}
+
+.content_hacer_test input {
+    width: auto;
+    font-size: 16px;
+}
+
 @media(max-width: 768px) {
     .content_img_entrevista {
         margin-top: 14%;
@@ -160,7 +228,7 @@
         width: 100%;
     }
 
-    .btn_tomar_foto{
+    .btn_tomar_foto {
         display: none;
     }
 }

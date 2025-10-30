@@ -57,8 +57,6 @@ function toSuperbingo() {
   cubo2.style.display = "none";
   cubo3.style.display = "none";
 
-  console.log(solofechaCompleta);
-
   if (solofechaCompleta == "septiembre") {
     cubo1.style.display = "flex";
   } else if (solofechaCompleta == "octubre") {

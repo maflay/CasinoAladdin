@@ -50,6 +50,20 @@
   const observacion_test = document.getElementById("observacion_test");
   const patron_test = document.getElementById("patron_test");
 
+  const content_form_entrevista = document.getElementById(
+    "content_form_entrevista"
+  );
+  const hacer_test = document.getElementById("hacer_test");
+
+  content_form_entrevista.style.display = "none";
+  hacer_test.addEventListener("click", () => {
+    if (hacer_test.checked == true) {
+      content_form_entrevista.style.display = "flex";
+    } else {
+      content_form_entrevista.style.display = "none";
+    }
+  });
+
   const btn_send_entrevista = document.getElementById("btn_send_entrevista");
 
   const fechaCompleta = new Date().toLocaleString("es-CO", {
@@ -67,7 +81,7 @@
 
   let formulario = document.getElementById("content_main_e_digital");
   const url =
-    "https://script.google.com/macros/s/AKfycby5F3BDXV7MoYQOacWU-cUIiTlIw_QJ84dwTzsQE1Ge6ZoIB6nRkqqb7XNKY7hqp2k/exec";
+    "https://script.google.com/macros/s/AKfycbzp0M3q4dlJ_eU4fIjVsfwNK8wdTR2n-bW_mj3qiihDvly_PZT8_a5EqVdqisgffjNK/exec";
 
   function fileToDataURL(file) {
     return new Promise((resolve, reject) => {
@@ -78,59 +92,167 @@
     });
   }
 
-  const memoria_test_num = document.getElementById("memoria_test_num");
-  const codigo = Math.floor(10000 + Math.random() * 90000);
-  memoria_test_num.textContent = "Mostrar";
-  memoria_test_num.style.cursor = "Pointer";
+  // guarda aquí los valores por pregunta: { 1:5, 2:3, ... }
+  const respuestas = {};
 
-  memoria_test_num.addEventListener("click", () => {
-    memoria_test_num.textContent = codigo;
-    setTimeout(() => {
-      memoria_test_num.textContent = "";
-    }, 4500);
-  });
+  const MAP_INTELIGENCIAS = {
+    "Lógico-matemática": [1, 10, 19],
+    "Lingüística-verbal": [2, 11, 20],
+    "Espacial-visual": [3, 12, 21],
+    "Corporal-kinestésica": [4, 13, 22],
+    Musical: [5, 14, 23],
+    Interpersonal: [6, 15, 24],
+    Intrapersonal: [7, 16, 25],
+    Naturalista: [8, 17, 26],
+    Existencial: [9, 18, 27],
+  };
+
+  // 1) poner listeners a TODOS los checkboxes
+  document
+    .querySelectorAll('input[type="checkbox"][id^="opc_"]')
+    .forEach((chk) => {
+      chk.addEventListener("change", (e) => {
+        const input = e.target;
+
+        // id ejemplo: opc_3_val_3_pre_14
+        // formato tuyo: opc_{opcion}_{val}_{pre_{NUMPREG}}
+        const parts = input.id.split("_");
+        // parts = ["opc","3","val","3","pre","14"]
+        const valor = Number(parts[3]); // 1..5
+        const numPregunta = Number(parts[5]); // 1..27
+
+        // 2) desmarcar los otros de esa MISMA pregunta
+        const rowChecks = document.querySelectorAll(
+          `input[id$="_pre_${numPregunta}"]`
+        );
+        rowChecks.forEach((c) => {
+          if (c !== input) c.checked = false;
+        });
+
+        // 3) si marcó, guardo; si desmarcó, borro
+        if (input.checked) {
+          respuestas[numPregunta] = valor;
+        } else {
+          delete respuestas[numPregunta];
+        }
+
+        // 4) recalcular totales
+        const totales = calcularTotales(respuestas);
+        // 5) mostrar/ordenar
+        pintarResultados(totales);
+      });
+    });
+
+  function pintarResultados(totales) {
+    // convertir a array y ordenar
+    const ordenadas = Object.entries(totales).sort((a, b) => b[1] - a[1]); // mayor → menor
+
+    // console.log("INTELIGENCIAS ORDENADAS:", ordenadas);
+
+    // const cont = document.getElementById("resultados-intel");
+    // if (!cont) return;
+
+    // cont.innerHTML = `
+    //   <h3>Resultados</h3>
+    //   <ul>
+    //     ${ordenadas
+    //       .map(
+    //         ([nombre, puntaje]) =>
+    //           `<li><strong>${nombre}</strong>: ${puntaje} / 15</li>`
+    //       )
+    //       .join("")}
+    //   </ul>
+    //   <p><strong>Más alta:</strong> ${
+    //     ordenadas[0] ? ordenadas[0][0] : "Sin datos"
+    //   }</p>
+    // `;
+  }
+
+  function calcularTotales(respuestasPorPregunta) {
+    // inicia todas en 0
+    const totales = {};
+    Object.keys(MAP_INTELIGENCIAS).forEach((intel) => (totales[intel] = 0));
+
+    // por cada inteligencia, sumar sus 3 preguntas
+    for (const [nombreIntel, preguntas] of Object.entries(MAP_INTELIGENCIAS)) {
+      let suma = 0;
+      preguntas.forEach((numPre) => {
+        const val = respuestasPorPregunta[numPre] || 0;
+        suma += val;
+      });
+      totales[nombreIntel] = suma; // máx 15
+    }
+
+    return totales;
+  }
+
+  // const memoria_test_num = document.getElementById("memoria_test_num");
+  // const codigo = Math.floor(10000 + Math.random() * 90000);
+  // memoria_test_num.textContent = "Mostrar";
+  // memoria_test_num.style.cursor = "Pointer";
+
+  // memoria_test_num.addEventListener("click", () => {
+  //   memoria_test_num.textContent = codigo;
+  //   setTimeout(() => {
+  //     memoria_test_num.textContent = "";
+  //   }, 4500);
+  // });
+
+  function buildPayloadResultados() {
+    // 1) totales por inteligencia
+    const totales = calcularTotales(respuestas);
+
+    // 2) ordenarlas por puntaje
+    const ordenadas = Object.entries(totales).sort((a, b) => b[1] - a[1]);
+
+    // 3) armar objeto final
+    const payload = {
+      tipo: "test_inteligencias", // para que tu Apps Script sepa qué hacer
+      respuestas_pregunta: respuestas, // {1:5, 2:3, ...} útil si quieres guardar todo
+      totales_inteligencia: totales, // { "Lógico-matemática": 12, ... }
+      orden_desc: ordenadas, // [ ["Lógico-matemática",12], ... ]
+      inteligencia_principal: ordenadas[0] ? ordenadas[0][0] : null,
+      puntaje_principal: ordenadas[0] ? ordenadas[0][1] : null,
+    };
+
+    return payload;
+  }
 
   btn_send_entrevista.addEventListener("click", () => {
     const identidad = validateIndetidad();
-    if (identidad > 40) {
-      if (ultimo_grado.value == "Primaria") {
-        loader.style.display = "flex";
-        setTimeout(() => {
-          loader.style.display = "none";
-          Swal.fire({
-            title: "Gracias por tu Participación!",
-            text: "Se reviso tu información y no cumples con unos requisitos.",
-            icon: "success",
-            allowOutsideClick: false,
-            customClass: {
-              popup: "mi-popup",
-              title: "mi-titulo",
-            },
-          });
-        }, 3000);
-        return;
-      } else {
-        handleSubmit();
-        return;
-      }
+    // if (identidad > 40) {
+    if (ultimo_grado.value == "Primaria") {
+      loader.style.display = "flex";
+      setTimeout(() => {
+        loader.style.display = "none";
+        Swal.fire({
+          title: "Gracias por tu Participación!",
+          text: "Se reviso tu información y no cumples con unos requisitos.",
+          icon: "success",
+          allowOutsideClick: false,
+          customClass: {
+            popup: "mi-popup",
+            title: "mi-titulo",
+          },
+        });
+      }, 3000);
+      return;
     } else {
       handleSubmit();
+      return;
     }
+    // } else {
+    //   handleSubmit();
+    // }
   });
 
   function validateIndetidad() {
     const fechaValor = fecha_nacimiento.value;
-    const ultimoGrado = ultimo_grado.value;
     if (fechaValor) {
       const fecha = new Date(fechaValor);
-      const anio = fecha.getFullYear(); // Ej: 2002 (entero)
-
-      // console.log("Año de nacimiento:", anio);
-
-      // Ejemplo de operación (calcular edad)
+      const anio = fecha.getFullYear();
       const anioActual = new Date().getFullYear();
       const edad = anioActual - anio;
-      // console.log("Edad:", edad);
       return edad;
     }
   }
@@ -154,6 +276,19 @@
     } else if (ciudad_referencia.value == "monteria") {
       val_correo = "carlosg@vivealaddin.com";
     }
+
+    let inte = buildPayloadResultados();
+    console.log(inte.orden_desc.join(" - "));
+    console.log(inte.orden_desc[0].join(" - "));
+    console.log(inte.orden_desc[1].join(" - "));
+    console.log(inte.orden_desc[2].join(" - "));
+    console.log(inte.orden_desc[3].join(" - "));
+    console.log(inte.orden_desc[4].join(" - "));
+    console.log(inte.orden_desc[5].join(" - "));
+    console.log(inte.orden_desc[6].join(" - "));
+    console.log(inte.orden_desc[7].join(" - "));
+    console.log(inte.orden_desc[8].join(" - "));
+
     let nombre_val = nombre.value;
     let apellido_val = apellido.value;
     let tipo_documento_val = tipo_documento.value;
@@ -189,13 +324,42 @@
     let disponible_traslado_val = disponible_traslado.value;
     let comentario_adicional_val = comentario_adicional.value;
     let autorizo_entre_val = autorizo_entre.checked;
-    let logica_test_val = logica_test.value;
-    let memoria_test_val = memoria_test.value;
-    let razonamiento_test_val = razonamiento_test.value;
-    let matematica_test_val = matematica_test.value;
-    let compresion_test_val = compresion_test.value;
-    let observacion_test_val = observacion_test.value;
-    let patron_test_val = patron_test.value;
+    let inteligencia1 =
+      hacer_test.checked == true
+        ? inte.orden_desc[0].join(" - ")
+        : "No realizo el test";
+    let inteligencia2 =
+      hacer_test.checked == true
+        ? inte.orden_desc[1].join(" - ")
+        : "No realizo el test";
+    let inteligencia3 =
+      hacer_test.checked == true
+        ? inte.orden_desc[2].join(" - ")
+        : "No realizo el test";
+    let inteligencia4 =
+      hacer_test.checked == true
+        ? inte.orden_desc[3].join(" - ")
+        : "No realizo el test";
+    let inteligencia5 =
+      hacer_test.checked == true
+        ? inte.orden_desc[4].join(" - ")
+        : "No realizo el test";
+    let inteligencia6 =
+      hacer_test.checked == true
+        ? inte.orden_desc[5].join(" - ")
+        : "No realizo el test";
+    let inteligencia7 =
+      hacer_test.checked == true
+        ? inte.orden_desc[6].join(" - ")
+        : "No realizo el test";
+    let inteligencia8 =
+      hacer_test.checked == true
+        ? inte.orden_desc[7].join(" - ")
+        : "No realizo el test";
+    let inteligencia9 =
+      hacer_test.checked == true
+        ? inte.orden_desc[8].join(" - ")
+        : "No realizo el test";
 
     if (
       nombre_val == "" ||
@@ -217,14 +381,7 @@
       trabajar_fines_val == "" ||
       disponible_traslado_val == "" ||
       autorizo_entre_val == false ||
-      !foto_entre_val ||
-      logica_test_val == "" || //inico test
-      memoria_test_val == "" ||
-      razonamiento_test_val == "" ||
-      matematica_test_val == "" ||
-      compresion_test_val == "" ||
-      observacion_test_val == "" ||
-      patron_test_val == ""
+      !foto_entre_val
     ) {
       Swal.fire({
         title: "Antes de Enviar!",
@@ -280,15 +437,16 @@
       valor_35: autorizo_entre_val,
       valor_36: base64,
       valor_37: val_correo,
-      valor_38: logica_test_val == "2" ? logica_test_val+" - Correcto" : logica_test_val+ " - Incorrecto",
-      valor_39: memoria_test_val == memoria_test_num.textContent ? memoria_test_val+" - Correcto" : memoria_test_val+" - Incorrecto" ,
-      valor_40: razonamiento_test_val == "2" ? razonamiento_test_val+" - Correcto" : razonamiento_test_val+" - Incorrecto",
-      valor_41: matematica_test_val == "3" ? matematica_test_val+" - Correcto" : matematica_test_val+" - Incorrecto",
-      valor_42: compresion_test_val == "3" ? compresion_test_val+"- Correcto" : compresion_test_val+" - Incorrecto",
-      valor_43: observacion_test_val == "3" ? observacion_test_val+" - Correcto" : observacion_test_val+" - Incorrecto",
-      valor_44: patron_test_val == "2" ? patron_test_val+" - Correcto" : patron_test_val+" - Incorrecto",
+      valor_38: inteligencia1,
+      valor_39: inteligencia2,
+      valor_40: inteligencia3,
+      valor_41: inteligencia4,
+      valor_42: inteligencia5,
+      valor_43: inteligencia6,
+      valor_44: inteligencia7,
+      valor_45: inteligencia8,
+      valor_46: inteligencia9,
     };
-
 
     Swal.fire({
       title: "Estas Seguro?",

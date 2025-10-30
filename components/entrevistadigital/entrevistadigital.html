@@ -318,10 +318,282 @@
             <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
             <br />
 
-            <div class="content_form_entrevista">
+            <div class="content_hacer_test">
+                <p>Quiero hacer el Test</p>
+                <input type="checkbox" id="hacer_test">
+            </div>
+
+
+            <div id="content_form_entrevista" class="content_form_entrevista">
                 <p class="type2-h1">Preguntas para tener una idea de tu destreza.</p>
                 <br />
-                <div class="datos_personales">
+                <span>Lee cada afirmación y marca del 1 al 5 qué tanto te representa (1 = Nada parecido a mí, 5 =
+                    Totalmente parecido a mí).
+                </span>
+                <br />
+                <div class="table-result table-scrolld">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Afirmación</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>Disfruto resolver acertijos o problemas lógicos.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_1" id="opc_1_val_1_pre_1"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_1" id="opc_2_val_2_pre_1"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_1" id="opc_3_val_3_pre_1"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_1" id="opc_4_val_4_pre_1"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_1" id="opc_5_val_5_pre_1"></th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Me gusta escribir, contar historias o persuadir con palabras.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_2" id="opc_1_val_1_pre_2"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_2" id="opc_2_val_2_pre_2"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_2" id="opc_3_val_3_pre_2"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_2" id="opc_4_val_4_pre_2"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_2" id="opc_5_val_5_pre_2"></th>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Tengo buena orientación espacial y puedo imaginar objetos en 3D.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_3" id="opc_1_val_1_pre_3"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_3" id="opc_2_val_2_pre_3"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_3" id="opc_3_val_3_pre_3"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_3" id="opc_4_val_4_pre_3"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_3" id="opc_5_val_5_pre_3"></th>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>Aprendo mejor haciendo o practicando físicamente.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_4" id="opc_1_val_1_pre_4"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_4" id="opc_2_val_2_pre_4"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_4" id="opc_3_val_3_pre_4"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_4" id="opc_4_val_4_pre_4"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_4" id="opc_5_val_5_pre_4"></th>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <th>Reconozco fácilmente melodías o ritmos.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_5" id="opc_1_val_1_pre_5"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_5" id="opc_2_val_2_pre_5"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_5" id="opc_3_val_3_pre_5"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_5" id="opc_4_val_4_pre_5"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_5" id="opc_5_val_5_pre_5"></th>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <th>Entiendo fácilmente los sentimientos de los demás.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_6" id="opc_1_val_1_pre_6"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_6" id="opc_2_val_2_pre_6"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_6" id="opc_3_val_3_pre_6"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_6" id="opc_4_val_4_pre_6"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_6" id="opc_5_val_5_pre_6"></th>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <th>Reflexiono sobre mis emociones y cómo mejorar personalmente.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_7" id="opc_1_val_1_pre_7"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_7" id="opc_2_val_2_pre_7"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_7" id="opc_3_val_3_pre_7"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_7" id="opc_4_val_4_pre_7"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_7" id="opc_5_val_5_pre_7"></th>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <th>Me gusta observar la naturaleza o identificar patrones en ella.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_8" id="opc_1_val_1_pre_8"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_8" id="opc_2_val_2_pre_8"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_8" id="opc_3_val_3_pre_8"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_8" id="opc_4_val_4_pre_8"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_8" id="opc_5_val_5_pre_8"></th>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <th>Me interesa reflexionar sobre el propósito de la vida o el sentido de las cosas.
+                                </th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_9" id="opc_1_val_1_pre_9"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_9" id="opc_2_val_2_pre_9"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_9" id="opc_3_val_3_pre_9"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_9" id="opc_4_val_4_pre_9"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_9" id="opc_5_val_5_pre_9"></th>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <th>Disfruto trabajar con números y datos.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_10" id="opc_1_val_1_pre_10"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_10" id="opc_2_val_2_pre_10"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_10" id="opc_3_val_3_pre_10"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_10" id="opc_4_val_4_pre_10"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_10" id="opc_5_val_5_pre_10"></th>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <th>Puedo expresarme bien al hablar frente a un grupo.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_11" id="opc_1_val_1_pre_11"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_11" id="opc_2_val_2_pre_11"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_11" id="opc_3_val_3_pre_11"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_11" id="opc_4_val_4_pre_11"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_11" id="opc_5_val_5_pre_11"></th>
+                            </tr>
+                            <tr>
+                                <th>12</th>
+                                <th>Tengo facilidad para interpretar planos, mapas o gráficos.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_12" id="opc_1_val_1_pre_12"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_12" id="opc_2_val_2_pre_12"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_12" id="opc_3_val_3_pre_12"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_12" id="opc_4_val_4_pre_12"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_12" id="opc_5_val_5_pre_12"></th>
+                            </tr>
+                            <tr>
+                                <th>13</th>
+                                <th>Soy bueno en deportes o actividades que exigen coordinación.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_13" id="opc_1_val_1_pre_13"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_13" id="opc_2_val_2_pre_13"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_13" id="opc_3_val_3_pre_13"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_13" id="opc_4_val_4_pre_13"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_13" id="opc_5_val_5_pre_13"></th>
+                            </tr>
+                            <tr>
+                                <th>14</th>
+                                <th>Suelo tararear canciones o notar el ritmo de sonidos cotidianos.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_14" id="opc_1_val_1_pre_14"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_14" id="opc_2_val_2_pre_14"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_14" id="opc_3_val_3_pre_14"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_14" id="opc_4_val_4_pre_14"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_14" id="opc_5_val_5_pre_14"></th>
+                            </tr>
+                            <tr>
+                                <th>15</th>
+                                <th>Puedo negociar o mediar cuando hay conflictos entre personas.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_15" id="opc_1_val_1_pre_15"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_15" id="opc_2_val_2_pre_15"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_15" id="opc_3_val_3_pre_15"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_15" id="opc_4_val_4_pre_15"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_15" id="opc_5_val_5_pre_15"></th>
+                            </tr>
+                            <tr>
+                                <th>16</th>
+                                <th>Me motiva analizar mis decisiones y aprender de mis errores.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_16" id="opc_1_val_1_pre_16"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_16" id="opc_2_val_2_pre_16"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_16" id="opc_3_val_3_pre_16"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_16" id="opc_4_val_4_pre_16"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_16" id="opc_5_val_5_pre_16"></th>
+                            </tr>
+                            <tr>
+                                <th>17</th>
+                                <th>Me gusta clasificar objetos o buscar patrones en lo natural.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_17" id="opc_1_val_1_pre_17"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_17" id="opc_2_val_2_pre_17"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_17" id="opc_3_val_3_pre_17"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_17" id="opc_4_val_4_pre_17"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_17" id="opc_5_val_5_pre_17"></th>
+                            </tr>
+                            <tr>
+                                <th>18</th>
+                                <th>Me hago preguntas sobre el universo y la existencia.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_18" id="opc_1_val_1_pre_18"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_18" id="opc_2_val_2_pre_18"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_18" id="opc_3_val_3_pre_18"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_18" id="opc_4_val_4_pre_18"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_18" id="opc_5_val_5_pre_18"></th>
+                            </tr>
+                            <tr>
+                                <th>19</th>
+                                <th>Me entusiasma encontrar soluciones lógicas a problemas complejos.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_19" id="opc_1_val_1_pre_19"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_19" id="opc_2_val_2_pre_19"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_19" id="opc_3_val_3_pre_19"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_19" id="opc_4_val_4_pre_19"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_19" id="opc_5_val_5_pre_19"></th>
+                            </tr>
+                            <tr>
+                                <th>20</th>
+                                <th>Disfruto leer, escribir o contar anécdotas.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_20" id="opc_1_val_1_pre_20"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_20" id="opc_2_val_2_pre_20"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_20" id="opc_3_val_3_pre_20"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_20" id="opc_4_val_4_pre_20"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_20" id="opc_5_val_5_pre_20"></th>
+                            </tr>
+                            <tr>
+                                <th>21</th>
+                                <th>Soy bueno recordando lugares o visualizando rutas.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_21" id="opc_1_val_1_pre_21"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_21" id="opc_2_val_2_pre_21"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_21" id="opc_3_val_3_pre_21"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_21" id="opc_4_val_4_pre_21"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_21" id="opc_5_val_5_pre_21"></th>
+                            </tr>
+                            <tr>
+                                <th>22</th>
+                                <th>Prefiero aprender tocando o manipulando objetos.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_22" id="opc_1_val_1_pre_22"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_22" id="opc_2_val_2_pre_22"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_22" id="opc_3_val_3_pre_22"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_22" id="opc_4_val_4_pre_22"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_22" id="opc_5_val_5_pre_22"></th>
+                            </tr>
+                            <tr>
+                                <th>23</th>
+                                <th>Me emociona la música y entiendo fácilmente los compases.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_23" id="opc_1_val_1_pre_23"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_23" id="opc_2_val_2_pre_23"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_23" id="opc_3_val_3_pre_23"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_23" id="opc_4_val_4_pre_23"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_23" id="opc_5_val_5_pre_23"></th>
+                            </tr>
+                            <tr>
+                                <th>24</th>
+                                <th>Disfruto trabajar con otras personas y comprender sus puntos de vista.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_24" id="opc_1_val_1_pre_24"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_24" id="opc_2_val_2_pre_24"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_24" id="opc_3_val_3_pre_24"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_24" id="opc_4_val_4_pre_24"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_24" id="opc_5_val_5_pre_24"></th>
+                            </tr>
+                            <tr>
+                                <th>25</th>
+                                <th>Me gusta pasar tiempo solo para pensar o planificar.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_25" id="opc_1_val_1_pre_25"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_25" id="opc_2_val_2_pre_25"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_25" id="opc_3_val_3_pre_25"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_25" id="opc_4_val_4_pre_25"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_25" id="opc_5_val_5_pre_25"></th>
+                            </tr>
+                            <tr>
+                                <th>26</th>
+                                <th>Me interesa cuidar el medio ambiente y los seres vivos.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_26" id="opc_1_val_1_pre_26"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_26" id="opc_2_val_2_pre_26"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_26" id="opc_3_val_3_pre_26"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_26" id="opc_4_val_4_pre_26"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_26" id="opc_5_val_5_pre_26"></th>
+                            </tr>
+                            <tr>
+                                <th>27</th>
+                                <th>Me cuestiono sobre mi propósito y el de los demás.</th>
+                                <th><input type="checkbox" name="opc_1_val_1_pre_27" id="opc_1_val_1_pre_27"></th>
+                                <th><input type="checkbox" name="opc_2_val_2_pre_27" id="opc_2_val_2_pre_27"></th>
+                                <th><input type="checkbox" name="opc_3_val_3_pre_27" id="opc_3_val_3_pre_27"></th>
+                                <th><input type="checkbox" name="opc_4_val_4_pre_27" id="opc_4_val_4_pre_27"></th>
+                                <th><input type="checkbox" name="opc_5_val_5_pre_27" id="opc_5_val_5_pre_27"></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- <div class="datos_personales">
                     <span>Lógica</span>
                     <br />
                     <br />
@@ -343,8 +615,8 @@
                     <span>Memoria</span>
                     <br />
                     <br />
-                    <span>Observa este número durante 5 segundos y luego escríbelo sin ver: <span style="color: #CB0404;"
-                            id="memoria_test_num"></span></span>
+                    <span>Observa este número durante 5 segundos y luego escríbelo sin ver: <span
+                            style="color: #CB0404;" id="memoria_test_num"></span></span>
                     <div class="content_input_entrevista">
                         <input type="text" name="memoria_test" id="memoria_test">
                     </div>
@@ -439,7 +711,7 @@
                             <option value="4">50</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="content_form_entrevista">
