@@ -20,6 +20,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 100%;
     padding: 20px 0;
     font-size: 16px !important;
@@ -142,12 +143,19 @@
     background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
 }
 
+.intro_test {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    padding-top: 15px;
+}
 
 .table-scrolld {
     max-height: 450px;
 }
-
-
 
 .table-wrapper {
     width: 100%;
@@ -193,7 +201,7 @@
     overflow-x: auto;
 }
 
-.content_hacer_test{
+.content_hacer_test {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,13 +209,29 @@
     gap: 10px;
 }
 
-.content_hacer_test p{
+.content_hacer_test p {
     font-size: 16px;
 }
 
 .content_hacer_test input {
     width: auto;
     font-size: 16px;
+}
+
+.content_action_no_xp {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 200px;
+    gap: 10px;
+    font-size: 12px;
+    position: absolute;
+    left: 155px;
+    top: 20px;
+}
+
+.content_action_no_xp input {
+    width: auto;
 }
 
 @media(max-width: 768px) {
@@ -230,5 +254,10 @@
 
     .btn_tomar_foto {
         display: none;
+    }
+
+    .content_action_no_xp {
+        left: 113px;
+        top: 4px;
     }
 }

@@ -12,7 +12,11 @@
     width: 100%;
     height: 500px;
     position: relative;
-    background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
+    /* background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%); */
+    background-image: url(/resources/banner_TCN.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .content_title_talento {
@@ -20,8 +24,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     position: relative;
+    gap: 10px;
 }
 
 .content_title_talento h2 {

@@ -50,6 +50,18 @@
   const observacion_test = document.getElementById("observacion_test");
   const patron_test = document.getElementById("patron_test");
 
+  const no_tengo_xp = document.getElementById("no_tengo_xp");
+
+  no_tengo_xp.addEventListener("click", () => {
+    if (no_tengo_xp.checked == true) {
+      document.getElementById("seccion_expe_laboral").style.display = "none";
+    } else {
+      document.getElementById("seccion_expe_laboral").style.display = "flex";
+    }
+  });
+
+  const final_msj = document.getElementById("final_msj");
+
   const content_form_entrevista = document.getElementById(
     "content_form_entrevista"
   );
@@ -81,7 +93,7 @@
 
   let formulario = document.getElementById("content_main_e_digital");
   const url =
-    "https://script.google.com/macros/s/AKfycbzp0M3q4dlJ_eU4fIjVsfwNK8wdTR2n-bW_mj3qiihDvly_PZT8_a5EqVdqisgffjNK/exec";
+    "https://script.google.com/macros/s/AKfycbztoV80VtrgKOKxJZFlKuv5EiwluKivFJjtLLYdK8Plab1Ht0dMYIlI0sm8Lx6epbeJ/exec";
 
   function fileToDataURL(file) {
     return new Promise((resolve, reject) => {
@@ -186,6 +198,14 @@
     return totales;
   }
 
+  ultimo_grado.addEventListener("change", () => {
+    if (ultimo_grado.value == "Primaria") {
+      final_msj.style.display = "none";
+    } else {
+      final_msj.style.display = "flex";
+    }
+  });
+
   // const memoria_test_num = document.getElementById("memoria_test_num");
   // const codigo = Math.floor(10000 + Math.random() * 90000);
   // memoria_test_num.textContent = "Mostrar";
@@ -278,16 +298,6 @@
     }
 
     let inte = buildPayloadResultados();
-    console.log(inte.orden_desc.join(" - "));
-    console.log(inte.orden_desc[0].join(" - "));
-    console.log(inte.orden_desc[1].join(" - "));
-    console.log(inte.orden_desc[2].join(" - "));
-    console.log(inte.orden_desc[3].join(" - "));
-    console.log(inte.orden_desc[4].join(" - "));
-    console.log(inte.orden_desc[5].join(" - "));
-    console.log(inte.orden_desc[6].join(" - "));
-    console.log(inte.orden_desc[7].join(" - "));
-    console.log(inte.orden_desc[8].join(" - "));
 
     let nombre_val = nombre.value;
     let apellido_val = apellido.value;
@@ -371,7 +381,6 @@
       ciudad_referencia_val == "" ||
       tel_numero_val == "" ||
       ultimo_grado_val == "" ||
-      ultimo_trabajo_val == "" ||
       experiencia_considerada_val == "" || //Fortalezas
       aspecto_mejorar_val == "" ||
       motivo_postulacion_val == "" ||
@@ -492,6 +501,10 @@
                 popup: "mi-popup",
                 title: "mi-titulo",
               },
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.reload();
+              }
             });
           })
           .catch((error) => {

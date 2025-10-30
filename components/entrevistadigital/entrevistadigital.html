@@ -20,22 +20,22 @@
                     Cuanta más información suministres mejor para el proceso.</span>
                 <br />
                 <div class="datos_personales">
-                    <span>Nombres<strong class="pregunta_obligatoria"> *</strong></span>
+                    <span>Nombre<strong class="pregunta_obligatoria"> *</strong></span>
                     <div class="content_input_entrevista">
-                        <input id="nombre" placeholder="Nombre" type="text">
+                        <input id="nombre" placeholder="Nombres" type="text">
                         <input id="apellido" placeholder="Apellidos" type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>Cédula o documento de identidad<strong class="pregunta_obligatoria"> *</strong></span>
+                    <span>Tipo y Número de identificación<strong class="pregunta_obligatoria"> *</strong></span>
                     <div class="content_input_entrevista">
                         <select name="tipo_documento" id="tipo_documento">
                             <option value="">Selecccionar...</option>
-                            <option value="cedula">Cedula de Ciudadania</option>
+                            <option value="cedula">Cédula de ciudadanía</option>
                             <option value="cedula_extrajera">Documento extranjero</option>
                             <option value="cedula_extrajera">Permiso por Proteccion Laboral</option>
                         </select>
-                        <input id="num_documento" placeholder="Numero de Documento" type="number">
+                        <input id="num_documento" placeholder="Número de identificación" type="number">
                     </div>
                 </div>
                 <div class="datos_personales">
@@ -45,9 +45,8 @@
                             <input id="fecha_nacimiento" placeholder="Fecha de nacimiento" type="date">
                         </div>
                         <div class="content_campo_entre">
-                            <span>Correo Electronico<strong class="pregunta_obligatoria"> *</strong></span>
-                            <input id="correo_entrevista" placeholder="Correo Electronico / Email" type="text">
-
+                            <span>Correo Electrónico<strong class="pregunta_obligatoria"> *</strong></span>
+                            <input id="correo_entrevista" placeholder="Correo Electrónico / Email" type="text">
                         </div>
                     </div>
                 </div>
@@ -77,7 +76,8 @@
                 <div class="datos_personales">
                     <span>Regálanos tu usuario de redes sociales (Ej. Instagram ...)</strong></span>
                     <div class="content_input_entrevista">
-                        <input style="width: 100%;" id="cargo_aspira" placeholder="Usuario redes sociales" type="text">
+                        <input style="width: 100%;" id="cargo_aspira" placeholder="Usuario redes sociales ej: @ejemplo"
+                            type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
@@ -104,7 +104,6 @@
                                 <option value="Bachillerato">Secundaria</option>
                                 <option value="Tecnico">Técnico</option>
                                 <option value="Tecnologo">Tecnólogo</option>
-                                <option value="Profesional">Profesional</option>
                                 <option value="PreGrado">PreGrado</option>
                                 <option value="PostGrado">PostGrado</option>
                             </select>
@@ -119,7 +118,7 @@
                     <div class="content_input_entrevista">
                         <div class="content_campo_entre">
                             <span>Profesión u Oficio</span>
-                            <input id="titulo_obt" placeholder="Profesión" type="text">
+                            <input id="titulo_obt" placeholder="Profesión u Oficio" type="text">
                         </div>
                         <div class="content_campo_entre">
                             <span>Otros cursos relevantes</span>
@@ -135,46 +134,53 @@
                 <p class="type2-h1">Experiencia Laboral.</p>
                 <br />
                 <div class="content_oportunidad_laboral">
-                    <p>Somos Grande generadores de oportunidad de primer empleo, donde el talento y la magia puede estar
-                        en ti.</p>
+                    <p>Somos grandes generadores de oportunidad de primer empleo, si no tienes experiencia marca la
+                        primera opción y continúa.</p>
+                </div>
+                <div class="content_action_no_xp">
+                    <p>No cuento con experiencia. </p><input type="checkbox" id="no_tengo_xp">
                 </div>
                 <br />
-                <div class="datos_personales">
-                    <span>¿Ultima empresa donde laboro?<strong class="pregunta_obligatoria">
-                            *</strong></span>
-                    <div class="content_input_entrevista">
-                        <input class="all_espace" id="ultimo_trabajo"
-                            placeholder="¿En qué empresa trabajó más recientemente?" type="text">
+                <div id="seccion_expe_laboral"
+                    style="width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+
+                    <div class="datos_personales">
+                        <span>¿Cuál fue la última empresa donde laboraste?</span>
+                        <div class="content_input_entrevista">
+                            <input class="all_espace" id="ultimo_trabajo"
+                                placeholder="¿Cuál fue la última empresa donde laboraste?" type="text">
+                        </div>
+                    </div>
+                    <div class="datos_personales">
+                        <span>¿Cuál era tu cargo y funciones principales?</span>
+                        <div class="content_input_entrevista">
+                            <input class="all_espace" id="funciones_ultimo_trabajo"
+                                placeholder="¿Cuál era tu cargo y funciones principales?" type="text">
+                        </div>
+                    </div>
+                    <div class="datos_personales">
+                        <span>¿Cuánto tiempo laboraste allí?</span>
+                        <div class="content_input_entrevista">
+                            <input class="all_espace" id="tiempo_laborado" placeholder="¿Cuánto tiempo laboraste allí?"
+                                type="text">
+                        </div>
+                    </div>
+                    <div style="display: none;" class="datos_personales">
+                        <span>¿Por qué motivo dejó su último empleo?</span>
+                        <div class="content_input_entrevista">
+                            <input class="all_espace" id="motivo_ultimo_trabajo"
+                                placeholder="¿Por qué motivo dejó su último empleo?" type="text">
+                        </div>
+                    </div>
+                    <div class="datos_personales">
+                        <span>Menciona una experiencia que consideres destacada.</span>
+                        <div class="content_input_entrevista">
+                            <input class="all_espace" id="exp_considerada" placeholder="Describa sus experiencias"
+                                type="text">
+                        </div>
                     </div>
                 </div>
-                <div class="datos_personales">
-                    <span>¿Cuál era su cargo y funciones principales?</span>
-                    <div class="content_input_entrevista">
-                        <input class="all_espace" id="funciones_ultimo_trabajo"
-                            placeholder="¿Cuál era su cargo y funciones principales?" type="text">
-                    </div>
-                </div>
-                <div class="datos_personales">
-                    <span>¿Cuánto tiempo laboró allí?</span>
-                    <div class="content_input_entrevista">
-                        <input class="all_espace" id="tiempo_laborado" placeholder="¿Cuánto tiempo laboró allí?"
-                            type="text">
-                    </div>
-                </div>
-                <div style="display: none;" class="datos_personales">
-                    <span>¿Por qué motivo dejó su último empleo?</span>
-                    <div class="content_input_entrevista">
-                        <input class="all_espace" id="motivo_ultimo_trabajo"
-                            placeholder="¿Por qué motivo dejó su último empleo?" type="text">
-                    </div>
-                </div>
-                <div class="datos_personales">
-                    <span>Mencione una experiencia laboral que considere destacada.</span>
-                    <div class="content_input_entrevista">
-                        <input class="all_espace" id="exp_considerada" placeholder="Describa sus experiencias"
-                            type="text">
-                    </div>
-                </div>
+
             </div>
             <br />
             <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
@@ -183,7 +189,7 @@
                 <p class="type2-h1">Competencias y habilidades.</p>
                 <br />
                 <div class="datos_personales">
-                    <span>¿Cuáles considera para usted sus Competencias y habilidades?<strong
+                    <span>¿Cuáles consideras que son tus principales Competencias y Habilidades para el trabajo?<strong
                             class="pregunta_obligatoria">
                             *</strong></span>
                     <div class="content_input_entrevista">
@@ -191,15 +197,15 @@
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Qué aspectos cree que debe mejorar?<strong class="pregunta_obligatoria">
+                    <span>¿Qué aspectos crees que debes mejorar?<strong class="pregunta_obligatoria">
                             *</strong></span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="aspecto_mejorar"
-                            placeholder="¿Qué aspectos cree que debe mejorar?" type="text">
+                            placeholder="¿Qué aspectos crees que debes mejorar?" type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Qué herramientas o programas maneja con fluidez?</span>
+                    <span>¿Qué herramientas o programas manejas con fluidez?</span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="uso_herramientas"
                             placeholder="¿Qué herramientas o programas maneja con fluidez?" type="text">
@@ -230,22 +236,22 @@
                 <p class="type2-h1">Motivación y objetivos.</p>
                 <br />
                 <div class="datos_personales">
-                    <span>¿Qué l@ motiva a postularse a esta Empresa?<strong class="pregunta_obligatoria">
+                    <span>¿Qué te motiva a postularte a esta Empresa?<strong class="pregunta_obligatoria">
                             *</strong></span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="motivo_postulacion"
-                            placeholder="¿Qué lo motiva a postularse a este cargo?" type="text">
+                            placeholder="¿Qué te motiva a postularte a esta Empresa?" type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Qué espera lograr laboralmente en los próximos dos años?</span>
+                    <span>¿Qué esperas lograr laboralmente en los próximos dos años?</span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="logro_profesional"
-                            placeholder="¿Qué espera lograr profesionalmente en los próximos dos años?" type="text">
+                            placeholder="¿Qué espera lograr laboralmente en los próximos dos años?" type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Qué conoce de nuestra empresa o del sector?<strong class="pregunta_obligatoria">
+                    <span>¿Qué conoces de nuestra empresa o del sector?<strong class="pregunta_obligatoria">
                             *</strong></span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="saber_de_la_empresa"
@@ -253,10 +259,10 @@
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Qué l@ hace diferente de otros candidatos?</span>
+                    <span>¿Qué te hace diferente de otros candidatos?</span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="diferencia_otros"
-                            placeholder="¿Qué lo hace diferente de otros candidatos?" type="text">
+                            placeholder="¿Qué te hace diferente de otros candidatos?" type="text">
                     </div>
                 </div>
             </div>
@@ -267,7 +273,7 @@
                 <p class="type2-h1">Disponibilidad y condiciones.</p>
                 <br />
                 <div class="datos_personales">
-                    <span>¿Está actualmente empleado?<strong class="pregunta_obligatoria"> *</strong></span>
+                    <span>¿Estás actualmente empleado?<strong class="pregunta_obligatoria"> *</strong></span>
                     <div class="content_input_entrevista">
                         <select class="all_espace" name="actual_empleo" id="actual_empleo">
                             <option value="">Seleccionar...</option>
@@ -277,18 +283,18 @@
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Cuál es su disponibilidad para iniciar labores?<strong class="pregunta_obligatoria">
+                    <span>¿Cuál es tu disponibilidad para iniciar labores?<strong class="pregunta_obligatoria">
                             *</strong></span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="disponibilidad_inicio"
-                            placeholder="¿Cuál es su disponibilidad para iniciar labores?" type="text">
+                            placeholder="¿Cuál es tu disponibilidad para iniciar labores?" type="text">
                     </div>
                 </div>
                 <div style="display: none;" class="datos_personales">
-                    <span>¿Cuál es su aspiración salarial?<strong class="pregunta_obligatoria"> *</strong></span>
+                    <span>¿Cuál es tu aspiración salarial?<strong class="pregunta_obligatoria"> *</strong></span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="aspiracion_salarial"
-                            placeholder="¿Cuál es su aspiración salarial?" type="text">
+                            placeholder="¿Cuál es tu aspiración salarial?" type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
@@ -303,7 +309,7 @@
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Tiene disponibilidad para trasladarse o viajar?<strong class="pregunta_obligatoria">
+                    <span>¿Disponible para trasladarse o viajar?<strong class="pregunta_obligatoria">
                             *</strong></span>
                     <div class="content_input_entrevista">
                         <select class="all_espace" name="disponible_traslado" id="disponible_traslado">
@@ -318,9 +324,19 @@
             <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
             <br />
 
-            <div class="content_hacer_test">
-                <p>Quiero hacer el Test</p>
-                <input type="checkbox" id="hacer_test">
+
+            <div class="intro_test">
+                <div class="content_oportunidad_laboral">
+                    <p>Test de perfilamiento previo.</p>
+                    <br />
+                    <p>Hemos diseñado un test que nos servirá para encontrar un espacio ideal para ti, no es obligatorio
+                        responderlo, pero será muy útil si lo hicieras.</p>
+                </div>
+                <br />
+                <div class="content_hacer_test">
+                    <p>Quiero hacer el Test</p>
+                    <input type="checkbox" id="hacer_test">
+                </div>
             </div>
 
 
@@ -725,13 +741,19 @@
                 </div>
                 <div style="width: 100%;height: 1px;background-color: rgba(87, 87, 87, 0.336);"></div>
                 <div class="datos_personales">
-                    <div style="justify-content: start;" class="content_input_entrevista">
-                        <span class="all_espace">Autorización para tratamiento de datos personales<strong
-                                class="pregunta_obligatoria"> *</strong>.</span>
-                        <input id="autorizo_entre" type="checkbox">
+                    <div class="content_input_entrevista">
+                        <span>Autorizo el tratamiento de mis datos personales<strong class="pregunta_obligatoria">
+                                *</strong>.</span>
+                        <input style="width: auto;display: flex;justify-content: start;" id="autorizo_entre"
+                            type="checkbox">
                     </div>
                 </div>
-
+                <div id="final_msj" class="intro_test">
+                    <div class="content_oportunidad_laboral">
+                        <p>Hemos llegado al final. Gracias por tu participación, nos pondremos en contacto muy pronto.
+                        </p>
+                    </div>
+                </div>
             </div>
             <br />
             <br />
