@@ -290,15 +290,16 @@ h2 {
     line-height: 2.1rem;
 }
 
-.flechas-levitando {
+.flechas-levitando-jr {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
     z-index: 10;
+    position: relative;
 }
 
-.flecha {
+.flecha-jr {
     width: 16px;
     height: 16px;
     border: solid #efb810;
@@ -308,11 +309,11 @@ h2 {
     opacity: 0.8;
 }
 
-.flecha:nth-child(2) {
+.flecha-jr:nth-child(2) {
     animation-delay: 0.2s;
 }
 
-.flecha:nth-child(3) {
+.flecha-jr:nth-child(3) {
     animation-delay: 0.4s;
 }
 
