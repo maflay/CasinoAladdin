@@ -12,7 +12,7 @@
 
   if (btnNext2) {
     btnNext2.addEventListener("click", () => {
-      navegarA("ruledelasuerte");
+      navegarA("hacemosengrande");
     });
   }
 

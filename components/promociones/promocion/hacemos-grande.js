@@ -67,14 +67,14 @@ setTimeout(() => {
     .addEventListener("click", tomatchperfecto);
 
   function tomatchperfecto() {
-    navegarA("halloweenmisterioso");
+    navegarA("ruledelasuerte");
   }
   document
     .getElementById("next-to-nueve-portales")
     .addEventListener("click", toflechazocupido);
 
   function toflechazocupido() {
-    navegarA("losnueveportales");
+    navegarA("acumulaygana");
   }
 
   function toPromos() {
