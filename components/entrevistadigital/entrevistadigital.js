@@ -403,6 +403,7 @@
         text: "Por favor completa todos los campos obligatorios.",
         icon: "warning",
         allowOutsideClick: false,
+        heightAuto: false,
         customClass: {
           popup: "mi-popup",
           title: "mi-titulo",
