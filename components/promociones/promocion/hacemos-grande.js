@@ -62,21 +62,21 @@ setTimeout(() => {
     });
 })();
 
-  document
-    .getElementById("next-to-halloween-misterioso")
-    .addEventListener("click", tomatchperfecto);
+document
+  .getElementById("next-to-halloween-misterioso")
+  .addEventListener("click", tomatchperfecto);
 
-  function tomatchperfecto() {
-    navegarA("ruledelasuerte");
-  }
-  document
-    .getElementById("next-to-nueve-portales")
-    .addEventListener("click", toflechazocupido);
+function tomatchperfecto() {
+  navegarA("ruledelasuerte");
+}
+document
+  .getElementById("next-to-nueve-portales")
+  .addEventListener("click", toflechazocupido);
 
-  function toflechazocupido() {
-    navegarA("acumulaygana");
-  }
+function toflechazocupido() {
+  navegarA("acumulaygana");
+}
 
-  function toPromos() {
-    navegarA("promociones");
-  }
+function toPromos() {
+  navegarA("promociones");
+}

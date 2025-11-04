@@ -1,4 +1,3 @@
-
 (() => {
   const btnNext1 = document.getElementById("next-to-1");
   const btnNext2 = document.getElementById("next-to-2");

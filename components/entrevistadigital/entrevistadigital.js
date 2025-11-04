@@ -280,22 +280,22 @@
   async function handleSubmit() {
     validateIndetidad();
     let val_correo = "";
-    if (ciudad_referencia.value == "cali") {
-      // val_correo = "seleccion@vivealaddin.com";
-      val_correo = "pruebajfdm@gmail.com";
-    } else if (ciudad_referencia.value == "bogota") {
-      val_correo = "bog_auxnomina@vivealaddin.com";
-    } else if (ciudad_referencia.value == "barranquilla") {
-      val_correo = "baq_operativo@vivealaddin.com";
-    } else if (ciudad_referencia.value == "pereira") {
-      val_correo = "per_asisadtvo@vivealaddin.com";
-    } else if (ciudad_referencia.value == "tulua") {
-      val_correo = "dir.a09@vivealaddin.com";
-    } else if (ciudad_referencia.value == "buga") {
-      val_correo = "dir.A38@vivealaddin.com";
-    } else if (ciudad_referencia.value == "monteria") {
-      val_correo = "carlosg@vivealaddin.com";
-    }
+    val_correo = "pruebajfdm@gmail.com";
+    // if (ciudad_referencia.value == "cali") {
+    //   val_correo = "seleccion@vivealaddin.com";
+    // } else if (ciudad_referencia.value == "bogota") {
+    //   val_correo = "bog_auxnomina@vivealaddin.com";
+    // } else if (ciudad_referencia.value == "barranquilla") {
+    //   val_correo = "baq_operativo@vivealaddin.com";
+    // } else if (ciudad_referencia.value == "pereira") {
+    //   val_correo = "per_asisadtvo@vivealaddin.com";
+    // } else if (ciudad_referencia.value == "tulua") {
+    //   val_correo = "dir.a09@vivealaddin.com";
+    // } else if (ciudad_referencia.value == "buga") {
+    //   val_correo = "dir.A38@vivealaddin.com";
+    // } else if (ciudad_referencia.value == "monteria") {
+    //   val_correo = "carlosg@vivealaddin.com";
+    // }
 
     let inte = buildPayloadResultados();
 
@@ -313,11 +313,17 @@
     let institucion_entre_val = institucion_entre.value;
     let titulo_obt_val = titulo_obt.value;
     let cursos_obt_val = cursos_obt.value;
-    let ultimo_trabajo_val = ultimo_trabajo.value;
-    let funciones_ultimo_trabajo_val = funciones_ultimo_trabajo.value;
-    let tiempo_laborado_val = tiempo_laborado.value;
+    let ultimo_trabajo_val =
+      no_tengo_xp.checked == true ? "Sin Experiencia." : ultimo_trabajo.value;
+    let funciones_ultimo_trabajo_val =
+      no_tengo_xp.checked == true
+        ? "Sin Experiencia."
+        : funciones_ultimo_trabajo.value;
+    let tiempo_laborado_val =
+      no_tengo_xp.checked == true ? "Sin Experiencia." : tiempo_laborado.value;
     let motivo_ultimo_trabajo_val = motivo_ultimo_trabajo.value;
-    let exp_considerada_val = exp_considerada.value;
+    let exp_considerada_val =
+      no_tengo_xp.checked == true ? "Sin Experiencia." : exp_considerada.value;
     let experiencia_considerada_val = experiencia_considerada.value;
     let aspecto_mejorar_val = aspecto_mejorar.value;
     let uso_herramientas_val = uso_herramientas.value;
