@@ -247,7 +247,7 @@
         loader.style.display = "none";
         Swal.fire({
           title: "Gracias por tu Participación!",
-          text: "Se reviso tu información y no cumples con unos requisitos.",
+          text: "Basándonos en las respuestas proporcionadas en este formulario, su perfil no cumple con los requisitos mínimos indispensables para participar en este estudio/proceso.",
           icon: "success",
           allowOutsideClick: false,
           customClass: {
@@ -280,22 +280,22 @@
   async function handleSubmit() {
     validateIndetidad();
     let val_correo = "";
-    val_correo = "pruebajfdm@gmail.com";
-    // if (ciudad_referencia.value == "cali") {
-    //   val_correo = "seleccion@vivealaddin.com";
-    // } else if (ciudad_referencia.value == "bogota") {
-    //   val_correo = "bog_auxnomina@vivealaddin.com";
-    // } else if (ciudad_referencia.value == "barranquilla") {
-    //   val_correo = "baq_operativo@vivealaddin.com";
-    // } else if (ciudad_referencia.value == "pereira") {
-    //   val_correo = "per_asisadtvo@vivealaddin.com";
-    // } else if (ciudad_referencia.value == "tulua") {
-    //   val_correo = "dir.a09@vivealaddin.com";
-    // } else if (ciudad_referencia.value == "buga") {
-    //   val_correo = "dir.A38@vivealaddin.com";
-    // } else if (ciudad_referencia.value == "monteria") {
-    //   val_correo = "carlosg@vivealaddin.com";
-    // }
+    // val_correo = "pruebajfdm@gmail.com";
+    if (ciudad_referencia.value == "cali") {
+      val_correo = "seleccion@vivealaddin.com";
+    } else if (ciudad_referencia.value == "bogota") {
+      val_correo = "bog_auxnomina@vivealaddin.com";
+    } else if (ciudad_referencia.value == "barranquilla") {
+      val_correo = "baq_operativo@vivealaddin.com";
+    } else if (ciudad_referencia.value == "pereira") {
+      val_correo = "per_asisadtvo@vivealaddin.com";
+    } else if (ciudad_referencia.value == "tulua") {
+      val_correo = "dir.a09@vivealaddin.com";
+    } else if (ciudad_referencia.value == "buga") {
+      val_correo = "dir.A38@vivealaddin.com";
+    } else if (ciudad_referencia.value == "monteria") {
+      val_correo = "carlosg@vivealaddin.com";
+    }
 
     let inte = buildPayloadResultados();
 

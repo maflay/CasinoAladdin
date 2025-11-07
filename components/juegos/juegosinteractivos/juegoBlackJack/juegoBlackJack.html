@@ -28,54 +28,66 @@
                             <div id="board_dealer" class="board_dealer"></div>
                             <div class="score" id="score_dealer">0</div>
                         </div>
-                       
+
                         <div title="Zapato" class="zapato_cartas"><img
                                 src="/resources/cartas/zapato_distribuidor_de_cartas.png" alt=""></div>
                         <!-- <div style="width: 100%;height: 1px;background-color: rgba(255, 255, 255, 0.349);"></div> -->
                         <div title="Tablero Jugador" class="content_board_player">
-                             <div title="Mazo" class="content_mazo"><img src="/resources/cartas/mazo.png" alt="Aladdin">
-                        </div>
+
                             <h2>Jugador</h2>
                             <div id="board_player" class="board_player"></div>
                             <div class="score" id="score_player">0</div>
+                            <div class="hand_2_curr" id="score_player2">0</div>
+                            <button class="btn-design1 btn_apostar btn_sacar_mazo" id="btn_mazo2">Pedir Carta</button>
                         </div>
-                        <div class="content_btn_actions">
-                            <button title="Realizar Apuesta" id="apostar_blackjack" class="btn-design1">Apostar</button>
-                            <button title="Sacar Carta" id="sacar_carta_blackjack" class="btn-design1">Sacar
-                                carta</button>
-                            <button title="Plantarse" id="plantarse_blackjack" class="btn-design1">Plantarse</button>
-                            <button title="Reiniciar" id="reset" class="btn-design1">Reiniciar Tablero</button>
-                        </div>
-                        <div style="position: absolute;bottom: -5px;font-size: 16px;" id="msj_reiniciar">Puedes
+
+                        <div style="position: absolute;bottom: -5px;font-size: 16px;font-family: 'digital_7', sans-serif;"
+                            id="msj_reiniciar">Puedes
                             reiniciar
                             el juego.</div>
                     </div>
                     <div class="control_blackjack">
                         <div class="content_info_ficha">
                             <small>El dinero es ficticio, por favor tener en cuenta</small>
-                            <div>Monto <span id="_cupo">0</span></div>
+                            <div class="yellow_text">Monto <span class="yellow_text" id="_cupo">0</span></div>
                             <br />
                             <div class="content_apuesta">
-                                <p>Apuestas</p> <span class="_apuesta" id="_apuesta"></span>
+                                <p class="yellow_text">Apuestas</p> <span class="_apuesta yellow_text"
+                                    id="_apuesta"></span>
                             </div>
                             <br />
-                            <div id="content_fichas_menos" class="content_fichas_menos"></div>
-                        </div>
-                        <div id="content_fichas" class="content_fichas">
-                            <span>Selecciona tus fichas, para apostar</span>
-                            <img id="ficha_10" title="Ficha de $ 10.000" src="/resources/poker-chip-10.png"
-                                alt="Aladdin" data-valor="10000">
-                            <img id="ficha_25" title="Ficha de $ 25.000" src="/resources/poker-chip-25.png"
-                                alt="Aladdin" data-valor="25000">
-                            <img id="ficha_50" title="Ficha de $ 50.000" src="/resources/poker-chip-50.png"
-                                alt="Aladdin" data-valor="50000">
-                            <img id="ficha_100" title="Ficha de $ 100.000" src="/resources/poker-chip-100.png"
-                                alt="Aladdin" data-valor="100000">
-                            <img id="ficha_250" title="Ficha de $ 250.000" src="/resources/poker-chip-250.png"
-                                alt="Aladdin" data-valor="250000">
                         </div>
                     </div>
                     <div class="mensaje_apuesta" id="mensaje_apuesta"></div>
+                </div>
+                <div title="Mazo" class="content_mazo"><img src="/resources/cartas/mazo.png" alt="Aladdin">
+                </div>
+                <div id="content_fichas_menos" class="content_fichas_menos"></div>
+                <div id="content_fichas" class="content_fichas">
+                    <span>Selecciona tus fichas, para apostar</span>
+                    <img id="ficha_10" title="Ficha de $ 10.000" src="/resources/poker-chip-10.png" alt="Aladdin"
+                        data-valor="10000">
+                    <img id="ficha_25" title="Ficha de $ 25.000" src="/resources/poker-chip-25.png" alt="Aladdin"
+                        data-valor="25000">
+                    <img id="ficha_50" title="Ficha de $ 50.000" src="/resources/poker-chip-50.png" alt="Aladdin"
+                        data-valor="50000">
+                    <img id="ficha_100" title="Ficha de $ 100.000" src="/resources/poker-chip-100.png" alt="Aladdin"
+                        data-valor="100000">
+                    <img id="ficha_250" title="Ficha de $ 250.000" src="/resources/poker-chip-250.png" alt="Aladdin"
+                        data-valor="250000">
+                </div>
+                <div class="content_btn_actions">
+                    <button title="Realizar Apuesta" id="apostar_blackjack"
+                        class="btn-design1 btn_apostar">Apostar</button>
+                    <button title="Realizar Apuesta" id="doblar_blackjack"
+                        class="btn-design1 btn_apostar">Doblar</button>
+                    <button title="Realizar Apuesta" id="dividir_blackjack" class="btn-design1 btn_apostar">Abrir /
+                        Dividir</button>
+                    <button title="Sacar Carta" id="sacar_carta_blackjack" class="btn-design1 btn_sacar_carta">Pedir
+                        Carta</button>
+                    <button title="Plantarse" id="plantarse_blackjack"
+                        class="btn-design1 btn_plantarse">Plantarse</button>
+                    <button title="Reiniciar" id="reset" class="btn-design1 btn_reiniciar_t">Reiniciar Tablero</button>
                 </div>
             </div>
 
@@ -89,38 +101,10 @@
                     <p onclick="cerrarModal()">&times;</p>
                 </div>
                 <div class="content_info_juego">
-                    <p>En el blackjack, los jugadores juegan contra el Dealer, en lugar de entre sí. El objetivo básico
+                    <p>En el blackjack, los apostadores juegan contra La Casa. El objetivo básico
                         del blackjack se describe fácilmente:</p>
                     <br />
-                    <p>El objetivo del blackjack es conseguir más puntos que el Dealer sin pasarse de 21.</p>
-                    <br />
-                    <h2 class="type2-h1">¿Cómo ganarle al Dealer?</h2>
-                    <br />
-                    <ul>
-                        <li>Sacando una mano que tenga un valor mayor que la del Dealer, sin pasarse de 21.</li>
-                        <li>Si el Dealer obtiene una mano con un resultado superior a 21, esto se conoce como pasarse .
-                        </li>
-                        <li>Si tus dos primeras cartas suman 21 puntos, que siempre serán un as y una carta de 10 (10,
-                            jota, reina o rey), esta mano se llama natural o blackjack .</li>
-                    </ul>
-                    <h2 class="type2-h1">¿Cómo se pierde contra el Dealer?</h2>
-                    <br />
-                    <ul>
-                        <li>Al anotar más de 21 puntos y quebrar.</li>
-                        <li>Si el Dealer obtiene más puntos que usted al final de la ronda, sin pasar de 21.</li>
-                    </ul>
-                    <br />
-                    <h2 class="type2-h1">Valores de las cartas del Blackjack</h2>
-                    <br />
-                    <p>En el blackjack, cada carta tiene un valor en puntos. Estos se muestran en la siguiente
-                        manera:</p>
-                    <br />
-                    <ul>
-                        <li>Las cartas numeradas (del 2 al 10) valen su valor nominal .</li>
-                        <li>Las cartas con figuras o cartas de la corte (jota, reina y rey) valen 10 puntos .</li>
-                        <li>Los ases valen 1 u 11 puntos , lo que sea mejor para la mano. A veces se dice que los ases
-                            son flexibles si pueden contarse como 1 u 11 en la mano.</li>
-                    </ul>
+                    <p>El objetivo del blackjack es conseguir más puntos que La Casa sin pasarse de 21.</p>
                     <br />
                     <h2 class="type2-h1">Realizar apuestas</h2>
                     <br />
@@ -140,11 +124,39 @@
                     <br />
                     <h2 class="type2-h1">Repartiendo las cartas</h2>
                     <br />
-                    <p>El Dealer reparte una carta boca arriba a cada jugador en el sentido de las agujas del reloj,
-                        antes de repartirse una carta boca abajo.</p>
+                    <p>El Dealer reparte una carta boca arriba a cada jugador en el sentido de las agujas del reloj.</p>
                     <br />
                     <p>La carta boca abajo se conoce como la carta oculta del Dealer . A continuación, se reparte una
                         carta boca arriba a cada jugador y, finalmente, una carta boca arriba al Dealer.</p>
+                    <br />
+                    <h2 class="type2-h1">¿Cómo ganarle a La Casa?</h2>
+                    <br />
+                    <ul>
+                        <li>Sacando una mano que tenga un valor mayor que la de La Casa, sin pasarse de 21.</li>
+                        <li>Si La Casa obtiene una mano con un resultado superior a 21, esto se conoce como pasarse .
+                        </li>
+                        <li>Si tus dos primeras cartas suman 21 puntos, que siempre serán un as y una carta de 10 (10,
+                            jota, reina o rey), esta mano se llama natural o blackjack .</li>
+                    </ul>
+                    <h2 class="type2-h1">¿Cómo se pierde contra La Casa?</h2>
+                    <br />
+                    <ul>
+                        <li>Al anotar más de 21 puntos y quebrar.</li>
+                        <li>Si La Casa obtiene más puntos que usted al final de la ronda, sin pasar de 21.</li>
+                    </ul>
+                    <br />
+                    <h2 class="type2-h1">Valores de las cartas del Blackjack</h2>
+                    <br />
+                    <p>En el blackjack, cada carta tiene un valor en puntos. Estos se muestran en la siguiente
+                        manera:</p>
+                    <br />
+                    <ul>
+                        <li>Las cartas numeradas (del 2 al 10) valen su valor nominal .</li>
+                        <li>Las cartas con figuras o cartas de la corte (jota, reina y rey) valen 10 puntos .</li>
+                        <li>Los ases valen 1 u 11 puntos , lo que sea mejor para la mano. A veces se dice que los ases
+                            son flexibles si pueden contarse como 1 u 11 en la mano.</li>
+                    </ul>
+
                 </div>
             </div>
         </div>
