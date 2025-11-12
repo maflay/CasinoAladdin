@@ -68,8 +68,8 @@ function toPromociones() {
 
       // si data ya es un array [{url:"..."}, ...]
       const posts = data
-      .reverse()
-        .slice(0 ,4) // 👈 copia para no mutar el array original
+        .reverse()
+        .slice(0, 4) // 👈 copia para no mutar el array original
         .map((item) => normalizeIgUrl(item.url));
 
       // console.log("Posts normalizados:", posts);

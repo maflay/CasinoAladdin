@@ -299,6 +299,7 @@
       },
     }).then((result) => {
       if (result.isConfirmed) {
+        console.log("entro en enviar");
         if (result.value != "") {
           setCookie("user", result.value[0].Cedula);
           //   view1.style.display = "none";
@@ -328,6 +329,8 @@
             }
           });
         }
+      } else if (result.isDismissed) {
+        navegarA("inicio");
       }
     });
   }
@@ -777,8 +780,6 @@
       Correo_enviar: "pruebajfdm@gmail.com",
     };
 
-   
-
     Swal.fire({
       title: "Estas Seguro?",
       text: "Revisa tu información antes del envió!",
@@ -795,7 +796,7 @@
       },
     }).then((res) => {
       if (res.isConfirmed) {
-         loader.style.display= "flex"
+        loader.style.display = "flex";
         fetch(url_post, {
           method: "POST",
           mode: "no-cors",
@@ -803,7 +804,7 @@
         })
           .then((res) => res.text())
           .then(() => {
-             loader.style.display= "none"
+            loader.style.display = "none";
             Swal.fire({
               icon: "success",
               title: "Gracias por tu solicitud",
