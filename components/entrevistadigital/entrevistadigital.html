@@ -33,7 +33,7 @@
                             <option value="">Selecccionar...</option>
                             <option value="cedula">Cédula de ciudadanía</option>
                             <option value="cedula_extrajera">Documento extranjero</option>
-                            <option value="cedula_extrajera">Permiso por Proteccion Laboral</option>
+                            <option value="permiso_laboral">Permiso por Proteccion Laboral</option>
                         </select>
                         <input id="num_documento" placeholder="Número de identificación" type="number">
                     </div>
@@ -46,7 +46,8 @@
                         </div>
                         <div class="content_campo_entre">
                             <span>Correo Electrónico<strong class="pregunta_obligatoria"> *</strong></span>
-                            <input id="correo_entrevista" placeholder="Correo Electrónico / Email" type="text">
+                            <input id="correo_entrevista" placeholder="Correo Electrónico / Email" type="email" required>
+                            <small id="correo_help" class="msg-ayuda"></small>
                         </div>
                     </div>
                 </div>

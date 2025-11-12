@@ -44,6 +44,7 @@
 .content_campo_entre {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 100%;
     gap: 10px;
 }
@@ -232,6 +233,25 @@
 .content_action_no_xp input {
     width: auto;
 }
+
+input.invalid {
+    border: 2px solid #e53935;
+    outline: none;
+}
+
+input.valid {
+    border: 2px solid #43a047;
+}
+
+.msg-ayuda {
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    font-size: .85rem;
+    margin-top: 4px;
+    color: #e53935;
+}
+
 
 @media(max-width: 768px) {
     .content_img_entrevista {

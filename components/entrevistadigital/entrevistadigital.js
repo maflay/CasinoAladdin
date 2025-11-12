@@ -5,6 +5,7 @@
   const num_documento = document.getElementById("num_documento");
   const fecha_nacimiento = document.getElementById("fecha_nacimiento");
   const correo_entrevista = document.getElementById("correo_entrevista");
+  const help = document.getElementById("correo_help");
   const ciudad_referencia = document.getElementById("ciudad_referencia");
   const tel_numero = document.getElementById("tel_numero");
   const cargo_aspira = document.getElementById("cargo_aspira");
@@ -237,6 +238,22 @@
 
     return payload;
   }
+
+  const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  correo_entrevista.addEventListener("input", () => {
+    const val = correo_entrevista.value.trim();
+
+    const ok = reEmail.test(val);
+
+    correo_entrevista.classList.toggle("invalid", !ok);
+    correo_entrevista.classList.toggle("valid", ok);
+
+    correo_entrevista.setCustomValidity(ok ? "" : "Correo inválido");
+    help.textContent = ok
+      ? ""
+      : "Escribe un correo válido (ej. usuario@dominio.com)";
+  });
 
   btn_send_entrevista.addEventListener("click", () => {
     const identidad = validateIndetidad();

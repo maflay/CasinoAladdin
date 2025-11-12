@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Experiencias con Aladdin</title>
+</head>
+
+<body>
+    <section class="content_main_exp">
+        <section class="container">
+            <div id="section_one">
+                <div class="content_head_exp"></div>
+                <div class="content_text_head">
+                    <h1 class="type1-h1">Vive la Experiencia en Familia</h1>
+                    <br />
+                    <p>En Aladdin, creemos que los mejores momentos se disfrutan en compañía de quienes más queremos.
+                        Por
+                        eso, nuestros trabajadores tienen la oportunidad especial de invitar a sus familias para
+                        compartir
+                        un día diferente dentro del casino: un espacio lleno de diversión, risas y experiencias únicas.
+                    </p>
+                    <br />
+                    <p>Queremos que tus seres queridos conozcan el lugar donde haces parte de algo grande, descubran
+                        nuestro
+                        ambiente, y vivan una jornada especial con actividades, música y sorpresas pensadas para todos.
+                    </p>
+                    <br />
+                    <h3 class="type2-h1">Porque para Aladdin la familia también hace parte de nuestra historia.</h3>
+
+                </div>
+                <div class="content_section_exp">
+                    <div class="content_img_exp">
+                        <img src="/resources/fichas-de-casino-y-escalera-real.jpg" alt="Aladdin">
+                    </div>
+                    <div class="content_text_exp">
+                        <h4 class="type2-h1">Quiero hacer mi invitación.</h4>
+                        <br />
+                        <p>Si eres parte de Aladdin, ¡ahora puedes invitar a tu familia a vivir un momento especial
+                            contigo!
+                        </p>
+                        <br />
+                        <p>Solo necesitas ingresar tu número de documento para validar tu identidad, y en pocos pasos
+                            podrás
+                            registrar tu invitación.</p>
+                        <br />
+                        <div>
+                            <button id="btn_realizar_invi" class="btn-design1">Realizar Invitación</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section_two" class="section_two no_screen">
+                <div class="content_all_form">
+                    <div class="content_info_invi">
+                        <button id="salida_segura" class="btn-design1 btn_salida_segura">Salida segura.</button>
+                        <div>
+                            <h2 class="type2-h1">Invitación</h2>
+                        </div>
+                        <br />
+                        <p>Sabes que por ser parte del equipo de trabajo de la compañía tú no puedes jugar, pero si
+                            puedes acompañar a tus invitados a vivir la experiencia si así lo deseas, cuéntanos si
+                            tienes intención de acompañarlo (s): </p>
+                        <br />
+                        <div>
+                            <small class="letras_aviso_pequeño"><strong style="color: red;">* </strong>Marca si vas como
+                                acompañante de lo contrario no lo hagas.<strong style="color: red;"> *</strong></small>
+                            <input type="checkbox" id="acompañante">
+                        </div>
+                        <br />
+                        <p id="si_voy">Si iré como acompañante, consciente de que no puedo jugar.</p>
+                        <p id="no_voy">No asistiré con mi (s) invitado (s).</p>
+                    </div>
+                    <div class="content_form_update_info">
+                        <h2 class="type2-h1">Te pediremos que actualices algunos datos personales tuyos.</h2>
+                        <div class="content_form_update">
+                            <div class="content_row_form">
+                                <div class="content_form_update">
+                                    <br /><br />
+                                    <span class="texto_inicio">Nombres<strong style="color: red;"> *</strong></span>
+                                    <div class="content_input_form">
+                                        <input class="input_form" type="text" placeholder="Nombre..." id="nombre">
+                                    </div>
+                                </div>
+                                <div class="content_form_update">
+                                    <br /><br />
+                                    <span class="texto_inicio">Apellido<strong style="color: red;"> *</strong></span>
+                                    <div class="content_input_form">
+                                        <input class="input_form" type="text" placeholder="Apellido..." id="apellido">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content_row_form">
+                                <div class="content_form_update">
+                                    <br /><br />
+                                    <span class="texto_inicio">Fecha de Nacimiento<strong style="color: red;">
+                                            *</strong></span>
+                                    <div class="content_input_form">
+                                        <input class="input_form" type="date" placeholder="Fecha..." id="fecha_nac">
+                                    </div>
+                                </div>
+                                <div class="content_form_update">
+                                    <br /><br />
+                                    <span class="texto_inicio">Dirección<strong style="color: red;"> *</strong></span>
+                                    <div class="content_input_form">
+                                        <input class="input_form" type="text" placeholder="Dirección..." id="direccion">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content_row_form">
+                                <div class="content_form_update">
+                                    <br /><br />
+                                    <span class="texto_inicio"># Contacto<strong style="color: red;"> *</strong></span>
+                                    <div class="content_input_form">
+                                        <input class="input_form" type="number" placeholder="Numero..." id="contacto">
+                                    </div>
+                                </div>
+                                <div class="content_form_update">
+                                    <br /><br />
+                                    <span class="texto_inicio">Correo / Email<strong style="color: red;">
+                                            *</strong></span>
+                                    <div class="content_input_form">
+                                        <input class="input_form" type="text" placeholder="Correo / Email ..."
+                                            id="correo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content_row_form">
+                                <div class="content_form_update">
+                                    <br /><br />
+                                    <span class="texto_inicio">Cargo Actual<strong style="color: red;">
+                                            *</strong></span>
+                                    <div class="content_input_form">
+                                        <input class="input_form" type="text" placeholder="Cargo..." id="cargo">
+                                    </div>
+                                </div>
+                                <div class="content_form_update">
+                                    <br /><br />
+                                    <span class="texto_inicio">Local Asignado<strong style="color: red;">
+                                            *</strong></span>
+                                    <div class="content_input_form">
+                                        <input class="input_form" type="text" placeholder="Local..." id="local">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;"></div>
+                        <div class="_form_invi_xp">
+                            <div class="content_form_invi_xp">
+                                <div class="_select_invi">
+                                    <h2 class="type2-h1">Selecciona la cantidad de invitados que quiere llevar.</h2>
+                                    <select class="input_form" name="invitados" id="cant_invitados">
+                                        <option value="">Invitados...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div id="form_invi_1" class="content_form_invitados">
+                                    <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;">
+                                    </div>
+                                    <h2 class="type2-h1">Invitado 1</h2>
+                                    <br />
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Nombre<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Nombre..."
+                                                    id="nombre_inv_1">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Parentesco<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Parentesco..."
+                                                    id="parentesco_invi_1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Tipo de identificación<strong
+                                                    style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <select class="input_form" name="tipo_documento"
+                                                    id="tipo_documento_invi_1">
+                                                    <option value="">Tipo de Documento</option>
+                                                    <option value="cedula_ciudadana">Cedúla ciudadanía</option>
+                                                    <option value="documento_extrangero">Documento extranjero</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Número de identificación<strong
+                                                    style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="number"
+                                                    placeholder="Número de identificación..." id="numero_docu_invi_1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Pais de residencia<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Pais..."
+                                                    id="pais_invi_1">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Ciudad de residencia<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Ciudad..."
+                                                    id="ciudad_invi_1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Fecha de Visita<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="date" placeholder="Fecha de Visita..."
+                                                    id="fecha_invi_1">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Número de Contacto<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text"
+                                                    placeholder="Número de contacto..." id="num_invi_1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">¿Cuéntanos quien es esta persona, que hace y por
+                                                qué la quieres invitar a conocer?<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <textarea class="input_form" type="text"
+                                                    placeholder="Describe a tu Invitado..." id="desc_invi_1"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="form_invi_2" class="content_form_invitados">
+                                    <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;">
+                                    </div>
+                                    <h2 class="type2-h1">Invitado 2</h2>
+                                    <br />
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Nombre<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Nombre..."
+                                                    id="nombre_inv_2">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Parentesco<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Parentesco..."
+                                                    id="parentesco_invi_2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Tipo de identificación<strong
+                                                    style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <select class="input_form" name="tipo_documento"
+                                                    id="tipo_documento_invi_2">
+                                                    <option value="">Tipo de Documento</option>
+                                                    <option value="cedula_ciudadana">Cedúla ciudadanía</option>
+                                                    <option value="documento_extrangero">Documento extranjero</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Número de identificación<strong
+                                                    style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="number"
+                                                    placeholder="Número de identificación..." id="numero_docu_invi_2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Pais de residencia<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Pais..."
+                                                    id="pais_invi_2">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Ciudad de residencia<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Ciudad..."
+                                                    id="ciudad_invi_2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Fecha de Visita<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="date" placeholder="Fecha de Visita..."
+                                                    id="fecha_invi_2">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Número de Contacto<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text"
+                                                    placeholder="Número de contacto..." id="num_invi_2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">¿Cuéntanos quien es esta persona, que hace y por
+                                                qué la quieres invitar a conocer?<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <textarea class="input_form" type="text"
+                                                    placeholder="Describe a tu Invitado..." id="desc_invi_2"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div id="form_invi_3" class="content_form_invitados">
+                                    <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;">
+                                    </div>
+                                    <h2 class="type2-h1">Invitado 3</h2>
+                                    <br />
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Nombre<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Nombre..."
+                                                    id="nombre_inv_3">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Parentesco<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Parentesco..."
+                                                    id="parentesco_invi_3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Tipo de identificación<strong
+                                                    style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <select class="input_form" name="tipo_documento"
+                                                    id="tipo_documento_invi_3">
+                                                    <option value="">Tipo de Documento</option>
+                                                    <option value="cedula_ciudadana">Cedúla ciudadanía</option>
+                                                    <option value="documento_extrangero">Documento extranjero</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Número de identificación<strong
+                                                    style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="number"
+                                                    placeholder="Número de identificación..." id="numero_docu_invi_3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Pais de residencia<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Pais..."
+                                                    id="pais_invi_3">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Ciudad de residencia<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Ciudad..."
+                                                    id="ciudad_invi_3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Fecha de Visita<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="date" placeholder="Fecha de Visita..."
+                                                    id="fecha_invi_3">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Número de Contacto<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text"
+                                                    placeholder="Número de contacto..." id="num_invi_3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">¿Cuéntanos quien es esta persona, que hace y por
+                                                qué la quieres invitar a conocer?<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <textarea class="input_form" type="text"
+                                                    placeholder="Describe a tu Invitado..." id="desc_invi_3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div id="form_invi_4" class="content_form_invitados">
+                                    <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;">
+                                    </div>
+                                    <h2 class="type2-h1">Invitado 4</h2>
+                                    <br />
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Nombre<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Nombre..."
+                                                    id="nombre_inv_4">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Parentesco<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Parentesco..."
+                                                    id="parentesco_invi_4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Tipo de identificación<strong
+                                                    style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <select class="input_form" name="tipo_documento"
+                                                    id="tipo_documento_invi_4">
+                                                    <option value="">Tipo de Documento</option>
+                                                    <option value="cedula_ciudadana">Cedúla ciudadanía</option>
+                                                    <option value="documento_extrangero">Documento extranjero</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Número de identificación<strong
+                                                    style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="number"
+                                                    placeholder="Número de identificación..." id="numero_docu_invi_4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Pais de residencia<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Pais..."
+                                                    id="pais_invi_4">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Ciudad de residencia<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Ciudad..."
+                                                    id="ciudad_invi_4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Fecha de Visita<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="date" placeholder="Fecha de Visita..."
+                                                    id="fecha_invi_4">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Número de Contacto<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text"
+                                                    placeholder="Número de contacto..." id="num_invi_4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">¿Cuéntanos quien es esta persona, que hace y por
+                                                qué la quieres invitar a conocer?<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <textarea class="input_form" type="text"
+                                                    placeholder="Describe a tu Invitado..." id="desc_invi_4"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="form_invi_5" class="content_form_invitados">
+                                    <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;">
+                                    </div>
+                                    <h2 class="type2-h1">Invitado 5</h2>
+                                    <br />
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Nombre<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Nombre..."
+                                                    id="nombre_inv_5">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Parentesco<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Parentesco..."
+                                                    id="parentesco_invi_5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Tipo de identificación<strong
+                                                    style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <select class="input_form" name="tipo_documento"
+                                                    id="tipo_documento_invi_5">
+                                                    <option value="">Tipo de Documento</option>
+                                                    <option value="cedula_ciudadana">Cedúla ciudadanía</option>
+                                                    <option value="documento_extrangero">Documento extranjero</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Número de identificación<strong
+                                                    style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="number"
+                                                    placeholder="Número de identificación..." id="numero_docu_invi_5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Pais de residencia<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Pais..."
+                                                    id="pais_invi_5">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Ciudad de residencia<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text" placeholder="Ciudad..."
+                                                    id="ciudad_invi_5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Fecha de Visita<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="date" placeholder="Fecha de Visita..."
+                                                    id="fecha_invi_5">
+                                            </div>
+                                        </div>
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">Número de Contacto<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <input class="input_form" type="text"
+                                                    placeholder="Número de contacto..." id="num_invi_5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_row_form">
+                                        <div class="content_form_update">
+                                            <span class="texto_inicio">¿Cuéntanos quien es esta persona, que hace y por
+                                                qué la quieres invitar a conocer?<strong style="color: red;">
+                                                    *</strong></span>
+                                            <div class="content_input_form">
+                                                <textarea class="input_form" type="text"
+                                                    placeholder="Describe a tu Invitado..." id="desc_invi_5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content_btn_submit" class="content_btn_submit">
+                                    <div>
+                                        <span>Autorizo el tratamiento de mis datos personales<strong
+                                                class="pregunta_obligatoria">
+                                                *</strong>.</span>
+                                        <input type="checkbox" id="check_acepto_terminos">
+                                    </div>
+                                    <div>
+                                        <button id="btn_send_invi_form" class="btn-design1">Enviar</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

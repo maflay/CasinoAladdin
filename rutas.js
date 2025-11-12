@@ -329,4 +329,9 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/ruleta-de-premios.js",
   },
+  experiencias:{
+    html: "/components/experiencias/experiencias.html",
+    css: "/components/experiencias/experiencias.css",
+    js: "/components/experiencias/experiencias.js",
+  }
 };

@@ -1,0 +1,229 @@
+.content_main_exp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 5%;
+}
+
+.content_head_exp {
+    width: 100%;
+    height: 300px;
+    background-image: url(/resources/people_exp.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.content_text_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.content_section_exp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.content_img_exp {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.content_img_exp img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.content_text_exp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.section_two {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    margin-bottom: 20px;
+}
+
+.content_all_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.content_info_invi {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    width: 100%;
+}
+
+.btn_salida_segura {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.letras_aviso_pequeño {
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.content_form_update_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: 60px;
+    width: 100%;
+    max-width: 1000px;
+
+}
+
+.content_row_form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.content_form_update {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 16px;
+    width: 100%;
+}
+
+.content_input_form {
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+    gap: 10px;
+}
+
+.content_input_form input,
+.content_input_form textarea {
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.input_form {
+    width: 100%;
+    border-radius: 8px;
+    border: #eee solid 1px;
+    outline: none;
+    padding: 12px 8px;
+}
+
+._form_invi_xp {
+    padding-top: 40px;
+    width: 100%;
+}
+
+.content_form_invi_xp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content_form_invi_xp h2 {
+    text-align: center;
+}
+
+.content_form_invitados {
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.content_form_invitados h2 {
+    padding: 20px 0;
+}
+
+._select_invi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+._select_invi select {
+    width: 100px;
+}
+
+.content_btn_submit {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.pregunta_obligatoria {
+    color: #CB0404;
+}
+
+.no_screen {
+    display: none !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+@media(max-width:768px) {
+
+    .content_main_exp {
+        padding-top: 12%;
+    }
+
+    .content_head_exp {
+        height: 120px;
+    }
+
+    .content_row_form {
+        flex-direction: column;
+    }
+
+    ._select_invi {
+        flex-direction: column;
+    }
+
+    .btn_salida_segura {
+        font-size: 12px !important;
+        right: 0;
+    }
+}
