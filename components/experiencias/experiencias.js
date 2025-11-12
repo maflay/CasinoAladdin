@@ -8,9 +8,13 @@
   );
   const btn_salida_segura = document.getElementById("salida_segura");
 
-  const loader = document.getElementById("loader");
+  const loader = document.getElementById("loading");
 
-  const cant_invitados = document.getElementById("cant_invitados");
+  const btn_agregar_invi_1 = document.getElementById("agregar_invi_1");
+  const btn_quitar_invi_2 = document.getElementById("btn_quitar_invi_2");
+  const btn_quitar_invi_3 = document.getElementById("btn_quitar_invi_3");
+  const btn_quitar_invi_4 = document.getElementById("btn_quitar_invi_4");
+  const btn_quitar_invi_5 = document.getElementById("btn_quitar_invi_5");
 
   //datos actualizar
   const nombre = document.getElementById("nombre");
@@ -102,11 +106,11 @@
     "https://script.google.com/macros/s/AKfycbzHvhVbDqWLKETTEeXgWDe8lStGSk1jtVt0tDH_GuFDFj4natKo2AesuSTY4QtGy2FPlw/exec";
 
   const url_post =
-    "https://script.google.com/macros/s/AKfycbyBQFtiyrulqQA_KgzNXh0QI6lVEThz8oUTPSBaZgnnguRhZC-KfsbjW3gqiCrypFKc/exec";
+    "https://script.google.com/macros/s/AKfycbx-e9BYs4QeaEGHaShvBVoeeCI9Zv-MBGXa_PlJjmwFXJ6muSsofsLvx-8NpHro5gDs/exec";
 
   function setCookie(name, value, opts = {}) {
     const {
-      hours = 3,
+      hours = 2,
       path = "/",
       sameSite = "Lax",
       secure = location.protocol === "https:",
@@ -138,6 +142,15 @@
 
   validateSeccion();
 
+  topItem();
+
+  function topItem() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // animado
+    });
+  }
+
   function validateSeccion() {
     const u = getCookie("user");
     if (u) {
@@ -154,50 +167,75 @@
     }
   }
 
-  cant_invitados.addEventListener("change", () => {
-    if (cant_invitados.value == "1") {
+  btn_agregar_invi_1.addEventListener("click", () => {
+    if (form_invi_1.style.display != "flex") {
       form_invi_1.style.display = "flex";
-      form_invi_2.style.display = "none";
-      form_invi_3.style.display = "none";
-      form_invi_4.style.display = "none";
-      form_invi_5.style.display = "none";
       content_btn_submit.style.display = "flex";
-    } else if (cant_invitados.value == "2") {
-      form_invi_1.style.display = "flex";
+    } else if (form_invi_2.style.display != "flex") {
       form_invi_2.style.display = "flex";
-      form_invi_3.style.display = "none";
-      form_invi_4.style.display = "none";
-      form_invi_5.style.display = "none";
       content_btn_submit.style.display = "flex";
-    } else if (cant_invitados.value == "3") {
-      form_invi_1.style.display = "flex";
-      form_invi_2.style.display = "flex";
+    } else if (form_invi_3.style.display != "flex") {
       form_invi_3.style.display = "flex";
-      form_invi_4.style.display = "none";
-      form_invi_5.style.display = "none";
       content_btn_submit.style.display = "flex";
-    } else if (cant_invitados.value == "4") {
-      form_invi_1.style.display = "flex";
-      form_invi_2.style.display = "flex";
-      form_invi_3.style.display = "flex";
+    } else if (form_invi_4.style.display != "flex") {
       form_invi_4.style.display = "flex";
-      form_invi_5.style.display = "none";
       content_btn_submit.style.display = "flex";
-    } else if (cant_invitados.value == "5") {
-      form_invi_1.style.display = "flex";
-      form_invi_2.style.display = "flex";
-      form_invi_3.style.display = "flex";
-      form_invi_4.style.display = "flex";
+    } else if (form_invi_5.style.display != "flex") {
       form_invi_5.style.display = "flex";
       content_btn_submit.style.display = "flex";
-    } else {
-      form_invi_1.style.display = "none";
-      form_invi_2.style.display = "none";
-      form_invi_3.style.display = "none";
-      form_invi_4.style.display = "none";
-      form_invi_5.style.display = "none";
-      content_btn_submit.style.display = "none";
     }
+  });
+
+  btn_quitar_invi_2.addEventListener("click", () => {
+    form_invi_2.style.display = "none";
+    nombre_inv_2.value = "";
+    parentesco_invi_2.value = "";
+    tipo_documento_invi_2.value = "";
+    numero_docu_invi_2.value = "";
+    pais_invi_2.value = "";
+    ciudad_invi_2.value = "";
+    fecha_invi_2.value = "";
+    num_invi_2.value = "";
+    desc_invi_2.value = "";
+  });
+
+  btn_quitar_invi_3.addEventListener("click", () => {
+    form_invi_3.style.display = "none";
+    nombre_inv_3.value = "";
+    parentesco_invi_3.value = "";
+    tipo_documento_invi_3.value = "";
+    numero_docu_invi_3.value = "";
+    pais_invi_3.value = "";
+    ciudad_invi_3.value = "";
+    fecha_invi_3.value = "";
+    num_invi_3.value = "";
+    desc_invi_3.value = "";
+  });
+
+  btn_quitar_invi_4.addEventListener("click", () => {
+    form_invi_4.style.display = "none";
+    nombre_inv_4.value = "";
+    parentesco_invi_4.value = "";
+    tipo_documento_invi_4.value = "";
+    numero_docu_invi_4.value = "";
+    pais_invi_4.value = "";
+    ciudad_invi_4.value = "";
+    fecha_invi_4.value = "";
+    num_invi_4.value = "";
+    desc_invi_4.value = "";
+  });
+
+  btn_quitar_invi_5.addEventListener("click", () => {
+    form_invi_5.style.display = "none";
+    nombre_inv_5.value = "";
+    parentesco_invi_5.value = "";
+    tipo_documento_invi_5.value = "";
+    numero_docu_invi_5.value = "";
+    pais_invi_5.value = "";
+    ciudad_invi_5.value = "";
+    fecha_invi_5.value = "";
+    num_invi_5.value = "";
+    desc_invi_5.value = "";
   });
 
   check_acompañante.addEventListener("click", () => {
@@ -210,14 +248,21 @@
     }
   });
 
-  btn_realizar_invi.addEventListener("click", () => {
+  // btn_realizar_invi.addEventListener("click", () => {
+  //   validateindentity();
+  // });
+
+  const u = getCookie("user");
+  if (!u) {
     validateindentity();
-  });
+  }
 
   function validateindentity() {
     Swal.fire({
-      title: "Digita tu número de cedúla para poder validar.",
-      input: "text",
+      title: "Digita tu usuario y contraseña.",
+      html: `<input id="swal-user" name="user" class="swal2-input" placeholder="Usuario" autocomplete="current-password">
+              <input id="swal-pass" name="password" type="password" class="swal2-input" placeholder="Contraseña" autocomplete="current-password">
+              `,
       inputAttributes: {
         autocapitalize: "off",
       },
@@ -225,18 +270,26 @@
       confirmButtonText: "Validar",
       showLoaderOnConfirm: true,
       allowOutsideClick: false,
-      preConfirm: async (cedula) => {
-        try {
-          const githubUrl = `${url}?cedula=${cedula}`;
-          const response = await fetch(githubUrl);
-          if (!response.ok) {
-            return Swal.showValidationMessage(
-              `${JSON.stringify(await response.json())}`
-            );
+      preConfirm: async () => {
+        const usuario = document.getElementById("swal-user").value.trim();
+        const cedula = document.getElementById("swal-pass").value.trim();
+        if (usuario == "" || cedula == "") {
+          alert("Completa la informaión");
+          validateindentity();
+          return;
+        } else {
+          try {
+            const githubUrl = `${url}?cedula=${cedula}`;
+            const response = await fetch(githubUrl);
+            if (!response.ok) {
+              return Swal.showValidationMessage(
+                `${JSON.stringify(await response.json())}`
+              );
+            }
+            return response.json();
+          } catch (error) {
+            Swal.showValidationMessage(`Request failed: ${error}`);
           }
-          return response.json();
-        } catch (error) {
-          Swal.showValidationMessage(`Request failed: ${error}`);
         }
       },
       customClass: {
@@ -257,17 +310,22 @@
           //     behavior: "smooth", // animado
           //   });
         } else if (result.value == "") {
-          view1.style.display = "block";
-          view2.style.display = "none";
+          // view1.style.display = "block";
+          // view2.style.display = "none";
           Swal.fire({
             icon: "info",
             title: "Documento no Encontrado",
             html: "El documento digitado no se encuentra, por favor comunícate con el area de comunicaciones.",
+            allowOutsideClick: false,
             customClass: {
               popup: "mi-popup",
               title: "mi-titulo",
               confirmButton: "btn-Send mi-boton",
             },
+          }).then((res) => {
+            if (res.isConfirmed) {
+              validateindentity();
+            }
           });
         }
       }
@@ -306,11 +364,11 @@
         }).then((res) => {
           if (res.isConfirmed) {
             document.cookie = "user=; max-age=0; path=/;";
-            location.reload();
             window.scrollTo({
               top: 0,
               behavior: "smooth", // animado
             });
+            location.reload();
           }
         });
       }
@@ -425,7 +483,7 @@
       return;
     }
 
-    if (cant_invitados.value == "1") {
+    if (form_invi_1.style.display == "flex") {
       if (
         nombreI1 == "" ||
         parentescoI1 == "" ||
@@ -449,7 +507,7 @@
         });
         return;
       }
-    } else if (cant_invitados.value == "2") {
+    } else if (form_invi_2.style.display == "flex") {
       if (
         nombreI1 == "" ||
         parentescoI1 == "" ||
@@ -482,7 +540,7 @@
         });
         return;
       }
-    } else if (cant_invitados.value == "3") {
+    } else if (form_invi_3.style.display == "flex") {
       if (
         nombreI1 == "" ||
         parentescoI1 == "" ||
@@ -524,7 +582,7 @@
         });
         return;
       }
-    } else if (cant_invitados.value == "4") {
+    } else if (form_invi_4.style.display == "flex") {
       if (
         nombreI1 == "" ||
         parentescoI1 == "" ||
@@ -575,7 +633,7 @@
         });
         return;
       }
-    } else if (cant_invitados.value == "5") {
+    } else if (form_invi_5.style.display == "flex") {
       if (
         nombreI1 == "" ||
         parentescoI1 == "" ||
@@ -661,10 +719,10 @@
       Num_contacto_inv_1: numeInviI1,
       descr_inv_1: descInviI1,
       Invitado_2:
-        cant_invitados.value == "2" ||
-        cant_invitados.value == "3" ||
-        cant_invitados.value == "4" ||
-        cant_invitados.value == "5"
+        form_invi_2.style.display == "flex" ||
+        form_invi_3.style.display == "flex" ||
+        form_invi_4.style.display == "flex" ||
+        form_invi_5.style.display == "flex"
           ? "Invitado 2"
           : "",
       Nombre_inv_2: nombreI2,
@@ -677,9 +735,9 @@
       Num_contacto_inv_2: numeInviI2,
       descr_inv_2: descInviI2,
       Invitado_3:
-        cant_invitados.value == "3" ||
-        cant_invitados.value == "4" ||
-        cant_invitados.value == "5"
+        form_invi_3.style.display == "flex" ||
+        form_invi_4.style.display == "flex" ||
+        form_invi_5.style.display == "flex"
           ? "Invitado 3"
           : "",
       Nombre_inv_3: nombreI3,
@@ -692,7 +750,8 @@
       Num_contacto_inv_3: numeInviI3,
       descr_inv_3: descInviI3,
       Invitado_4:
-        cant_invitados.value == "4" || cant_invitados.value == "5"
+        form_invi_4.style.display == "flex" ||
+        form_invi_5.style.display == "flex"
           ? "Invitado 3"
           : "",
       Nombre_inv_4: nombreI4,
@@ -704,7 +763,7 @@
       Fecha_visita_inv_4: fechaVisiI4,
       Num_contacto_inv_4: numeInviI4,
       descr_inv_4: descInviI4,
-      Invitado_5: cant_invitados.value == "5" ? "Invitado 3" : "",
+      Invitado_5: form_invi_5.style.display == "flex" ? "Invitado 3" : "",
       Nombre_inv_5: nombreI5,
       Parentesco_inv_5: parentescoI5,
       Tipo_identificacion_inv_5: tipoDocuI5,
@@ -718,45 +777,66 @@
       Correo_enviar: "pruebajfdm@gmail.com",
     };
 
+   
 
-    fetch(url_post, {
-      method: "POST",
-      mode: "no-cors",
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.text())
-      .then(() => {
-        Swal.fire({
-          icon: "success",
-          title: "Gracias por tu solicitud",
-          html: "En máximo 72 horas recibirás respuesta de la aprobación de esta solicitud.",
-          allowOutsideClick: false,
-          customClass: {
-            popup: "mi-popup",
-            title: "mi-titulo",
-            confirmButton: "btn-Send mi-boton",
-          },
-        }).then((res) => {
-          if (res.isConfirmed) {
-            document.cookie = "user=; max-age=0; path=/;";
-            window.location.reload();
-          }
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-        loader.style.display = "none";
-        Swal.fire({
-          icon: "error",
-          title: "Error en el envió",
-          allowOutsideClick: false,
-          html: "Ha ocurrido un error en el envio de la solicitud, por favor intentalo mas tarde.",
-          customClass: {
-            popup: "mi-popup",
-            title: "mi-titulo",
-            confirmButton: "btn-Send mi-boton",
-          },
-        });
-      });
+    Swal.fire({
+      title: "Estas Seguro?",
+      text: "Revisa tu información antes del envió!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#9e7a2dff",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, estoy de acuerdo!",
+      heightAuto: false,
+      allowOutsideClick: false,
+      customClass: {
+        popup: "mi-popup",
+        title: "mi-titulo",
+      },
+    }).then((res) => {
+      if (res.isConfirmed) {
+         loader.style.display= "flex"
+        fetch(url_post, {
+          method: "POST",
+          mode: "no-cors",
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.text())
+          .then(() => {
+             loader.style.display= "none"
+            Swal.fire({
+              icon: "success",
+              title: "Gracias por tu solicitud",
+              html: "En máximo 72 horas recibirás respuesta de la aprobación de esta solicitud.",
+              allowOutsideClick: false,
+              customClass: {
+                popup: "mi-popup",
+                title: "mi-titulo",
+                confirmButton: "btn-Send mi-boton",
+              },
+            }).then((res) => {
+              if (res.isConfirmed) {
+                document.cookie = "user=; max-age=0; path=/;";
+                window.location.reload();
+              }
+            });
+          })
+          .catch((error) => {
+            console.log(error);
+            loader.style.display = "none";
+            Swal.fire({
+              icon: "error",
+              title: "Error en el envió",
+              allowOutsideClick: false,
+              html: "Ha ocurrido un error en el envio de la solicitud, por favor intentalo mas tarde.",
+              customClass: {
+                popup: "mi-popup",
+                title: "mi-titulo",
+                confirmButton: "btn-Send mi-boton",
+              },
+            });
+          });
+      }
+    });
   }
 })();

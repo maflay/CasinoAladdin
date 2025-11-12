@@ -149,6 +149,13 @@
     width: 100%;
 }
 
+.content_btn_agregar_invi {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+
 .content_form_invi_xp {
     display: flex;
     flex-direction: column;
@@ -170,6 +177,17 @@
 
 .content_form_invitados h2 {
     padding: 20px 0;
+}
+
+.content_btn_quitar_invi {
+    width: 100%;
+    position: relative;
+}
+
+.content_btn_quitar_invi button {
+    position: absolute;
+    right: 0;
+    top: 20px;
 }
 
 ._select_invi {

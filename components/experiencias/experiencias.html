@@ -8,8 +8,8 @@
 <body>
     <section class="content_main_exp">
         <section class="container">
-            <div id="section_one">
-                <div class="content_head_exp"></div>
+            <div id="section_one" style="height: 100vh;">
+                <!-- <div class="content_head_exp"></div>
                 <div class="content_text_head">
                     <h1 class="type1-h1">Vive la Experiencia en Familia</h1>
                     <br />
@@ -47,15 +47,26 @@
                             <button id="btn_realizar_invi" class="btn-design1">Realizar Invitación</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div id="section_two" class="section_two no_screen">
                 <div class="content_all_form">
                     <div class="content_info_invi">
                         <button id="salida_segura" class="btn-design1 btn_salida_segura">Salida segura.</button>
                         <div>
-                            <h2 class="type2-h1">Invitación</h2>
+                            <h2 class="type2-h1">QUE TU GENTE CONOZCA TU AMBIENTE</h2>
                         </div>
+                        <br />
+                        <p>Sabemos que muchas personas de tu círculo estrecho quisieran conocer un poco más del mundo en
+                            el que trabajas y desde luego eso hasta hoy... estaba prohibido, pero las cosas han cambiado
+                            y ahora tienes la oportunidad de invitar a tu gente a vivir esta experiencia del casino.</p>
+                        <br />
+                        <p>Si tienes un familiar o allegado que desea vivir la experiencia y conocer algo del mundo en
+                            el que trabajas, ahora podrás invitarlo y nosotros le daremos un bono de cortesía.</p>
+                        <br />
+                        <p>Todo lo que debes hacer es presentar la solicitud con los datos de la persona que deseas
+                            invitar y en cuestión de dos o tres días recibirás la aprobación de la visita, veamos cómo
+                            hacerlo:</p>
                         <br />
                         <p>Sabes que por ser parte del equipo de trabajo de la compañía tú no puedes jugar, pero si
                             puedes acompañar a tus invitados a vivir la experiencia si así lo deseas, cuéntanos si
@@ -100,7 +111,8 @@
                                 </div>
                                 <div class="content_form_update">
                                     <br /><br />
-                                    <span class="texto_inicio">Dirección<strong style="color: red;"> *</strong></span>
+                                    <span class="texto_inicio">Actualiza tu Dirección<strong style="color: red;">
+                                            *</strong></span>
                                     <div class="content_input_form">
                                         <input class="input_form" type="text" placeholder="Dirección..." id="direccion">
                                     </div>
@@ -109,14 +121,16 @@
                             <div class="content_row_form">
                                 <div class="content_form_update">
                                     <br /><br />
-                                    <span class="texto_inicio"># Contacto<strong style="color: red;"> *</strong></span>
+                                    <span class="texto_inicio">Actualiza tu número de contacto<strong
+                                            style="color: red;"> *</strong></span>
                                     <div class="content_input_form">
                                         <input class="input_form" type="number" placeholder="Numero..." id="contacto">
                                     </div>
                                 </div>
                                 <div class="content_form_update">
                                     <br /><br />
-                                    <span class="texto_inicio">Correo / Email<strong style="color: red;">
+                                    <span class="texto_inicio">Actualiza tu correo electrónico<strong
+                                            style="color: red;">
                                             *</strong></span>
                                     <div class="content_input_form">
                                         <input class="input_form" type="text" placeholder="Correo / Email ..."
@@ -127,7 +141,7 @@
                             <div class="content_row_form">
                                 <div class="content_form_update">
                                     <br /><br />
-                                    <span class="texto_inicio">Cargo Actual<strong style="color: red;">
+                                    <span class="texto_inicio">Actualiza tu cargo<strong style="color: red;">
                                             *</strong></span>
                                     <div class="content_input_form">
                                         <input class="input_form" type="text" placeholder="Cargo..." id="cargo">
@@ -135,7 +149,7 @@
                                 </div>
                                 <div class="content_form_update">
                                     <br /><br />
-                                    <span class="texto_inicio">Local Asignado<strong style="color: red;">
+                                    <span class="texto_inicio">Actualiza tu local<strong style="color: red;">
                                             *</strong></span>
                                     <div class="content_input_form">
                                         <input class="input_form" type="text" placeholder="Local..." id="local">
@@ -143,20 +157,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;"></div>
+                        <!-- <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;"></div> -->
                         <div class="_form_invi_xp">
                             <div class="content_form_invi_xp">
-                                <div class="_select_invi">
-                                    <h2 class="type2-h1">Selecciona la cantidad de invitados que quiere llevar.</h2>
-                                    <select class="input_form" name="invitados" id="cant_invitados">
-                                        <option value="">Invitados...</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                    </select>
-                                </div>
+
                                 <div id="form_invi_1" class="content_form_invitados">
                                     <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;">
                                     </div>
@@ -224,10 +228,10 @@
                                     </div>
                                     <div class="content_row_form">
                                         <div class="content_form_update">
-                                            <span class="texto_inicio">Fecha de Visita<strong style="color: red;">
+                                            <span class="texto_inicio">Fecha probable de visita<strong style="color: red;">
                                                     *</strong></span>
                                             <div class="content_input_form">
-                                                <input class="input_form" type="date" placeholder="Fecha de Visita..."
+                                                <input class="input_form" type="date" placeholder="Fecha probable de visita..."
                                                     id="fecha_invi_1">
                                             </div>
                                         </div>
@@ -255,7 +259,11 @@
                                 <div id="form_invi_2" class="content_form_invitados">
                                     <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;">
                                     </div>
-                                    <h2 class="type2-h1">Invitado 2</h2>
+                                    <div class="content_btn_quitar_invi">
+                                        <h2 class="type2-h1">Invitado 2</h2>
+                                        <button id="btn_quitar_invi_2" title="Quitar Invitado"
+                                            class="btn-design1">Quitar</button>
+                                    </div>
                                     <br />
                                     <div class="content_row_form">
                                         <div class="content_form_update">
@@ -319,10 +327,10 @@
                                     </div>
                                     <div class="content_row_form">
                                         <div class="content_form_update">
-                                            <span class="texto_inicio">Fecha de Visita<strong style="color: red;">
+                                            <span class="texto_inicio">Fecha probable de visita<strong style="color: red;">
                                                     *</strong></span>
                                             <div class="content_input_form">
-                                                <input class="input_form" type="date" placeholder="Fecha de Visita..."
+                                                <input class="input_form" type="date" placeholder="Fecha probable de visita..."
                                                     id="fecha_invi_2">
                                             </div>
                                         </div>
@@ -347,13 +355,14 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
                                 <div id="form_invi_3" class="content_form_invitados">
                                     <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;">
                                     </div>
-                                    <h2 class="type2-h1">Invitado 3</h2>
+                                    <div class="content_btn_quitar_invi">
+                                        <h2 class="type2-h1">Invitado 3</h2>
+                                        <button id="btn_quitar_invi_3" title="Quitar Invitado"
+                                            class="btn-design1">Quitar</button>
+                                    </div>
                                     <br />
                                     <div class="content_row_form">
                                         <div class="content_form_update">
@@ -417,10 +426,10 @@
                                     </div>
                                     <div class="content_row_form">
                                         <div class="content_form_update">
-                                            <span class="texto_inicio">Fecha de Visita<strong style="color: red;">
+                                            <span class="texto_inicio">Fecha probable de visita<strong style="color: red;">
                                                     *</strong></span>
                                             <div class="content_input_form">
-                                                <input class="input_form" type="date" placeholder="Fecha de Visita..."
+                                                <input class="input_form" type="date" placeholder="Fecha probable de visita..."
                                                     id="fecha_invi_3">
                                             </div>
                                         </div>
@@ -445,13 +454,14 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
                                 <div id="form_invi_4" class="content_form_invitados">
                                     <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;">
                                     </div>
-                                    <h2 class="type2-h1">Invitado 4</h2>
+                                    <div class="content_btn_quitar_invi">
+                                        <h2 class="type2-h1">Invitado 4</h2>
+                                        <button id="btn_quitar_invi_4" title="Quitar Invitado"
+                                            class="btn-design1">Quitar</button>
+                                    </div>
                                     <br />
                                     <div class="content_row_form">
                                         <div class="content_form_update">
@@ -515,10 +525,10 @@
                                     </div>
                                     <div class="content_row_form">
                                         <div class="content_form_update">
-                                            <span class="texto_inicio">Fecha de Visita<strong style="color: red;">
+                                            <span class="texto_inicio">Fecha probable de visita<strong style="color: red;">
                                                     *</strong></span>
                                             <div class="content_input_form">
-                                                <input class="input_form" type="date" placeholder="Fecha de Visita..."
+                                                <input class="input_form" type="date" placeholder="Fecha probable de visita..."
                                                     id="fecha_invi_4">
                                             </div>
                                         </div>
@@ -543,12 +553,14 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div id="form_invi_5" class="content_form_invitados">
                                     <div style="width: 100%;height: 1px;background-color: #e7e7e7;margin: 10px 0;">
                                     </div>
-                                    <h2 class="type2-h1">Invitado 5</h2>
+                                    <div class="content_btn_quitar_invi">
+                                        <h2 class="type2-h1">Invitado 5</h2>
+                                        <button id="btn_quitar_invi_5" title="Quitar Invitado"
+                                            class="btn-design1">Quitar</button>
+                                    </div>
                                     <br />
                                     <div class="content_row_form">
                                         <div class="content_form_update">
@@ -612,10 +624,10 @@
                                     </div>
                                     <div class="content_row_form">
                                         <div class="content_form_update">
-                                            <span class="texto_inicio">Fecha de Visita<strong style="color: red;">
+                                            <span class="texto_inicio">Fecha probable de visita<strong style="color: red;">
                                                     *</strong></span>
                                             <div class="content_input_form">
-                                                <input class="input_form" type="date" placeholder="Fecha de Visita..."
+                                                <input class="input_form" type="date" placeholder="Fecha probable de visita..."
                                                     id="fecha_invi_5">
                                             </div>
                                         </div>
@@ -640,9 +652,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div id="agregar_invi_1" class="content_btn_agregar_invi">
+                                    <button class="btn-design1">Agregar Invitado</button>
+                                </div>
+                                <br />
                                 <div id="content_btn_submit" class="content_btn_submit">
                                     <div>
-                                        <span>Autorizo el tratamiento de mis datos personales<strong
+                                        <span>Autorizo el uso de los datos aquí suministrados<strong
                                                 class="pregunta_obligatoria">
                                                 *</strong>.</span>
                                         <input type="checkbox" id="check_acepto_terminos">
