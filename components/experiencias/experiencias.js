@@ -1,5 +1,5 @@
 (() => {
-  const btn_realizar_invi = document.getElementById("btn_realizar_invi");
+  // const btn_realizar_invi = document.getElementById("btn_realizar_invi");
   const view1 = document.getElementById("section_one");
   const view2 = document.getElementById("section_two");
   const check_acompañante = document.getElementById("acompañante");
@@ -110,13 +110,15 @@
 
   function setCookie(name, value, opts = {}) {
     const {
-      hours = 2,
+      minute = 1,
       path = "/",
       sameSite = "Lax",
       secure = location.protocol === "https:",
     } = opts;
 
-    const expires = new Date(Date.now() + hours * 60 * 60 * 1000).toUTCString();
+    const expires = new Date(
+      Date.now() + minute * 10 * 10 * 1000
+    ).toUTCString();
     console.log(expires, "expires");
     const encoded = encodeURIComponent(JSON.stringify(value));
     let cookie = `${name}=${encoded}; Expires=${expires}; Path=${path}; SameSite=${sameSite}`;
@@ -147,7 +149,7 @@
   function topItem() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // animado
+      // behavior: "smooth",
     });
   }
 
@@ -183,6 +185,27 @@
     } else if (form_invi_5.style.display != "flex") {
       form_invi_5.style.display = "flex";
       content_btn_submit.style.display = "flex";
+    } else {
+      if (
+        form_invi_1.style.display == "flex" &&
+        form_invi_2.style.display == "flex" &&
+        form_invi_3.style.display == "flex" &&
+        form_invi_4.style.display == "flex" &&
+        form_invi_5.style.display == "flex"
+      ) {
+        Swal.fire({
+          icon: "warning",
+          title: "Advertencia",
+          html: "Ya ocupaste el máximo de cupos de invitados posibles.",
+          allowOutsideClick: false,
+          customClass: {
+            popup: "mi-popup",
+            title: "mi-titulo",
+            confirmButton: "btn-Send mi-boton",
+          },
+        });
+        return;
+      }
     }
   });
 
@@ -260,8 +283,10 @@
   function validateindentity() {
     Swal.fire({
       title: "Digita tu usuario y contraseña.",
-      html: `<input id="swal-user" name="user" class="swal2-input" placeholder="Usuario" autocomplete="current-password">
-              <input id="swal-pass" name="password" type="password" class="swal2-input" placeholder="Contraseña" autocomplete="current-password">
+      html: `<div class="test_input">
+      <input id="swal-user" name="user" class="swal2-input input_validate_xp" placeholder="Usuario" autocomplete="current-password">
+              <input id="swal-pass" name="password" type="password" class="swal2-input input_validate_xp" placeholder="Contraseña" autocomplete="current-password">
+      </div>
               `,
       inputAttributes: {
         autocapitalize: "off",
@@ -274,7 +299,7 @@
         const usuario = document.getElementById("swal-user").value.trim();
         const cedula = document.getElementById("swal-pass").value.trim();
         if (usuario == "" || cedula == "") {
-          alert("Completa la informaión");
+          alert("Completa la información");
           validateindentity();
           return;
         } else {
@@ -293,9 +318,9 @@
         }
       },
       customClass: {
-        popup: "mi-popup",
-        title: "mi-titulo",
-        confirmButton: "btn-Send mi-boton",
+        popup: "mi-popup-xp",
+        title: "mi-titulo-xp",
+        confirmButton: "btn-Send-xp mi-boton",
       },
     }).then((result) => {
       if (result.isConfirmed) {
@@ -306,17 +331,13 @@
           //   view2.style.display = "flex";
           view2.classList.remove("no_screen");
           window.location.reload();
-          //   window.scrollTo({
-          //     top: 0,
-          //     behavior: "smooth", // animado
-          //   });
         } else if (result.value == "") {
           // view1.style.display = "block";
           // view2.style.display = "none";
           Swal.fire({
             icon: "info",
-            title: "Documento no Encontrado",
-            html: "El documento digitado no se encuentra, por favor comunícate con el area de comunicaciones.",
+            title: "Usuario no Encontrado",
+            html: "El Usuario digitado no se encuentra, por favor comunícate con el área de comunicaciones.",
             allowOutsideClick: false,
             customClass: {
               popup: "mi-popup",
@@ -369,7 +390,6 @@
             document.cookie = "user=; max-age=0; path=/;";
             window.scrollTo({
               top: 0,
-              behavior: "smooth", // animado
             });
             location.reload();
           }
@@ -398,7 +418,6 @@
     const u = getCookie("user");
 
     // datos a actualiza
-
     let nombreV = nombre.value;
     let apellidoV = apellido.value;
     let fecha_nacV = fecha_nac.value;
@@ -808,7 +827,7 @@
             Swal.fire({
               icon: "success",
               title: "Gracias por tu solicitud",
-              html: "En máximo 72 horas recibirás respuesta de la aprobación de esta solicitud.",
+              html: "En máximo 72 horas recibirás respuesta de la aprobación de esta solicitud. Tu sesión se cerrará",
               allowOutsideClick: false,
               customClass: {
                 popup: "mi-popup",
