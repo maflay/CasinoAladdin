@@ -5,11 +5,13 @@
 .content_main_baccarat {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(75deg, #011801 10%, #044d04e5 60%, #011801 100%);
-
+    background-image: linear-gradient(75deg, #0118014d 10%, #044d044b 60%, #0118013d 100%), url(/resources/mesa_blackjack.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.pre_view_bac{
+.pre_view_bac {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +19,8 @@
     width: 100vw;
     height: 100vh;
     gap: 40px;
-    background-image: linear-gradient(75deg, #011801 10%, #044d04e5 60%, #011801 100%);
+    background-image: linear-gradient(75deg, #01180160 10%, #044d0438 60%, #0118013f 100%);
+    backdrop-filter: blur(8px);
 }
 
 .content_game_all {

@@ -368,6 +368,11 @@
         mostrarCarta(board2, segundaCarta, false);
       }
 
+      document.getElementById("btn_mazo2").style.display = "flex";
+      document.getElementById("plantarse_blackjack_mazo2").style.display =
+        "flex";
+      document.getElementById("score_player2").style.display = "flex";
+
       // 4) Repartir una carta adicional a cada mano
       repartirA(playerBoards[0], playerHands[0]); // mano 1
       repartirA(playerBoards[1], playerHands[1]); // mano 2
@@ -442,23 +447,66 @@
     return board2;
   }
 
+  document
+    .getElementById("plantarse_blackjack_mazo2")
+    .addEventListener("click", () => {
+      if (score2.textContent >= 17) {
+        document.getElementById("btn_mazo2").classList.add("btn_disable");
+        document
+          .getElementById("plantarse_blackjack_mazo2")
+          .classList.add("btn_disable");
+        document.getElementById("plantarse_blackjack_mazo2").textContent =
+          "Plantado";
+        Swal.fire({
+          icon: "info",
+          title: "Mazo 2 Plantado.",
+          html: `Plantaste el mazo 2 en ${score2.textContent}`,
+          customClass: {
+            popup: "mi-popup",
+            title: "mi-titulo",
+            confirmButton: "btn-Send mi-boton",
+          },
+        });
+      }
+    });
+
   // Botón del mazo 2
   document.getElementById("btn_mazo2").addEventListener("click", () => {
     const board2 = document.getElementById("board_player2");
-    repartirA(board2, manoPlayer2); 
+    repartirA(board2, manoPlayer2);
     actualizarSumaSegundaMano();
   });
 
   // Calcula y pinta el total de la mano 2
-  function actualizarSumaSegundaMano() {
-    const total2 = totalMano(manoPlayer2); // usa tu misma totalMano(mano)
-    const marcador2 = document.getElementById("score_player2");
-    if (marcador2) marcador2.textContent = Number(marcador2.textContent) + total2,"suma";
+ function actualizarSumaSegundaMano() {
+  const total = totalMano(manoPlayer);
+  const total_dealer = totalMano(manoDealer);
+  const total2 = totalMano(manoPlayer2); // usa tu misma totalMano(mano)
 
+  console.log(total2, );
+  console.log(total2,"2");
+  // total2 trae la ultima carta del mazo 2
+  const marcador2 = document.getElementById("score_player2");
+  if (marcador2)
+    (marcador2.textContent = totalMano(playerHands[1]) + total2);
+
+  console.log(total, total_dealer, score2.textContent);
     // Si quieres cerrar la mano cuando 21+:
-    if (marcador2.textContent >= 21) {
+    if (Number(marcador2.textContent) >= 21) {
       // avanzar a dealer o a la siguiente mano si la hay
-      decidirGanador();
+      Swal.fire({
+        icon: "warning",
+        title: "Mazo 2 se pasó de 21.",
+        customClass: {
+          popup: "mi-popup",
+          title: "mi-titulo",
+          confirmButton: "btn-Send mi-boton",
+        },
+      });
+      document.getElementById("btn_mazo2").classList.add("btn_disable");
+      document
+        .getElementById("plantarse_blackjack_mazo2")
+        .classList.add("btn_disable");
     }
   }
 
@@ -548,10 +596,28 @@
 
           actualizarPuntajes({ showHole: false });
           const total = totalMano(manoPlayer);
-          if (total > 21 || total === 21) {
+          if (total === 21) {
             // finDeRonda({ razon: "player_bust" });
             // validatePlantarse();
             decidirGanador();
+          } else if (total > 21) {
+            if (document.getElementById("board_player2")) {
+              Swal.fire({
+                icon: "warning",
+                title: "Mazo principal se paso de 21.",
+                customClass: {
+                  popup: "mi-popup",
+                  title: "mi-titulo",
+                  confirmButton: "btn-Send mi-boton",
+                },
+              });
+              btn_apostar_blackjack.classList.add("btn_disable");
+              btn_sacar_carta_blackjack.classList.add("btn_disable");
+              btn_doblar_blackjack.classList.add("btn_disable");
+              btn_dividir_blackjack.classList.add("btn_disable");
+            } else {
+              decidirGanador();
+            }
           }
         }, 100);
       }
@@ -662,7 +728,7 @@
     const totalP = totalMano(manoPlayer);
     const totalD = totalMano(manoDealer);
 
-    console.log(score2);
+    console.log(score2, "score 2");
 
     let test_img = board_player.querySelectorAll("img").length;
 
@@ -755,6 +821,10 @@
     btn_dividir_blackjack.classList.add("btn_disable");
     msj_reiniciar.style.display = "flex";
     btn_plantarse_blackjack.classList.add("btn_disable");
+    document.getElementById("btn_mazo2").classList.add("btn_disable");
+    document
+      .getElementById("plantarse_blackjack_mazo2")
+      .classList.add("btn_disable");
   }
 
   const content_fichas_menos = document.getElementById("content_fichas_menos"); // fichas apostadas
@@ -796,6 +866,7 @@
     // Crea la ficha clonada en la zona "menos"
     const clon = document.createElement("img");
     clon.src = ficha.src;
+    clon.title = ficha.title;
     clon.alt = ficha.alt || ficha.title || "ficha";
     clon.className = "ficha-apostada";
     clon.dataset.valor = String(valor); // guarda su valor aquí
@@ -830,7 +901,12 @@
     board_dealer.innerHTML = "";
     score_dealer.textContent = 0;
     score_player.textContent = 0;
-    content_fichas_menos.innerHTML = "";
+
+    if (apuesta == 0) {
+      content_fichas_menos.innerHTML = "";
+    }
+
+    score2.innerHTML = "";
 
     btn_apostar_blackjack.classList.remove("btn_disable");
     btn_sacar_carta_blackjack.classList.add("btn_disable");
@@ -838,6 +914,13 @@
     btn_plantarse_blackjack.classList.add("btn_disable");
     content_fichas.classList.remove("btn_disable");
     content_fichas_menos.classList.remove("btn_disable");
+    document.getElementById("btn_mazo2").classList.remove("btn_disable");
+    document
+      .getElementById("plantarse_blackjack_mazo2")
+      .classList.remove("btn_disable");
+
+    document.getElementById("btn_mazo2").style.display = "none";
+    document.getElementById("plantarse_blackjack_mazo2").style.display = "none";
     msj_reiniciar.style.display = "none";
 
     btn_doblar_blackjack.classList.add("btn_disable");

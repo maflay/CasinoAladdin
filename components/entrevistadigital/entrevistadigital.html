@@ -237,18 +237,21 @@
                 <p class="type2-h1">Motivación y objetivos.</p>
                 <br />
                 <div class="datos_personales">
-                    <span>¿Qué te motiva a postularte a esta Empresa?<strong class="pregunta_obligatoria">
+                    <span>¿Posee familiares o conocidos que hayan trabajado o trabajen actualmente con nuestra empresa?<strong class="pregunta_obligatoria">
                             *</strong></span>
                     <div class="content_input_entrevista">
-                        <input class="all_espace" id="motivo_postulacion"
-                            placeholder="¿Qué te motiva a postularte a esta Empresa?" type="text">
+                        <select name="motivo_postulacion" id="motivo_postulacion" class="all_espace">
+                            <option value="">Selecciona...</option>
+                            <option value="Si">Sí</option>
+                            <option value="No">No</option>
+                        </select>
                     </div>
                 </div>
-                <div class="datos_personales">
-                    <span>¿Qué esperas lograr laboralmente en los próximos dos años?</span>
+                <div style="display: none;" id="familiar_conocido" class="datos_personales">
+                    <span>¿Que departamento pertence tu familiar o conocido?</span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="logro_profesional"
-                            placeholder="¿Qué espera lograr laboralmente en los próximos dos años?" type="text">
+                            placeholder="¿Que departamento pertence tu familiar o conocido?" type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
@@ -256,14 +259,18 @@
                             *</strong></span>
                     <div class="content_input_entrevista">
                         <input class="all_espace" id="saber_de_la_empresa"
-                            placeholder="¿Qué conoce de nuestra empresa o del sector?" type="text">
+                            placeholder="¿Qué conoces de nuestra empresa o del sector?" type="text">
                     </div>
                 </div>
                 <div class="datos_personales">
-                    <span>¿Qué te hace diferente de otros candidatos?</span>
+                    <span>¿Fue referido por alguna persona o cómo tuvo conocimiento de nuestra empresa?<strong
+                            class="pregunta_obligatoria"> *</strong></span>
                     <div class="content_input_entrevista">
-                        <input class="all_espace" id="diferencia_otros"
-                            placeholder="¿Qué te hace diferente de otros candidatos?" type="text">
+                        <select name="diferencia_otros" id="diferencia_otros" class="all_espace">
+                            <option value="">Selecciona...</option>
+                            <option value="Sí">Si</option>
+                            <option value="No">No</option>
+                        </select>
                     </div>
                 </div>
             </div>

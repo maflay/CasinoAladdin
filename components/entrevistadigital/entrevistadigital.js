@@ -94,7 +94,7 @@
 
   let formulario = document.getElementById("content_main_e_digital");
   const url =
-    "https://script.google.com/macros/s/AKfycbztoV80VtrgKOKxJZFlKuv5EiwluKivFJjtLLYdK8Plab1Ht0dMYIlI0sm8Lx6epbeJ/exec";
+    "https://script.google.com/macros/s/AKfycbz3sBamHoc1rRUSfCnQ6i20FyMpnrEWXtBqNY4C5SXXyVg1Vzhyc_-TT3MOX8qM59F6/exec";
 
   function fileToDataURL(file) {
     return new Promise((resolve, reject) => {
@@ -104,6 +104,14 @@
       reader.readAsDataURL(file);
     });
   }
+
+  motivo_postulacion.addEventListener("change", ()=> {
+    if(motivo_postulacion.value == "Si"){
+      document.getElementById("familiar_conocido").style.display = "block";
+    }else {
+      document.getElementById("familiar_conocido").style.display = "none";
+    }
+  });
 
   // guarda aquí los valores por pregunta: { 1:5, 2:3, ... }
   const respuestas = {};
@@ -347,7 +355,7 @@
     let menejo_presion_val = menejo_presion.value;
     let trabajo_en_equipo_val = trabajo_en_equipo.value;
     let motivo_postulacion_val = motivo_postulacion.value;
-    let logro_profesional_val = logro_profesional.value;
+    let logro_profesional_val = motivo_postulacion_val == "Si" ? logro_profesional.value : "No tiene conocidos";
     let saber_de_la_empresa_val = saber_de_la_empresa.value;
     let diferencia_otros_val = diferencia_otros.value;
     let actual_empleo_val = actual_empleo.value;
