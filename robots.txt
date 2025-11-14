@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://casinoaladdin.netlify.app/sitemap.xml
+Sitemap: https://vivealaddin.com/sitemap.xml

@@ -105,10 +105,10 @@
     });
   }
 
-  motivo_postulacion.addEventListener("change", ()=> {
-    if(motivo_postulacion.value == "Si"){
+  motivo_postulacion.addEventListener("change", () => {
+    if (motivo_postulacion.value == "Si") {
       document.getElementById("familiar_conocido").style.display = "block";
-    }else {
+    } else {
       document.getElementById("familiar_conocido").style.display = "none";
     }
   });
@@ -355,7 +355,10 @@
     let menejo_presion_val = menejo_presion.value;
     let trabajo_en_equipo_val = trabajo_en_equipo.value;
     let motivo_postulacion_val = motivo_postulacion.value;
-    let logro_profesional_val = motivo_postulacion_val == "Si" ? logro_profesional.value : "No tiene conocidos";
+    let logro_profesional_val =
+      motivo_postulacion_val == "Si"
+        ? logro_profesional.value
+        : "No tiene conocidos";
     let saber_de_la_empresa_val = saber_de_la_empresa.value;
     let diferencia_otros_val = diferencia_otros.value;
     let actual_empleo_val = actual_empleo.value;

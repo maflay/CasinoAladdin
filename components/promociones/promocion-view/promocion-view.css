@@ -66,6 +66,10 @@
   transition: all 1s ease;
 }
 
+.card-content h1 {
+  font-family: 'lovelace', sans-serif !important;
+}
+
 a {
   text-decoration: none;
 }

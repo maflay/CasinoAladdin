@@ -160,16 +160,23 @@
 
   // ======== Estado de la partida ========
   let manoPlayer = [];
-  let manoPlayer2 = [];
-  const score2 = document.getElementById("score_player2");
-
   let manoDealer = [];
-  let dealerOculta = null; // guarda la carta oculta mientras no se revele
-  let playerHands = []; // e.g., [mano1, mano2]
-  let playerBoards = []; // e.g., [board_player, board_player2]
-  let bets = []; // apuesta por mano (COP)
-  let currentHand = 0; // índice de la mano activa
+  let dealerOculta = null;
+  let playerHands = []; // [mano principal, mano split, ...]
+  let playerBoards = []; // [board_player, board_player2, ...]
+  let bets = []; // apuesta por mano
+  let currentHand = 0;
   let splitActive = false;
+
+  const score2 = document.getElementById("score_player2");
+  const btnMazo2 = document.getElementById("btn_mazo2");
+  const btnPlantarseMazo2 = document.getElementById(
+    "plantarse_blackjack_mazo2"
+  );
+
+  // arranque oculto de controles de mazo 2
+  btnMazo2.style.display = "none";
+  btnPlantarseMazo2.style.display = "none";
 
   // ======== Helpers de puntaje ========
 
@@ -350,44 +357,41 @@
         bets.reduce((a, b) => a + b, 0)
       );
 
-      // 2) Crear/obtener el tablero para la 2da mano
+      // 2) Crear tablero de la segunda mano
       const board2 = crearBoardSegundaMano();
 
-      // 3) Sacar la segunda carta de la mano 0 y moverla al nuevo board
-      const segundaCarta = playerHands[0].pop(); // quita la 2da carta de la mano 1
-      playerHands.push([segundaCarta]); // crea mano 2 con esa carta
+      // 3) Sacar la segunda carta de la mano 0 y pasarla a la mano 2
+      const segundaCarta = playerHands[0].pop();
+      playerHands.push([segundaCarta]);
       playerBoards.push(board2);
 
-      // Mover la imagen existente (usa id seguro 'carta_X')
+      // Mover la imagen correspondiente
       const safeId = `carta_${segundaCarta.slice(0, -1)}`;
       let imgSeg = board_player.querySelector(`#${safeId}`);
       if (imgSeg) {
         board2.appendChild(imgSeg);
       } else {
-        // Fallback por si no encuentra la imagen: vuelve a pintar la carta en board2
         mostrarCarta(board2, segundaCarta, false);
       }
 
-      document.getElementById("btn_mazo2").style.display = "flex";
-      document.getElementById("plantarse_blackjack_mazo2").style.display =
-        "flex";
-      document.getElementById("score_player2").style.display = "flex";
+      // 4) Mostrar controles de mazo 2
+      btnMazo2.style.display = "flex";
+      btnPlantarseMazo2.style.display = "flex";
+      score2.style.display = "flex";
 
-      // 4) Repartir una carta adicional a cada mano
-      repartirA(playerBoards[0], playerHands[0]); // mano 1
-      repartirA(playerBoards[1], playerHands[1]); // mano 2
+      // 5) Dar una carta extra a cada mano
+      repartirA(playerBoards[0], playerHands[0]);
+      repartirA(playerBoards[1], playerHands[1]);
 
-      // 5) Actualizar puntajes visibles (si tienes marcador para mano 2)
+      // 6) Actualizar puntajes
       actualizarPuntajes({ showHole: false });
-      if (score2) score2.textContent = totalMano(playerHands[1]);
+      actualizarSumaSegundaMano();
 
-      // 6) Si eran Ases (A/A), una carta por mano y ambas se plantan según regla común
+      // 7) Caso especial: si son Ases divididos
       const rA = playerHands[0][0].slice(0, -1);
       const rB = playerHands[1][0].slice(0, -1);
       if (rA === "A" && rB === "A") {
-        // Ir directo al dealer (no se permiten más hits)
         avanzarManoODealer(true);
-        // UI
         btn_sacar_carta_blackjack.classList.add("btn_disable");
         btn_doblar_blackjack.classList.add("btn_disable");
         btn_dividir_blackjack.classList.add("btn_disable");
@@ -395,21 +399,20 @@
         return;
       }
 
-      // 7) UI post-split: jugarás primero la mano 1 (currentHand = 0)
+      // 8) Empiezas jugando la mano 1
       currentHand = 0;
-      btn_dividir_blackjack.classList.add("btn_disable"); // (desactiva re-split si no soportas multisplit)
+      btn_dividir_blackjack.classList.add("btn_disable");
       btn_sacar_carta_blackjack.classList.remove("btn_disable");
       btn_plantarse_blackjack.classList.remove("btn_disable");
 
-      // Habilitar/Deshabilitar 'Doblar' según regla (solo con 2 cartas y saldo suficiente)
-      if (typeof puedeDoblar === "function" && puedeDoblar(currentHand)) {
+      if (puedeDoblar(currentHand)) {
         btn_doblar_blackjack.classList.remove("btn_disable");
       } else {
         btn_doblar_blackjack.classList.add("btn_disable");
       }
-      const total = totalMano(manoPlayer);
 
-      if (score2.textContent === 21 || total === 21) {
+      const total = totalMano(manoPlayer);
+      if (Number(score2.textContent) === 21 || total === 21) {
         decidirGanador();
       }
     });
@@ -441,78 +444,92 @@
     if (!board2) {
       board2 = document.createElement("div");
       board2.id = "board_player2";
-      board2.className = "board_player hand_2"; // añade estilos si quieres
+      board2.className = "board_player hand_2";
       board_player.parentElement.appendChild(board2);
     }
     return board2;
   }
 
-  document
-    .getElementById("plantarse_blackjack_mazo2")
-    .addEventListener("click", () => {
-      if (score2.textContent >= 17) {
-        document.getElementById("btn_mazo2").classList.add("btn_disable");
-        document
-          .getElementById("plantarse_blackjack_mazo2")
-          .classList.add("btn_disable");
-        document.getElementById("plantarse_blackjack_mazo2").textContent =
-          "Plantado";
-        Swal.fire({
-          icon: "info",
-          title: "Mazo 2 Plantado.",
-          html: `Plantaste el mazo 2 en ${score2.textContent}`,
-          customClass: {
-            popup: "mi-popup",
-            title: "mi-titulo",
-            confirmButton: "btn-Send mi-boton",
-          },
-        });
-      }
-    });
+  btnPlantarseMazo2.addEventListener("click", () => {
+    const total2 = Number(score2.textContent) || 0;
+    if (total2 >= 17) {
+      btnMazo2.classList.add("btn_disable");
+      btnPlantarseMazo2.classList.add("btn_disable");
+      btnPlantarseMazo2.textContent = "Plantado";
 
-  // Botón del mazo 2
-  document.getElementById("btn_mazo2").addEventListener("click", () => {
-    const board2 = document.getElementById("board_player2");
-    repartirA(board2, manoPlayer2);
-    actualizarSumaSegundaMano();
-  });
-
-  // Calcula y pinta el total de la mano 2
- function actualizarSumaSegundaMano() {
-  const total = totalMano(manoPlayer);
-  const total_dealer = totalMano(manoDealer);
-  const total2 = totalMano(manoPlayer2); // usa tu misma totalMano(mano)
-
-  console.log(total2, );
-  console.log(total2,"2");
-  // total2 trae la ultima carta del mazo 2
-  const marcador2 = document.getElementById("score_player2");
-  if (marcador2)
-    (marcador2.textContent = totalMano(playerHands[1]) + total2);
-
-  console.log(total, total_dealer, score2.textContent);
-    // Si quieres cerrar la mano cuando 21+:
-    if (Number(marcador2.textContent) >= 21) {
-      // avanzar a dealer o a la siguiente mano si la hay
       Swal.fire({
-        icon: "warning",
-        title: "Mazo 2 se pasó de 21.",
+        icon: "info",
+        title: "Mazo 2 Plantado.",
+        html: `Plantaste el mazo 2 en ${total2}`,
+        allowOutsideClick: false,
         customClass: {
           popup: "mi-popup",
           title: "mi-titulo",
           confirmButton: "btn-Send mi-boton",
         },
+      }).then((res) => {
+        if (res.isConfirmed) {
+          if (
+            btn_plantarse_blackjack.classList.contains("btn_disable") &&
+            btnPlantarseMazo2.classList.contains("btn_disable")
+          ) {
+            decidirGanador();
+          }
+        }
       });
-      document.getElementById("btn_mazo2").classList.add("btn_disable");
-      document
-        .getElementById("plantarse_blackjack_mazo2")
-        .classList.add("btn_disable");
+    }
+  });
+
+  // Botón del mazo 2
+  btnMazo2.addEventListener("click", () => {
+    const board2 = document.getElementById("board_player2");
+    if (!playerHands[1] || !board2) return;
+
+    repartirA(board2, playerHands[1]);
+    actualizarSumaSegundaMano();
+  });
+
+  // Calcula y pinta el total de la mano 2
+  function actualizarSumaSegundaMano() {
+    if (!playerHands[1]) return; // aún no hay mano 2
+
+    const total2 = totalMano(playerHands[1]);
+    const marcador2 = document.getElementById("score_player2");
+
+    if (marcador2) {
+      marcador2.textContent = total2;
+    }
+
+    console.log("Total mano 2:", total2);
+
+    if (total2 > 21) {
+      Swal.fire({
+        icon: "warning",
+        title: "Mazo 2 se pasó de 21.",
+        allowOutsideClick: false,
+        customClass: {
+          popup: "mi-popup",
+          title: "mi-titulo",
+          confirmButton: "btn-Send mi-boton",
+        },
+      }).then((res) => {
+        if (res.isConfirmed) {
+          if (btn_plantarse_blackjack.classList.contains("btn_disable")) {
+            decidirGanador();
+          }
+        }
+      });
+      btnMazo2.classList.add("btn_disable");
+      btnPlantarseMazo2.classList.add("btn_disable");
     }
   }
 
   function agregarCartaSegundaMano(carta) {
-    manoPlayer2.push(carta);
-    mostrarCarta(carta, board2);
+    const board2 = document.getElementById("board_player2");
+    if (!playerHands[1] || !board2) return;
+
+    playerHands[1].push(carta);
+    mostrarCarta(board2, carta);
     actualizarSumaSegundaMano();
   }
 
@@ -576,7 +593,7 @@
   // Hit (sacar carta jugador)
   btn_sacar_carta_blackjack.addEventListener("click", () => {
     Swal.fire({
-      title: "Estas  seguro?",
+      title: "Estas seguro?",
       text: "Puede pasarte estas seguro de sacar una nueva carta!",
       icon: "warning",
       showCancelButton: true,
@@ -605,16 +622,24 @@
               Swal.fire({
                 icon: "warning",
                 title: "Mazo principal se paso de 21.",
+                allowOutsideClick: false,
                 customClass: {
                   popup: "mi-popup",
                   title: "mi-titulo",
                   confirmButton: "btn-Send mi-boton",
                 },
+              }).then((res) => {
+                if (res.isConfirmed) {
+                  if (btnPlantarseMazo2.classList.contains("btn_disable")) {
+                    decidirGanador();
+                  }
+                }
               });
               btn_apostar_blackjack.classList.add("btn_disable");
               btn_sacar_carta_blackjack.classList.add("btn_disable");
               btn_doblar_blackjack.classList.add("btn_disable");
               btn_dividir_blackjack.classList.add("btn_disable");
+              btn_plantarse_blackjack.classList.add("btn_disable");
             } else {
               decidirGanador();
             }
@@ -626,7 +651,21 @@
 
   // Stand (plantarse): revelar y dealer roba hasta 17
   btn_plantarse_blackjack.addEventListener("click", () => {
-    validatePlantarse();
+    if (!btnPlantarseMazo2.classList.contains("btn_disable")) {
+      Swal.fire({
+        icon: "info",
+        title: "Antes de plantar.",
+        html: `Completa tu otro mazo para poder planta el mazo principal`,
+        allowOutsideClick: false,
+        customClass: {
+          popup: "mi-popup",
+          title: "mi-titulo",
+          confirmButton: "btn-Send mi-boton",
+        },
+      });
+    } else {
+      validatePlantarse();
+    }
   });
 
   function validatePlantarse() {
@@ -732,21 +771,33 @@
 
     let test_img = board_player.querySelectorAll("img").length;
 
-    if (score2 == !null) {
-      console.log("entro a score 2");
+    if (score2 && score2.textContent) {
       let board_2 = document.getElementById("board_player2");
-      let cartas_board_2 = board_2.querySelectorAll("img").length;
-      if (score2.textContent === 21 && cartas_board_2 === 2) {
-        console.log("entro al longitud");
-        return finDeRonda("BlackJack", "Sacaste BlackJack con el segundo mazo");
-      } else if (score2.textContent > totalD) {
-        return finDeRonda("Ganaste", "Ganaste con el segundo mazo");
-      } else if (score2.textContent < totalD) {
-        return finDeRonda("Perdiste", "Te pasaste en el segundo mazo");
-      }
-    }
+      if (board_2) {
+        let cartas_board_2 = board_2.querySelectorAll("img").length;
+        const total2 = Number(score2.textContent) || 0;
 
-    if (totalP === 21 && test_img == 2) {
+        if (total2 === 21 && cartas_board_2 === 2) {
+          return finDeRonda(
+            "BlackJack",
+            "Sacaste BlackJack con el segundo mazo",
+            bets[1] || 0
+          );
+        } else if (total2 > totalD && total2 <= 21) {
+          return finDeRonda(
+            "Ganaste",
+            "Ganaste con el segundo mazo",
+            bets[1] || 0
+          );
+        } else if (total2 < totalD && total2 > 21) {
+          return finDeRonda(
+            "Perdiste",
+            "Te pasaste en el segundo mazo",
+            bets[1] || 0
+          );
+        }
+      }
+    } else if (totalP === 21 && test_img == 2) {
       if (totalP > totalD)
         return finDeRonda("BlackJack", "Sacaste BlackJack", apuesta);
     } else if (totalP > totalD && totalP === 21)
@@ -935,6 +986,18 @@
     manoDealer = [];
     dealerOculta = null;
     window.holeCard = null;
+
+    score2.innerHTML = "";
+
+    // Limpia estado
+    playerHands = [];
+    playerBoards = [];
+    bets = [];
+    currentHand = 0;
+    splitActive = false;
+
+    btnMazo2.style.display = "none";
+    btnPlantarseMazo2.style.display = "none";
   }
 })();
 

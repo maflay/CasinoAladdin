@@ -94,6 +94,7 @@
 
 .content_banner_promo img {
     width: 100%;
+    border-radius: 20px;
 }
 
 .promocion_paddin_head {
@@ -632,10 +633,7 @@ td {
 }
 
 @media(max-width:1366px) {
-    .to-promo .next-to-promo img {
-        width: 50px;
-        margin-left: 10px;
-    }
+
 
     .terminos-condiciones h1 {
         padding-bottom: 20px;
