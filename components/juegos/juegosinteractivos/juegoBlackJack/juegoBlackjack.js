@@ -24,20 +24,9 @@
   _cupo.textContent = formatoPesos_monto_efectivo.format(cupo);
   _apuesta.textContent = apuesta;
 
-  const ficha_10 = document.getElementById("ficha_10");
-  const ficha_25 = document.getElementById("ficha_25");
-  const ficha_50 = document.getElementById("ficha_50");
-  const ficha_100 = document.getElementById("ficha_100");
-  const ficha_250 = document.getElementById("ficha_250");
-
-  const ficha_10_menos = document.getElementById("ficha_10_menos");
-  const ficha_25_menos = document.getElementById("ficha_25_menos");
-  const ficha_50_menos = document.getElementById("ficha_50_menos");
-  const ficha_100_menos = document.getElementById("ficha_100_menos");
-  const ficha_250_menos = document.getElementById("ficha_250_menos");
-
   const btn_apostar_blackjack = document.getElementById("apostar_blackjack");
   const btn_doblar_blackjack = document.getElementById("doblar_blackjack");
+  const btn_retirar_blackjack = document.getElementById("retirar_blackjack");
   const btn_dividir_blackjack = document.getElementById("dividir_blackjack");
 
   const btn_sacar_carta_blackjack = document.getElementById(
@@ -53,7 +42,7 @@
   msj_reiniciar.style.display = "none";
   btn_reset.classList.add("btn_disable");
   btn_plantarse_blackjack.classList.add("btn_disable");
-  // --- Crear mazo completo ---
+  //  Crear mazo completo
   const palos = ["C", "D", "H", "S"];
   const numeros = [
     "A",
@@ -79,7 +68,6 @@
     return m;
   }
 
-  // --- Barajar el mazo (algoritmo Fisher-Yates) ---
   function barajar(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -217,7 +205,6 @@
   }
 
   function puedeDividir() {
-    console.log(playerHands[0]);
     return (
       !splitActive && playerHands.length === 1 && esParParaSplit(playerHands[0])
     );
@@ -259,6 +246,7 @@
   }
 
   btn_doblar_blackjack.classList.add("btn_disable");
+  btn_retirar_blackjack.classList.add("btn_disable");
   btn_dividir_blackjack.classList.add("btn_disable");
 
   btn_doblar_blackjack.addEventListener("click", () => {
@@ -394,6 +382,7 @@
         avanzarManoODealer(true);
         btn_sacar_carta_blackjack.classList.add("btn_disable");
         btn_doblar_blackjack.classList.add("btn_disable");
+        btn_retirar_blackjack.classList.add("btn_disable");
         btn_dividir_blackjack.classList.add("btn_disable");
         btn_plantarse_blackjack.classList.remove("btn_disable");
         return;
@@ -413,7 +402,8 @@
 
       const total = totalMano(manoPlayer);
       if (Number(score2.textContent) === 21 || total === 21) {
-        decidirGanador();
+        // decidirGanador();
+        validatePlantarse();
       }
     });
   });
@@ -473,10 +463,23 @@
             btn_plantarse_blackjack.classList.contains("btn_disable") &&
             btnPlantarseMazo2.classList.contains("btn_disable")
           ) {
-            decidirGanador();
+            validatePlantarse();
           }
         }
       });
+    } else if (total2 < 17) {
+      Swal.fire({
+        title: "Accion no necesario?",
+        text: "No tiene el puntaje minimo para plantarte!",
+        icon: "warning",
+        confirmButtonText: "De acuerdo!",
+        customClass: {
+          popup: "mi-popup",
+          title: "mi-titulo",
+          confirmButton: "btn-Send mi-boton",
+        },
+      });
+      return;
     }
   });
 
@@ -500,8 +503,6 @@
       marcador2.textContent = total2;
     }
 
-    console.log("Total mano 2:", total2);
-
     if (total2 > 21) {
       Swal.fire({
         icon: "warning",
@@ -515,7 +516,8 @@
       }).then((res) => {
         if (res.isConfirmed) {
           if (btn_plantarse_blackjack.classList.contains("btn_disable")) {
-            decidirGanador();
+            // decidirGanador();
+            validatePlantarse();
           }
         }
       });
@@ -550,6 +552,7 @@
     }
 
     btn_doblar_blackjack.classList.remove("btn_disable");
+    btn_retirar_blackjack.classList.remove("btn_disable");
     btn_dividir_blackjack.classList.remove("btn_disable");
     content_fichas.classList.add("btn_disable");
     content_fichas_menos.classList.add("btn_disable");
@@ -610,13 +613,12 @@
         setTimeout(() => {
           const carta = repartirA(board_player, manoPlayer);
           if (!carta) return;
-
           actualizarPuntajes({ showHole: false });
           const total = totalMano(manoPlayer);
           if (total === 21) {
             // finDeRonda({ razon: "player_bust" });
-            // validatePlantarse();
-            decidirGanador();
+            validatePlantarse();
+            // decidirGanador();
           } else if (total > 21) {
             if (document.getElementById("board_player2")) {
               Swal.fire({
@@ -631,17 +633,20 @@
               }).then((res) => {
                 if (res.isConfirmed) {
                   if (btnPlantarseMazo2.classList.contains("btn_disable")) {
-                    decidirGanador();
+                    // decidirGanador();
+                    validatePlantarse();
                   }
                 }
               });
               btn_apostar_blackjack.classList.add("btn_disable");
               btn_sacar_carta_blackjack.classList.add("btn_disable");
               btn_doblar_blackjack.classList.add("btn_disable");
+              btn_retirar_blackjack.classList.add("btn_disable");
               btn_dividir_blackjack.classList.add("btn_disable");
               btn_plantarse_blackjack.classList.add("btn_disable");
             } else {
-              decidirGanador();
+              // decidirGanador();
+              validatePlantarse();
             }
           }
         }, 100);
@@ -651,18 +656,22 @@
 
   // Stand (plantarse): revelar y dealer roba hasta 17
   btn_plantarse_blackjack.addEventListener("click", () => {
-    if (!btnPlantarseMazo2.classList.contains("btn_disable")) {
-      Swal.fire({
-        icon: "info",
-        title: "Antes de plantar.",
-        html: `Completa tu otro mazo para poder planta el mazo principal`,
-        allowOutsideClick: false,
-        customClass: {
-          popup: "mi-popup",
-          title: "mi-titulo",
-          confirmButton: "btn-Send mi-boton",
-        },
-      });
+    if (btnPlantarseMazo2.style.display == "flex") {
+      if (!btnPlantarseMazo2.classList.contains("btn_disable")) {
+        Swal.fire({
+          icon: "info",
+          title: "Antes de plantar.",
+          html: `Completa tu otro mazo para poder planta el mazo principal`,
+          allowOutsideClick: false,
+          customClass: {
+            popup: "mi-popup",
+            title: "mi-titulo",
+            confirmButton: "btn-Send mi-boton",
+          },
+        });
+      } else {
+        validatePlantarse();
+      }
     } else {
       validatePlantarse();
     }
@@ -675,6 +684,36 @@
       });
     });
   }
+
+  btn_retirar_blackjack.addEventListener("click", () => {
+    Swal.fire({
+      title: "Estas seguro?",
+      text: "Te retiras con las mitad de tu apuesta!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si quiero!",
+      customClass: {
+        popup: "mi-popup",
+        title: "mi-titulo",
+        confirmButton: "btn-Send mi-boton",
+      },
+    }).then((res) => {
+      if (res.isConfirmed) {
+        cupo += apuesta / 2;
+        apuesta = 0;
+
+        console.log(cupo);
+        console.log(apuesta);
+        _cupo.textContent = formatoPesos_monto_efectivo.format(cupo);
+        _apuesta.textContent = formatoPesos_monto_efectivo.format(apuesta);
+        setTimeout(() => {
+          reset();
+        }, 1500);
+      }
+    });
+  });
 
   // ======== Lógica de dealer ========
 
@@ -764,78 +803,173 @@
   }
 
   function decidirGanador() {
-    const totalP = totalMano(manoPlayer);
-    const totalD = totalMano(manoDealer);
+    const totalD = totalMano(manoDealer); // Total final del Dealer
+    const esBlackjackD = totalD === 21 && manoDealer.length === 2;
 
-    console.log(score2, "score 2");
+    const hayBoard2 = !!document.getElementById("board_player2");
 
-    let test_img = board_player.querySelectorAll("img").length;
+    // Totales de manos
+    const mano1 = totalMano(playerHands[0]);
+    const mano2 =
+      hayBoard2 && playerHands[1] ? totalMano(playerHands[1]) : null;
 
-    if (score2 && score2.textContent) {
-      let board_2 = document.getElementById("board_player2");
-      if (board_2) {
-        let cartas_board_2 = board_2.querySelectorAll("img").length;
-        const total2 = Number(score2.textContent) || 0;
+    // Estados de cada mano
+    const bust1 = mano1 > 21;
+    const bust2 = mano2 !== null ? mano2 > 21 : false;
 
-        if (total2 === 21 && cartas_board_2 === 2) {
-          return finDeRonda(
-            "BlackJack",
-            "Sacaste BlackJack con el segundo mazo",
-            bets[1] || 0
-          );
-        } else if (total2 > totalD && total2 <= 21) {
-          return finDeRonda(
-            "Ganaste",
-            "Ganaste con el segundo mazo",
-            bets[1] || 0
-          );
-        } else if (total2 < totalD && total2 > 21) {
-          return finDeRonda(
-            "Perdiste",
-            "Te pasaste en el segundo mazo",
-            bets[1] || 0
-          );
-        }
+    const blackjack1 = mano1 === 21 && playerHands[0].length === 2;
+    const blackjack2 =
+      mano2 !== null && mano2 === 21 && playerHands[1].length === 2;
+
+    // Solo se considera Blackjack si NO hubo split (solo una mano)
+    const jugadorTieneBlackjack =
+      (blackjack1 || blackjack2) && playerHands.length === 1;
+
+    console.log("Dealer:", totalD);
+    console.log("Mano 1:", mano1, bust1 ? "(BUST)" : "");
+    if (hayBoard2) console.log("Mano 2:", mano2, bust2 ? "(BUST)" : "");
+
+    if (jugadorTieneBlackjack) {
+      if (esBlackjackD) {
+        // Ambos Blackjack
+        finDeRonda(
+          "Empate",
+          "Empate, tanto tú como la casa tienen Blackjack.",
+          apuesta
+        );
+        return;
+      } else {
+        // Solo jugador tiene Blackjack
+        finDeRonda(
+          "BlackJack",
+          "¡Sacaste Blackjack con uno de tus mazos!",
+          apuesta
+        );
+        return;
       }
-    } else if (totalP === 21 && test_img == 2) {
-      if (totalP > totalD)
-        return finDeRonda("BlackJack", "Sacaste BlackJack", apuesta);
-    } else if (totalP > totalD && totalP === 21)
-      return finDeRonda(
-        "Ganaste",
-        "Le Ganaste al Dealer con BlackJack",
-        apuesta
-      );
+    }
 
-    if (totalP > 21) return finDeRonda("Perdiste", "Superior a 21, ", apuesta);
-    if (totalD > 21)
-      return finDeRonda("Ganaste", "El Dealer se paso, ", apuesta);
-    if (totalP > totalD)
-      return finDeRonda("Ganaste", "Tienes mejores cartas, ", apuesta);
-    if (totalP < totalD)
-      return finDeRonda(
+    //2. Dealer se pasa
+    if (totalD > 21) {
+      // Ganas si al menos una mano NO se pasó
+      if (
+        (!bust1 && mano1 <= 21) ||
+        (!bust2 && mano2 !== null && mano2 <= 21)
+      ) {
+        finDeRonda(
+          "Ganaste",
+          "La Casa se pasó de 21, ganas la ronda.",
+          apuesta
+        );
+      } else {
+        finDeRonda(
+          "Perdiste",
+          "Tanto tú como la casa se pasaron, pero la casa gana.",
+          apuesta
+        );
+      }
+      return;
+    }
+
+    // if (bust1 && mano1 < 21) {
+    //   finDeRonda("Perdiste", "Te pasaste.", apuesta);
+    //   return;
+    // }
+
+    // 3. Todas las manos del jugador se pasan
+    if (bust1 && (!hayBoard2 || (hayBoard2 && bust2))) {
+      finDeRonda("Perdiste", "Te pasaste de 21 con todas tus manos.", apuesta);
+      return;
+    }
+
+    // 4. Elegimos la mejor mano válida del jugador (la más alta ≤21)
+    let mejorManoJugador = -1;
+
+    if (!bust1 && mano1 <= 21) {
+      mejorManoJugador = mano1;
+    }
+
+    if (!bust2 && mano2 !== null && mano2 <= 21) {
+      if (mano2 > mejorManoJugador) {
+        mejorManoJugador = mano2;
+      }
+    }
+
+    // Por seguridad
+    if (mejorManoJugador === -1) {
+      finDeRonda(
         "Perdiste",
-        "El Dealer Tiene mejores cartas, ",
+        "No tienes ninguna mano válida contra la Casa.",
         apuesta
       );
-    return finDeRonda("Empate", "Esto fue empate, ", apuesta);
+      return;
+    }
+
+    // 5. Comparación final contra el dealer usando la mejor mano
+    if (mejorManoJugador > totalD) {
+      finDeRonda(
+        "Ganaste",
+        `Tu mejor mano (${mejorManoJugador}) es mayor que la de la Casa (${totalD}).`,
+        apuesta
+      );
+    } else if (mejorManoJugador < totalD) {
+      finDeRonda(
+        "Perdiste",
+        `La mano de la Casa (${totalD}) es mayor que tu mejor mano (${mejorManoJugador}).`,
+        apuesta
+      );
+    } else {
+      finDeRonda(
+        "Empate",
+        `Empate: tu mejor mano y la de la Casa son ${totalD}.`,
+        apuesta
+      );
+    }
   }
 
-  function finDeRonda(razon, mensaje, valorApuesta) {
+  function finDeRonda(razon, mensaje, valorApuesta, montoFinal) {
+    const alert_ganancia = document.getElementById("alert_ganancia");
     // pagar
     if (razon === "BlackJack") {
       cupo += valorApuesta * 2.5; // cobras 3:2
+      alert_ganancia.style.display = "flex";
+      alert_ganancia.innerHTML = `Blackjack <br/> ${formatoPesos_monto_efectivo.format(
+        valorApuesta * 2.5
+      )}`;
+      confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
       apuesta = 0;
     } else if (razon === "Ganaste") {
       cupo += valorApuesta * 2; // cobras 1:1 (recuperas apuesta + ganancia)
+      alert_ganancia.style.display = "flex";
+      alert_ganancia.innerHTML = `Ganaste <br/> ${formatoPesos_monto_efectivo.format(
+        valorApuesta * 2
+      )}`;
+      confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
       apuesta = 0;
     } else if (razon === "Empate") {
       cupo += valorApuesta; // te devuelven la apuesta
+      alert_ganancia.style.display = "flex";
+      alert_ganancia.innerHTML = `Empate <br /> ${formatoPesos_monto_efectivo.format(
+        valorApuesta
+      )}`;
       apuesta = 0;
     } else if (razon === "Perdiste") {
       // ya la apuesta salió de cupo cuando la colocaste
       apuesta = 0;
     }
+
+    setTimeout(() => {
+      alert_ganancia.innerHTML = "";
+      alert_ganancia.style.display = "none";
+    }, 4000);
 
     // UI dinero
     _cupo.textContent = formatoPesos_monto_efectivo.format(cupo);
@@ -869,6 +1003,7 @@
     btn_apostar_blackjack.classList.add("btn_disable");
     btn_sacar_carta_blackjack.classList.add("btn_disable");
     btn_doblar_blackjack.classList.add("btn_disable");
+    btn_retirar_blackjack.classList.add("btn_disable");
     btn_dividir_blackjack.classList.add("btn_disable");
     msj_reiniciar.style.display = "flex";
     btn_plantarse_blackjack.classList.add("btn_disable");
@@ -885,6 +1020,7 @@
     currency: "COP",
     minimumFractionDigits: 0,
   });
+  
   _cupo.textContent = fmt.format(cupo);
   _apuesta.textContent = fmt.format(apuesta);
 
@@ -959,6 +1095,8 @@
 
     score2.innerHTML = "";
 
+    btnPlantarseMazo2.textContent = "Plantarse";
+
     btn_apostar_blackjack.classList.remove("btn_disable");
     btn_sacar_carta_blackjack.classList.add("btn_disable");
     btn_reset.classList.add("btn_disable");
@@ -970,15 +1108,19 @@
       .getElementById("plantarse_blackjack_mazo2")
       .classList.remove("btn_disable");
 
+    document.getElementById("alert_ganancia").innerHTML = "";
+
     document.getElementById("btn_mazo2").style.display = "none";
     document.getElementById("plantarse_blackjack_mazo2").style.display = "none";
     msj_reiniciar.style.display = "none";
 
     btn_doblar_blackjack.classList.add("btn_disable");
+    btn_retirar_blackjack.classList.add("btn_disable");
     btn_dividir_blackjack.classList.add("btn_disable");
 
     if (document.getElementById("board_player2")) {
       document.getElementById("board_player2").textContent = "";
+      document.getElementById("board_player2").remove();
     }
 
     // limpia estado de mano/dealer

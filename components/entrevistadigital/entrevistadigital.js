@@ -94,7 +94,7 @@
 
   let formulario = document.getElementById("content_main_e_digital");
   const url =
-    "https://script.google.com/macros/s/AKfycbz3sBamHoc1rRUSfCnQ6i20FyMpnrEWXtBqNY4C5SXXyVg1Vzhyc_-TT3MOX8qM59F6/exec";
+    "https://script.google.com/macros/s/AKfycbyn4VrjlPGx0mR7RUuQWXbcWlwFjtubA2sMZz8JQBZkzHla2PSvTfn5sA1wFdLuRcE/exec";
 
   function fileToDataURL(file) {
     return new Promise((resolve, reject) => {

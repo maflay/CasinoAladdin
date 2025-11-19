@@ -25,7 +25,7 @@
 }
 
 .content-info-game-entretenimiento p {
-font-size: 1.6rem;
+    font-size: 1.6rem;
 }
 
 .content-info-game-entretenimiento a {
@@ -72,13 +72,13 @@ font-size: 1.6rem;
     gap: 32px;
 }
 
-.card-juegos:hover .card-juegos-text>h2{
+.card-juegos:hover .card-juegos-text>h2 {
     color: #CB0404;
 }
 
 .card-juegos:hover .card-juegos-img img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .card-juegos {
@@ -98,13 +98,13 @@ font-size: 1.6rem;
     width: 100%;
     height: 100%;
     object-fit: cover;
-      transition: transform 0.4s ease;
-  -webkit-transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    -webkit-transition: -webkit-transform 0.4s ease;
 }
 
 .card-juegos-img img:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .card-juegos-text {
@@ -155,6 +155,7 @@ font-size: 1.6rem;
     .card-juegos-text {
         width: 100%;
     }
+
     .section-mesas-entretenimiento {
         line-height: 2rem;
     }

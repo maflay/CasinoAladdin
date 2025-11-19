@@ -167,6 +167,10 @@
     font-family: 'Quicksand', sans-serif !important;
 }
 
+.textarea_content {
+    field-sizing: content;
+}
+
 .input_form {
     width: 100%;
     border-radius: 8px;

@@ -79,7 +79,7 @@ div {
     gap: 8px;
     padding: 10px 40px;
     border-radius: 20px;
-    animation: border_cajon 2s infinite;
+    animation: border_cajon 3s infinite;
     background-color: #00000052;
     font-size: 10px !important;
 }
@@ -118,9 +118,19 @@ div {
         text-shadow: 0px 0px 0px white;
     }
 
+    25% {
+        color: rgb(255, 17, 0);
+        text-shadow: 1px 0px 1px rgb(255, 17, 0);
+    }
+
     50% {
         color: rgb(255, 255, 0);
         text-shadow: 1px 0px 1px rgb(255, 255, 0);
+    }
+
+    75% {
+        color: #1E63D3;
+        text-shadow: 1px 0px 1px #1E63D3;
     }
 }
 
@@ -187,7 +197,7 @@ div {
     border-radius: 20px;
     background-color: #00000052;
     font-size: 10px !important;
-    animation: border_cajon 1.5s infinite;
+    animation: border_cajon 2.5s infinite;
 }
 
 @keyframes border_cajon {
@@ -197,9 +207,16 @@ div {
         border: white 1px solid;
     }
 
+    25% {
+        border: rgb(255, 17, 0) 1px solid;
+    }
+
     50% {
         border: rgb(255, 255, 0) 1px solid;
+    }
 
+    75% {
+        border: #1E63D3 1px solid;
     }
 }
 
@@ -468,6 +485,11 @@ div {
     font-size: 1.6rem;
 }
 
+.content_info_juego iframe {
+    width: 100%;
+    height: 85%;
+}
+
 .content_mazo {
     position: absolute;
     top: 35vh;
@@ -615,6 +637,33 @@ div {
     position: absolute;
     bottom: 180px;
     right: 285px;
+}
+
+.alert_ganancia {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    font-size: 6rem;
+    font-weight: bold;
+    right: 180px;
+    bottom: 100px;
+    transform: rotate(-25deg);
+    animation: cambioColor 2s infinite alternate;
+    font-family: 'digital_7', sans-serif;
+}
+
+@keyframes cambioColor {
+    0% {
+        color: #ff3b3b;
+    }
+
+    50% {
+        color: #51c9f1;
+    }
+
+    100% {
+        color: #eaff32;
+    }
 }
 
 @media(max-width: 1366px) {

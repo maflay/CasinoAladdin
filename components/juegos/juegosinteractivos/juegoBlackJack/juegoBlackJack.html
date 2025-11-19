@@ -38,7 +38,7 @@
                             <div id="board_player" class="board_player"></div>
                             <div class="score" id="score_player">0</div>
                             <div style="display: none;" class="hand_2_curr" id="score_player2">0</div>
-                            <button style="display: none;" class="btn-design1 btn_apostar btn_sacar_mazo"
+                            <button style="display: none;" title="Sacar Carta" class="btn-design1 btn_apostar btn_sacar_mazo"
                                 id="btn_mazo2">Pedir Carta</button>
                             <button style="display: none;" title="Plantarse" id="plantarse_blackjack_mazo2"
                                 class="btn-design1 btn_plantarse btn_plantar_mazo2">Plantarse</button>
@@ -48,6 +48,7 @@
                             id="msj_reiniciar">Puedes
                             reiniciar
                             el juego.</div>
+                            <div id="alert_ganancia" class="alert_ganancia"></div>
                     </div>
                     <div class="control_blackjack">
                         <div class="content_info_ficha">
@@ -84,6 +85,8 @@
                         class="btn-design1 btn_apostar">Apostar</button>
                     <button title="Realizar Apuesta" id="doblar_blackjack"
                         class="btn-design1 btn_apostar">Doblar</button>
+                    <button title="Realizar Apuesta" id="retirar_blackjack"
+                        class="btn-design1 btn_apostar">Retirada</button>
                     <button title="Realizar Apuesta" id="dividir_blackjack" class="btn-design1 btn_apostar">Abrir /
                         Dividir</button>
                     <button title="Sacar Carta" id="sacar_carta_blackjack" class="btn-design1 btn_sacar_carta">Pedir
@@ -103,10 +106,53 @@
                     <p onclick="cerrarModal()">&times;</p>
                 </div>
                 <div class="content_info_juego">
+                    <iframe
+                        src="https://www.youtube.com/embed/y632gnlP0Zk?start=0&autoplay=0&mute=1&loop=1&playlist=y632gnlP0Zk&controls=1&modestbranding=1&showinfo=0"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <br />
+                    <br />
                     <p>En el blackjack, los apostadores juegan contra La Casa. El objetivo básico
                         del blackjack se describe fácilmente:</p>
                     <br />
                     <p>El objetivo del blackjack es conseguir más puntos que La Casa sin pasarse de 21.</p>
+                    <br />
+                    <h2 class="type2-h1">Valores de las cartas del Blackjack</h2>
+                    <br />
+                    <p>En el blackjack, cada carta tiene un valor en puntos. Estos se muestran en la siguiente
+                        manera:</p>
+                    <br />
+                    <ul>
+                        <li>Las cartas numeradas (del 2 al 10) valen su valor nominal .</li>
+                        <li>Las cartas con figuras o cartas de la corte (jota, reina y rey) valen 10 puntos .</li>
+                        <li>Los ases valen 1 u 11 puntos , lo que sea mejor para la mano.</li>
+                    </ul>
+                    <br />
+                    <h2 class="type2-h1">La partida de BlackJack acaba cuando sucede uno de estos escenarios.</h2>
+                    <br />
+                    <ul>
+                        <li>Cuando la casa tiene mejor puntaje que el jugador.</li>
+                        <li>Cuando el Jugador tiene mejor puntaje que la casa.</li>
+                        <li>O cuando uno de los jugadores incluyendo la casa se pasa de 21.</li>
+                    </ul>
+                    <br />
+                    <h2 class="type2-h1">¿Cómo ganarle a La Casa?</h2>
+                    <br />
+                    <ul>
+                        <li>Sacando una mano que tenga un valor mayor que la de La Casa, sin pasarse de 21.</li>
+                        <li>Si La Casa obtiene una mano con un resultado superior a 21, esto se conoce como pasarse .
+                        </li>
+                        <li>Si tus dos primeras cartas suman 21 puntos, que siempre serán un as y una carta de 10 (10,
+                            jota, reina o rey), esta mano se llama natural o blackjack .</li>
+                    </ul>
+                    <h2 class="type2-h1">¿Cómo se pierde contra La Casa?</h2>
+                    <br />
+                    <ul>
+                        <li>Al sacar más de 21 puntos y pasarse.</li>
+                        <li>Si La Casa obtiene más puntos que usted al final de la ronda, sin pasar de 21.</li>
+                    </ul>
                     <br />
                     <h2 class="type2-h1">Realizar apuestas</h2>
                     <br />
@@ -130,35 +176,6 @@
                     <br />
                     <p>La carta boca abajo se conoce como la carta oculta del Dealer . A continuación, se reparte una
                         carta boca arriba a cada jugador y, finalmente, una carta boca arriba al Dealer.</p>
-                    <br />
-                    <h2 class="type2-h1">¿Cómo ganarle a La Casa?</h2>
-                    <br />
-                    <ul>
-                        <li>Sacando una mano que tenga un valor mayor que la de La Casa, sin pasarse de 21.</li>
-                        <li>Si La Casa obtiene una mano con un resultado superior a 21, esto se conoce como pasarse .
-                        </li>
-                        <li>Si tus dos primeras cartas suman 21 puntos, que siempre serán un as y una carta de 10 (10,
-                            jota, reina o rey), esta mano se llama natural o blackjack .</li>
-                    </ul>
-                    <h2 class="type2-h1">¿Cómo se pierde contra La Casa?</h2>
-                    <br />
-                    <ul>
-                        <li>Al anotar más de 21 puntos y quebrar.</li>
-                        <li>Si La Casa obtiene más puntos que usted al final de la ronda, sin pasar de 21.</li>
-                    </ul>
-                    <br />
-                    <h2 class="type2-h1">Valores de las cartas del Blackjack</h2>
-                    <br />
-                    <p>En el blackjack, cada carta tiene un valor en puntos. Estos se muestran en la siguiente
-                        manera:</p>
-                    <br />
-                    <ul>
-                        <li>Las cartas numeradas (del 2 al 10) valen su valor nominal .</li>
-                        <li>Las cartas con figuras o cartas de la corte (jota, reina y rey) valen 10 puntos .</li>
-                        <li>Los ases valen 1 u 11 puntos , lo que sea mejor para la mano. A veces se dice que los ases
-                            son flexibles si pueden contarse como 1 u 11 en la mano.</li>
-                    </ul>
-
                 </div>
             </div>
         </div>

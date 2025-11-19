@@ -186,6 +186,75 @@
     background: #000000;
 }
 
+.soy_mayor_de_edad {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    z-index: 999;
+}
+
+.content_mayor_edad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.info_modal_mayor_de_edad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #CB0404;
+    border: #171c1ede 8px solid;
+    border-radius: 20px;
+    width: 500px;
+}
+
+.content_img_me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content_img_me img {
+    width: 80%;
+}
+
+.content_text_me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    padding: 0 30px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.close_modal_me {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    border-radius: 12px;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    transition: all .4s ease;
+    background-color: #171c1e;
+    margin-top: 20px;
+}
+
+.close_modal_me:hover {
+    background-color: #1E63D3;
+    cursor: pointer;
+}
 
 @media (max-width: 980px) {
     .Navbar {
@@ -265,7 +334,6 @@
         z-index: 1000;
     }
 
-
     .Navbar .nav-content-logo {
         display: flex;
         width: 105px;
@@ -275,7 +343,6 @@
         display: flex;
         width: 100%;
     }
-
 
     .Navbar .nav-content-logo img {
         width: 100%;
@@ -378,4 +445,7 @@
     }
 
 
+    .info_modal_mayor_de_edad {
+        width: 90%;
+    }
 }
