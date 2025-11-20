@@ -38,7 +38,6 @@
 }
 
 .section-start-juego-responsable {
-    margin-top: 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -466,6 +465,29 @@ h2 {
     left: 95% !important;
     top: 500px !important;
 }
+
+
+.content_form_head {
+    position: absolute;
+    width: 100px;
+    background-color: transparent;
+    height: 1px;
+    top: 50%;
+    left: 12vw;
+    z-index: 100;
+    transform: rotate(-90deg);
+}
+
+.progress-fill-head {
+    width: 100%;
+    /* Asegura que ocupe todo el ancho de la barra */
+    height: 100%;
+    --c: no-repeat linear-gradient(rgb(255, 255, 255) 0 0);
+    background: var(--c), var(--c), transparent;
+    background-size: 60% 100%;
+    animation: movehead 4.2s infinite;
+}
+
 
 @keyframes desaparecer {
     from {

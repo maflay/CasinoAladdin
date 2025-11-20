@@ -109,11 +109,11 @@ input[name="slider-radioC"] {
 }
 
 .title_promo_page {
-        position: absolute;
+    position: absolute;
     width: 100%;
     text-align: center;
     pointer-events: none;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -132,7 +132,7 @@ input[name="slider-radioC"] {
     filter: drop-shadow(1px 1px 1px #000);
 }
 
-.content-title-page p{
+.content-title-page p {
     color: #fff;
     text-shadow: #fff 0 0 0px;
     font-size: 1.6rem;

@@ -1,3 +1,7 @@
+body {
+    padding-top: 60px;
+}
+
 .Navbar {
     height: 60px;
     display: flex;
@@ -447,4 +451,9 @@
     .info_modal_mayor_de_edad {
         width: 90%;
     }
+
+    body {
+        padding-top: 35px;
+    }
+
 }

@@ -65,3 +65,20 @@ setTimeout(() => {
 function toPromos() {
   navegarA("promociones");
 }
+
+document.getElementById("btn_conocer_promo").addEventListener("click", () => {
+  irASeccionCoordenadas();
+});
+
+function irASeccionCoordenadas() {
+  const destino = document.getElementById("terminos-hacemos-en-grande");
+
+  if (destino) {
+    const posicionY = destino.getBoundingClientRect().top + window.pageYOffset;
+
+    window.scrollTo({
+      top: posicionY,
+      behavior: "smooth",
+    });
+  }
+}
