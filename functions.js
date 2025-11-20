@@ -80,7 +80,6 @@ const PageLoader = {
         mainContent.innerHTML = html;
 
         if(document.getElementById("soy_mayor_de_edad")){
-          
           const MAYOR_EDAD = getCookie("Soy_Mayor");
           if (!MAYOR_EDAD) {
             document.getElementById("soy_mayor_de_edad").style.display = "flex";

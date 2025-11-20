@@ -14,18 +14,48 @@
 .start-game-text {
     width: 100%;
     text-align: center;
+    position: relative;
+}
+
+.start-game-text h1 {
+    padding-top: 20px;
 }
 
 .content-img-game {
     width: 100%;
     height: 500px;
     overflow: hidden;
+    position: relative;
 }
 
 .content-img-game img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 0;
+}
+
+.content-img-game::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, black, rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.content-img-game p {
+    position: absolute;
+    top: 50%;
+    left: 15vw;
+    z-index: 10;
+    color: white;
+    border-bottom: #fff 1px solid;
+    pointer-events: none;
+    font-family: 'lovelace', sans-serif !important;
+    font-size: 5rem;
 }
 
 .acerca-game {
@@ -41,11 +71,15 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 20px;
 }
-
 
 .content-desc-game-text {
     display: flex;
+    width: 100%;
 }
 
 .content-desc-game-text p {
@@ -54,6 +88,13 @@
     align-items: center;
     text-align: justify;
     font-size: 1.6rem;
+}
+
+.content_btn_to_game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .content-card-game {
@@ -78,13 +119,15 @@
     width: 100%;
     height: 250px;
     overflow: hidden;
+    position: relative;
+    z-index: 0;
 }
 
 .img-card-game img {
     width: 100%;
     height: 100%;
     transition: all 0.4s ease;
-    overflow: hidden;
+    object-fit: cover;
 }
 
 .img-card-game img:hover {
@@ -92,6 +135,15 @@
     transform: scale(1.1);
 }
 
+.img-card-game::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
 
 .text-card-game {
     display: flex;
@@ -159,8 +211,116 @@
 }
 
 .card-media-r iframe {
+    width: 600px;
+    height: 85%;
+}
+
+._content_divider_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 10px;
     width: 100%;
-    height: 350px;
+}
+
+._divider_game_ {
+    width: 100%;
+    background-color: #770000;
+    height: 1px;
+    animation: color_divider 2s infinite;
+}
+
+._figura_divider_ {
+    position: absolute;
+    padding: 4px;
+    border: white 4px solid;
+    background-color: #770000;
+    transform: rotate(45deg);
+    animation: color_divider 2s infinite;
+}
+
+.progress-fill-game {
+    width: 100%;
+    /* Asegura que ocupe todo el ancho de la barra */
+    height: 100%;
+    --c: no-repeat linear-gradient(rgb(153, 3, 3) 0 0);
+    background: var(--c), var(--c), #c5c5c5;
+    background-size: 60% 100%;
+    animation: l16 3s infinite;
+}
+
+@keyframes l16 {
+    0% {
+        background-position: -150% 0, -150% 0
+    }
+
+    66% {
+        background-position: 250% 0, -150% 0
+    }
+
+    100% {
+        background-position: 250% 0, 250% 0
+    }
+}
+
+@keyframes color_divider {
+
+    0%,
+    100% {
+        background-color: #770000;
+    }
+
+    20% {
+        background-color: #777500;
+    }
+
+    40% {
+        background-color: #0a7700;
+    }
+
+    60% {
+        background-color: #006577;
+    }
+
+    80% {
+        background-color: #240077;
+    }
+}
+
+.content_form_head {
+    position: absolute;
+    width: 100px;
+    background-color: transparent;
+    height: 1px;
+    top: 50%;
+    left: 12vw;
+    z-index: 100;
+    transform: rotate(-90deg);
+}
+
+.progress-fill-head {
+    width: 100%;
+    /* Asegura que ocupe todo el ancho de la barra */
+    height: 100%;
+    --c: no-repeat linear-gradient(rgb(255, 255, 255) 0 0);
+    background: var(--c), var(--c), transparent;
+    background-size: 60% 100%;
+    animation: movehead 4.2s infinite;
+}
+
+@keyframes movehead {
+    0% {
+        background-position: -150% 0, -150% 0
+    }
+
+    66% {
+        background-position: 250% 0, -150% 0
+    }
+
+    100% {
+        background-position: 250% 0, 250% 0
+    }
 }
 
 @media(max-width:1366px) {
@@ -168,7 +328,7 @@
         width: 400px;
     }
 
-    .img-card-game{
+    .img-card-game {
         height: 205px;
     }
 }
@@ -179,7 +339,7 @@
         height: auto;
     }
 
-    .content-img-game{
+    .content-img-game {
         height: 200px;
     }
 
@@ -218,7 +378,17 @@
         width: 100%;
     }
 
-     .img-card-game{
+    .img-card-game {
         height: 250px;
+    }
+
+    .content-img-game p {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 4rem;
+    }
+
+    .content_form_head {
+        display: none;
     }
 }
