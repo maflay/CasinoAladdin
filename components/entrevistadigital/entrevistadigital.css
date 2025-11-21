@@ -4,7 +4,6 @@
 }
 
 .content_img_entrevista {
-    margin-top: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -254,9 +253,6 @@ input.valid {
 
 
 @media(max-width: 768px) {
-    .content_img_entrevista {
-        margin-top: 14%;
-    }
 
     .content_form_entrevista>p {
         text-align: center;
@@ -273,6 +269,10 @@ input.valid {
 
     .btn_tomar_foto {
         display: none;
+    }
+
+    .content_img_entrevista h2 {
+        font-size: 36px;
     }
 
 }

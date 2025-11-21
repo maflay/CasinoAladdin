@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 80px 0 20px 0;
 }
 
 .content_head_tcn {
@@ -146,12 +145,8 @@
 
 @media(max-width:768px) {
     .content_head_tcn {
-        height: 420px;
-        background-image: url(/resources/banner_TCN_movil.jpg);
-    }
-
-    .content_head_tcn {
         height: 300px;
+        background-image: url(/resources/banner_TCN_movil.jpg);
     }
 
     .content_title_talento {
@@ -200,5 +195,9 @@
         font-size: 1rem;
         right: -10px;
         bottom: -24px;
+    }
+
+    .movil_t_c_n{
+        padding: 0 !important;
     }
 }

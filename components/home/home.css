@@ -517,6 +517,14 @@
         font-size: 1.6rem;
     }
 
+    .container-tarjeta {
+        background-image: linear-gradient(90deg, #cb040480, #cb040448), url(/resources/people-mymawy-roja.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px 0;
+    }
+
     .box-container-tarjeta {
         flex-direction: column;
         padding: 20px 0;
@@ -533,6 +541,7 @@
     }
 
     .box-rigth-tarjeta {
+        display: none;
         width: 100%;
     }
 

@@ -6,6 +6,15 @@
   align-items: center;
 }
 
+.content_title_promo_view {
+  text-align: center;
+  padding: 20px;
+}
+
+.content_title_promo_view h1 {
+  color: #27314F;
+}
+
 .promocion-container .card-view {
   text-align: center;
 }
@@ -217,6 +226,10 @@ a {
 
   .card-view .card-promo {
     width: 100%;
+  }
+
+  .content_title_promo_view h1 {
+    font-size: 32px;
   }
 
 }

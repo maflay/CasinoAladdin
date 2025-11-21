@@ -393,11 +393,14 @@ body {
     }
 
     .type1-h1 {
-        font-size: 20px;
+        font-size: 32px;
     }
 
     .type1-h1-bold {
-        font-size: 2rem;
+        font-size: 32px;
     }
 
+    ._content_divider_section {
+        margin: 40px 0;
+    }
 }
