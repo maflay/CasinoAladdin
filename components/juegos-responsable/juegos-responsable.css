@@ -500,6 +500,66 @@ h2 {
 }
 
 
+.loader-local {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+
+.spinner {
+    border: 6px solid #ccc;
+    border-top: 6px solid #CB0404;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content_seccion_media_jr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: linear-gradient(90deg, #ffffffbe, #ffffffbe), url(/resources/A53-MallPlaza-Barra.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.content_seccion_media_jr h2 {
+    color: #000000;
+}
+
+.ig-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.ig-grid iframe {
+    border-radius: 8px;
+}
+
+
 @media (max-width: 768px) {
     .section-start-juego-responsable {
         width: 100%;
@@ -680,6 +740,20 @@ h2 {
     }
 
     .section-consecuencias-text h1 {
+        text-align: center;
+    }
+
+
+    .ig-grid {
+        display: grid;
+        gap: 10px;
+    }
+
+    .content_seccion_media_jr {
+        background-image: linear-gradient(90deg, transparent);
+    }
+
+    .content_seccion_media_jr h2 {
         text-align: center;
     }
 }
