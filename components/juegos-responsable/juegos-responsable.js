@@ -211,20 +211,36 @@ function toDowgame() {
   // })();
 })();
 
-const conteoJRCookie = getCookie("Conteo");
-if (!conteoJRCookie) {
-  const url = "https://script.google.com/macros/s/AKfycbyyG9kTYdce-jABeF_Uz254A54HSy9fOJI0_IoEnuml3f5O91tT7mnA5E8EGWiR4p7PWA/exec";
-  setCookie("Conteo", "conteo");
-  let data = {
-    tipo:"conteo",
-    conteo : 1
+function conteoView() {
+  const fechaCompletaC = new Date().toLocaleString("es-CO", {
+    timeZone: "America/Bogota",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+  const [fechaC, horaC] = fechaCompletaC.split(", ");
+  const conteoJRCookie = getCookie("Conteo");
+  if (!conteoJRCookie) {
+    const url =
+      "https://script.google.com/macros/s/AKfycbyyG9kTYdce-jABeF_Uz254A54HSy9fOJI0_IoEnuml3f5O91tT7mnA5E8EGWiR4p7PWA/exec";
+    setCookie("Conteo", "conteo");
+    let data = {
+      tipo: "conteo",
+      conteo: 1,
+      hora: horaC,
+      fecha: fechaC,
+    };
+    fetch(url, {
+      method: "POST",
+      mode: "no-cors",
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.text())
+      .then(() => {});
   }
-  fetch(url, {
-    method: "POST",
-    mode:"no-cors",
-    body: JSON.stringify(data)
-  }).then((res) => res.text())
-  .then(() => {
-    
-  })
 }
+
+conteoView();

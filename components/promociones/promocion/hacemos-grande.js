@@ -82,3 +82,19 @@ function irASeccionCoordenadas() {
     });
   }
 }
+
+(() => {
+  const solofechaCompleta = new Date().toLocaleString("es-CO", {
+    month: "long",
+  });
+
+  console.log(solofechaCompleta);
+  const promos_noviembre = document.getElementById("promos_noviembre");
+  const promos_diciembre = document.getElementById("promos_diciembre");
+
+  if (solofechaCompleta == "noviembre") {
+    promos_noviembre.style.display = "flex";
+  } else if (solofechaCompleta == "diciembre") {
+    promos_diciembre.style.display = "flex";
+  }
+})();
