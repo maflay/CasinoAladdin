@@ -14,8 +14,8 @@
     cursor: grab;
 }
 
-.slider-wrapperC:active{
-  cursor: grabbing;
+.slider-wrapperC:active {
+    cursor: grabbing;
 }
 
 .slideC {
@@ -26,25 +26,22 @@
 }
 
 .bg1C {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/s1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)), url(/resources/20250809_085252.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg2C {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/s2-test.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)), url(/resources/DSC_2144.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg3C {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/s3.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)), url(/resources/DSC_0371.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -55,12 +52,56 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
     width: 100%;
     height: 100%;
+    font-size: 16px !important;
 }
 
-.content-slide h1{
+.content-slide h1 {
     color: white;
+}
+
+.content-slide img {
+    width: 400px;
+    pointer-events: none;
+}
+
+.content_horario_casinos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.76);
+    gap: 8px;
+    padding: 20px;
+    color: white !important;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.disponible_cas{
+}
+
+.content_horario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.opciones_casino {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+}
+
+.opciones_casino h5 {
+    font-size: 3rem;
 }
 
 input[name="slider-radioC"] {
@@ -95,7 +136,7 @@ input[name="slider-radioC"] {
 
 .arrowC {
     position: absolute;
-    top: 40%;
+    top: 50%;
     transform: translateY(-50%);
     background: transparent;
     color: #fff;
@@ -117,7 +158,7 @@ input[name="slider-radioC"] {
 
 .card-casinos {
     width: 100%;
-    height: 60vh;
+    height: 600px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -132,6 +173,10 @@ input[name="slider-radioC"] {
     left: 50%;
     transform: translateX(-50%);
     z-index: 12;
+}
+
+.card-content-title h2 {
+    font-family: 'lovelace', sans-serif !important;
 }
 
 .card-casinos-left {
@@ -149,7 +194,15 @@ input[name="slider-radioC"] {
     width: 50%;
 }
 
-
+.content_btn_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 180px;
+}
 
 /* slider cali */
 
@@ -164,6 +217,7 @@ input[name="slider-radioC"] {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .slider-wrapperCali {
@@ -177,6 +231,7 @@ input[name="slider-radioC"] {
 }
 
 .slideCali {
+    position: relative;
     min-width: 100%;
     height: 100%;
     background-size: cover;
@@ -185,8 +240,7 @@ input[name="slider-radioC"] {
 
 .bg1Cali {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/cali-mi-tierra-300x169.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/cali-mi-tierra-300x169.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -196,48 +250,42 @@ input[name="slider-radioC"] {
 
 .bg2Cali {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/cali_aladdin_terminal_2-300x169.png);
+            rgba(0, 0, 0, 0.5)), url(/resources/cali-A7-300x169.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg3Cali {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/cali_aladdin_terminal-300x169.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/A-50-8326.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg4Cali {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/cali-aladdin_19-300x169.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/A-19.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg5Cali {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/cali-A7-300x169.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/A8.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg6Cali {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/cali-aladdin_cosmocentro-300x168.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/cali-aladdin_cosmocentro-300x168.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg7Cali {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/cali-aladdin_calima-300x168.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/cali-aladdin_calima-300x168.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -322,8 +370,8 @@ input[name="slider-radioCali"] {
     cursor: grab;
 }
 
-.slider-wrapperPereira:active{
-  cursor: grabbing;
+.slider-wrapperPereira:active {
+    cursor: grabbing;
 }
 
 .slidePereira {
@@ -335,32 +383,28 @@ input[name="slider-radioCali"] {
 
 .bg1Pereira {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/PEREIRA-UNICENTRO-300x169.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/aladdin-pereira-unicentro.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg2Pereira {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/Aladdin-el-lago-300x169.jpeg);
+            rgba(0, 0, 0, 0.5)), url(/resources/A-88-7343.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg3Pereira {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/PEREIRA-CENTRO-300x168.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/PEREIRA-CENTRO-300x168.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg4Pereira {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/Pereira-Aladdin_18-300x168.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/aladdin-pereira-22.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -444,8 +488,8 @@ input[name="slider-radioPereira"] {
     cursor: grab;
 }
 
-.slider-wrapperBogota:active{
-  cursor: grabbing;
+.slider-wrapperBogota:active {
+    cursor: grabbing;
 }
 
 .slideBogota {
@@ -457,16 +501,14 @@ input[name="slider-radioPereira"] {
 
 .bg1Bogota {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/IMG-1-300x168.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/bogota_septima_head.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg2Bogota {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/bogota-centro_internacional-300x168.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/bogota_tenquendama_head.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -546,7 +588,7 @@ input[name="slider-radioBogota"] {
     height: 100%;
     touch-action: pan-y;
     user-select: none;
-    /* cursor: grab; */
+    cursor: grab;
 }
 
 /* .slider-wrapperBarranquilla:active{
@@ -562,24 +604,21 @@ input[name="slider-radioBogota"] {
 
 .bg1Barranquilla {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/barranquilla_dragon_fenix-300x169.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/casino-de-barranquilla-card.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg2Barranquilla {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/s2-test.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/A53-MallPlaza-Barra.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg3Barranquilla {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/s3.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/s3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -636,6 +675,285 @@ input[name="slider-radioBarranquilla"] {
 }
 
 
+/* SLIDER BUGA */
+
+
+.content-slider-buga {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliderBuga {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-wrapperBuga {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+    /* permite swipe horizontal */
+    user-select: none;
+}
+
+.slideBuga {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1Buga {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/ubicacion-comodin.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg2Buga {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/cali-A7-300x169.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3Buga {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/A-50-8326.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg4Buga {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/A-19.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg5Buga {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/A8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg6Buga {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/cali-aladdin_cosmocentro-300x168.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg7Buga {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/cali-aladdin_calima-300x168.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+input[name="slider-radioBuga"] {
+    display: none;
+}
+
+.slider-controlsBuga label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsBuga {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsBuga input[type="radio"]:checked+label {
+    background: white;
+}
+
+.arrowBuga {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowBuga-left {
+    left: 0px;
+}
+
+.arrowBuga-right {
+    right: 0px;
+}
+
+
+
+/* SLIDER MONTERIA */
+
+.content-slider-monte {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliderMonte {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-wrapperMonte {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+    /* permite swipe horizontal */
+    user-select: none;
+}
+
+.slideMonte {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1Monte {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/head_monteria.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg2Monte {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/head_monteria.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3Monte {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/A-50-8326.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg4Monte {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/A-19.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg5Monte {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/A8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg6Monte {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/cali-aladdin_cosmocentro-300x168.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg7Monte {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/resources/head_monteria.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+input[name="slider-radioMonte"] {
+    display: none;
+}
+
+.slider-controlsMonte label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsMonte {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsMonte input[type="radio"]:checked+label {
+    background: white;
+}
+
+.arrowMonte {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowMonte-left {
+    left: 0px;
+}
+
+.arrowMonte-right {
+    right: 0px;
+}
+
 
 /* slider tulua */
 
@@ -670,24 +988,21 @@ input[name="slider-radioBarranquilla"] {
 
 .bg1Tulua {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/tulua-calle_sarmiento-300x169.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/tulua-calle_sarmiento-300x169.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg2Tulua {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/tulua-calle_sarmiento-300x169.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/tulua-calle_sarmiento-300x169.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg3Tulua {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ), url(/resources/s3.jpg);
+            rgba(0, 0, 0, 0.5)), url(/resources/s3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -746,6 +1061,47 @@ input[name="slider-radioTulua"] {
 
 
 
+.content_form_head_casinos {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    height: 1px;
+    z-index: 100;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress-fill-head_casinos {
+    width: 100%;
+    /* Asegura que ocupe todo el ancho de la barra */
+    height: 100%;
+    --c: no-repeat linear-gradient(rgb(255, 255, 255) 0 0);
+    background: var(--c), var(--c), transparent;
+    background-size: 60% 100%;
+    animation: movehead 4.2s infinite;
+}
+
+@keyframes movehead {
+    0% {
+        background-position: -150% 0, -150% 0
+    }
+
+    66% {
+        background-position: 250% 0, -150% 0
+    }
+
+    100% {
+        background-position: 250% 0, 250% 0
+    }
+}
+
+@media(max-width:1366px) {
+    .content_btn_header {
+        bottom: 70px;
+    }
+}
+
 @media (max-width: 768px) {
     .card-casinos {
         flex-direction: column;
@@ -754,18 +1110,29 @@ input[name="slider-radioTulua"] {
 
     .card-casinos-left {
         width: 100%;
-        height: 50vh;
+        height: 600px;
     }
 
     .card-casinos-rigth {
         width: 100%;
-        height: 50vh;
+        height: 600px;
     }
 
     .controls-sliderC {
         display: none;
     }
 
+    .content-slide img {
+        width: 250px;
+    }
+
+    .content_btn_header {
+        display: none;
+    }
+
+    .content_form_head_casinos {
+        top: 33px;
+    }
 }
 
 @media (max-width: 376px) {

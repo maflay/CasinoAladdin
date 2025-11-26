@@ -3,7 +3,8 @@
 
   if (btnTocasinos) {
     btnTocasinos.addEventListener("click", () => {
-      navegarA("inicio?id=ubicaciones");
+      // navegarA("inicio?id=ubicaciones");
+      navegarA("casinos");
     });
   }
 })();

@@ -254,6 +254,10 @@
     .img-card-game {
         height: 205px;
     }
+
+    .content_form_head {
+        left: 130px;
+    }
 }
 
 @media (max-width: 768px) {

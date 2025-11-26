@@ -4,6 +4,7 @@
     align-items: center;
     width: 100%;
     height: auto;
+    padding: 40px 0;
     background-color: #CB0404;
 }
 
@@ -93,7 +94,7 @@
     width: 50%;
 }
 
-.beneficios-rigth p{
+.beneficios-rigth p {
     text-align: justify;
     font-size: 1.6rem;
 }
@@ -268,38 +269,42 @@ input[name="slider-radioC"] {
 
 
 .content_form_head {
-  position: absolute;
-  width: 250px;
-  background-color: transparent;
-  height: 1px;
-  top: 49%;
-  left: 70px;
-  z-index: 100;
-  transform: rotate(-90deg);
+    position: absolute;
+    width: 330px;
+    background-color: transparent;
+    height: 1px;
+    top: 197px;
+    left: -151px;
+    z-index: 100;
+    transform: rotate(-90deg);
 }
 
 .progress-fill-head {
-  width: 100%;
-  /* Asegura que ocupe todo el ancho de la barra */
-  height: 100%;
-  --c: no-repeat linear-gradient(rgb(255, 255, 255) 0 0);
-  background: var(--c), var(--c), transparent;
-  background-size: 60% 100%;
-  animation: movehead 4.2s infinite;
+    width: 100%;
+    /* Asegura que ocupe todo el ancho de la barra */
+    height: 100%;
+    --c: no-repeat linear-gradient(rgb(255, 255, 255) 0 0);
+    background: var(--c), var(--c), transparent;
+    background-size: 60% 100%;
+    animation: movehead 4.2s infinite;
 }
 
 @keyframes movehead {
-  0% {
-    background-position: -150% 0, -150% 0
-  }
+    0% {
+        background-position: -150% 0, -150% 0
+    }
 
-  66% {
-    background-position: 250% 0, -150% 0
-  }
+    66% {
+        background-position: 250% 0, -150% 0
+    }
 
-  100% {
-    background-position: 250% 0, 250% 0
-  }
+    100% {
+        background-position: 250% 0, 250% 0
+    }
+}
+
+._content_divider_section {
+    padding: 20px 0;
 }
 
 @media(max-width:1366px) {
@@ -309,6 +314,12 @@ input[name="slider-radioC"] {
 
     .beneficios-rigth {
         font-size: 1.6rem;
+    }
+
+    .content_form_head {
+        width: 240px;
+        left: -100px;
+        top: 145px;
     }
 }
 
@@ -351,12 +362,16 @@ input[name="slider-radioC"] {
     .acordeon-mymawi {
         top: 0;
     }
-    
-    
-  .content_form_head {
-    width: 74px;
-    top: 78px;
-    left: 15px;
-  }
+
+
+    .content_form_head {
+        width: 100px;
+        top: 60px;
+        left: -45px;
+    }
+
+    ._content_divider_section {
+        padding: 0 20px;
+    }
 
 }
