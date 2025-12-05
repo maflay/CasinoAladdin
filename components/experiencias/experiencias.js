@@ -110,14 +110,14 @@
 
   function setCookie(name, value, opts = {}) {
     const {
-      minute = 1,
+      hours = 1,
       path = "/",
       sameSite = "Lax",
       secure = location.protocol === "https:",
     } = opts;
 
     const expires = new Date(
-      Date.now() + minute * 10 * 10 * 1000
+      Date.now() + hours * 60 * 60 * 1000
     ).toUTCString();
     console.log(expires, "expires");
     const encoded = encodeURIComponent(JSON.stringify(value));
@@ -282,7 +282,7 @@
 
   function validateindentity() {
     Swal.fire({
-      title: "Digita tu usuario y contraseña.",
+      title: "Digita tu usuario Aladdin.",
       html: `<div class="test_input">
       <input id="swal-user" name="user" class="swal2-input input_validate_xp" placeholder="Usuario" autocomplete="current-password">
               <input id="swal-pass" name="password" type="password" class="swal2-input input_validate_xp" placeholder="Contraseña" autocomplete="current-password">

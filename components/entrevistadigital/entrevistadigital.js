@@ -100,7 +100,47 @@
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onerror = () => reject(reader.error);
-      reader.onload = () => resolve(reader.result); // "data:image/png;base64,...."
+      reader.onload = () => resolve(reader.result);
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // Comprime la imagen: redimensiona y baja calidad
+  function compressImage(
+    file,
+    { maxWidth = 800, maxHeight = 800, quality = 0.7 } = {}
+  ) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+
+      reader.onerror = () => reject(reader.error);
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          let width = img.width;
+          let height = img.height;
+
+          // Mantener proporción pero limitar tamaño
+          const ratio = Math.min(maxWidth / width, maxHeight / height, 1);
+          width = width * ratio;
+          height = height * ratio;
+
+          const canvas = document.createElement("canvas");
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext("2d");
+
+          // Dibujar imagen escalada
+          ctx.drawImage(img, 0, 0, width, height);
+
+          // Sacar dataURL comprimido en JPG
+          const dataUrl = canvas.toDataURL("image/jpeg", quality);
+          resolve(dataUrl);
+        };
+        img.onerror = (err) => reject(err);
+        img.src = e.target.result;
+      };
+
       reader.readAsDataURL(file);
     });
   }
@@ -113,7 +153,6 @@
     }
   });
 
-  // guarda aquí los valores por pregunta: { 1:5, 2:3, ... }
   const respuestas = {};
 
   const MAP_INTELIGENCIAS = {
@@ -128,21 +167,16 @@
     Existencial: [9, 18, 27],
   };
 
-  // 1) poner listeners a TODOS los checkboxes
   document
     .querySelectorAll('input[type="checkbox"][id^="opc_"]')
     .forEach((chk) => {
       chk.addEventListener("change", (e) => {
         const input = e.target;
 
-        // id ejemplo: opc_3_val_3_pre_14
-        // formato tuyo: opc_{opcion}_{val}_{pre_{NUMPREG}}
         const parts = input.id.split("_");
-        // parts = ["opc","3","val","3","pre","14"]
         const valor = Number(parts[3]); // 1..5
         const numPregunta = Number(parts[5]); // 1..27
 
-        // 2) desmarcar los otros de esa MISMA pregunta
         const rowChecks = document.querySelectorAll(
           `input[id$="_pre_${numPregunta}"]`
         );
@@ -150,23 +184,19 @@
           if (c !== input) c.checked = false;
         });
 
-        // 3) si marcó, guardo; si desmarcó, borro
         if (input.checked) {
           respuestas[numPregunta] = valor;
         } else {
           delete respuestas[numPregunta];
         }
 
-        // 4) recalcular totales
         const totales = calcularTotales(respuestas);
-        // 5) mostrar/ordenar
         pintarResultados(totales);
       });
     });
 
   function pintarResultados(totales) {
-    // convertir a array y ordenar
-    const ordenadas = Object.entries(totales).sort((a, b) => b[1] - a[1]); // mayor → menor
+    const ordenadas = Object.entries(totales).sort((a, b) => b[1] - a[1]);
 
     // console.log("INTELIGENCIAS ORDENADAS:", ordenadas);
 
@@ -190,18 +220,16 @@
   }
 
   function calcularTotales(respuestasPorPregunta) {
-    // inicia todas en 0
     const totales = {};
     Object.keys(MAP_INTELIGENCIAS).forEach((intel) => (totales[intel] = 0));
 
-    // por cada inteligencia, sumar sus 3 preguntas
     for (const [nombreIntel, preguntas] of Object.entries(MAP_INTELIGENCIAS)) {
       let suma = 0;
       preguntas.forEach((numPre) => {
         const val = respuestasPorPregunta[numPre] || 0;
         suma += val;
       });
-      totales[nombreIntel] = suma; // máx 15
+      totales[nombreIntel] = suma;
     }
 
     return totales;
@@ -228,18 +256,15 @@
   // });
 
   function buildPayloadResultados() {
-    // 1) totales por inteligencia
     const totales = calcularTotales(respuestas);
 
-    // 2) ordenarlas por puntaje
     const ordenadas = Object.entries(totales).sort((a, b) => b[1] - a[1]);
 
-    // 3) armar objeto final
     const payload = {
-      tipo: "test_inteligencias", // para que tu Apps Script sepa qué hacer
-      respuestas_pregunta: respuestas, // {1:5, 2:3, ...} útil si quieres guardar todo
-      totales_inteligencia: totales, // { "Lógico-matemática": 12, ... }
-      orden_desc: ordenadas, // [ ["Lógico-matemática",12], ... ]
+      tipo: "test_inteligencias",
+      respuestas_pregunta: respuestas,
+      totales_inteligencia: totales,
+      orden_desc: ordenadas,
       inteligencia_principal: ordenadas[0] ? ordenadas[0][0] : null,
       puntaje_principal: ordenadas[0] ? ordenadas[0][1] : null,
     };
@@ -260,7 +285,7 @@
     correo_entrevista.setCustomValidity(ok ? "" : "Correo inválido");
     help.textContent = ok
       ? ""
-      : "Escribe un correo válido (ej. usuario@dominio.com)";
+      : "Escribe un correo válido (ej. usuario@aladdin.com)";
   });
 
   btn_send_entrevista.addEventListener("click", () => {
@@ -440,7 +465,11 @@
       return;
     }
 
-    const base64 = await fileToDataURL(foto_entre_val);
+    const base64 = await compressImage(foto_entre_val, {
+      maxWidth: 800,
+      maxHeight: 800,
+      quality: 0.7,
+    });
 
     let data = {
       tipo: "envio_1",
