@@ -265,9 +265,9 @@
     width: 450px;
 }
 
-.mi-titulo-xp {
+/* .mi-titulo-xp {
     font-size: 4rem;
-}
+} */
 
 .mi-boton-xp {
     background-color: #efb810;
@@ -290,6 +290,11 @@
 .input_validate_xp {
     width: 220px;
     border-radius: 12px;
+}
+
+.content_img_head {
+    width: 250px;
+    line-height: 1rem;
 }
 
 @media(max-width:768px) {

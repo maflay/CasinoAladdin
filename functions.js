@@ -359,7 +359,7 @@ function actualizarColorNavbar() {
   const hash = window.location.hash.split("?")[0];
 
   // Por defecto, logo claro
-  logo.src = "/resources/logo-aladdin.png";
+  logo.src = "/resources/logo-aladdin_navidad.png";
 
   // if (hash === "#contacto") {
   //   navbar.classList.add("page-contacto");
@@ -368,7 +368,7 @@ function actualizarColorNavbar() {
 
   if (hash === "#contacto") {
     navbar.classList.add("page-contacto");
-    logo.src = "/resources/logo-aladdin-negro.png";
+    logo.src = "/resources/logo-aladdin-negro_navidad.png";
   }
 }
 

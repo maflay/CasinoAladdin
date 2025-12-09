@@ -282,7 +282,7 @@
 
   function validateindentity() {
     Swal.fire({
-      title: "Digita tu usuario Aladdin.",
+      title: `<img class="content_img_head" src="/resources/logo-aladdin.png" />`,
       html: `<div class="test_input">
       <input id="swal-user" name="user" class="swal2-input input_validate_xp" placeholder="Usuario" autocomplete="current-password">
               <input id="swal-pass" name="password" type="password" class="swal2-input input_validate_xp" placeholder="Contraseña" autocomplete="current-password">
