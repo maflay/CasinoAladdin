@@ -439,6 +439,11 @@
     font-size: 1.6rem;
 }
 
+.content_regalo {
+    margin-top: 100px;
+    padding: 40px 0;
+}
+
 @media(max-width: 1366px) {
 
     .content-title-home {
@@ -630,4 +635,133 @@
         width: 50px;
         height: 50px;
     }
+
+    .content_regalo{
+        padding: 100px 0;
+    }
+}
+
+/* EFECTO REGALO */
+
+
+.regalo {
+    width: 410px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+@media(max-width:768px) {
+    .regalo {
+        position: relative;
+        left: -10px;
+    }
+
+    /* Efecto hover */
+.regalo .tapa {
+    top: -100px;
+    transform: rotateZ(10deg);
+    left: 10px;
+}
+
+.regalo .promo {
+    top: -80px;
+}
+}
+
+.caja,
+.tapa {
+    background:
+        -webkit-radial-gradient(white 10%, transparent 15.1%),
+        -webkit-radial-gradient(white 7%, transparent 15.1%),
+        #f80000;
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.caja {
+    width: 400px;
+    height: 250px;
+}
+
+.tapa {
+    width: 400px;
+    height: 70px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0 2px;
+    background-color: #f80000;
+    /* transiciones */
+    top: 0;
+    left: 0;
+    transition:
+        top ease-out 0.5s,
+        left ease-out 0.5s,
+        transform ease-out 0.5s;
+}
+
+.tapa img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -70px;
+}
+
+.caja span,
+.tapa span {
+    position: absolute;
+    display: block;
+    background: rgba(239, 184, 16, 0.8);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.caja span:first-child {
+    width: 100%;
+    height: 60px;
+    top: 80px;
+}
+
+.caja span:last-child,
+.tapa span {
+    width: 60px;
+    height: 100%;
+    left: 170px;
+}
+
+.tapa span {
+    left: 172px;
+}
+
+.promo {
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    position: relative;
+    height: 0;
+    top: 10px;
+    transition: all ease-out 0.7s;
+}
+
+.promo p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.promo h2 {
+    font-family: 'lovelace', sans-serif !important;
+    font-size: 30px;
+    margin: 0;
+}
+
+
+/* Efecto hover */
+.regalo:hover .tapa {
+    top: -100px;
+    transform: rotateZ(10deg);
+    left: 10px;
+}
+
+.regalo:hover .promo {
+    top: -80px;
 }
