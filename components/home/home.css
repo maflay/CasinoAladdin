@@ -636,7 +636,7 @@
         height: 50px;
     }
 
-    .content_regalo{
+    .content_regalo {
         padding: 100px 0;
     }
 }
@@ -657,15 +657,15 @@
     }
 
     /* Efecto hover */
-.regalo .tapa {
-    top: -100px;
-    transform: rotateZ(10deg);
-    left: 10px;
-}
+    .regalo .tapa {
+        top: -100px;
+        transform: rotateZ(10deg);
+        left: 10px;
+    }
 
-.regalo .promo {
-    top: -80px;
-}
+    .regalo .promo_home {
+        top: -80px;
+    }
 }
 
 .caja,
@@ -733,7 +733,7 @@
     left: 172px;
 }
 
-.promo {
+.promo_home {
     font-size: 30px;
     color: black;
     text-align: center;
@@ -743,12 +743,12 @@
     transition: all ease-out 0.7s;
 }
 
-.promo p {
+.promo_home p {
     font-size: 24px;
     margin: 0;
 }
 
-.promo h2 {
+.promo_home h2 {
     font-family: 'lovelace', sans-serif !important;
     font-size: 30px;
     margin: 0;
@@ -762,6 +762,6 @@
     left: 10px;
 }
 
-.regalo:hover .promo {
+.regalo:hover .promo_home {
     top: -80px;
 }
