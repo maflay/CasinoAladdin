@@ -93,7 +93,7 @@
 
 .content_banner_promo img {
     width: 100%;
-    border-radius: 0 0 20px 20px;
+    /* border-radius: 0 0 20px 20px; */
 }
 
 .promocion_paddin_head {
@@ -731,7 +731,6 @@ td {
 @media (max-width: 767px) {
 
     .promocion {
-        padding-top: 15%;
         height: auto;
     }
 
@@ -833,6 +832,7 @@ td {
 
     .halloween_movil {
         display: flex;
+        margin-bottom: 20px;
     }
 
     .content_msg_grand {

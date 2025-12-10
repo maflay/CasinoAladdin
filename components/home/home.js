@@ -57,7 +57,7 @@ function toPromociones() {
   loaderLocal.innerHTML = `
       <div class="loader-local">
         <div class="spinner"></div>
-        <p>Cargando multimedia ...</p>
+        <p>Cargando Contenido ...</p>
       </div>
     `;
   // --- fetch posts desde Apps Script ---

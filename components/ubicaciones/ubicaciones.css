@@ -37,6 +37,11 @@
     color: #CB0404;
 }
 
+.content-info-casino>section {
+    position: relative;
+    width: 100vw;
+}
+
 .content-desc-casino {
     display: flex;
     gap: 30px;
@@ -316,7 +321,6 @@
 
 @media(max-width:1366px) {
     .content-info-casino .content-info-casino-img {
-
         height: 380px;
     }
 

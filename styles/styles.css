@@ -122,10 +122,10 @@ body {
 
 .btn-design1 {
     padding: 8px 16px;
+   border-radius: 0.375rem;
     background-color: #CB0404;
     color: white;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
     width: auto;
     font-size: 14px;
@@ -145,7 +145,7 @@ body {
     color: #CB0404;
     background-color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.375rem;
     cursor: pointer;
     width: auto;
     font-size: 14px;

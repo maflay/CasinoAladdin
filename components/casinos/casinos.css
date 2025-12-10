@@ -81,8 +81,7 @@
     position: relative;
 }
 
-.disponible_cas{
-}
+.disponible_cas {}
 
 .content_horario {
     display: flex;
@@ -1139,4 +1138,56 @@ input[name="slider-radioTulua"] {
     .section-casinos-ciudad .section-casinos-content-text {
         bottom: 60px;
     }
+}
+
+.content_seccion_casino {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.card_casino {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    border-radius: 12px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.content_img_casino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content_img_casino img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.content_info_casino {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    font-size: 16px !important;
+}
+
+.casino_disponible{
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
