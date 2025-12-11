@@ -333,5 +333,10 @@ const rutasLimpias = {
     html: "/components/experiencias/experiencias.html",
     css: "/components/experiencias/experiencias.css",
     js: "/components/experiencias/experiencias.js",
+  },
+  en_vivo:{
+    html: "/components/eventos_en_vivo/en_vivo.html",
+    css: "/components/eventos_en_vivo/en_vivo.css",
+    js: "/components/eventos_en_vivo/en_vivo.js"
   }
 };

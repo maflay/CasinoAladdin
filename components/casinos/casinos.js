@@ -1,90 +1,3 @@
-//(() => {
-// const btntoCosmo = document.getElementById("toCosmomi");
-// const btntotermi1 = document.getElementById("toTermi1");
-// const btntotermi2 = document.getElementById("toTermi2");
-// const btntoSportbar = document.getElementById("toSportbar");
-// const btntoCayzedo = document.getElementById("toCayzedo");
-// const btntoCosmocali = document.getElementById("toCosmocali");
-// const btntoCalima = document.getElementById("toCalima");
-// const btnmitierrauni = document.getElementById("toTierraunicentro");
-// const btntoLago = document.getElementById("toLago");
-// const btnla18 = document.getElementById("la18");
-// const btnla22 = document.getElementById("la22");
-// const btntoSeptima = document.getElementById("toSeptima");
-// const btntoTenquendama = document.getElementById("toTenquendama");
-// const btntoDragonfenix = document.getElementById("toDragonfenix");
-// const btntoCallesarmiento = document.getElementById("toCallesarmiento");
-// const btntoGirasol = document.getElementById("toGirasol");
-// const btntoMorocco = document.getElementById("toMorocco");
-// const btntoLindavista = document.getElementById("toLindavista");
-// const btntoBellohorizonte = document.getElementById("toBellohorizonte");
-// const btntoEsteli = document.getElementById("toEsteli");
-// const btntoTipitapa = document.getElementById("toTipitapa");
-// btntoCosmo.addEventListener("click", () => {
-//   navegarA("casinocosmocentromitierra");
-// });
-// btntotermi1.addEventListener("click", () => {
-//   navegarA("casinoterminal1");
-// });
-// btntotermi2.addEventListener("click", () => {
-//   navegarA("casinoterminal2");
-// });
-// btntoSportbar.addEventListener("click", () => {
-//   navegarA("casinosportbar");
-// });
-// btntoCayzedo.addEventListener("click", () => {
-//   navegarA("casinoplazacayzedo");
-// });
-// btntoCosmocali.addEventListener("click", () => {
-//   navegarA("casinocosmocentrocali");
-// });
-// btntoCalima.addEventListener("click", () => {
-//   navegarA("casinocalima");
-// });
-// btnmitierrauni.addEventListener("click", () => {
-//   navegarA("casinomitierraunicentro");
-// });
-// btntoLago.addEventListener("click", () => {
-//   navegarA("casinolago");
-// });
-// btnla18.addEventListener("click", () => {
-//   navegarA("casinola18");
-// });
-// btnla22.addEventListener("click", () => {
-//   navegarA("casinola22");
-// });
-// btntoSeptima.addEventListener("click", () => {
-//   navegarA("casinoseptima");
-// });
-// btntoTenquendama.addEventListener("click", () => {
-//   navegarA("casinotequendama");
-// });
-// btntoDragonfenix.addEventListener("click", () => {
-//   navegarA("casinodragonfenix");
-// });
-// btntoCallesarmiento.addEventListener("click", () => {
-//   navegarA("casinocallesarmiento");
-// });
-// btntoGirasol.addEventListener("click", () => {
-//   navegarA("casinogirasol");
-// });
-// btntoMorocco.addEventListener("click", () => {
-//   navegarA("casinomorocco");
-// });
-// btntoLindavista.addEventListener("click", () => {
-//   navegarA("casinolindavista");
-// });
-// btntoBellohorizonte.addEventListener("click", () => {
-//   navegarA("casinobellohorizonte");
-// });
-// btntoEsteli.addEventListener("click", () => {
-//   navegarA("casinoelteli");
-// });
-// btntoTipitapa.addEventListener("click", () => {
-//   navegarA("casinotipitapa");
-// });
-//})();
-
 function sliderhome() {
   const track = document.getElementById("sliderTrackC");
   const radios = document.querySelectorAll('input[name="slider-radioC"]');
@@ -1621,29 +1534,49 @@ sliderTulua();
   }
 })();
 
-
-
 (() => {
-  if(document.getElementById("content-banner-membresia")){
+  if (document.getElementById("content-banner-membresia")) {
     fetch("/components/membresia/bannerMembresia/bannerMembresia.html")
-    .then((res) => res.text())
-    .then((html) => {
-      const contenedor = document.getElementById("content-banner-membresia");
-      contenedor.innerHTML = html;
-      
-      const estilo = document.createElement("link");
-      estilo.rel = "stylesheet";
-      estilo.href = "/components/membresia/bannerMembresia/bannerMembresia.css";
-      document.head.appendChild(estilo);
-      // Cargar script dinámicamente
-      const script = document.createElement("script");
-      script.src = "/components/membresia/bannerMembresia/bannerMembresia.js";
-      script.onload = () => {
-        if (typeof window.inicializarSliderUbicaciones === "function") {
-          window.inicializarSliderUbicaciones();
-        }
-      };
-      document.body.appendChild(script);
-    });
+      .then((res) => res.text())
+      .then((html) => {
+        const contenedor = document.getElementById("content-banner-membresia");
+        contenedor.innerHTML = html;
+
+        const estilo = document.createElement("link");
+        estilo.rel = "stylesheet";
+        estilo.href =
+          "/components/membresia/bannerMembresia/bannerMembresia.css";
+        document.head.appendChild(estilo);
+        // Cargar script dinámicamente
+        const script = document.createElement("script");
+        script.src = "/components/membresia/bannerMembresia/bannerMembresia.js";
+        script.onload = () => {
+          if (typeof window.inicializarSliderUbicaciones === "function") {
+            window.inicializarSliderUbicaciones();
+          }
+        };
+        document.body.appendChild(script);
+      });
   }
 })();
+
+function getDia() {
+  const fechaCompleta = new Date().toLocaleString("es-CO", {
+    timeZone: "America/Bogota",
+    year: "numeric",
+    month: "long",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+
+  const [fechaBreve, horaBreve] = fechaCompleta.split(", ");
+
+  console.log(fechaBreve);
+  const valor = document.getElementById("fecha_casinos");
+  valor.value = fechaBreve;
+  valor.textContent = fechaBreve;
+}
+
+getDia();
