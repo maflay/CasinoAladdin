@@ -182,8 +182,11 @@
 
 .card-media-game {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 400px;
+    gap: 30px;
 }
 
 .reverse-card {
@@ -195,7 +198,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 .card-media-r {
@@ -203,12 +207,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 .card-media-r iframe {
-    width: 600px;
-    height: 85%;
+    width: 100%;
+    height: 100%;
 }
 
 .content_form_head {
