@@ -1020,7 +1020,7 @@
     currency: "COP",
     minimumFractionDigits: 0,
   });
-  
+
   _cupo.textContent = fmt.format(cupo);
   _apuesta.textContent = fmt.format(apuesta);
 
@@ -1143,31 +1143,45 @@
   }
 })();
 
-function abrirModal() {
-  document.getElementById("modal_reglas_blackjack").style.display = "flex";
-  lockBodyScroll();
-}
+(() => {
+  document.getElementById("btn_abrir_modal").addEventListener("click", () => {
+    abrirModal();
+  });
 
-function cerrarModal() {
-  document.getElementById("modal_reglas_blackjack").style.display = "none";
-  unlockBodyScroll();
-}
+  function abrirModal() {
+    document.getElementById("modal_reglas_blackjack").style.display = "flex";
+    lockBodyScroll();
+  }
 
-let _scrollY = 0;
+  document.getElementById("btn_cerrar_modal").addEventListener("click", () => {
+    cerrarModal();
+  });
 
-function lockBodyScroll() {
-  _scrollY = window.scrollY || document.documentElement.scrollTop;
-  document.body.style.top = `-${_scrollY}px`;
-  document.body.classList.add("body-lock");
-}
+  function cerrarModal() {
+    document.getElementById("modal_reglas_blackjack").style.display = "none";
+    unlockBodyScroll();
+  }
 
-function unlockBodyScroll() {
-  document.body.classList.remove("body-lock");
-  document.body.style.top = "";
-  window.scrollTo(0, _scrollY);
-}
+  let _scrollY = 0;
 
-function startGame() {
-  document.getElementById("view_pre").style.display = "none";
-  document.getElementById("content_game_all").style.display = "block";
-}
+  function lockBodyScroll() {
+    _scrollY = window.scrollY || document.documentElement.scrollTop;
+    document.body.style.top = `-${_scrollY}px`;
+    document.body.classList.add("body-lock");
+  }
+
+  function unlockBodyScroll() {
+    document.body.classList.remove("body-lock");
+    document.body.style.top = "";
+    window.scrollTo(0, _scrollY);
+  }
+
+  document.getElementById("btn_start_game").addEventListener("click", () => {
+    startGame();
+  });
+
+  function startGame() {
+    document.getElementById("view_pre").style.display = "none";
+    document.getElementById("content_game_all").style.display = "block";
+  }
+})();

@@ -10,7 +10,7 @@
         <div id="view_pre" class="view_pre">
             <img src="/resources/cartas/logo_entrada_blackjack.png" alt="Aladdin">
             <br />
-            <button onclick="startGame()" title="Jugar BlackJack" class="btn-design1">Jugar</button>
+            <button id="btn_start_game" title="Jugar BlackJack" class="btn-design1">Jugar</button>
         </div>
         <div id="content_game_all" class="container">
             <div class="content_juego_open">
@@ -18,7 +18,7 @@
                     <h2 class="type1-h1 title_game">BlackJack - <img class="img_game" src="/resources/ala_blanco.png"
                             alt="aladdin">
                     </h2>
-                    <button title="Instrucciones" onclick="abrirModal()"
+                    <button title="Instrucciones" id="btn_abrir_modal"
                         class="btn_rules btn-design1">Instrucciones</button>
                 </div>
                 <div class="blackjack_content">
@@ -33,13 +33,12 @@
                                 src="/resources/cartas/zapato_distribuidor_de_cartas.png" alt=""></div>
                         <!-- <div style="width: 100%;height: 1px;background-color: rgba(255, 255, 255, 0.349);"></div> -->
                         <div title="Tablero Jugador" class="content_board_player">
-
                             <h2>Jugador</h2>
                             <div id="board_player" class="board_player"></div>
                             <div class="score" id="score_player">0</div>
                             <div style="display: none;" class="hand_2_curr" id="score_player2">0</div>
-                            <button style="display: none;" title="Sacar Carta" class="btn-design1 btn_apostar btn_sacar_mazo"
-                                id="btn_mazo2">Pedir Carta</button>
+                            <button style="display: none;" title="Sacar Carta"
+                                class="btn-design1 btn_apostar btn_sacar_mazo" id="btn_mazo2">Pedir Carta</button>
                             <button style="display: none;" title="Plantarse" id="plantarse_blackjack_mazo2"
                                 class="btn-design1 btn_plantarse btn_plantar_mazo2">Plantarse</button>
                         </div>
@@ -48,7 +47,7 @@
                             id="msj_reiniciar">Puedes
                             reiniciar
                             el juego.</div>
-                            <div id="alert_ganancia" class="alert_ganancia"></div>
+                        <div id="alert_ganancia" class="alert_ganancia"></div>
                     </div>
                     <div class="control_blackjack">
                         <div class="content_info_ficha">
@@ -103,7 +102,7 @@
             <div class="content_all_modal">
                 <div class="content_head_modal">
                     <h2 class="type2-h1">BlackJack</h2>
-                    <p onclick="cerrarModal()">&times;</p>
+                    <p id="btn_cerrar_modal">&times;</p>
                 </div>
                 <div class="content_info_juego">
                     <iframe
