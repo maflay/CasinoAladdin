@@ -124,8 +124,6 @@
       const dx = mazoX - cartaX;
       const dy = mazoY - cartaY;
 
-      // console.log(dy, "prueba de coordenadas");
-      // console.log(dx, "prueba de coordenadas");
       // Posición inicial: justo donde está el mazo
       img.style.transform = `translate(${dx}px, ${dy}px) rotate(-10deg) scale(0.9)`;
       img.style.opacity = "0";
@@ -704,8 +702,6 @@
         cupo += apuesta / 2;
         apuesta = 0;
 
-        console.log(cupo);
-        console.log(apuesta);
         _cupo.textContent = formatoPesos_monto_efectivo.format(cupo);
         _apuesta.textContent = formatoPesos_monto_efectivo.format(apuesta);
         setTimeout(() => {
@@ -825,8 +821,6 @@
     const jugadorTieneBlackjack =
       (blackjack1 || blackjack2) && playerHands.length === 1;
 
-    console.log("Dealer:", totalD);
-    console.log("Mano 1:", mano1, bust1 ? "(BUST)" : "");
     if (hayBoard2) console.log("Mano 2:", mano2, bust2 ? "(BUST)" : "");
 
     if (jugadorTieneBlackjack) {

@@ -1573,7 +1573,6 @@ function getDia() {
 
   const [fechaBreve, horaBreve] = fechaCompleta.split(", ");
 
-  console.log(fechaBreve);
   const valor = document.getElementById("fecha_casinos");
   valor.value = fechaBreve;
   valor.textContent = fechaBreve;

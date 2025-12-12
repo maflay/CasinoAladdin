@@ -323,4 +323,8 @@
     .content_form_head {
         display: none;
     }
+
+    .content_btn_to_game {
+        display: none;
+    }
 }

@@ -119,7 +119,6 @@
     const expires = new Date(
       Date.now() + hours * 60 * 60 * 1000
     ).toUTCString();
-    console.log(expires, "expires");
     const encoded = encodeURIComponent(JSON.stringify(value));
     let cookie = `${name}=${encoded}; Expires=${expires}; Path=${path}; SameSite=${sameSite}`;
     if (secure) cookie += `; Secure`;
@@ -324,7 +323,6 @@
       },
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log("entro en enviar");
         if (result.value != "") {
           setCookie("user", result.value[0].Cedula);
           //   view1.style.display = "none";

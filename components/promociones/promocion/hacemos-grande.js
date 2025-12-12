@@ -88,7 +88,6 @@ function irASeccionCoordenadas() {
     month: "long",
   });
 
-  console.log(solofechaCompleta);
   const promos_noviembre = document.getElementById("promos_noviembre");
   const promos_diciembre = document.getElementById("promos_diciembre");
 
@@ -98,8 +97,6 @@ function irASeccionCoordenadas() {
     promos_diciembre.style.display = "flex";
   }
 })();
-
-
 
 (() => {
   if (document.getElementById("content-banner-membresia")) {
