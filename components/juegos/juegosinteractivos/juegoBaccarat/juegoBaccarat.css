@@ -1,10 +1,5 @@
-* {
-    color: white !important;
-}
-
 .content_main_baccarat {
     width: 100vw;
-    height: 100vh;
     background-image: linear-gradient(75deg, #0118014d 10%, #044d044b 60%, #0118013d 100%), url(/resources/mesa_blackjack.png);
     background-position: center;
     background-size: cover;
@@ -65,11 +60,368 @@
 
 .baccarat_content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-content: center;
     position: relative;
+    padding: 20px;
     width: 100%;
     height: 650px;
-    border: white solid 5px;
     border-radius: 20px;
+}
+
+.body-lock {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.item_disable {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.content_mazo {
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
+.content_mazo img {
+    width: 100px;
+}
+
+.content_controls_baccarat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: rgba(255, 255, 255, 0.39) solid 1px;
+    background-color: rgba(0, 0, 0, 0.342);
+    gap: 10px;
+    padding: 40px;
+    border-radius: 40px;
+}
+
+.btn_apostar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 100%;
+    padding: 25px;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    background-color: #550c0c85;
+    border: #C0C0C0 2px solid;
+    transition: all 0.4s ease;
+    color: white;
+}
+
+.btn_apostar:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btn_sacar_carta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    padding: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: #550c0c85;
+    border: #C0C0C0 2px solid;
+    transition: all 0.4s ease;
+}
+
+.btn_sacar_carta:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.div-global2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.div-global {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(75deg, #0118014d 10%, #044d044b 60%, #0118013d 100%),
+        url(/resources/mesa_blackjack.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infoSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+.banker,
+.player {
+    font-size: large;
+    color: white;
+}
+
+.playField {
+    color: #05cd84ad;
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.betButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-size: large;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.betField {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    height: 110px;
+    color: white;
+}
+
+.balanceSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: white solid 1px;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #0000005d
+}
+
+.betField small {
+    font-size: 10px;
+}
+
+.content_saldo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 3px;
+}
+
+.chip {
+    width: 55px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 3px;
+
+}
+
+.chip:hover {
+    transform: translateY(-0.2em);
+}
+
+.chips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+h4 {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: large;
+}
+
+.betSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-size: 12px;
+    height: 100%;
+}
+
+.bet {
+    font-family: 'digital_7', sans-serif;
+    font-size: 16px;
+}
+
+.betChoice {
+    cursor: pointer;
+}
+
+.undoButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: #d5ad0e;
+    width: 600px;
+    height: 30px;
+    border-radius: 7px;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+    border: solid grey 1px;
+    cursor: pointer;
+}
+
+.buttonSection {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 150px;
+}
+
+.card {
+    width: 100px;
+    margin-right: 3px;
+    animation: slideInLeft 0.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.playerCards,
+.bankerCards {
+    display: flex;
+    height: 150.65px;
+}
+
+.bankerScore,
+.playerScore {
+    font-size: 35px;
+}
+
+.player,
+.banker {
+    width: 220px;
+}
+
+.balance {
+    font-family: 'digital_7', sans-serif;
+    font-size: large;
+}
+
+.info {
+    font-size: x-large;
+}
+
+
+/* MODAL */
+
+.modal_reglas_baccarat {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.content_modal_baccarat {
+    display: flex;
+    width: 650px;
+    height: 100%;
+    max-height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+}
+
+.content_all_modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.content_head_modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.content_head_modal h2 {
+    color: #CB0404 !important;
+}
+
+.content_head_modal p {
+    position: absolute;
+    color: #1F253A !important;
+    right: 4px;
+    top: -30px;
+    font-size: 2rem;
+}
+
+.content_head_modal p:hover {
+    color: #1f253a9f !important;
+    cursor: pointer;
+}
+
+.content_info_juego {
+    width: 100%;
+    padding: 10px 0;
+    overflow-y: auto;
+}
+
+.content_info_juego ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #1F253A !important;
+    padding-left: 20px;
+}
+
+.content_info_juego li {
+    list-style: inherit;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #1F253A !important;
+    font-size: 1.6rem;
+}
+
+.content_info_juego h2 {
+    color: #CB0404 !important;
+}
+
+.content_info_juego p {
+    color: #011801 !important;
+    font-size: 1.6rem;
+}
+
+.content_info_juego iframe {
+    width: 100%;
+    height: 85%;
 }

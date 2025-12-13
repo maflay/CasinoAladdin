@@ -6,19 +6,17 @@ window.addEventListener("load", function () {
 });
 
 function cargarEstiloVista(cssUrls) {
-  // Eliminar cualquier estilo anterior de vista
   const oldLinks = document.querySelectorAll("link[data-vista-css]");
   oldLinks.forEach((link) => link.remove());
 
   const addCss = (url, i = 0) => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = withVersion(url);     // 👈 cache-busting
+    link.href = withVersion(url);
     link.setAttribute("data-vista-css", `vista-css-${i}`);
     document.head.appendChild(link);
   };
 
-  // Cargar nuevos estilos
   if (Array.isArray(cssUrls)) {
     cssUrls.forEach((url, i) => addCss(url, i));
   } else if (cssUrls) {
@@ -27,14 +25,13 @@ function cargarEstiloVista(cssUrls) {
 }
 
 function cargarScriptVista(scriptUrls) {
-  // Elimina todos los scripts anteriores de vista
   const oldScripts = document.querySelectorAll("script[data-vista-script]");
   oldScripts.forEach((script) => script.remove());
 
   const addScript = (url, i = 0, isModule = false) => {
     const script = document.createElement("script");
     if (isModule) script.type = "module";
-    script.src = withVersion(url);       // 👈 cache-busting
+    script.src = withVersion(url);
     script.defer = true;
     script.setAttribute("data-vista-script", `vista-script-${i}`);
     document.body.appendChild(script);
@@ -42,9 +39,7 @@ function cargarScriptVista(scriptUrls) {
 
   if (Array.isArray(scriptUrls)) {
     scriptUrls.forEach((url, i) => {
-      // si quieres todos como módulo:
       addScript(url, i, true);
-      // si algunos no son módulo, aquí podrías decidir según el nombre
     });
   } else if (scriptUrls) {
     addScript(scriptUrls, 0, false);
@@ -58,7 +53,6 @@ function withVersion(url) {
   const sep = url.includes("?") ? "&" : "?";
   return `${url}${sep}v=${APP_VERSION}`;
 }
-
 
 const PageLoader = {
   cargarPagina: function (clave, contenedorId = "content-area") {
@@ -82,27 +76,26 @@ const PageLoader = {
         if (ruta.css) cargarEstiloVista(ruta.css);
         if (ruta.js) cargarScriptVista(ruta.js);
 
-        // Esperar a que imágenes terminen de cargar antes de animar
         const images = mainContent.querySelectorAll("img");
         const total = images.length;
         let loaded = 0;
         mainContent.innerHTML = html;
 
-        if(document.getElementById("soy_mayor_de_edad")){
+        if (document.getElementById("soy_mayor_de_edad")) {
           const MAYOR_EDAD = getCookie("Soy_Mayor");
           if (!MAYOR_EDAD) {
             document.getElementById("soy_mayor_de_edad").style.display = "flex";
           } else {
             document.getElementById("soy_mayor_de_edad").style.display = "none";
           }
-          
+
           document
-          .getElementById("close_modal_me")
-          .addEventListener("click", () => {
-            setCookie("Soy_Mayor", "Soy_Mayor");
-            document.getElementById("soy_mayor_de_edad").style.display = "none";
-          });
-          
+            .getElementById("close_modal_me")
+            .addEventListener("click", () => {
+              setCookie("Soy_Mayor", "Soy_Mayor");
+              document.getElementById("soy_mayor_de_edad").style.display =
+                "none";
+            });
         }
         const iniciarAnimaciones = () => {
           animarScrollConObserver(".titulo", "y");
@@ -273,11 +266,9 @@ function cargarHeaderYFooter() {
 
       navLinks.forEach((link) => {
         link.addEventListener("click", function () {
-          // Elimina clases activas del resto
           navLinks.forEach((l) => l.classList.remove("active"));
           this.classList.add("active");
 
-          // Cerrar menú móvil si está abierto
           if (navItems.classList.contains("open")) {
             navToggle.classList.remove("open");
             navItems.classList.remove("open");
@@ -331,7 +322,7 @@ function toRegister() {
 
 function capturarCorreoDesdeURL() {
   const hash = window.location.hash;
-  const url = new URL("http://prueba.com" + hash.slice(1)); // usar un dominio falso
+  const url = new URL("http://prueba.com" + hash.slice(1));
   const email = url.searchParams.get("email");
 
   const inputCorreo = document.getElementById("correo");
@@ -362,12 +353,10 @@ function actualizarColorNavbar() {
 
   if (!navbar || !logo) return;
 
-  // Limpiar clases anteriores
   navbar.classList.remove("page-juegos", "page-promociones", "page-contacto");
 
   const hash = window.location.hash.split("?")[0];
 
-  // Por defecto, logo claro
   logo.src = "/resources/logo-aladdin_navidad.png";
 
   // if (hash === "#contacto") {
@@ -386,7 +375,7 @@ function setCookie(name, value, opts = {}) {
     hours = 2,
     path = "/",
     sameSite = "Lax", // recomendado
-    secure = location.protocol === "https:", // true si estás en https
+    secure = location.protocol === "https:",
   } = opts;
 
   const expires = new Date(Date.now() + hours * 60 * 60 * 1000).toUTCString();
