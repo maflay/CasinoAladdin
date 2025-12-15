@@ -97,6 +97,18 @@ const PageLoader = {
                 "none";
             });
         }
+
+        if (document.getElementById("snow_cas")) {
+          const fechaCompleta = new Date().toLocaleString("es-CO", {
+            timeZone: "America/Bogota",
+            month: "long",
+          });
+          if (fechaCompleta == "diciembre") {
+            document.getElementById("snow_cas").style.display = "flex";
+          } else {
+            document.getElementById("snow_cas").style.display = "none";
+          }
+        }
         const iniciarAnimaciones = () => {
           animarScrollConObserver(".titulo", "y");
           animarScrollConObserver(".titulor", "x-right");
@@ -357,7 +369,16 @@ function actualizarColorNavbar() {
 
   const hash = window.location.hash.split("?")[0];
 
-  logo.src = "/resources/logo-aladdin_navidad.png";
+  const fechaCompleta = new Date().toLocaleString("es-CO", {
+    timeZone: "America/Bogota",
+    month: "long",
+  });
+
+  if (fechaCompleta == "diciembre") {
+    logo.src = "/resources/logo-aladdin_navidad.png";
+  } else {
+    logo.src = "/resources/logo-aladdin.png";
+  }
 
   // if (hash === "#contacto") {
   //   navbar.classList.add("page-contacto");
@@ -366,7 +387,12 @@ function actualizarColorNavbar() {
 
   if (hash === "#contacto") {
     navbar.classList.add("page-contacto");
-    logo.src = "/resources/logo-aladdin-negro_navidad.png";
+
+    if (fechaCompleta == "diciembre") {
+      logo.src = "/resources/logo-aladdin-negro_navidad.png";
+    } else {
+      logo.src = "/resources/logo-aladdin-negro.png";
+    }
   }
 }
 

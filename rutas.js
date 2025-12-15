@@ -338,5 +338,10 @@ const rutasLimpias = {
     html: "/components/eventos_en_vivo/en_vivo.html",
     css: "/components/eventos_en_vivo/en_vivo.css",
     js: "/components/eventos_en_vivo/en_vivo.js"
+  },
+  mr_bonus: {
+    html: "/components/promociones/promocion/mr-bonus.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/mr-bonus.js"
   }
 };
