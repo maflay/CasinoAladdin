@@ -1,13 +1,3 @@
-// (()=> {
-// document.getElementById("toBlackjackexpress").addEventListener("click", ()=> {
-//   navegarA("blackjackexpress");
-// })
-
-// document.getElementById("toTrenpremios").addEventListener("click", ()=> {
-//   navegarA("trenpremios");
-// })
-// })();
-
 (() => {
   const solofechaCompleta = new Date().toLocaleString("es-CO", {
     month: "long",
