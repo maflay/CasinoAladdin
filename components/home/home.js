@@ -28,12 +28,14 @@
       const contenedor = document.getElementById("promocion-seccion");
       contenedor.innerHTML = html;
 
+      const version = Date.now();
+
       const estilo = document.createElement("link");
       estilo.rel = "stylesheet";
-      estilo.href = "/components/promociones/promocion-view/promocion-view.css";
+      estilo.href = `/components/promociones/promocion-view/promocion-view.css?v=${version}`;
       document.head.appendChild(estilo);
       const script = document.createElement("script");
-      script.src = "/components/promociones/promocion-view/promocion-view.js";
+      script.src = `/components/promociones/promocion-view/promocion-view.js?v=${version}`;
       script.onload = () => {
         if (typeof window.inicializarSliderUbicaciones === "function") {
           window.inicializarSliderUbicaciones();
@@ -64,13 +66,11 @@ function toPromociones() {
   fetch(IG_FETCH_URL)
     .then((res) => res.json())
     .then((data) => {
-
       // si data ya es un array [{url:"..."}, ...]
       const posts = data
         .reverse()
-        .slice(0, 4) // 👈 copia para no mutar el array original
+        .slice(0, 4)
         .map((item) => normalizeIgUrl(item.url));
-
 
       window.IG_POSTS = posts;
       renderInstagramEmbeds("ig-feed", window.IG_POSTS);
@@ -150,30 +150,42 @@ function toPromociones() {
   }
 })();
 
-
 (() => {
-  if(document.getElementById("juegos-view-seccion")){
+  if (document.getElementById("juegos-view-seccion")) {
     fetch("/components/juegos/juegos-view/juegos-view.html")
-    .then((res) => res.text())
-    .then((html) => {
-      const contenedor = document.getElementById("juegos-view-seccion");
-      contenedor.innerHTML = html;
-      
-      // Cargar CSS dinámicamente
-      const estilo = document.createElement("link");
-      estilo.rel = "stylesheet";
-      estilo.href = "/components/juegos/juegos-view/juegos-view.css";
-      document.head.appendChild(estilo);
-      
-      // Cargar script dinámicamente
-      const script = document.createElement("script");
-      script.src = "/components/juegos/juegos-view/juegos-view.js";
-      script.onload = () => {
-        if (typeof window.inicializarSliderUbicaciones === "function") {
-          window.inicializarSliderUbicaciones();
-        }
-      };
-      document.body.appendChild(script);
-    });
+      .then((res) => res.text())
+      .then((html) => {
+        const contenedor = document.getElementById("juegos-view-seccion");
+        contenedor.innerHTML = html;
+
+        // Cargar CSS dinámicamente
+        const estilo = document.createElement("link");
+        estilo.rel = "stylesheet";
+        estilo.href = "/components/juegos/juegos-view/juegos-view.css";
+        document.head.appendChild(estilo);
+
+        // Cargar script dinámicamente
+        const script = document.createElement("script");
+        script.src = "/components/juegos/juegos-view/juegos-view.js";
+        script.onload = () => {
+          if (typeof window.inicializarSliderUbicaciones === "function") {
+            window.inicializarSliderUbicaciones();
+          }
+        };
+        document.body.appendChild(script);
+      });
   }
 })();
+
+itemnavidad();
+
+function itemnavidad() {
+  const fechaCompleta = new Date().toLocaleString("es-CO", {
+    timeZone: "America/Bogota",
+    month: "long",
+  });
+
+  if (fechaCompleta == "diciembre") {
+    document.getElementById("navidad_home").style.display = "flex";
+  }
+}
