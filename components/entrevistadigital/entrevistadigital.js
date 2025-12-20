@@ -475,7 +475,7 @@
       tipo: "envio_1",
       valor_1: hora,
       valor_2: fecha,
-      valor_3: nombre_val + " " + apellido_val,
+      valor_3: nombre_val+" "+apellido_val,
       valor_4: tipo_documento_val,
       valor_5: num_documento_val,
       valor_6: fecha_nacimiento_val,

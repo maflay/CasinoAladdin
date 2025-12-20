@@ -17,6 +17,7 @@
   const btntoLago = document.getElementById("toLago");
   const btntoMitierra = document.getElementById("toMitierra");
   const btntoSarmiento = document.getElementById("toSarmiento");
+  const btntoSonesta = document.getElementById("toSonesta");
 
   if (btnTocasinos) {
     btnTocasinos.addEventListener("click", () => {
@@ -42,10 +43,13 @@
     });
   }
 
-  if(btntoMallPlazaBarran){
-btntoMallPlazaBarran.addEventListener("click",()=> {
-  window.open("https://www.google.com/maps/place/Centro+Comercial+Mallplaza+Buenavista/@11.0161995,-74.8283157,17z/data=!4m6!3m5!1s0x8ef42c4cd175908d:0x9b9bfcb63575d493!8m2!3d11.0150707!4d-74.8277407!16s%2Fg%2F11c5xsk0vh?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"), "_blank";
-});
+  if (btntoMallPlazaBarran) {
+    btntoMallPlazaBarran.addEventListener("click", () => {
+      window.open(
+        "https://www.google.com/maps/place/Centro+Comercial+Mallplaza+Buenavista/@11.0161995,-74.8283157,17z/data=!4m6!3m5!1s0x8ef42c4cd175908d:0x9b9bfcb63575d493!8m2!3d11.0150707!4d-74.8277407!16s%2Fg%2F11c5xsk0vh?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+      ),
+        "_blank";
+    });
   }
 
   if (btntoSeptima) {
@@ -162,6 +166,15 @@ btntoMallPlazaBarran.addEventListener("click",()=> {
     });
   }
 
+  if (btntoSonesta) {
+    btntoSonesta.addEventListener("click", () => {
+      window.open(
+        "  https://www.google.com/maps/place/Sonesta+Hotel+Bogota/@4.7038276,-74.0460245,17z/data=!4m10!3m9!1s0x8e3f9ab2f6785559:0xccaf51e1d70c118b!5m3!1s2026-01-03!4m1!1i2!8m2!3d4.7038223!4d-74.0434496!16s%2Fg%2F1ygbbbclw?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+      ),
+        "_blank";
+    });
+  }
+
   if (btnTojuegos) {
     btnTojuegos.addEventListener("click", () => {
       navegarA("juegos");
@@ -221,28 +234,28 @@ btntoMallPlazaBarran.addEventListener("click",()=> {
     });
 })();
 
-
 (() => {
-  if(document.getElementById("content-banner-membresia")){
+  if (document.getElementById("content-banner-membresia")) {
     fetch("/components/membresia/bannerMembresia/bannerMembresia.html")
-    .then((res) => res.text())
-    .then((html) => {
-      const contenedor = document.getElementById("content-banner-membresia");
-      contenedor.innerHTML = html;
-      
-      const estilo = document.createElement("link");
-      estilo.rel = "stylesheet";
-      estilo.href = "/components/membresia/bannerMembresia/bannerMembresia.css";
-      document.head.appendChild(estilo);
-      // Cargar script dinámicamente
-      const script = document.createElement("script");
-      script.src = "/components/membresia/bannerMembresia/bannerMembresia.js";
-      script.onload = () => {
-        if (typeof window.inicializarSliderUbicaciones === "function") {
-          window.inicializarSliderUbicaciones();
-        }
-      };
-      document.body.appendChild(script);
-    });
+      .then((res) => res.text())
+      .then((html) => {
+        const contenedor = document.getElementById("content-banner-membresia");
+        contenedor.innerHTML = html;
+
+        const estilo = document.createElement("link");
+        estilo.rel = "stylesheet";
+        estilo.href =
+          "/components/membresia/bannerMembresia/bannerMembresia.css";
+        document.head.appendChild(estilo);
+        // Cargar script dinámicamente
+        const script = document.createElement("script");
+        script.src = "/components/membresia/bannerMembresia/bannerMembresia.js";
+        script.onload = () => {
+          if (typeof window.inicializarSliderUbicaciones === "function") {
+            window.inicializarSliderUbicaciones();
+          }
+        };
+        document.body.appendChild(script);
+      });
   }
 })();

@@ -343,5 +343,10 @@ const rutasLimpias = {
     html: "/components/promociones/promocion/mr-bonus.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/mr-bonus.js"
+  },
+  casinosonesta: {
+    html: "/components/ubicaciones/bogota/sonesta.html",
+    css: "/components/ubicaciones/ubicaciones.css",
+    js: "/components/ubicaciones/ubicaciones.js"
   }
 };

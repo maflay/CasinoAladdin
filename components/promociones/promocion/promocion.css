@@ -93,6 +93,7 @@
 
 .content_banner_promo img {
     width: 100%;
+    pointer-events: none;
     /* border-radius: 0 0 20px 20px; */
 }
 

@@ -111,7 +111,6 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-image: linear-gradient(90deg, #ffffff1a 10%, #ffffff 20%, #ffffff 25%, #ffffff00 30%, #ffffff00 40%, #ffffff00 50%, #ffffff00 60%, #ffffff00 70%, #ffffff 75%, #ffffff 80%, #ffffff1a 90%);
 }
 
 .content_vivo_en_vivo video {

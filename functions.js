@@ -98,6 +98,12 @@ const PageLoader = {
             });
         }
 
+        if(document.getElementById("modal_bono_apertura")){
+          document.getElementById("close_registrarse").addEventListener("click", ()=> {
+            document.getElementById("modal_bono_apertura").style.display = "none";
+          });
+        }
+
         if (document.getElementById("snow_cas")) {
           const fechaCompleta = new Date().toLocaleString("es-CO", {
             timeZone: "America/Bogota",
