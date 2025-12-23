@@ -15,3 +15,6 @@
       document.body.appendChild(script);
     });
 })();
+
+
+console.log(window.location.hash);
