@@ -18,13 +18,21 @@
 
   if (solofechaCompleta == "septiembre") {
     cubo1.style.display = "flex";
-  } else if (solofechaCompleta == "octubre") {
+  }
+
+  if (solofechaCompleta == "octubre") {
     cubo2.style.display = "flex";
-  } else if (solofechaCompleta == "noviembre") {
+  }
+
+  if (solofechaCompleta == "noviembre") {
     cubo3.style.display = "flex";
-  } else if (solofechaCompleta == "diciembre") {
+  }
+
+  if (solofechaCompleta == "diciembre") {
     cubo4.style.display = "flex";
-  } else if (solofechaCompleta == "enero") {
+  }
+
+  if (solofechaCompleta == "enero") {
     promociones_enero_2026.style.display = "flex";
   }
 })();

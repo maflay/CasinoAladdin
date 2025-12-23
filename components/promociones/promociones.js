@@ -14,11 +14,6 @@
       const script = document.createElement("script");
       script.src =
         "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.js";
-      script.onload = () => {
-        if (typeof window.inicializarSliderUbicaciones === "function") {
-          window.inicializarSliderUbicaciones();
-        }
-      };
       document.body.appendChild(script);
     });
 })();
@@ -37,11 +32,6 @@
       // Cargar script dinámicamente
       const script = document.createElement("script");
       script.src = "/components/promociones/promocion-view/promocion-view.js";
-      script.onload = () => {
-        if (typeof window.inicializarSliderUbicaciones === "function") {
-          window.inicializarSliderUbicaciones();
-        }
-      };
       document.body.appendChild(script);
     });
 })();
@@ -60,11 +50,6 @@
       // Cargar script dinámicamente
       const script = document.createElement("script");
       script.src = "/components/membresia/bannerMembresia/bannerMembresia.js";
-      script.onload = () => {
-        if (typeof window.inicializarSliderUbicaciones === "function") {
-          window.inicializarSliderUbicaciones();
-        }
-      };
       document.body.appendChild(script);
     });
 })();
@@ -85,15 +70,9 @@
       // Cargar script dinámicamente
       const script = document.createElement("script");
       script.src = "/components/juegos/juegos-view/juegos-view.js";
-      script.onload = () => {
-        if (typeof window.inicializarSliderUbicaciones === "function") {
-          window.inicializarSliderUbicaciones();
-        }
-      };
       document.body.appendChild(script);
     });
 })();
-
 
 function sliderhome() {
   const track = document.getElementById("sliderTrackC");
@@ -160,7 +139,9 @@ function sliderhome() {
   track.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
     deltaX = e.pageX - startX;
-    track.style.transform = `translateX(calc(-${currentIndex * 100}vw + ${deltaX}px))`;
+    track.style.transform = `translateX(calc(-${
+      currentIndex * 100
+    }vw + ${deltaX}px))`;
   });
 
   track.addEventListener("mouseup", () => {
@@ -178,18 +159,28 @@ function sliderhome() {
     }
   });
 
-  track.addEventListener("touchstart", (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    deltaX = 0;
-    track.style.transition = "none";
-  }, { passive: true });
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      deltaX = 0;
+      track.style.transition = "none";
+    },
+    { passive: true }
+  );
 
-  track.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    deltaX = e.touches[0].clientX - startX;
-    track.style.transform = `translateX(calc(-${currentIndex * 100}vw + ${deltaX}px))`;
-  }, { passive: true });
+  track.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!isDragging) return;
+      deltaX = e.touches[0].clientX - startX;
+      track.style.transform = `translateX(calc(-${
+        currentIndex * 100
+      }vw + ${deltaX}px))`;
+    },
+    { passive: true }
+  );
 
   track.addEventListener("touchend", () => {
     if (!isDragging) return;
@@ -212,16 +203,15 @@ function sliderhome() {
   goToSlide(currentIndex);
 }
 
-
 sliderhome();
 
 window.addEventListener("scroll", function () {
-        const item = document.getElementById("halloween_item");
-        if (item) {
-          if (window.scrollY > 0) {
-            item.classList.add("mostrar");
-          } else {
-            item.classList.remove("mostrar");
-          }
-        }
-      });
+  const item = document.getElementById("halloween_item");
+  if (item) {
+    if (window.scrollY > 0) {
+      item.classList.add("mostrar");
+    } else {
+      item.classList.remove("mostrar");
+    }
+  }
+});

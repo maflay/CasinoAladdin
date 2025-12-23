@@ -67,54 +67,19 @@ const PageLoader = {
       return;
     }
 
-    sessionStorage.clear();
+    Object.keys(sessionStorage).forEach((k) => {
+      if (k.startsWith("anim-")) sessionStorage.removeItem(k);
+    });
+
     fetch(withVersion(ruta.html), { cache: "no-store" })
       .then((response) => response.text())
       .then((html) => {
         actualizarMenuActivo();
         actualizarColorNavbar();
+        mainContent.innerHTML = html;
         if (ruta.css) cargarEstiloVista(ruta.css);
         if (ruta.js) cargarScriptVista(ruta.js);
 
-        const images = mainContent.querySelectorAll("img");
-        const total = images.length;
-        let loaded = 0;
-        mainContent.innerHTML = html;
-
-        if (document.getElementById("soy_mayor_de_edad")) {
-          const MAYOR_EDAD = getCookie("Soy_Mayor");
-          if (!MAYOR_EDAD) {
-            document.getElementById("soy_mayor_de_edad").style.display = "flex";
-          } else {
-            document.getElementById("soy_mayor_de_edad").style.display = "none";
-          }
-
-          document
-            .getElementById("close_modal_me")
-            .addEventListener("click", () => {
-              setCookie("Soy_Mayor", "Soy_Mayor");
-              document.getElementById("soy_mayor_de_edad").style.display =
-                "none";
-            });
-        }
-
-        if(document.getElementById("modal_bono_apertura")){
-          document.getElementById("close_registrarse").addEventListener("click", ()=> {
-            document.getElementById("modal_bono_apertura").style.display = "none";
-          });
-        }
-
-        if (document.getElementById("snow_cas")) {
-          const fechaCompleta = new Date().toLocaleString("es-CO", {
-            timeZone: "America/Bogota",
-            month: "long",
-          });
-          if (fechaCompleta == "diciembre") {
-            document.getElementById("snow_cas").style.display = "flex";
-          } else {
-            document.getElementById("snow_cas").style.display = "none";
-          }
-        }
         const iniciarAnimaciones = () => {
           animarScrollConObserver(".titulo", "y");
           animarScrollConObserver(".titulor", "x-right");
@@ -123,6 +88,10 @@ const PageLoader = {
             loading.style.display = "none";
           }, 350);
         };
+
+        const images = mainContent.querySelectorAll("img");
+        const total = images.length;
+        let loaded = 0;
 
         if (total === 0) {
           requestAnimationFrame(() => setTimeout(iniciarAnimaciones, 50));
@@ -257,6 +226,63 @@ function cargarHeaderYFooter() {
       document.getElementById("main-header").innerHTML = html;
       const navToggle = document.getElementById("navToggle");
       const navItems = document.getElementById("navItems");
+
+      // MODAL MAYOR DE EDAD
+      if (document.getElementById("soy_mayor_de_edad")) {
+        const MAYOR_EDAD = getCookie("Soy_Mayor");
+        if (!MAYOR_EDAD) {
+          document.getElementById("soy_mayor_de_edad").style.display = "flex";
+        } else {
+          document.getElementById("soy_mayor_de_edad").style.display = "none";
+        }
+
+        document
+          .getElementById("close_modal_me")
+          .addEventListener("click", () => {
+            setCookie("Soy_Mayor", "Soy_Mayor");
+            document.getElementById("soy_mayor_de_edad").style.display = "none";
+          });
+      }
+
+      // EFECTO NIEVE
+      (() => {
+        const snow = document.getElementById("snow_cas");
+        if (!snow) return;
+
+        try {
+          const mes = new Date().toLocaleString("es-CO", {
+            timeZone: "America/Bogota",
+            month: "long",
+          });
+
+          snow.style.display = mes === "diciembre" ? "flex" : "none";
+        } catch (e) {
+          snow.style.display = "none";
+        }
+      })();
+
+      // CASINO NUEVO
+      fetch("/components/modal/modal_casino_nuevo/casino.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const contenedor = document.getElementById("aviso_nuevo_casino");
+          contenedor.innerHTML = html;
+
+          const version = Date.now();
+
+          const estilo = document.createElement("link");
+          estilo.rel = "stylesheet";
+          estilo.href = `/components/modal/modal_casino_nuevo/casino.css?v=${version}`;
+          document.head.appendChild(estilo);
+          const script = document.createElement("script");
+          script.src = `/components/modal/modal_casino_nuevo/casino.js?v=${version}`;
+          script.onload = () => {
+            if (typeof window.inicializarSliderUbicaciones === "function") {
+              window.inicializarSliderUbicaciones();
+            }
+          };
+          document.body.appendChild(script);
+        });
 
       if (navToggle && navItems) {
         navToggle.addEventListener("click", () => {

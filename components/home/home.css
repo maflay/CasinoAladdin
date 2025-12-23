@@ -456,7 +456,7 @@
     }
 
     .logo-casino-social-media {
-        width: 150px;
+        width: 200px;
     }
 
     .story-ring {
@@ -639,6 +639,11 @@
     .content_regalo {
         padding: 100px 0;
     }
+
+    .logo-casino-social-media {
+        width: 150px;
+    }
+
 }
 
 /* EFECTO REGALO */

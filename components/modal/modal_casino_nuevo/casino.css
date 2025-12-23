@@ -1,0 +1,139 @@
+.modal_apertura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    z-index: 250;
+}
+
+.content_modal_apertura {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #CB0404;
+    border: #171c1ede 4px solid;
+    width: 600px;
+    padding: 40px;
+}
+
+.head_apertura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.head_apertura img {
+    width: 80%;
+}
+
+.content_text_apertura {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px 0;
+    width: 100%;
+    padding: 0 30px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.cas_url {
+    color: white;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.cas_url:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.content_text_apertura img {
+    width: 450px;
+}
+
+.content_text_apertura small {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.close_modal_me {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    border-radius: 0.375rem;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    transition: all .4s ease;
+    background-color: #171c1e;
+    margin-top: 20px;
+}
+
+.close_modal_me:hover {
+    background-color: #1E63D3;
+    cursor: pointer;
+}
+
+.close_registrarse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px 16px;
+    border-radius: 100%;
+    color: white;
+    font-size: 4rem;
+    transition: all 0.4s ease;
+}
+
+.close_registrarse:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.no_screen {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+@media(max-height: 660px) {
+    .content_modal_apertura {
+        top: -30px;
+    }
+}
+
+@media(max-width: 1366px) {
+    .content_modal_apertura {
+        padding: 20px;
+    }
+
+    .content_text_apertura img {
+        width: 300px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .content_modal_apertura {
+        width: 90%;
+    }
+
+    .content_text_apertura img {
+        width: 300px;
+    }
+}

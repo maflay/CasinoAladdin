@@ -193,13 +193,22 @@ body {
 }
 
 /* ANIMACIONES */
-.titulo,
-.titulor,
-.titulol {
+.titulo {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.6s ease;
-    will-change: transform, opacity;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.titulor {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.titulol {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .item {
