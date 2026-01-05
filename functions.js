@@ -244,6 +244,20 @@ function cargarHeaderYFooter() {
           });
       }
 
+      if (document.getElementById("icono_movil")) {
+        const mes = new Date().toLocaleString("es-CO", {
+          timeZone: "America/Bogota",
+          month: "long",
+        });
+        if (mes == "diciembre") {
+          document.getElementById("icono_movil").src =
+            "/resources/logo-aladdin_navidad.png";
+        } else {
+          document.getElementById("icono_movil").src =
+            "/resources/logo-aladdin.png";
+        }
+      }
+
       // EFECTO NIEVE
       (() => {
         const snow = document.getElementById("snow_cas");
