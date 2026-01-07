@@ -185,6 +185,13 @@ function itemnavidad() {
     month: "long",
   });
 
+  const fechaAño = new Date().toLocaleString("es-CO", {
+    timeZone: "America/Bogota",
+    year: "numeric",
+  });
+
+  document.getElementById("año_diciembre").textContent = fechaAño;
+
   if (fechaCompleta == "diciembre") {
     document.getElementById("navidad_home").style.display = "flex";
   }

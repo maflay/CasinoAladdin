@@ -1,15 +1,40 @@
+:root {
+    --size_menu: 60px;
+    --size_menu_mobil: 35px
+}
+
 body {
-    padding-top: 60px;
+    padding-top: var(--size_menu);
+}
+
+.casino_virtual {
+    display: none;
+    justify-content: end;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(110, 0, 0);
+    color: white;
+    font-size: 12px;
+}
+
+.casino_virtual a {
+    color: white;
+    position: relative;
+    right: 5%;
 }
 
 .Navbar {
-    height: 60px;
+    height: var(--size_menu);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 0px;
     z-index: 999;
     transition: background-color 0.6s ease;
     background-color: #7a0000;
@@ -17,6 +42,7 @@ body {
 
 .Navbar.navbar-scrolled {
     background-color: #CB0404;
+    top: 0;
 }
 
 .Navbar>.nav-logo {
@@ -281,7 +307,7 @@ body {
     .Navbar {
         transition: background-color 0.3s ease;
         background-color: #CB0404;
-        height: 35px;
+        height: var(--size_menu_mobil);
     }
 
     .Navbar.navbar-scrolled {
@@ -471,8 +497,15 @@ body {
     }
 
     body {
-        padding-top: 35px;
+        padding-top: var(--size_menu_mobil);
     }
+
+    .casino_virtual a {
+        color: white;
+        position: relative;
+        right: 5px;
+    }
+
 }
 
 

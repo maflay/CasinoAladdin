@@ -24,11 +24,11 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicaciones.css",
     js: "/components/ubicaciones/ubicaciones.js",
   },
-  casinoterminal1: {
-    html: "/components/ubicaciones/cali/terminalcali1.html",
-    css: "/components/ubicaciones/ubicaciones.css",
-    js: "/components/ubicaciones/ubicaciones.js",
-  },
+  // casinoterminal1: {
+  //   html: "/components/ubicaciones/cali/terminalcali1.html",
+  //   css: "/components/ubicaciones/ubicaciones.css",
+  //   js: "/components/ubicaciones/ubicaciones.js",
+  // },
   casinoterminal2: {
     html: "/components/ubicaciones/cali/terminalcali2.html",
     css: "/components/ubicaciones/ubicaciones.css",

@@ -1127,21 +1127,23 @@ sliderTulua();
   }
 
   const festivosCO = [
-    "2025-01-01", // Año Nuevo
-    "2025-03-24", // San José (trasladado)
-    "2025-04-17", // Jueves Santo
-    "2025-04-18", // Viernes Santo
-    "2025-05-01", // Día del Trabajo
-    "2025-06-23", // Corpus Christi
-    "2025-06-30", // Sagrado Corazón
-    "2025-07-20", // Independencia
-    "2025-08-07", // Batalla de Boyacá
-    "2025-08-18", // Asunción
-    "2025-10-13", // Día de la Raza
-    "2025-11-03", // Todos los Santos
-    "2025-11-17", // Independencia de Cartagena
-    "2025-12-08", // Inmaculada Concepción
-    "2025-12-25", // Navidad
+    "2026-01-01", // Año Nuevo
+    "2026-01-12", // Reyes Magos (trasladado)
+    "2026-03-23", // San José (trasladado)
+    "2026-04-02", // Jueves Santo
+    "2026-04-03", // Viernes Santo
+    "2026-05-01", // Día del Trabajo
+    "2026-06-08", // Corpus Christi (trasladado)
+    "2026-06-15", // Sagrado Corazón (trasladado)
+    "2026-06-29", // San Pedro y San Pablo (trasladado)
+    "2026-07-20", // Independencia
+    "2026-08-07", // Batalla de Boyacá
+    "2026-08-17", // Asunción (trasladado)
+    "2026-10-12", // Día de la Raza (trasladado)
+    "2026-11-02", // Todos los Santos (trasladado)
+    "2026-11-16", // Independencia de Cartagena (trasladado)
+    "2026-12-08", // Inmaculada Concepción
+    "2026-12-25", // Navidad
   ];
 
   function obtenerProximoFestivo(zona = "America/Bogota") {
@@ -1577,5 +1579,3 @@ function getDia() {
   valor.value = fechaBreve;
   valor.textContent = fechaBreve;
 }
-
-getDia();
