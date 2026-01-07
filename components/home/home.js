@@ -196,3 +196,30 @@ function itemnavidad() {
     document.getElementById("navidad_home").style.display = "flex";
   }
 }
+
+seccionUbicaciones();
+
+function seccionUbicaciones() {
+  const hash = window.location.hash;
+
+  if (hash.includes("id=ubicaciones")) {
+    irASeccionCoordenadas();
+    setTimeout(() => {
+      irASeccionCoordenadas();
+    }, 1000);
+  }
+
+  function irASeccionCoordenadas() {
+    const destino = document.getElementById("ubicaciones");
+
+    if (destino) {
+      const posicionY =
+        destino.getBoundingClientRect().top + window.pageYOffset;
+
+      window.scrollTo({
+        top: posicionY,
+        behavior: "smooth",
+      });
+    }
+  }
+}
