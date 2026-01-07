@@ -429,7 +429,6 @@
     const diaSemana = ahora.getDay();
     let inicio = "10:00";
     let cierra = "02:00";
-    console.log(diaSemana);
     if (diaSemana === 7 || huboFestivo) {
       inicio = "10:00";
       cierra = "22:00";
