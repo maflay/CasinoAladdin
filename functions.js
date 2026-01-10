@@ -236,12 +236,6 @@ function cargarHeaderYFooter() {
           document.getElementById("soy_mayor_de_edad").style.display = "none";
         }
 
-        let url_seccion = window.location.origin + "/" + window.location.hash;
-        console.log(url_seccion);
-        if (url_seccion.includes("menu_anko")) {
-          document.getElementById("soy_mayor_de_edad").style.display = "none";
-        }
-
         document
           .getElementById("close_modal_me")
           .addEventListener("click", () => {
