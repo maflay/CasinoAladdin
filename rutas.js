@@ -354,7 +354,7 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicaciones.css",
     js: "/components/ubicaciones/ubicaciones.js",
   },
-    menu_anko: {
+  menu_anko: {
     html: "/components/modal/menu/menu_anko.html",
     css: "/components/modal/menu/menu_anko.css",
     js: "/components/modal/menu/menu_anko.js",
