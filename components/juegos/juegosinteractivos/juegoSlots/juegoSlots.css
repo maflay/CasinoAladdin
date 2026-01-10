@@ -1,0 +1,435 @@
+.slots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #003f1c;
+    background-image: url(/resources/stck009.png);
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#content_game_all {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.view_pre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(75deg, #01180160 10%, #044d0438 60%, #0118013f 100%);
+    backdrop-filter: blur(8px);
+}
+
+.view_pre img {
+    width: 350px;
+}
+
+.content_palanca {
+    position: absolute !important;
+    top: -20px;
+    right: -150px;
+}
+
+.img_palanca {
+    width: 150px !important;
+    transition: translate 0.4s ease;
+    transform: rotate(15deg) translate(10px, 100px) !important
+}
+
+.palanca_accionada {
+    transform: rotate(140deg) translate(204px, -255px) !important;
+    pointer-events: none;
+}
+
+.img_palanca:hover {
+    cursor: pointer;
+}
+
+.sopor_palanca {
+    position: absolute;
+    width: 30px;
+    height: 90px;
+    top: 300px;
+    background: linear-gradient(35deg, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A);
+    z-index: 20;
+    border-radius: 0 10px 10px 0;
+}
+
+.slot-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* background: linear-gradient(35deg, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A); */
+    /* background: linear-gradient(35deg, #d10000, #8627279a, #d10000a8, #862727a9); */
+    background: linear-gradient(180deg, #c2c2c2, #535353, #c2c2c2, #535353, #c2c2c2, #535353);
+    width: 600px;
+    padding: 15px;
+    border-radius: 22px;
+    border: #27314F solid 10px;
+    box-shadow: 0 0 20px #efb810;
+    text-align: center;
+    transition: animation 2s ease;
+    animation: sombra-animada 2s infinite;
+    gap: 5px;
+}
+
+
+@keyframes sombra-animada {
+    0% {
+        box-shadow: 0 0 20px #efb810;
+    }
+
+    5% {
+        box-shadow: 0 0 18px #efb810;
+    }
+
+    10% {
+        box-shadow: 0 0 16px #efb810;
+    }
+
+    15% {
+        box-shadow: 0 0 14px #efb810;
+    }
+
+    20% {
+        box-shadow: 0 0 12px #efb810;
+    }
+
+    25% {
+        box-shadow: 0 0 10px #efb810;
+    }
+
+    30% {
+        box-shadow: 0 0 12px #efb810;
+    }
+
+    35% {
+        box-shadow: 0 0 14px #efb810;
+    }
+
+    40% {
+        box-shadow: 0 0 16px #efb810;
+    }
+
+    45% {
+        box-shadow: 0 0 18px #efb810;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #efb810;
+    }
+
+    55% {
+        box-shadow: 0 0 18px #efb810;
+    }
+
+    60% {
+        box-shadow: 0 0 16px #efb810;
+    }
+
+    65% {
+        box-shadow: 0 0 14px #efb810;
+    }
+
+    70% {
+        box-shadow: 0 0 12px #efb810;
+    }
+
+    75% {
+        box-shadow: 0 0 10px #efb810;
+    }
+
+    80% {
+        box-shadow: 0 0 12px #efb810;
+    }
+
+    85% {
+        box-shadow: 0 0 14px #efb810;
+    }
+
+    90% {
+        box-shadow: 0 0 16px #efb810;
+    }
+
+    95% {
+        box-shadow: 0 0 18px #efb810;
+    }
+
+    100% {
+        box-shadow: 0 0 20px #efb810;
+    }
+}
+
+.slot-img {
+    border-radius: 20px;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.slot-img h1 {
+    color: white;
+}
+
+.slot-container img {
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.reels {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.reel {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    background: white;
+    border: 2px solid #efb810;
+    border-radius: 8px;
+    position: relative;
+}
+
+.reel img {
+    width: 400px;
+    height: 200px;
+    display: block;
+    object-fit: contain;
+}
+
+.spin-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    will-change: transform;
+}
+
+/* @keyframes spinAnim {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -650px;
+    }
+
+} */
+
+@keyframes spinAnim {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -380px;
+    }
+
+}
+
+.divider-actions {
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(35deg, #000, #444444, #000, #444444);
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.content-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    height: 10vh;
+    gap: 10px;
+    color: rgb(3, 77, 0);
+}
+
+.bloque-lateral {
+    width: 80px;
+    height: 105px;
+    /* background: linear-gradient(35deg, red, rgb(134, 39, 39), red, rgb(134, 39, 39)); */
+    background: linear-gradient(35deg, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A);
+    border-radius: 20px;
+    box-shadow: 0 0 10px #e0d24f;
+    display: none;
+}
+
+.part_mid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* background: linear-gradient(35deg, green, rgb(40, 177, 63), green, rgb(40, 177, 63)); */
+    background-image: url(/resources/placa_metalica.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 90px;
+    font-size: 25px;
+    font-family: 'digital_7', sans-serif;
+}
+
+.control_coins {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 20px 20px;
+    width: 70%;
+    /* background: linear-gradient(35deg, green, rgb(40, 177, 63), green, rgb(40, 177, 63)); */
+    background-image: url(/resources/background-blackjack-bottom.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65px;
+    padding: 10px 0;
+}
+
+.control_coins img {
+    width: 50px;
+    transition: all 0.4s ease;
+}
+
+.control_coins img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    background-color: black;
+    background-image: url(/resources/fondo-oscuro-con-formas-grises.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: #000 solid 10px;
+    width: 900px;
+    height: 350px;
+    border-radius: 50px 50px 0 0;
+    z-index: 9;
+    border: hwb(58 18% 70%) solid 10px;
+    box-shadow: 0 0 20px #efb810;
+    transition: animation 2s ease;
+    animation: sombra-animada 2s infinite;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item_disable {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.torni_1 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+    background-image: linear-gradient(45deg, white, gray, white, gray);
+    box-shadow: #000 1px 1px 10px;
+}
+
+.sep_1 {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: rotate(52deg);
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+.sep_2 {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: rotate(-45deg);
+    width: 100%;
+    height: 5px;
+    opacity: 0.7;
+    border-radius: 20px;
+    background-color: #000;
+}
+
+.torni_2 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+    background-image: linear-gradient(45deg, white, gray, white, gray);
+    box-shadow: #000 1px 1px 10px;
+}
+
+.torni_3 {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+    background-image: linear-gradient(45deg, white, gray, white, gray);
+    box-shadow: #000 1px 1px 10px;
+}
+
+.torni_4 {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+    background-image: linear-gradient(45deg, white, gray, white, gray);
+    box-shadow: #000 1px 1px 10px;
+}
+
+@media (max-width: 768px) {
+    .slots {
+        width: 100%;
+    }
+
+    .slot-container {
+        width: 100%;
+    }
+}

@@ -146,6 +146,56 @@
     right: 0;
 }
 
+.content_juegos_inte {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.card_juego_inte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.content_img_inte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_img_inte img {
+    width: 150px;
+    border-radius: 30px;
+}
+
+.content_text_inte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_text_inte a {
+    color: #1d1d1f;
+    transition: all 0.4s ease;
+}
+
+.content_text_inte a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+   .content_seccion_juegos_inte {
+        display: none;
+    }
+
 @media (max-width:768px) {
     .card-juegos {
         width: 90%;
@@ -162,5 +212,9 @@
 
     .section-mesas-entretenimiento {
         line-height: 3rem;
+    }
+
+    .content_seccion_juegos_inte {
+        display: none;
     }
 }

@@ -309,6 +309,11 @@ const rutasLimpias = {
     css: "/components/juegos/juegosinteractivos/juegoBaccarat/juegoBaccarat.css",
     js: "/components/juegos/juegosinteractivos/juegoBaccarat/juegoBaccarat.js",
   },
+  juegoSlots: {
+    html: "/components/juegos/juegosinteractivos/juegoSlots/juegoSlots.html",
+    css: "/components/juegos/juegosinteractivos/juegoSlots/juegoSlots.css",
+    js: "/components/juegos/juegosinteractivos/juegoSlots/juegoSlots.js",
+  },
   entrevistadigital: {
     html: "/components/entrevistadigital/entrevistadigital.html",
     css: "/components/entrevistadigital/entrevistadigital.css",
@@ -329,24 +334,29 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/ruleta-de-premios.js",
   },
-  experiencias:{
+  experiencias: {
     html: "/components/experiencias/experiencias.html",
     css: "/components/experiencias/experiencias.css",
     js: "/components/experiencias/experiencias.js",
   },
-  en_vivo:{
+  en_vivo: {
     html: "/components/eventos_en_vivo/en_vivo.html",
     css: "/components/eventos_en_vivo/en_vivo.css",
-    js: "/components/eventos_en_vivo/en_vivo.js"
+    js: "/components/eventos_en_vivo/en_vivo.js",
   },
   mr_bonus: {
     html: "/components/promociones/promocion/mr-bonus.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/mr-bonus.js"
+    js: "/components/promociones/promocion/mr-bonus.js",
   },
   casinosonesta: {
     html: "/components/ubicaciones/bogota/sonesta.html",
     css: "/components/ubicaciones/ubicaciones.css",
-    js: "/components/ubicaciones/ubicaciones.js"
-  }
+    js: "/components/ubicaciones/ubicaciones.js",
+  },
+    menu_anko: {
+    html: "/components/modal/menu/menu_anko.html",
+    css: "/components/modal/menu/menu_anko.css",
+    js: "/components/modal/menu/menu_anko.js",
+  },
 };
