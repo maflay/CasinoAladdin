@@ -35,7 +35,6 @@
     width: 200px;
 }
 
-
 .content-title-home p {
     font-size: 2.5rem;
     color: white;
@@ -82,7 +81,6 @@
     transform: scale(1.1);
 }
 
-
 .card-ubicacion-text {
     display: flex;
     flex-direction: column;
@@ -93,7 +91,6 @@
     background-color: #fff;
     overflow: hidden;
 }
-
 
 .card-ubicacion-text h3 {
     color: #27314F;
@@ -117,7 +114,6 @@
     cursor: pointer;
 }
 
-
 .card-ubicacion-text>small>a {
     color: gray;
     transition: all 0.4s ease;
@@ -126,7 +122,6 @@
 .card-ubicacion:hover h3 {
     color: #CB0404;
 }
-
 
 .card-ubicacion-text>small>a:hover {
     text-decoration: none;
@@ -142,7 +137,6 @@
     display: flex;
     justify-content: flex-end;
 }
-
 
 /* TARJETA-MYMAWI */
 .container-tarjeta {
@@ -172,7 +166,6 @@
 .box-left-tarjeta h2 {
     color: white;
 }
-
 
 .box-rigth-tarjeta {
     width: 50%;
@@ -282,9 +275,6 @@
     text-align: center;
 }
 
-
-
-
 .loader-local {
     display: flex;
     flex-direction: column;
@@ -293,7 +283,6 @@
     font-size: 1.2rem;
     color: #444;
 }
-
 
 .spinner {
     border: 6px solid #ccc;
@@ -315,14 +304,12 @@
     }
 }
 
-
 .content-logo-social {
     display: flex;
     justify-content: center;
     align-content: center;
     width: 100%;
 }
-
 
 .logo-inst-social-media {
     width: 50px;
@@ -342,7 +329,6 @@
     justify-content: start;
     align-items: end;
 }
-
 
 .content-parahacer-acordeon:hover {
     width: 55%;
@@ -366,7 +352,6 @@
     z-index: 2;
     pointer-events: none;
 }
-
 
 .content-parahacer-img img {
     width: 100%;
@@ -404,7 +389,6 @@
     color: white;
     z-index: 2;
 }
-
 
 .close-section {
     display: flex;
@@ -465,7 +449,6 @@
         height: 55px;
     }
 
-
     .story-img {
         width: 100%;
         height: 100%;
@@ -514,7 +497,6 @@
         width: 100%;
     }
 
-
     .card-ubicacion-text p {
         font-size: 1.6rem;
     }
@@ -539,11 +521,16 @@
 
     .box-left-tarjeta {
         display: flex;
-        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 0px;
         width: 100%;
-        padding-bottom: 10px;
+        padding: 0;
+    }
+
+    .box-left-tarjeta h2{
+        text-shadow: #27314F 1px 1px 10px;
+        text-align: center;
     }
 
     .box-rigth-tarjeta {
@@ -759,7 +746,6 @@
     font-size: 30px;
     margin: 0;
 }
-
 
 /* Efecto hover */
 .regalo:hover .tapa {

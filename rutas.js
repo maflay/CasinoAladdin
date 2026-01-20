@@ -359,4 +359,14 @@ const rutasLimpias = {
     css: "/components/modal/menu/menu_anko.css",
     js: "/components/modal/menu/menu_anko.js",
   },
+  lampara: {
+    html: "/components/promociones/promocion/lampara-suerte.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/lampara-suerte.js",
+  },
+  dadosmagicos: {
+    html: "/components/promociones/promocion/dados-magicos.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/dados-magicos.js",
+  },
 };

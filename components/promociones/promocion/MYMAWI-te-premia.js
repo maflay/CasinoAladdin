@@ -81,23 +81,10 @@ function toPromos() {
 }
 
 function promosUpdate() {
-  const promociones_2025 = document.getElementById("promociones_2025");
-  const promociones_2026 = document.getElementById("promociones_2026");
-  const vigencia_2025 = document.getElementById("vigencia_2025");
-  const vigencia_2026 = document.getElementById("vigencia_2026");
+
   const fechaCompleta = new Date().toLocaleString("es-CO", {
     timeZone: "America/Bogota",
     month: "long",
   });
-
-  if (fechaCompleta == "diciembre") {
-    promociones_2025.style.display = "flex";
-    vigencia_2025.style.display = "flex";
-  }
-
-  if (fechaCompleta == "enero") {
-    promociones_2026.style.display = "flex";
-    vigencia_2026.style.display = "flex";
-  }
 }
 promosUpdate();

@@ -160,8 +160,8 @@
 
   function spinReel(reel, opts = {}, callback) {
     const {
-      spins = 10, // cantidad de GIROS (vueltas) editables
-      duration = 1400, // duración del giro en ms
+      spins = 10,
+      duration = 1400,
       easing = "cubic-bezier(.12,.72,.2,1)",
     } = opts;
 
@@ -170,7 +170,6 @@
       opts = {};
     }
 
-    // Garantiza callback válido
     if (typeof callback !== "function") callback = () => {};
 
     reel.innerHTML = "";
@@ -178,24 +177,20 @@
     const track = document.createElement("div");
     track.classList.add("spin-track");
 
-    // Alto de 1 símbolo = alto del reel (en tu CSS es 200px)
     const H = reel.clientHeight || 200;
 
-    // Creamos un track largo: spins * cantidadSímbolos + buffer
     const totalItems = spins * longObj + longObj;
 
-    // Llenar el track con imágenes random
     for (let i = 0; i < totalItems; i++) {
       const img = document.createElement("img");
       const symbol = getRandomSymbol();
       img.src = "/resources/slots/" + symbol;
       img.style.width = "100%";
-      img.style.height = `${H}px`; // clave: cada imagen mide 1 "paso"
+      img.style.height = `${H}px`;
       img.style.objectFit = "contain";
       track.appendChild(img);
     }
 
-    // Símbolo final (el resultado real)
     const lastSymbol = getRandomSymbol();
     const finalImg = document.createElement("img");
     finalImg.src = "/resources/slots/" + lastSymbol;
@@ -206,8 +201,7 @@
 
     reel.appendChild(track);
 
-    // Posición final para que quede el último símbolo visible
-    const finalIndex = totalItems; // el último que agregamos
+    const finalIndex = totalItems;
     const toY = -finalIndex * H;
 
     // Reset

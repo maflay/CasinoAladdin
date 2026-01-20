@@ -192,9 +192,9 @@
     cursor: pointer;
 }
 
-   .content_seccion_juegos_inte {
-        display: none;
-    }
+.content_seccion_juegos_inte {
+    display: none;
+}
 
 @media (max-width:768px) {
     .card-juegos {

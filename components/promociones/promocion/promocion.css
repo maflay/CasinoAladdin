@@ -213,7 +213,7 @@
 
 .to-promo .next-to-promo img {
     inset: 0;
-    width: 40%;
+    width: 30%;
     object-fit: cover;
     z-index: 1;
     overflow: hidden;
@@ -766,6 +766,10 @@ td {
         width: 100%;
         height: 300px;
         overflow: hidden;
+    }
+
+    .to-promo .next-to-promo img {
+        width: 70%;
     }
 
     .to-promo .next-to-promo h2 {
