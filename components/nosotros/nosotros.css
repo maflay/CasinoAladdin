@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
+    padding: 40px 0;
     width: 100%;
-    height: 100vh;
     color: #171c1e;
     flex-direction: column;
 }
@@ -16,17 +15,30 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image:  linear-gradient(180deg, #ffffff41,#ffffff41),url(/resources/logo-aladdin-rojo.png);
+    background-image: linear-gradient(180deg, #ffffff41, #ffffff41), url(/resources/logo-aladdin-rojo.png);
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.2;
     background-attachment: fixed;
 }
 
+.head_nosotros {
+    background-image: url(/resources/friends-playing-poker-together.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
 
 .section {
     width: 100%;
     padding-top: 60px;
+    pointer-events: none;
+}
+
+.section>p strong {
+    color: #750000;
 }
 
 .section h2 {
@@ -52,7 +64,6 @@
     flex: 1 1 300px;
     background: #ffffff77;
     padding: 30px;
-    border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     color: #171c1e;
@@ -63,15 +74,38 @@
 }
 
 .card h3 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 15px;
-    color: #CB0404;
+    color: #fff;
+    text-shadow: #ffffff 1px 1px 10px;
 }
+
+.card p {
+    color: #ffffff;
+}
+
+.card_background {
+    background-image: linear-gradient(180deg, #000000c0, #000000c0),
+        url(/resources/DSC_0371.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(100px);
+}
+
+.card_background_2 {
+    background-image: linear-gradient(180deg, #000000c0, #000000c0),
+        url(/resources/casino-de-bogota-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 @media (max-width: 768px) {
     .content-nosotros {
         height: auto;
-        padding: 20px 0 ;
+        padding: 20px 0;
     }
 
     .grid {

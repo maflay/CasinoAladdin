@@ -15,11 +15,11 @@
   const cursos_obt = document.getElementById("cursos_obt");
   const ultimo_trabajo = document.getElementById("ultimo_trabajo");
   const funciones_ultimo_trabajo = document.getElementById(
-    "funciones_ultimo_trabajo"
+    "funciones_ultimo_trabajo",
   );
   const tiempo_laborado = document.getElementById("tiempo_laborado");
   const motivo_ultimo_trabajo = document.getElementById(
-    "motivo_ultimo_trabajo"
+    "motivo_ultimo_trabajo",
   );
   const exp_considerada = document.getElementById("exp_considerada");
   const experiencia_considerada = document.getElementById("fortalezas");
@@ -33,7 +33,7 @@
   const diferencia_otros = document.getElementById("diferencia_otros");
   const actual_empleo = document.getElementById("actual_empleo");
   const disponibilidad_inicio = document.getElementById(
-    "disponibilidad_inicio"
+    "disponibilidad_inicio",
   );
   const aspiracion_salarial = document.getElementById("aspiracion_salarial");
   const trabajar_fines = document.getElementById("trabajar_fines");
@@ -64,7 +64,7 @@
   const final_msj = document.getElementById("final_msj");
 
   const content_form_entrevista = document.getElementById(
-    "content_form_entrevista"
+    "content_form_entrevista",
   );
   const hacer_test = document.getElementById("hacer_test");
 
@@ -108,7 +108,7 @@
   // Comprime la imagen: redimensiona y baja calidad
   function compressImage(
     file,
-    { maxWidth = 800, maxHeight = 800, quality = 0.7 } = {}
+    { maxWidth = 800, maxHeight = 800, quality = 0.7 } = {},
   ) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -178,7 +178,7 @@
         const numPregunta = Number(parts[5]); // 1..27
 
         const rowChecks = document.querySelectorAll(
-          `input[id$="_pre_${numPregunta}"]`
+          `input[id$="_pre_${numPregunta}"]`,
         );
         rowChecks.forEach((c) => {
           if (c !== input) c.checked = false;
@@ -546,7 +546,7 @@
           .then((res) => res.text())
           .then(() => {
             let inputs = formulario.querySelectorAll(
-              'input[type="text"], select, date, file, checkbox'
+              'input[type="text"], select, date, file, checkbox',
             );
             foto_entre.value = "";
             fecha_nacimiento.value = "";
