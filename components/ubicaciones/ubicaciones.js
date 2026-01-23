@@ -480,6 +480,18 @@
   }
   validaTequeB();
 
+    function validaSonB() {
+    const ahora = new Date(
+      new Date().toLocaleString("en-US", { timeZone: zona })
+    );
+    const diaSemana = ahora.getDay();
+    let contendor = document.getElementById("disponible_cas_sonb");
+    let inicio = "6:00";
+    let cierra = "5:00";
+    
+    validateOpenClose(inicio, cierra, contendor);
+  }
+validaSonB();
   // barranquilla
 
   function validateDragonBar() {

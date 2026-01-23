@@ -305,6 +305,7 @@
 
     .en_vivo {
         flex-direction: column-reverse;
+        height: auto;
     }
 
 
@@ -354,7 +355,9 @@
         flex-direction: column !important;
     }
 
+
     .content_vivo_en_vivo::before {
         background-image: linear-gradient(180deg, rgba(255, 255, 255, 0));
     }
+
 }
