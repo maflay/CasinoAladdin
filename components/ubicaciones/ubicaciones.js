@@ -572,8 +572,8 @@ validaSonB();
     let inicio = "8:00";
     let cierra = "2:00";
     if (diaSemana === 5 || diaSemana === 6) {
-      inicio = "8:00 AM";
-      cierra = "3:00 AM";
+      inicio = "8:00";
+      cierra = "3:00";
     }
     validateOpenClose(inicio, cierra, contendor);
   }
