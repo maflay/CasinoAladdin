@@ -27,109 +27,109 @@
 
   if (btnTomapComomitierra) {
     btnTomapComomitierra.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin+Mi+Tierra+Cosmo/@3.4148579,-76.5469797,17z/data=!3m2!4b1!5s0x8e30a6a7bf01a8df:0x45a43e3aebaacece!4m6!3m5!1s0x8e30a6a80b7e6449:0x4b1435c9d56a0067!8m2!3d3.4148579!4d-76.5469797!16s%2Fg%2F1tgj9w89?entry=ttu&g_ep=EgoyMDI1MDYyMi4wIKXMDSoASAFQAw%3D%3D"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin+Mi+Tierra+Cosmo/@3.4148579,-76.5469797,17z/data=!3m2!4b1!5s0x8e30a6a7bf01a8df:0x45a43e3aebaacece!4m6!3m5!1s0x8e30a6a80b7e6449:0x4b1435c9d56a0067!8m2!3d3.4148579!4d-76.5469797!16s%2Fg%2F1tgj9w89?entry=ttu&g_ep=EgoyMDI1MDYyMi4wIKXMDSoASAFQAw%3D%3D",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoDragonfenix) {
     btntoDragonfenix.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin+Barranquilla/@10.9944759,-74.8123962,15z/data=!4m6!3m5!1s0x8ef42d0ed9b8a539:0xdf9f7a7a87ca11d2!8m2!3d10.9944759!4d-74.8123962!16s%2Fg%2F1q5bp8qb4?entry=ttu"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin+Barranquilla/@10.9944759,-74.8123962,15z/data=!4m6!3m5!1s0x8ef42d0ed9b8a539:0xdf9f7a7a87ca11d2!8m2!3d10.9944759!4d-74.8123962!16s%2Fg%2F1q5bp8qb4?entry=ttu",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoMallPlazaBarran) {
     btntoMallPlazaBarran.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Centro+Comercial+Mallplaza+Buenavista/@11.0161995,-74.8283157,17z/data=!4m6!3m5!1s0x8ef42c4cd175908d:0x9b9bfcb63575d493!8m2!3d11.0150707!4d-74.8277407!16s%2Fg%2F11c5xsk0vh?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+      (window.open(
+        "https://www.google.com/maps/place/Centro+Comercial+Mallplaza+Buenavista/@11.0161995,-74.8283157,17z/data=!4m6!3m5!1s0x8ef42c4cd175908d:0x9b9bfcb63575d493!8m2!3d11.0150707!4d-74.8277407!16s%2Fg%2F11c5xsk0vh?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoSeptima) {
     btntoSeptima.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin/@4.6058329,-74.0760226,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f99a1f6d763d1:0x218a6e48d01b391!8m2!3d4.6058276!4d-74.0714092!16s%2Fg%2F11b7q6w7j3?entry=tts&shorturl=1"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin/@4.6058329,-74.0760226,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f99a1f6d763d1:0x218a6e48d01b391!8m2!3d4.6058276!4d-74.0714092!16s%2Fg%2F11b7q6w7j3?entry=tts&shorturl=1",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoTequendama) {
     btntoTequendama.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin/@4.613999,-74.0724671,17z/data=!3m2!4b1!5s0x8e3f999b84cf11b9:0x938e681212959d4d!4m6!3m5!1s0x8e3f999b99991b6b:0xfa697adce6d2f800!8m2!3d4.6139937!4d-74.0698922!16s%2Fg%2F1pzs2b01c?entry=tts&shorturl=1"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin/@4.613999,-74.0724671,17z/data=!3m2!4b1!5s0x8e3f999b84cf11b9:0x938e681212959d4d!4m6!3m5!1s0x8e3f999b99991b6b:0xfa697adce6d2f800!8m2!3d4.6139937!4d-74.0698922!16s%2Fg%2F1pzs2b01c?entry=tts&shorturl=1",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoCalima) {
     btntoCalima.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin/@3.484939,-76.4989577,17z/data=!3m1!4b1!4m5!3m4!1s0x8e30a878d54e788d:0xef8fdc8733eacb65!8m2!3d3.4849336!4d-76.496769?hl=es"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin/@3.484939,-76.4989577,17z/data=!3m1!4b1!4m5!3m4!1s0x8e30a878d54e788d:0xef8fdc8733eacb65!8m2!3d3.4849336!4d-76.496769?hl=es",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoCosmocentro) {
     btntoCosmocentro.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin/@3.4148579,-76.5469797,17z/data=!3m2!4b1!5s0x8e30a6a7bf01a8df:0x45a43e3aebaacece!4m6!3m5!1s0x8e30a6a80b7e6449:0x4b1435c9d56a0067!8m2!3d3.4148579!4d-76.5469797!16s%2Fg%2F1tgj9w89?entry=ttu"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin/@3.4148579,-76.5469797,17z/data=!3m2!4b1!5s0x8e30a6a7bf01a8df:0x45a43e3aebaacece!4m6!3m5!1s0x8e30a6a80b7e6449:0x4b1435c9d56a0067!8m2!3d3.4148579!4d-76.5469797!16s%2Fg%2F1tgj9w89?entry=ttu",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoPlazacayzedo) {
     btntoPlazacayzedo.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin/@3.4519888,-76.5333411,17z/data=!3m1!4b1!4m6!3m5!1s0x8e30a665bb8134c1:0x27e3768135b90cfd!8m2!3d3.4519888!4d-76.5333411!16s%2Fg%2F1tfzhtlr?entry=ttu"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin/@3.4519888,-76.5333411,17z/data=!3m1!4b1!4m6!3m5!1s0x8e30a665bb8134c1:0x27e3768135b90cfd!8m2!3d3.4519888!4d-76.5333411!16s%2Fg%2F1tfzhtlr?entry=ttu",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoSportBar) {
     btntoSportBar.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin/@3.4534441,-76.5303406,17z/data=!3m1!4b1!4m6!3m5!1s0x8e30a7c38dba71bf:0xe744dca8f9a81414!8m2!3d3.4534441!4d-76.5303406!16s%2Fg%2F11qmbpb357?entry=ttu"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin/@3.4534441,-76.5303406,17z/data=!3m1!4b1!4m6!3m5!1s0x8e30a7c38dba71bf:0xe744dca8f9a81414!8m2!3d3.4534441!4d-76.5303406!16s%2Fg%2F11qmbpb357?entry=ttu",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoTermi1) {
     btntoTermi1.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin/@3.4648724,-76.5241304,17z/data=!4m6!3m5!1s0x8e30a63f1a39ad53:0x47fd39caa543f7c5!8m2!3d3.4650669!4d-76.521872!16s%2Fg%2F1z44b611h?entry=ttu"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin/@3.4648724,-76.5241304,17z/data=!4m6!3m5!1s0x8e30a63f1a39ad53:0x47fd39caa543f7c5!8m2!3d3.4650669!4d-76.521872!16s%2Fg%2F1z44b611h?entry=ttu",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoTermi2) {
     btntoTermi2.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin/@3.4648724,-76.5241304,17z/data=!4m7!3m6!1s0x8e30a63f1a39ad53:0x47fd39caa543f7c5!8m2!3d3.4650669!4d-76.521872!15sCh9DYWxsZSAzMCBOb3J0ZSAjIDJBTi0yOSBBTEFERElOkgEGY2FzaW5v4AEA!16s%2Fg%2F1z44b611h?entry=tts&shorturl=1"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin/@3.4648724,-76.5241304,17z/data=!4m7!3m6!1s0x8e30a63f1a39ad53:0x47fd39caa543f7c5!8m2!3d3.4650669!4d-76.521872!15sCh9DYWxsZSAzMCBOb3J0ZSAjIDJBTi0yOSBBTEFERElOkgEGY2FzaW5v4AEA!16s%2Fg%2F1z44b611h?entry=tts&shorturl=1",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoAladdin18) {
     btntoAladdin18.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Cra.+7+%2318-24,+Pereira,+Risaralda/@4.8146868,-75.6935824,17z/data=!3m1!4b1!4m6!3m5!1s0x8e388748f631c899:0xe3651b41d870df6a!8m2!3d4.8146868!4d-75.6935824!16s%2Fg%2F11j0ldqrcp?entry=ttu"
+      (window.open(
+        "https://www.google.com/maps/place/Cra.+7+%2318-24,+Pereira,+Risaralda/@4.8146868,-75.6935824,17z/data=!3m1!4b1!4m6!3m5!1s0x8e388748f631c899:0xe3651b41d870df6a!8m2!3d4.8146868!4d-75.6935824!16s%2Fg%2F11j0ldqrcp?entry=ttu",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
@@ -141,37 +141,37 @@
 
   if (btntoLago) {
     btntoLago.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin/@4.814217,-75.7014228,17z/data=!4m6!3m5!1s0x8e3887a8dce0b573:0xb25554ff6296303!8m2!3d4.8142117!4d-75.6988479!16s%2Fg%2F11t4cdk0l3?entry=tts&shorturl=1"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin/@4.814217,-75.7014228,17z/data=!4m6!3m5!1s0x8e3887a8dce0b573:0xb25554ff6296303!8m2!3d4.8142117!4d-75.6988479!16s%2Fg%2F11t4cdk0l3?entry=tts&shorturl=1",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoMitierra) {
     btntoMitierra.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin+-+Unicentro+Pereira/@4.8089894,-75.779078,14z/data=!4m6!3m5!1s0x8e387dc6aaa7319f:0x42d81048f9ae2c17!8m2!3d4.80899!4d-75.74303!16s%2Fg%2F1vlqr7qk?entry=ttu"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin+-+Unicentro+Pereira/@4.8089894,-75.779078,14z/data=!4m6!3m5!1s0x8e387dc6aaa7319f:0x42d81048f9ae2c17!8m2!3d4.80899!4d-75.74303!16s%2Fg%2F1vlqr7qk?entry=ttu",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoSarmiento) {
     btntoSarmiento.addEventListener("click", () => {
-      window.open(
-        "https://www.google.com/maps/place/Casino+Aladdin/@4.0844846,-76.1992988,17z/data=!4m6!3m5!1s0x8e39c54e552984f5:0xc8c053632bfcf352!8m2!3d4.0844793!4d-76.1967239!16s%2Fg%2F11mv0sldsv?entry=tts&shorturl=1"
+      (window.open(
+        "https://www.google.com/maps/place/Casino+Aladdin/@4.0844846,-76.1992988,17z/data=!4m6!3m5!1s0x8e39c54e552984f5:0xc8c053632bfcf352!8m2!3d4.0844793!4d-76.1967239!16s%2Fg%2F11mv0sldsv?entry=tts&shorturl=1",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
   if (btntoSonesta) {
     btntoSonesta.addEventListener("click", () => {
-      window.open(
-        "  https://www.google.com/maps/place/Sonesta+Hotel+Bogota/@4.7038276,-74.0460245,17z/data=!4m10!3m9!1s0x8e3f9ab2f6785559:0xccaf51e1d70c118b!5m3!1s2026-01-03!4m1!1i2!8m2!3d4.7038223!4d-74.0434496!16s%2Fg%2F1ygbbbclw?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+      (window.open(
+        "  https://www.google.com/maps/place/Sonesta+Hotel+Bogota/@4.7038276,-74.0460245,17z/data=!4m10!3m9!1s0x8e3f9ab2f6785559:0xccaf51e1d70c118b!5m3!1s2026-01-03!4m1!1i2!8m2!3d4.7038223!4d-74.0434496!16s%2Fg%2F1ygbbbclw?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
       ),
-        "_blank";
+        "_blank");
     });
   }
 
@@ -286,7 +286,7 @@
   function huboFestivoEntreSemanaEstaSemana(zona = "America/Bogota") {
     // Fecha actual en la zona correcta
     const ahoraLocal = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahoraLocal.getDay(); // 0=Dom, 1=Lun, ... 6=Sáb
 
@@ -311,7 +311,7 @@
 
     // ⏰ Fecha actual en Bogotá
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay(); // 0=Dom, 1=Lun, ...
     const fechaActual = ahora.toISOString().split("T")[0];
@@ -342,7 +342,7 @@
 
   function validateMitierraCali() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_mitierra");
@@ -373,7 +373,7 @@
 
   function validateTerminalCali() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_terminal");
@@ -390,7 +390,7 @@
 
   function validateSportCali() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_sportbar");
@@ -423,7 +423,7 @@
   function validateMallCali() {
     let contendor = document.getElementById("disponible_cal_mall");
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const huboFestivo = huboFestivoEntreSemanaEstaSemana(zona);
     const diaSemana = ahora.getDay();
@@ -441,7 +441,7 @@
 
   function validateSeptiB() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_septib");
@@ -460,7 +460,7 @@
 
   function validaTequeB() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_tequeb");
@@ -480,18 +480,18 @@
   }
   validaTequeB();
 
-    function validaSonB() {
+  function validaSonB() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_sonb");
     let inicio = "6:00";
     let cierra = "5:00";
-    
+
     validateOpenClose(inicio, cierra, contendor);
   }
-validaSonB();
+  validaSonB();
   // barranquilla
 
   function validateDragonBar() {
@@ -504,7 +504,7 @@ validaSonB();
 
   function validateMallBar() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_mallb");
@@ -522,7 +522,7 @@ validaSonB();
 
   function validateLagoPere() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_lagop");
@@ -549,7 +549,7 @@ validaSonB();
 
   function validatela18p() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_la18p");
@@ -565,7 +565,7 @@ validaSonB();
 
   function validatela22p() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_la22p");
@@ -583,7 +583,7 @@ validaSonB();
 
   function validateHorMonte() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_monte");
@@ -601,7 +601,7 @@ validaSonB();
 
   function validateTuluCas() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_tulu");
@@ -622,7 +622,7 @@ validaSonB();
 
   function validateHorBuga() {
     const ahora = new Date(
-      new Date().toLocaleString("en-US", { timeZone: zona })
+      new Date().toLocaleString("en-US", { timeZone: zona }),
     );
     const diaSemana = ahora.getDay();
     let contendor = document.getElementById("disponible_cas_buga");
