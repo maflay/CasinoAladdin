@@ -369,4 +369,14 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/dados-magicos.js",
   },
+  directorio: {
+    html: "/components/directorio/directorio.html",
+    css: "/components/directorio/directorio.css",
+    js: "/components/directorio/directorio.js"
+  },
+    vamosengrande: {
+    html: "/components/promociones/promocion/vamos-grande.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/hacemos-grande.js"
+  }
 };

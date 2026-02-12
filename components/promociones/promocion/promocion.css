@@ -27,7 +27,6 @@
     align-items: center;
     height: auto;
     color: white;
-    padding-top: 8%;
 }
 
 .content_head_grande {
@@ -81,7 +80,6 @@
 
 .promocion-img img {
     width: 100%;
-    border-radius: 45px;
     transition: all 0.4s ease;
     -webkit-transition: -webkit-transform 0.4s ease;
 }
@@ -510,7 +508,7 @@ td {
     align-items: center;
     width: 450px;
     position: absolute;
-    left: 80px;
+    left: 100px;
     z-index: 1;
     color: white !important;
 }
@@ -570,7 +568,7 @@ td {
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    width: 100%;
+    width: 95%;
     height: 300px;
     background-image: linear-gradient(150deg, #e22e2eb7 10%, #b40505 90%);
     border-radius: 20px;
@@ -724,7 +722,7 @@ td {
     }
 
     .content_btn_t_y_c {
-        right: 150px;
+        right: 30px;
     }
 }
 
@@ -827,7 +825,6 @@ td {
 
     .halloween_movil {
         display: flex;
-        margin-bottom: 20px;
     }
 
     .content_msg_grand {
@@ -835,6 +832,8 @@ td {
         align-items: center;
         text-align: center;
         flex-direction: column;
+        height: auto;
+        padding: 50px 0;
         gap: 50px;
     }
 
