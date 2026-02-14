@@ -151,7 +151,6 @@ input[name="slider-radioC"] {
     font-size: 1.6rem;
 }
 
-
 @media(max-width:768px) {
     .content-title-page {
         padding: 0 10px;

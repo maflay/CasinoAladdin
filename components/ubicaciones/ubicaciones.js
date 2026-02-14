@@ -674,3 +674,50 @@
     }
   }
 })();
+
+closemodalshagai();
+function closemodalshagai() {
+  const hash = window.location.hash;
+  console.log(hash);
+  if (hash.includes("id=close")) {
+    const modal = document.getElementById("modal_bono_apertura");
+    modal.style.display = "none";
+    irASeccionCoordenadas();
+    setTimeout(() => {
+      irASeccionCoordenadas();
+      console.log("entro");
+    }, 3000);
+    setTimeout(() => {
+      const hash = window.location.hash.slice(1);
+      const [ruta, query] = hash.split("?");
+
+      if (!query) return;
+
+      const params = new URLSearchParams(query);
+      if (params.get("id") === "close") {
+        history.replaceState(null, "", `#${ruta}`);
+      }
+    }, 4000);
+  }
+  function irASeccionCoordenadas() {
+    const destino = document.getElementById("close");
+
+    if (destino) {
+      const posicionY =
+        destino.getBoundingClientRect().top + window.pageYOffset;
+
+      window.scrollTo({
+        top: posicionY,
+        behavior: "smooth",
+      });
+    }
+  }
+}
+
+if (document.getElementById("open_gran_ina")) {
+  console.log("existe");
+  document.getElementById("open_gran_ina").addEventListener("click", () => {
+    const modal = document.getElementById("modal_bono_apertura");
+    modal.style.display = "flex";
+  });
+}

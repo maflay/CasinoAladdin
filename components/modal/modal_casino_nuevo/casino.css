@@ -15,8 +15,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #CB0404;
-    border: #171c1ede 4px solid;
     width: 600px;
     padding: 40px;
 }
@@ -40,9 +38,13 @@
     color: white;
     padding: 40px 0;
     width: 100%;
-    padding: 0 30px;
     font-size: 2rem;
     text-align: center;
+}
+
+.content_text_apertura img {
+    width: 26vw;
+    object-fit: cover;
 }
 
 .cas_url {
@@ -54,10 +56,6 @@
 .cas_url:hover {
     opacity: 0.7;
     cursor: pointer;
-}
-
-.content_text_apertura img {
-    width: 450px;
 }
 
 .content_text_apertura small {
@@ -89,11 +87,12 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0px;
+    top: 50px;
     right: 0px;
     padding: 0px 16px;
     border-radius: 100%;
-    color: white;
+    color: #fff;
+    background-color: black;
     font-size: 4rem;
     transition: all 0.4s ease;
 }
@@ -122,18 +121,16 @@
         padding: 20px;
     }
 
-    .content_text_apertura img {
-        width: 300px;
-    }
+
 }
 
 @media(max-width: 768px) {
 
     .content_modal_apertura {
-        width: 90%;
+        width: 100%;
     }
 
     .content_text_apertura img {
-        width: 300px;
+        width: 100%;
     }
 }

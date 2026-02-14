@@ -13,3 +13,22 @@
     });
   }
 })();
+
+function validatHash() {
+  const hash = window.location.hash;
+
+  if (hash.includes("casinosonesta")) {
+    const modal = document.getElementById("modal_bono_apertura");
+    modal.style.display = "none";
+  }
+}
+
+validatHash();
+
+if (document.getElementById("open_gran_ina")) {
+  console.log("existe");
+  document.getElementById("open_gran_ina").addEventListener("click", () => {
+    const modal = document.getElementById("modal_bono_apertura");
+    modal.style.display = "flex";
+  });
+}

@@ -167,7 +167,7 @@ function sliderhome() {
       deltaX = 0;
       track.style.transition = "none";
     },
-    { passive: true }
+    { passive: true },
   );
 
   track.addEventListener(
@@ -179,7 +179,7 @@ function sliderhome() {
         currentIndex * 100
       }vw + ${deltaX}px))`;
     },
-    { passive: true }
+    { passive: true },
   );
 
   track.addEventListener("touchend", () => {
