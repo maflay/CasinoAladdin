@@ -43,7 +43,7 @@
 }
 
 .content_text_apertura img {
-    width: 26vw;
+    width: 100%;
     object-fit: cover;
 }
 
