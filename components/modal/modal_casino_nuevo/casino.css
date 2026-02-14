@@ -120,8 +120,9 @@
     .content_modal_apertura {
         padding: 20px;
     }
-
-
+    .content_text_apertura img{
+        width: 65%;
+    }
 }
 
 @media(max-width: 768px) {

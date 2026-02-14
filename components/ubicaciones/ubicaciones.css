@@ -382,6 +382,11 @@
     background-color: rgba(255, 255, 255, 0.733);
 }
 
+.card_info_shag_w{
+    text-decoration: none;
+    color: rgb(107, 0, 0);
+}
+
 .card_info_shag h2 {
     font-size: 4rem;
     font-family: 'poppins_black' ,sans-serif  !important;
