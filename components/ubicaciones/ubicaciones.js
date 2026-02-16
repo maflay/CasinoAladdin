@@ -678,14 +678,12 @@
 closemodalshagai();
 function closemodalshagai() {
   const hash = window.location.hash;
-  console.log(hash);
   if (hash.includes("id=close")) {
     const modal = document.getElementById("modal_bono_apertura");
     modal.style.display = "none";
     irASeccionCoordenadas();
     setTimeout(() => {
       irASeccionCoordenadas();
-      console.log("entro");
     }, 3000);
     setTimeout(() => {
       const hash = window.location.hash.slice(1);
@@ -715,7 +713,6 @@ function closemodalshagai() {
 }
 
 if (document.getElementById("open_gran_ina")) {
-  console.log("existe");
   document.getElementById("open_gran_ina").addEventListener("click", () => {
     const modal = document.getElementById("modal_bono_apertura");
     modal.style.display = "flex";

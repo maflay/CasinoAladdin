@@ -26,7 +26,6 @@ function validatHash() {
 validatHash();
 
 if (document.getElementById("open_gran_ina")) {
-  console.log("existe");
   document.getElementById("open_gran_ina").addEventListener("click", () => {
     const modal = document.getElementById("modal_bono_apertura");
     modal.style.display = "flex";

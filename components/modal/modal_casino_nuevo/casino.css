@@ -17,7 +17,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 600px;
 }
 
 .head_apertura {
@@ -110,15 +109,19 @@
     height: 0;
 }
 
-@media(max-height: 660px) {
-    .content_modal_apertura {
-        top: -30px;
+.img_inau_movil {
+    display: none;
+}
+
+@media(max-height: 780px){
+    .content_text_apertura img{
+        width: 75%;
     }
 }
 
-@media(max-width: 1366px) {
-    .content_text_apertura img{
-        width: 65%;
+@media(max-height: 660px) {
+    .content_modal_apertura {
+        top: -30px;
     }
 }
 
@@ -129,6 +132,14 @@
     }
 
     .content_text_apertura img {
-        width: 100%;
+        width: 95%;
+    }
+
+    .img_inau_desk {
+        display: none;
+    }
+
+    .img_inau_movil {
+        display: flex;
     }
 }
