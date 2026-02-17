@@ -400,9 +400,13 @@
     width: 600px;
 }
 
-.background_inuau{
-    display: flex;justify-content: center;align-items: center;flex-direction: column;height: auto;
-    background-image: linear-gradient(180deg, #f4f4f4, #f4f4f456, #f4f4f4) ,url(/resources/74876.png);
+.background_inuau {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    background-image: linear-gradient(180deg, #f4f4f4, #f4f4f456, #f4f4f4), url(/resources/74876.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -417,7 +421,6 @@
     .content-img-ubicacion>img {
         height: 300px;
     }
-
 
     .content-info-col h3,
     .content-info-col h2 {
@@ -447,8 +450,6 @@
 }
 
 @media(max-width: 915px) {
-
-
     .card_info_shag {
         width: 100%;
     }
@@ -553,5 +554,5 @@
     .content_info_shag {
         background-image: linear-gradient(150deg, #e22e2e00 10%, #b4050500 90%), url(/resources/FONDO-VACIO-CABALLOS.png);
     }
-    
+
 }
