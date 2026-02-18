@@ -277,4 +277,33 @@ input.valid {
         font-size: 36px;
     }
 
+    .styled-table th,
+    .styled-table td {
+        padding: 2px 0px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .styled-table th:nth-child(2),
+    .styled-table td:nth-child(2) {
+        font-size: 11px;
+        width: 100px;
+    }
+
+    .styled-table th:nth-child(1),
+    .styled-table td:nth-child(1),
+    .styled-table th:nth-child(3),
+    .styled-table td:nth-child(3),
+    .styled-table th:nth-child(4),
+    .styled-table td:nth-child(4),
+    .styled-table th:nth-child(5),
+    .styled-table td:nth-child(5),
+    .styled-table th:nth-child(6),
+    .styled-table td:nth-child(6),
+    .styled-table th:nth-child(7),
+    .styled-table td:nth-child(7) {
+        width: 10px;
+    }
+
+
 }

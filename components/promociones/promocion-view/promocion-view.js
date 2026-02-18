@@ -38,3 +38,16 @@
     cubo4.style.display = "flex";
   }
 })();
+(() => {
+  const allitem = document.querySelectorAll(".card-content p");
+
+  allitem.forEach((item) => {
+    let item_len = item.textContent;
+    let long_item = item_len.length;
+    let end_long;
+    if (long_item > 150) {
+      end_long = item_len.slice(0, 155) + "...";
+      item.textContent = end_long;
+    }
+  });
+})();

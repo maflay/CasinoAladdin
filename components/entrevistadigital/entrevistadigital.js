@@ -465,6 +465,31 @@
       return;
     }
 
+    if (hacer_test.checked == true) {
+      if (
+        inte.orden_desc[0][1] == 0 ||
+        inte.orden_desc[1][1] == 0 ||
+        inte.orden_desc[2][1] == 0 ||
+        inte.orden_desc[3][1] == 0 ||
+        inte.orden_desc[4][1] == 0 ||
+        inte.orden_desc[5][1] == 0 ||
+        inte.orden_desc[6][1] == 0 ||
+        inte.orden_desc[7][1] == 0 ||
+        inte.orden_desc[8][1] == 0
+      ) {
+        Swal.fire({
+          icon: "warning",
+          title: "Test Pendiente",
+          html: "Haz el test, o puedes desmarcar la casilla.",
+          customClass: {
+            popup: "mi-popup",
+            title: "mi-titulo",
+          },
+        });
+        return;
+      }
+    }
+
     const base64 = await compressImage(foto_entre_val, {
       maxWidth: 800,
       maxHeight: 800,
