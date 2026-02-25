@@ -412,6 +412,37 @@
     background-size: cover;
 }
 
+.background_tesla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(180deg, #00106894, #00106894), url(/resources/evento_tesla.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content_promo_tesla {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.content_promo_tesla img {
+    width: 350px;
+}
+
+.content_promo_tesla h2 {
+    color: white;
+    font-family: 'tesla', sans-serif !important;
+    font-size: 62px;
+}
+
 
 @media(max-width:1366px) {
     .content-info-casino .content-info-casino-img {
@@ -554,5 +585,16 @@
     .content_info_shag {
         background-image: linear-gradient(150deg, #e22e2e00 10%, #b4050500 90%), url(/resources/FONDO-VACIO-CABALLOS.png);
     }
+
+    .content_promo_tesla img {
+        width: 280px;
+    }
+
+    .content_promo_tesla h2 {
+    color: white;
+    font-family: 'tesla', sans-serif !important;
+    font-size: 36px;
+    text-align: center;
+}
 
 }

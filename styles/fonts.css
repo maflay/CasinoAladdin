@@ -60,3 +60,7 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: 'tesla';
+  src: url('/fonts/TESLA.ttf') format('truetype');
+}
