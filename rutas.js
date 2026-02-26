@@ -330,9 +330,9 @@ const rutasLimpias = {
     js: "/components/promociones/promocion/acumula-y-gana.js",
   },
   ruledelasuerte: {
-    html: "/components/promociones/promocion/ruleta-de-premios.html",
+    html: "/components/promociones/promocion/ruleta-de-la-suerte.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/ruleta-de-premios.js",
+    js: "/components/promociones/promocion/ruleta-de-la-suerte.js",
   },
   experiencias: {
     html: "/components/experiencias/experiencias.html",
@@ -378,5 +378,15 @@ const rutasLimpias = {
     html: "/components/promociones/promocion/vamos-grande.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/hacemos-grande.js"
+  },
+  vueltalmundo : {
+    html: "/components/promociones/promocion/vuelta-al-mundo.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/vuelta-al-mundo.js"
+  },
+  ruletadepremios : {
+    html: "/components/promociones/promocion/ruleta-de-premios.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/ruleta-de-premios.js"
   }
 };

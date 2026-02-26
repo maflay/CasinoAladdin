@@ -7,6 +7,7 @@
     "promociones_enero_2026",
   );
   const promociones_febrero = document.getElementById("promociones_febrero");
+  const promociones_marzo = document.getElementById("promociones_marzo");
   const cubo1 = document.getElementById("cubo1-ala");
   const cubo2 = document.getElementById("cubo2-ala");
   const cubo4 = document.getElementById("cubo4-ala");
@@ -26,6 +27,10 @@
     promociones_febrero.style.display = "flex";
   }
 
+  if(solofechaCompleta == "marzo"){
+    promociones_marzo.style.display = "flex";
+  }
+
   if (solofechaCompleta == "septiembre") {
     cubo1.style.display = "flex";
   }
@@ -37,6 +42,7 @@
   if (solofechaCompleta == "diciembre") {
     cubo4.style.display = "flex";
   }
+
 })();
 (() => {
   const allitem = document.querySelectorAll(".card-content p");

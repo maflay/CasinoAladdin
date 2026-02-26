@@ -90,11 +90,21 @@ function irASeccionCoordenadas() {
 
   const promos_noviembre = document.getElementById("promos_noviembre");
   const promos_diciembre = document.getElementById("promos_diciembre");
+  const promos_febrero_2026 = document.getElementById("promos_febrero_2026");
+  const promos_marzo_2026 = document.getElementById("promos_marzo_2026");
 
   if (solofechaCompleta == "noviembre") {
     promos_noviembre.style.display = "flex";
   } else if (solofechaCompleta == "diciembre") {
     promos_diciembre.style.display = "flex";
+  }
+
+  if (solofechaCompleta == "febrero") {
+    promos_febrero_2026.style.display = "flex";
+  }
+
+  if (solofechaCompleta == "marzo") {
+    promos_marzo_2026.style.display = "flex";
   }
 })();
 
