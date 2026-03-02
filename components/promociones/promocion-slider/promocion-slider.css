@@ -41,7 +41,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -92,7 +92,7 @@
 .sliderProm {
     position: relative;
     width: 100%;
-    height: 850px;
+    height: 90vh;
     overflow: hidden;
 }
 
@@ -207,14 +207,6 @@ input[name="slider-radioProm"] {
     color: black;
 }
 
-.item_movil {
-    display: none;
-}
-
-.item_desk {
-    display: block;
-}
-
 @media(max-width: 768px) {
 
     .sliderProm {
@@ -224,14 +216,6 @@ input[name="slider-radioProm"] {
     .content_promo_info {
         flex-direction: column-reverse;
         gap: 60px;
-    }
-
-    .item_desk {
-        display: none;
-    }
-
-    .item_movil {
-        display: flex;
     }
 
     .bg1Prom {
@@ -247,7 +231,7 @@ input[name="slider-radioProm"] {
     }
 
     .bg3Prom {
-        background-image: url("/resources/Redes_vamos en grande_1080x1920.jpeg");
+        background-image: linear-gradient(180deg, #f4f4f434, #ffffff23, #f4f4f4), url("/resources/Redes_vamos en grande_1080x1920.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
     }
