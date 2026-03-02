@@ -1,0 +1,201 @@
+.content_promo_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.box_left_promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    gap: 10px;
+    font-family: 'poppins_black', sans-serif !important;
+}
+
+.box_left_promo h2 {
+    color: white;
+    text-align: start;
+    line-height: 40px;
+    text-shadow: black 1px 1px 10px;
+    font-size: 5.2rem;
+}
+
+.box_left_promo p {
+    color: white;
+    text-align: start;
+    text-shadow: black 1px 1px 10px;
+}
+
+.box_rigth_promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.box_rigth_promo img {
+    width: 250px;
+}
+
+/* SLIDER */
+.sliderProm {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
+.slider-wrapperProm {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.slider-wrapperProm:active {
+    cursor: grabbing;
+}
+
+.slideProm {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1Prom {
+    background-image: linear-gradient(180deg, #f4f4f4, #ffffff23, #f4f4f4), url(/resources/tesla_promo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2Prom {
+    background-image: url(/resources/PROMO_MYMAWI_TE_PREMIA_AL.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3Prom {
+    background-image: linear-gradient(#000000b3,
+            #000000b3), url(/resources/683.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.texto_blanco {
+    color: white;
+}
+
+input[name="slider-radioProm"] {
+    display: none;
+}
+
+.slider-controlsProm {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsProm label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+
+.slider-controlsProm input[type="radio"]:checked+label {
+    background: white;
+}
+
+.arrowProm {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowProm-left {
+    left: 0px;
+}
+
+.arrowProm-right {
+    right: 0px;
+}
+
+.controls-sliderProm {
+    color: black;
+}
+
+@media(max-width: 768px) {
+
+    .sliderProm {
+        height: 100vh;
+    }
+
+    .content_promo_info {
+        flex-direction: column-reverse;
+        gap: 60px;
+    }
+
+    .bg1Prom {
+    background-image: linear-gradient(180deg, #f4f4f4, #ffffff23, #f4f4f4), url(/resources/tesla_promo_movil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+    .bg2Prom {
+        background-image: url(/resources/PROMO_MYMAWI_TE_PREMIA_movil_AL.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .box_left_promo {
+        align-items: center;
+    }
+
+    .box_left_promo h2 {
+        font-size: 3.8rem;
+    }
+
+    .box_left_promo p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+}

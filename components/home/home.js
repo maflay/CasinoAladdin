@@ -177,6 +177,33 @@ function toPromociones() {
   }
 })();
 
+(() => {
+  if (document.getElementById("slider_promos")) {
+    fetch("/components/promociones/promocion-slider/promocion-slider.html")
+      .then((res) => res.text())
+      .then((html) => {
+        const contenedor = document.getElementById("slider_promos");
+        contenedor.innerHTML = html;
+
+        // Cargar CSS dinámicamente
+        const estilo = document.createElement("link");
+        estilo.rel = "stylesheet";
+        estilo.href = "/components/promociones/promocion-slider/promocion-slider.css";
+        document.head.appendChild(estilo);
+
+        // Cargar script dinámicamente
+        const script = document.createElement("script");
+        script.src = "/components/promociones/promocion-slider/promocion-slider.js";
+        script.onload = () => {
+          if (typeof window.inicializarSliderUbicaciones === "function") {
+            window.inicializarSliderUbicaciones();
+          }
+        };
+        document.body.appendChild(script);
+      });
+  }
+})();
+
 itemnavidad();
 
 function itemnavidad() {

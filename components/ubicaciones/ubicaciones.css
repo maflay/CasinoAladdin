@@ -591,10 +591,10 @@
     }
 
     .content_promo_tesla h2 {
-    color: white;
-    font-family: 'tesla', sans-serif !important;
-    font-size: 36px;
-    text-align: center;
-}
+        color: white;
+        font-family: 'tesla', sans-serif !important;
+        font-size: 36px;
+        text-align: center;
+    }
 
 }

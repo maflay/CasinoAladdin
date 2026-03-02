@@ -446,7 +446,7 @@ function setCookie(name, value, opts = {}) {
   const {
     hours = 2,
     path = "/",
-    sameSite = "Lax", // recomendado
+    sameSite = "Lax",
     secure = location.protocol === "https:",
   } = opts;
 
