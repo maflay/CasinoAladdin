@@ -246,6 +246,13 @@ input[name="slider-radioProm"] {
         background-repeat: no-repeat;
     }
 
+    .bg3Prom {
+    background-image: url("/resources/Redes_vamos en grande_1080x1920.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
     .box_left_promo {
         align-items: center;
     }
