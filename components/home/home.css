@@ -25,14 +25,14 @@
 }
 
 .content-title-home {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 300px;
     height: 300px;
     line-height: 1.4rem;
-    background-color: #CB0404;
+    background-color: #cb040470;
     transform: rotate(45deg);
 }
 

@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 100%;
     gap: 10px;
 }
@@ -11,9 +12,47 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    position: relative;
     width: 100%;
     gap: 10px;
     font-family: 'poppins_black', sans-serif !important;
+}
+
+.video_test_ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.video-background-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.info_tesla {
+    display: none;
+}
+
+.text_promo {
+    font-family: 'poppins_black', sans-serif !important;
+    z-index: 10;
+    text-shadow: black 1px 1px 10px;
 }
 
 .box_left_promo h2 {
@@ -30,11 +69,17 @@
     text-shadow: black 1px 1px 10px;
 }
 
+.box_left_promo small {
+    text-shadow: #7a1111c4 1px 1px 10px;
+    color: #7a1111c4;
+}
+
 .box_rigth_promo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     gap: 20px;
     width: 100%;
 }
@@ -47,7 +92,7 @@
 .sliderProm {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 850px;
     overflow: hidden;
 }
 
@@ -162,6 +207,14 @@ input[name="slider-radioProm"] {
     color: black;
 }
 
+.item_movil {
+    display: none;
+}
+
+.item_desk {
+    display: block;
+}
+
 @media(max-width: 768px) {
 
     .sliderProm {
@@ -173,11 +226,19 @@ input[name="slider-radioProm"] {
         gap: 60px;
     }
 
+    .item_desk {
+        display: none;
+    }
+
+    .item_movil {
+        display: flex;
+    }
+
     .bg1Prom {
-    background-image: linear-gradient(180deg, #f4f4f4, #ffffff23, #f4f4f4), url(/resources/tesla_promo_movil.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+        background-image: linear-gradient(180deg, #f4f4f4, #ffffff23, #f4f4f4), url(/resources/tesla_promo_movil.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
     .bg2Prom {
         background-image: url(/resources/PROMO_MYMAWI_TE_PREMIA_movil_AL.png);

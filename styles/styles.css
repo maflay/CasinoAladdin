@@ -58,7 +58,7 @@ body {
     width: 100%;
     /* Asegura que ocupe todo el ancho de la barra */
     height: 100%;
-    --c: no-repeat linear-gradient(red 0 0);
+    --c: no-repeat linear-gradient(#CB0404 0 0);
     background: var(--c), var(--c), #c5c5c5;
     background-size: 60% 100%;
     animation: l16 3s infinite;

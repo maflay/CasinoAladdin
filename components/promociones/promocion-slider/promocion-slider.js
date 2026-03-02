@@ -31,7 +31,7 @@ function sliderhome() {
 
   function resetInterval() {
     clearInterval(interval);
-    interval = setInterval(nextSlide, 11000);
+    interval = setInterval(nextSlide, 20000);
   }
 
   nextBtnh.addEventListener("click", () => {
@@ -51,7 +51,7 @@ function sliderhome() {
     });
   });
 
-  interval = setInterval(nextSlide, 11000);
+  interval = setInterval(nextSlide, 20000);
 
   track.addEventListener("mousedown", (e) => {
     isDragging = true;
