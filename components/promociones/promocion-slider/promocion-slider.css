@@ -118,7 +118,7 @@
 }
 
 .bg1Prom {
-    background-image: linear-gradient(180deg, #f4f4f4, #ffffff23, #f4f4f4), url(/resources/tesla_promo.jpg);
+    background-image: linear-gradient(180deg, #f4f4f473, #ffffff23, #f4f4f473), url(/resources/tesla_background_desk.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -219,7 +219,7 @@ input[name="slider-radioProm"] {
     }
 
     .bg1Prom {
-        background-image: linear-gradient(180deg, #f4f4f4, #ffffff23, #f4f4f4), url(/resources/tesla_promo_movil.jpg);
+        background-image: linear-gradient(180deg, #f4f4f460, #ffffff23, #f4f4f460), url(/resources/tesla_background_movil.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
