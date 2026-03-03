@@ -66,9 +66,9 @@ function toPromos() {
   navegarA("promociones");
 }
 
-document.getElementById("btn_conocer_promo").addEventListener("click", () => {
-  irASeccionCoordenadas();
-});
+// document.getElementById("btn_conocer_promo").addEventListener("click", () => {
+//   irASeccionCoordenadas();
+// });
 
 function irASeccionCoordenadas() {
   const destino = document.getElementById("terminos-hacemos-en-grande");

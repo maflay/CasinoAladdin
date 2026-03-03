@@ -473,7 +473,7 @@ td {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url(/resources/Aladdin_img.png);
+    background-image: linear-gradient(180deg, #CB0404, #CB0404) ,url(/resources/Aladdin_img.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
