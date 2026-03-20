@@ -253,6 +253,14 @@ input.valid {
     color: #e53935;
 }
 
+.dp_label_desk {
+    display: flex;
+}
+
+.dp_label_movil {
+    display: none;
+}
+
 
 @media(max-width: 768px) {
 
@@ -270,7 +278,7 @@ input.valid {
     }
 
     .btn_tomar_foto {
-        display: none;
+        display: flex;
     }
 
     .content_img_entrevista h2 {
@@ -305,5 +313,16 @@ input.valid {
         width: 10px;
     }
 
+    .dp_label_desk {
+        display: none;
+    }
+
+    .dp_label_movil {
+        display: flex;
+    }
+
+    .view_input_pic{
+        opacity: 0;
+    }
 
 }
