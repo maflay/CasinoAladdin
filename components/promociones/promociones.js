@@ -19,12 +19,13 @@
 })();
 
 (() => {
-  fetch("/components/promociones/promocion-view/promocion-view.html")
+  if(document.getElementById("promocion-seccion")){
+    fetch("/components/promociones/promocion-view/promocion-view.html")
     .then((res) => res.text())
     .then((html) => {
       const contenedor = document.getElementById("promocion-seccion");
       contenedor.innerHTML = html;
-
+      
       const estilo = document.createElement("link");
       estilo.rel = "stylesheet";
       estilo.href = "/components/promociones/promocion-view/promocion-view.css";
@@ -34,6 +35,7 @@
       script.src = "/components/promociones/promocion-view/promocion-view.js";
       document.body.appendChild(script);
     });
+  }
 })();
 
 (() => {

@@ -399,4 +399,9 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
   },
+  tesla_aladdin: {
+    html: "/components/promociones/promocion/carro_promo.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js"
+  }
 };

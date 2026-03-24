@@ -473,7 +473,7 @@ td {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: linear-gradient(180deg, #CB0404, #CB0404) ,url(/resources/Aladdin_img.png);
+    background-image: linear-gradient(180deg, #CB0404, #CB0404), url(/resources/Aladdin_img.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -863,5 +863,137 @@ td {
     .to-promo .next-to-promo h2 {
         font-size: 1rem;
         font-weight: 700;
+    }
+}
+
+
+/* CARRO PROMO */
+
+.banner_carro_promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* height: 520px;
+    background-image: url(/resources/banner_tesla.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.banner_carro_promo img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.carro_desk {
+    display: flex;
+}
+
+.carro_movil {
+    display: none;
+}
+
+
+
+
+.content_info_promo_carro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-image: linear-gradient(180deg, #24262cb4, #24262c00), url(/resources/tesla_fondo_desk_.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.des_promo_carro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.content_brand_banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 35%;
+}
+
+.letra_tesla_back {
+    position: absolute;
+    width: 400px !important;
+    opacity: 0.4;
+}
+
+.logo_brand_cas {
+    position: absolute;
+    width: 500px !important;
+}
+
+.back_seccion {
+    width: 100%;
+}
+
+.des_promo_carro h2 {
+    color: white;
+}
+
+._content_brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+._content_brand img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.content_carro_view {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.content_carro_view h2 {
+    border-left: #000 5px solid;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+._des_cas_view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+._des_cas_view p {
+    text-align: justify;
+}
+
+@media(max-width: 768px) {
+    .carro_desk {
+        display: none;
+    }
+
+    .carro_movil {
+        display: flex;
     }
 }
