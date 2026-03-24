@@ -8,16 +8,10 @@
   );
   const promociones_febrero = document.getElementById("promociones_febrero");
   const promociones_marzo = document.getElementById("promociones_marzo");
+  const promociones_abril = document.getElementById("promociones_abril");
   const cubo1 = document.getElementById("cubo1-ala");
   const cubo2 = document.getElementById("cubo2-ala");
   const cubo4 = document.getElementById("cubo4-ala");
-
-  promociones_enero_2026.style.display = "none";
-  promociones_febrero.style.display = "none";
-
-  cubo1.style.display = "none";
-  cubo2.style.display = "none";
-  cubo4.style.display = "none";
 
   if (solofechaCompleta == "enero") {
     promociones_enero_2026.style.display = "flex";
@@ -27,8 +21,12 @@
     promociones_febrero.style.display = "flex";
   }
 
-  if(solofechaCompleta == "marzo"){
+  if (solofechaCompleta == "marzo") {
     promociones_marzo.style.display = "flex";
+  }
+
+  if (solofechaCompleta == "abril") {
+    promociones_abril.style.display = "flex";
   }
 
   if (solofechaCompleta == "septiembre") {
@@ -42,8 +40,8 @@
   if (solofechaCompleta == "diciembre") {
     cubo4.style.display = "flex";
   }
-
 })();
+
 (() => {
   const allitem = document.querySelectorAll(".card-content p");
 

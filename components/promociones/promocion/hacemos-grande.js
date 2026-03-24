@@ -92,6 +92,7 @@ function irASeccionCoordenadas() {
   const promos_diciembre = document.getElementById("promos_diciembre");
   const promos_febrero_2026 = document.getElementById("promos_febrero_2026");
   const promos_marzo_2026 = document.getElementById("promos_marzo_2026");
+  const promos_abril_2026 = document.getElementById("promos_abril_2026");
 
   if (solofechaCompleta == "noviembre") {
     promos_noviembre.style.display = "flex";
@@ -105,6 +106,10 @@ function irASeccionCoordenadas() {
 
   if (solofechaCompleta == "marzo") {
     promos_marzo_2026.style.display = "flex";
+  }
+
+  if (solofechaCompleta == "abril") {
+    promos_abril_2026.style.display = "flex";
   }
 })();
 
