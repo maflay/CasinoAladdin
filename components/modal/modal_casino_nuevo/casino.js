@@ -5,25 +5,27 @@
 
   if (modal) {
     btnClose?.addEventListener("click", () => {
-      Swal.fire({
-        title: "Seguro de Cerrar?",
-        text: "Se cerrará, si desea volver a ver, refresca la página.",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#d33",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Si Quiero!",
-        allowOutsideClick: false,
-        customClass: {
-          popup: "mi-popup",
-          title: "mi-titulo",
-          confirmButton: "btn-Send mi-boton",
-        },
-      }).then((result) => {
-        if (result.isConfirmed) {
           modal.style.display = "none";
-        }
-      });
+
+      // Swal.fire({
+      //   title: "Seguro de Cerrar?",
+      //   text: "Se cerrará, si desea volver a ver, refresca la página.",
+      //   icon: "warning",
+      //   showCancelButton: true,
+      //   confirmButtonColor: "#d33",
+      //   cancelButtonColor: "#d33",
+      //   confirmButtonText: "Si Quiero!",
+      //   allowOutsideClick: false,
+      //   customClass: {
+      //     popup: "mi-popup",
+      //     title: "mi-titulo",
+      //     confirmButton: "btn-Send mi-boton",
+      //   },
+      // }).then((result) => {
+      //   if (result.isConfirmed) {
+      //     modal.style.display = "none";
+      //   }
+      // });
     });
 
     btnRegister?.addEventListener("click", () => {

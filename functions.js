@@ -192,7 +192,7 @@ function animarScrollConObserver(selector, direccion = "y") {
     },
     {
       threshold: 0.2, // visible al 20%
-    }
+    },
   );
 
   elements.forEach((el, index) => {
