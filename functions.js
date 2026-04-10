@@ -244,6 +244,7 @@ function cargarHeaderYFooter() {
           });
       }
 
+      // ICONO MOVIL HEADER
       if (document.getElementById("icono_movil")) {
         const mes = new Date().toLocaleString("es-CO", {
           timeZone: "America/Bogota",
@@ -251,14 +252,17 @@ function cargarHeaderYFooter() {
         });
         if (mes == "diciembre") {
           document.getElementById("icono_movil").src =
-            "/resources/logo-aladdin_navidad.png";
+          "/resources/logo-aladdin_navidad.png";
+        } else if (mes == "junio" || mes == "julio") {
+          document.getElementById("icono_movil").src =
+          "/resources/logo_aladdin_mundial.png";
         } else {
           document.getElementById("icono_movil").src =
-            "/resources/logo-aladdin.png";
+          "/resources/logo-aladdin.png";
         }
       }
-
       // EFECTO NIEVE
+
       (() => {
         const snow = document.getElementById("snow_cas");
         if (!snow) return;
@@ -275,26 +279,37 @@ function cargarHeaderYFooter() {
         }
       })();
 
+      // EFECTO MUNDIAL
+      (() => {
+        const efect_mund = document.getElementById("efect_mund");
+        if (!efect_mund) return;
+
+        try {
+          const mes = new Date().toLocaleString("es-CO", {
+            timeZone: "America/Bogota",
+            month: "long",
+          });
+
+          efect_mund.style.display =
+            mes === "junio" || mes === "julio" ? "flex" : "none";
+        } catch (e) {
+          efect_mund.style.display = "none";
+        }
+      })();
+
       // CASINO NUEVO
       fetch("/components/modal/modal_casino_nuevo/casino.html")
         .then((res) => res.text())
         .then((html) => {
           const contenedor = document.getElementById("aviso_nuevo_casino");
           contenedor.innerHTML = html;
-
           const version = Date.now();
-
           const estilo = document.createElement("link");
           estilo.rel = "stylesheet";
           estilo.href = `/components/modal/modal_casino_nuevo/casino.css?v=${version}`;
           document.head.appendChild(estilo);
           const script = document.createElement("script");
           script.src = `/components/modal/modal_casino_nuevo/casino.js?v=${version}`;
-          script.onload = () => {
-            if (typeof window.inicializarSliderUbicaciones === "function") {
-              window.inicializarSliderUbicaciones();
-            }
-          };
           document.body.appendChild(script);
         });
 
@@ -415,6 +430,11 @@ function actualizarColorNavbar() {
 
   const hash = window.location.hash.split("?")[0];
 
+  // if (hash === "#contacto") {
+  //   navbar.classList.add("page-contacto");
+  //   logo.src = "/resources/logo-aladdin-negro.png";
+  // }
+
   const fechaCompleta = new Date().toLocaleString("es-CO", {
     timeZone: "America/Bogota",
     month: "long",
@@ -422,20 +442,19 @@ function actualizarColorNavbar() {
 
   if (fechaCompleta == "diciembre") {
     logo.src = "/resources/logo-aladdin_navidad.png";
+  } else if (fechaCompleta == "junio" || fechaCompleta == "julio") {
+    logo.src = "/resources/logo_aladdin_mundial.png";
   } else {
     logo.src = "/resources/logo-aladdin.png";
   }
-
-  // if (hash === "#contacto") {
-  //   navbar.classList.add("page-contacto");
-  //   logo.src = "/resources/logo-aladdin-negro.png";
-  // }
 
   if (hash === "#contacto") {
     navbar.classList.add("page-contacto");
 
     if (fechaCompleta == "diciembre") {
       logo.src = "/resources/logo-aladdin-negro_navidad.png";
+    } else if (fechaCompleta == "junio" || fechaCompleta == "julio") {
+      logo.src = "/resources/logo_aladdin_mundial_oscuro.png";
     } else {
       logo.src = "/resources/logo-aladdin-negro.png";
     }

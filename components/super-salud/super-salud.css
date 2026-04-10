@@ -40,6 +40,7 @@
 
 .card_s_s>a{
     color: white;
+    font-size: 16px;
     transition: all 0.4s ease;
 }
 
