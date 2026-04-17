@@ -456,6 +456,32 @@ td {
 }
 
 
+/* TESLA */
+
+
+.video-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    /* 16:9 */
+    min-width: 177.77vh;
+    min-height: 100vh;
+    transform: translate(-50%, -50%);
+    border: 0;
+    pointer-events: none;
+}
+
+
+
 /* HALLOWEEN */
 
 .background_halloween_promo {
@@ -876,8 +902,8 @@ td {
     position: relative;
     overflow: hidden;
     width: 100%;
-    /* height: 520px;
-    background-image: url(/resources/banner_tesla.png);
+    height: 750px;
+    /*background-image: url(/resources/banner_tesla.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; */
@@ -996,4 +1022,9 @@ td {
     .carro_movil {
         display: flex;
     }
+
+    .banner_carro_promo {
+        height: 750px;
+    }
+
 }

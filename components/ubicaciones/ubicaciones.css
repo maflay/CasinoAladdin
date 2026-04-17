@@ -366,8 +366,23 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 20px;
+    padding: 20px 20px 100px 20px;
     gap: 20px;
+}
+
+.content_info_shag>a {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    transition: all 0.4s ease;
+}
+
+.content_info_shag>a:hover {
+    cursor: pointer;
+    opacity: 0.7;
 }
 
 .car_tesla_show_1 {
