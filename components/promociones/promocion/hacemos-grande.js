@@ -93,6 +93,7 @@ function irASeccionCoordenadas() {
   const promos_febrero_2026 = document.getElementById("promos_febrero_2026");
   const promos_marzo_2026 = document.getElementById("promos_marzo_2026");
   const promos_abril_2026 = document.getElementById("promos_abril_2026");
+  const promos_mayo_2026 = document.getElementById("promos_mayo_2026");
 
   if (solofechaCompleta == "noviembre") {
     promos_noviembre.style.display = "flex";
@@ -111,6 +112,10 @@ function irASeccionCoordenadas() {
   if (solofechaCompleta == "abril") {
     promos_abril_2026.style.display = "flex";
   }
+
+  if (solofechaCompleta == "mayo") {
+    promos_mayo_2026.style.display = "flex";
+  }
 })();
 
 (() => {
@@ -126,14 +131,8 @@ function irASeccionCoordenadas() {
         estilo.href =
           "/components/membresia/bannerMembresia/bannerMembresia.css";
         document.head.appendChild(estilo);
-        // Cargar script dinámicamente
         const script = document.createElement("script");
         script.src = "/components/membresia/bannerMembresia/bannerMembresia.js";
-        script.onload = () => {
-          if (typeof window.inicializarSliderUbicaciones === "function") {
-            window.inicializarSliderUbicaciones();
-          }
-        };
         document.body.appendChild(script);
       });
   }
@@ -146,21 +145,12 @@ function irASeccionCoordenadas() {
       .then((html) => {
         const contenedor = document.getElementById("juegos-view-seccion");
         contenedor.innerHTML = html;
-
-        // Cargar CSS dinámicamente
         const estilo = document.createElement("link");
         estilo.rel = "stylesheet";
         estilo.href = "/components/juegos/juegos-view/juegos-view.css";
         document.head.appendChild(estilo);
-
-        // Cargar script dinámicamente
         const script = document.createElement("script");
         script.src = "/components/juegos/juegos-view/juegos-view.js";
-        script.onload = () => {
-          if (typeof window.inicializarSliderUbicaciones === "function") {
-            window.inicializarSliderUbicaciones();
-          }
-        };
         document.body.appendChild(script);
       });
   }
