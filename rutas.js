@@ -403,5 +403,10 @@ const rutasLimpias = {
     html: "/components/promociones/promocion/carro_promo.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js"
+  },
+  cinecasino : {
+    html: "/components/promociones/promocion/cine-casino.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js"
   }
 };

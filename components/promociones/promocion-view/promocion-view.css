@@ -21,10 +21,10 @@
 
 .promocion-container .card-view .content-card-promo {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   width: 100%;
-  max-width: 1400px;
 }
 
 .promocion-container .card-view .card-promo {

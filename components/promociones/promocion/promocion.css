@@ -456,6 +456,32 @@ td {
 }
 
 
+/* del cine al casino */
+
+._content_msg_animate_ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+._content_msg_animate_ h4 {
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+    font-family: 'poppins_bold', sans-serif !important;
+}
+
+._content_msg_animate_ p {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'poppins_bold', sans-serif !important;
+}
+
+
 /* TESLA */
 
 
