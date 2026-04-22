@@ -84,41 +84,6 @@ function irASeccionCoordenadas() {
 }
 
 (() => {
-  const solofechaCompleta = new Date().toLocaleString("es-CO", {
-    month: "long",
-  });
-
-  const promos_noviembre = document.getElementById("promos_noviembre");
-  const promos_diciembre = document.getElementById("promos_diciembre");
-  const promos_febrero_2026 = document.getElementById("promos_febrero_2026");
-  const promos_marzo_2026 = document.getElementById("promos_marzo_2026");
-  const promos_abril_2026 = document.getElementById("promos_abril_2026");
-  const promos_mayo_2026 = document.getElementById("promos_mayo_2026");
-
-  if (solofechaCompleta == "noviembre") {
-    promos_noviembre.style.display = "flex";
-  } else if (solofechaCompleta == "diciembre") {
-    promos_diciembre.style.display = "flex";
-  }
-
-  if (solofechaCompleta == "febrero") {
-    promos_febrero_2026.style.display = "flex";
-  }
-
-  if (solofechaCompleta == "marzo") {
-    promos_marzo_2026.style.display = "flex";
-  }
-
-  if (solofechaCompleta == "abril") {
-    promos_abril_2026.style.display = "flex";
-  }
-
-  if (solofechaCompleta == "mayo") {
-    promos_mayo_2026.style.display = "flex";
-  }
-})();
-
-(() => {
   if (document.getElementById("content-banner-membresia")) {
     fetch("/components/membresia/bannerMembresia/bannerMembresia.html")
       .then((res) => res.text())
@@ -151,6 +116,27 @@ function irASeccionCoordenadas() {
         document.head.appendChild(estilo);
         const script = document.createElement("script");
         script.src = "/components/juegos/juegos-view/juegos-view.js";
+        document.body.appendChild(script);
+      });
+  }
+})();
+
+(() => {
+  if (document.getElementById("promocion-seccion")) {
+    fetch("/components/promociones/promocion-view/promocion-view.html")
+      .then((res) => res.text())
+      .then((html) => {
+        const contenedor = document.getElementById("promocion-seccion");
+        contenedor.innerHTML = html;
+
+        const estilo = document.createElement("link");
+        estilo.rel = "stylesheet";
+        estilo.href =
+          "/components/promociones/promocion-view/promocion-view.css";
+        document.head.appendChild(estilo);
+        // Cargar script dinámicamente
+        const script = document.createElement("script");
+        script.src = "/components/promociones/promocion-view/promocion-view.js";
         document.body.appendChild(script);
       });
   }

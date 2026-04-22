@@ -30,7 +30,7 @@
     promociones_abril.style.display = "flex";
   }
 
-  if(solofechaCompleta == "mayo"){
+  if (solofechaCompleta == "mayo") {
     promociones_mayo.style.display = "flex";
   }
 
@@ -60,3 +60,26 @@
     }
   });
 })();
+
+(() => {
+  const currentHash = window.location.hash;
+
+  if (!currentHash) return;
+
+  const cardLinks = document.querySelectorAll(".card-image > a");
+
+  cardLinks.forEach((link) => {
+    const linkHash = link.getAttribute("href");
+
+    if (linkHash === currentHash) {
+      const promoSection = link.closest(".card-promo");
+      
+      if (promoSection) {
+        promoSection.style.display = "none";
+      }
+    }
+  });
+})();
+
+
+
