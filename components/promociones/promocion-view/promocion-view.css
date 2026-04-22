@@ -224,10 +224,6 @@ a {
     width: 90%;
   }
 
-  .promo h1 {
-    font-size: 2rem;
-  }
-
   .card-view .card-promo {
     width: 100%;
   }
@@ -239,9 +235,6 @@ a {
 }
 
 @media (max-width: 480px) {
-  .promo h1 {
-    font-size: 1.6rem;
-  }
 
   .card-content h1 {
     font-size: 1.6rem;
