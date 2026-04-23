@@ -76,6 +76,7 @@
       
       if (promoSection) {
         promoSection.style.display = "none";
+        document.getElementById("_title_promos_view_").textContent = "Otras Promociones";
       }
     }
   });
