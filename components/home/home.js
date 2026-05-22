@@ -81,7 +81,7 @@ function toPromociones() {
   function ensureInstagramScript() {
     if (
       !document.querySelector(
-        'script[src^="https://www.instagram.com/embed.js"]'
+        'script[src^="https://www.instagram.com/embed.js"]',
       )
     ) {
       const s = document.createElement("script");
@@ -114,7 +114,7 @@ function toPromociones() {
     if (invalid.length) {
       console.warn(
         "URLs IG omitidas (no son permalinks de post/reel/tv):",
-        invalid
+        invalid,
       );
     }
 
@@ -126,7 +126,7 @@ function toPromociones() {
             data-instgrm-version="14"
             style="background:#fff;border:0;margin:0 auto;max-width:540px;width:100%;border-radius:8px;overflow:hidden;">
           </blockquote>
-        `
+        `,
       )
       .join("");
 
@@ -188,12 +188,14 @@ function toPromociones() {
         // Cargar CSS dinámicamente
         const estilo = document.createElement("link");
         estilo.rel = "stylesheet";
-        estilo.href = "/components/promociones/promocion-slider/promocion-slider.css";
+        estilo.href =
+          "/components/promociones/promocion-slider/promocion-slider.css";
         document.head.appendChild(estilo);
 
         // Cargar script dinámicamente
         const script = document.createElement("script");
-        script.src = "/components/promociones/promocion-slider/promocion-slider.js";
+        script.src =
+          "/components/promociones/promocion-slider/promocion-slider.js";
         script.onload = () => {
           if (typeof window.inicializarSliderUbicaciones === "function") {
             window.inicializarSliderUbicaciones();
@@ -300,3 +302,20 @@ function seccionMembresia() {
   }
 }
 
+(() => {
+  let _seccion_tesla_insta_ = document.getElementById("_seccion_tesla_insta_");
+  const fechaCompleta = new Date().toLocaleString("es-CO", {
+    timeZone: "America/Bogota",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+  const [fecha, hora] = fechaCompleta.split(", ");
+
+  if (fecha >= "29/05/2026") {
+    _seccion_tesla_insta_.style.display = "none";
+  }
+})();
