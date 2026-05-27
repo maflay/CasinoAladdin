@@ -10,6 +10,7 @@
   const promociones_marzo = document.getElementById("promociones_marzo");
   const promociones_abril = document.getElementById("promociones_abril");
   const promociones_mayo = document.getElementById("promociones_mayo");
+  const promociones_junio = document.getElementById("promociones_junio");
   const cubo1 = document.getElementById("cubo1-ala");
   const cubo2 = document.getElementById("cubo2-ala");
   const cubo4 = document.getElementById("cubo4-ala");
@@ -32,6 +33,10 @@
 
   if (solofechaCompleta == "mayo") {
     promociones_mayo.style.display = "flex";
+  }
+
+  if (solofechaCompleta == "junio") {
+    promociones_junio.style.display = "flex";
   }
 
   if (solofechaCompleta == "septiembre") {

@@ -402,11 +402,21 @@ const rutasLimpias = {
   tesla_aladdin: {
     html: "/components/promociones/promocion/carro_promo.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js"
+    js: "/components/promociones/promocion/promocion.js",
   },
-  cinecasino : {
+  cinecasino: {
     html: "/components/promociones/promocion/cine-casino.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js"
-  }
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  jugadaganadora: {
+    html: "/components/promociones/promocion/jugada_ganadora.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  fiebrefutbolera: {
+    html: "/components/promociones/promocion/fiebre_futbolera.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
 };
