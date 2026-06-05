@@ -111,6 +111,13 @@
     width: 250px;
 }
 
+._content_info_ganador_ {
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /* SLIDER */
 .sliderProm {
     position: relative;
@@ -141,7 +148,7 @@
 }
 
 .bg1Prom {
-    background-image: linear-gradient(180deg, #f4f4f473, #ffffff23, #f4f4f473), url(/resources/tesla_background_desk.jpg);
+    background-image: linear-gradient(180deg, #00000073, #00000023, #00000073), url(/resources/entrega_tesla_2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -242,7 +249,7 @@ input[name="slider-radioProm"] {
     }
 
     .bg1Prom {
-        background-image: linear-gradient(180deg, #f4f4f460, #ffffff23, #f4f4f460), url(/resources/tesla_background_movil.jpg);
+        background-image: linear-gradient(180deg, #00000060, #00000023, #00000060), url(/resources/entrega_tesla_1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }

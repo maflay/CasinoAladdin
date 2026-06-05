@@ -252,13 +252,13 @@ function cargarHeaderYFooter() {
         });
         if (mes == "diciembre") {
           document.getElementById("icono_movil").src =
-          "/resources/logo-aladdin_navidad.png";
+            "/resources/logo-aladdin_navidad.png";
         } else if (mes == "junio" || mes == "julio") {
           document.getElementById("icono_movil").src =
-          "/resources/logo_aladdin_mundial.png";
+            "/resources/logo-aladdin.png";
         } else {
           document.getElementById("icono_movil").src =
-          "/resources/logo-aladdin.png";
+            "/resources/logo-aladdin.png";
         }
       }
       // EFECTO NIEVE
@@ -443,7 +443,7 @@ function actualizarColorNavbar() {
   if (fechaCompleta == "diciembre") {
     logo.src = "/resources/logo-aladdin_navidad.png";
   } else if (fechaCompleta == "junio" || fechaCompleta == "julio") {
-    logo.src = "/resources/logo_aladdin_mundial.png";
+    logo.src = "/resources/logo-aladdin.png";
   } else {
     logo.src = "/resources/logo-aladdin.png";
   }
@@ -454,7 +454,7 @@ function actualizarColorNavbar() {
     if (fechaCompleta == "diciembre") {
       logo.src = "/resources/logo-aladdin-negro_navidad.png";
     } else if (fechaCompleta == "junio" || fechaCompleta == "julio") {
-      logo.src = "/resources/logo_aladdin_mundial_oscuro.png";
+      logo.src = "/resources/logo-aladdin-negro.png";
     } else {
       logo.src = "/resources/logo-aladdin-negro.png";
     }
