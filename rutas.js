@@ -419,4 +419,9 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
   },
+  reglamentointerno: {
+    html: "/components/reglamento_interno/reglamento.html",
+    css: "/components/reglamento_interno/reglamento.css",
+    js: "/components/reglamento_interno/reglamento.js",
+  },
 };

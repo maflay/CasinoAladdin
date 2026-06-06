@@ -45,6 +45,24 @@ body {
     top: 0;
 }
 
+._casino_virtual_odoo_ {
+    display: flex;
+    position: relative;
+}
+
+._casino_virtual_odoo_ a {
+    background-color: white;
+    padding: 8px;
+    border-radius: 6px;
+    color: #7a0000 !important;
+    transition: all 0.4s ease;
+}
+
+._casino_virtual_odoo_ a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
 .Navbar>.nav-logo {
     font-weight: 700;
     font-size: 21px;

@@ -112,8 +112,13 @@
 }
 
 ._content_info_ganador_ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 40vh;
+    gap: 20px;
+    top: 20vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -148,7 +153,7 @@
 }
 
 .bg1Prom {
-    background-image: linear-gradient(180deg, #00000073, #00000023, #00000073), url(/resources/entrega_tesla_2.jpg);
+    background-image: linear-gradient(180deg, #00000073, #00000023, #00000073), url(/resources/entrega_tesla_3.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -163,6 +168,43 @@
     background-image: linear-gradient(#000000b3,
             #000000b3), url(/resources/683.png);
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg4Prom {
+    background-image: linear-gradient(#000000b3,
+            #000000b3), url(/resources/wplay_ala_desk.jpeg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    z-index: 0;
+
+}
+
+.bg4Prom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    background-image: url(/resources/wplay_ala_desk.jpeg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+}
+
+._union_wp_ala_ {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background-image: url(/resources/wplay_ala_desk.jpeg);
+    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
 }
 
@@ -196,10 +238,9 @@ input[name="slider-radioProm"] {
 
 .slider-controlsProm label {
     cursor: pointer;
-    width: 12px;
-    height: 12px;
-    border: 2px solid white;
-    border-radius: 50%;
+    width: 50px;
+    height: 10px;
+    border: 2px solid #ffffff7a;
     background: transparent;
     margin: 0 5px;
     display: inline-block;
@@ -207,8 +248,25 @@ input[name="slider-radioProm"] {
 }
 
 
+.slider-controlsProm input[type="radio"]+label {
+    background-image: linear-gradient(to right, #ffffff7a, #ffffff7a);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0s;
+}
+
 .slider-controlsProm input[type="radio"]:checked+label {
-    background: white;
+    animation: llenarFondo 20s linear forwards;
+}
+
+@keyframes llenarFondo {
+    from {
+        background-size: 0% 100%;
+    }
+
+    to {
+        background-size: 100% 100%;
+    }
 }
 
 .arrowProm {
@@ -249,7 +307,7 @@ input[name="slider-radioProm"] {
     }
 
     .bg1Prom {
-        background-image: linear-gradient(180deg, #00000060, #00000023, #00000060), url(/resources/entrega_tesla_1.jpg);
+        background-image: linear-gradient(180deg, #00000060, #00000023, #00000060), url(/resources/entrega_tesla_3_desk.png);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -266,6 +324,15 @@ input[name="slider-radioProm"] {
         background-repeat: no-repeat;
     }
 
+
+    .bg4Prom {
+        background-image: linear-gradient(#000000b3,
+                #000000b3), url(/resources/wplay_ala_movil.jpeg);
+    }
+
+    ._union_wp_ala_ {
+        background-image: url(/resources/wplay_ala_movil.jpeg);
+    }
 
     .box_left_promo {
         align-items: center;
