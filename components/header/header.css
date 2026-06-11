@@ -321,6 +321,24 @@ body {
     cursor: pointer;
 }
 
+
+
+
+.desaparecer_4s {
+    opacity: 1;
+  animation: ocultarElemento 4s forwards;
+}
+
+@keyframes ocultarElemento {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 5;
+  }
+}
+
+
 @media (max-width: 1100px) {
     .Navbar {
         transition: background-color 0.3s ease;
