@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Si no existe archivo físico
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Si no existe directorio físico
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Enviar todo a index.html
+RewriteRule ^ index.html [L]

@@ -33,11 +33,27 @@
     width: 100vw;
     height: 56.25vw;
     /* 16:9 */
-    min-width: 177.77vh;
+    min-width: 167.77vh;
     min-height: 100vh;
     transform: translate(-50%, -50%);
     border: 0;
     pointer-events: none;
+}
+
+.multimedia_winners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.multimedia_winners video {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -161,7 +177,7 @@
 .bg2Prom {
     background-image: url(/resources/PROMO_MYMAWI_TE_PREMIA_AL.png);
     background-size: cover;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
 }
 
 .bg3Prom {
@@ -195,6 +211,16 @@
     background-position: top;
     background-repeat: no-repeat;
     filter: blur(10px);
+}
+
+.bg5Prom {
+    background-image: url(/resources/ganadores_desk.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    z-index: 0;
+
 }
 
 ._union_wp_ala_ {
@@ -331,8 +357,13 @@ input[name="slider-radioProm"] {
                 #000000b3), url(/resources/wplay_ala_movil.jpeg);
     }
 
+    .bg5Prom {
+        background-image: url(/resources/ganadores_movil.png);
+    }
+
     ._union_wp_ala_ {
         background-image: url(/resources/wplay_ala_movil.jpeg);
+        background-size: 100% 100%;
     }
 
     .box_left_promo {

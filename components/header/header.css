@@ -1139,7 +1139,7 @@ body {
     }
 
     100% {
-        top: 1000px;
+        top: 550px;
         opacity: 0;
     }
 }

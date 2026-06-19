@@ -433,6 +433,36 @@
     margin-top: 140px;
     padding: 40px 0;
 }
+.instagram-fallback{
+  max-width:540px;
+  min-height:250px;
+  margin:20px auto;
+  border:1px solid #ddd;
+  border-radius:12px;
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.instagram-fallback-content{
+  text-align:center;
+  padding:20px;
+}
+
+.instagram-fallback-content a{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 20px;
+  background:#E1306C;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+.wrapper_ig_ins {
+    position: absolute;
+}
 
 @media(max-width: 1366px) {
 
