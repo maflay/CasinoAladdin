@@ -318,4 +318,13 @@ function seccionMembresia() {
   if (fecha >= "29/05/2026") {
     _seccion_tesla_insta_.style.display = "none";
   }
+
+  const currentHash = window.location.hash;
+  if (currentHash == "#inicio") {
+    history.replaceState(
+      null,
+      null,
+      window.location.pathname + window.location.search,
+    );
+  }
 })();
