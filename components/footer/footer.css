@@ -260,12 +260,12 @@
   justify-content: center;
   align-items: start;
   padding: 30px 0;
-  width: 100%;
   font-size: 1.2rem;
 }
 
 .footer_reglamento_interno>a>img {
-  width: 180px;
+  width: 110px;
+  opacity: 0.7;
 }
 
 @media (max-width :1104px) {
