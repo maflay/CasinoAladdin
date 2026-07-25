@@ -225,6 +225,54 @@
     border-radius: 8px;
 }
 
+._content_view_seccion_sm_ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+._content_view_seccion_sm_ img {
+    width: 400px;
+    border-radius: 20px;
+}
+
+._content_view_seccion_sm_>div {
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+._content_view_seccion_sm_>div:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+._content_view_seccion_sm_>div>span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.507);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+._content_view_seccion_sm_>div>span::before {
+    content: "";
+}
+
+._content_view_seccion_sm_>div>span>img {
+    width: 40%;
+    opacity: 0.7;
+}
+
 .story-container {
     display: flex;
     justify-content: center;
@@ -433,31 +481,32 @@
     margin-top: 140px;
     padding: 40px 0;
 }
-.instagram-fallback{
-  max-width:540px;
-  min-height:250px;
-  margin:20px auto;
-  border:1px solid #ddd;
-  border-radius:12px;
-  background:#fff;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+
+.instagram-fallback {
+    max-width: 540px;
+    min-height: 250px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.instagram-fallback-content{
-  text-align:center;
-  padding:20px;
+.instagram-fallback-content {
+    text-align: center;
+    padding: 20px;
 }
 
-.instagram-fallback-content a{
-  display:inline-block;
-  margin-top:10px;
-  padding:10px 20px;
-  background:#E1306C;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
+.instagram-fallback-content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #E1306C;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
 }
 
 .wrapper_ig_ins {
@@ -511,7 +560,7 @@
         gap: 20px;
     }
 
-    .slider_promos{
+    .slider_promos {
         width: 100%;
     }
 }
