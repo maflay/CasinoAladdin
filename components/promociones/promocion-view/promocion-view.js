@@ -39,6 +39,10 @@
     promociones_junio.style.display = "flex";
   }
 
+   if (solofechaCompleta == "julio") {
+    promociones_junio.style.display = "flex";
+  }
+
   if (solofechaCompleta == "septiembre") {
     cubo1.style.display = "flex";
   }
