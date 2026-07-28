@@ -3,20 +3,16 @@
     month: "long",
   });
 
-  const promociones_enero_2026 = document.getElementById(
-    "promociones_enero_2026",
-  );
+  const promociones_enero = document.getElementById("promociones_enero");
   const promociones_febrero = document.getElementById("promociones_febrero");
   const promociones_marzo = document.getElementById("promociones_marzo");
   const promociones_abril = document.getElementById("promociones_abril");
   const promociones_mayo = document.getElementById("promociones_mayo");
   const promociones_junio = document.getElementById("promociones_junio");
-  const cubo1 = document.getElementById("cubo1-ala");
-  const cubo2 = document.getElementById("cubo2-ala");
-  const cubo4 = document.getElementById("cubo4-ala");
+  const promociones_agosto = document.getElementById("promociones_agosto");
 
   if (solofechaCompleta == "enero") {
-    promociones_enero_2026.style.display = "flex";
+    promociones_enero.style.display = "flex";
   }
 
   if (solofechaCompleta == "febrero") {
@@ -39,35 +35,13 @@
     promociones_junio.style.display = "flex";
   }
 
-   if (solofechaCompleta == "julio") {
+  if (solofechaCompleta == "julio") {
     promociones_junio.style.display = "flex";
   }
 
-  if (solofechaCompleta == "septiembre") {
-    cubo1.style.display = "flex";
+  if (solofechaCompleta == "agosto") {
+    promociones_agosto.style.display = "flex";
   }
-
-  if (solofechaCompleta == "octubre") {
-    cubo2.style.display = "flex";
-  }
-
-  if (solofechaCompleta == "diciembre") {
-    cubo4.style.display = "flex";
-  }
-})();
-
-(() => {
-  const allitem = document.querySelectorAll(".card-content p");
-
-  allitem.forEach((item) => {
-    let item_len = item.textContent;
-    let long_item = item_len.length;
-    let end_long;
-    if (long_item > 150) {
-      end_long = item_len.slice(0, 155) + "...";
-      item.textContent = end_long;
-    }
-  });
 })();
 
 (() => {

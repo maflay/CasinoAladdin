@@ -189,14 +189,12 @@
       const contenedor = document.getElementById("ubicacion-seccion");
       contenedor.innerHTML = html;
 
-      // Cargar CSS dinámicamente
       const estilo = document.createElement("link");
       estilo.rel = "stylesheet";
       estilo.href =
         "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.css";
       document.head.appendChild(estilo);
 
-      // Cargar script dinámicamente
       const script = document.createElement("script");
       script.src =
         "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.js";
@@ -216,13 +214,11 @@
       const contenedor = document.getElementById("juegos-view-seccion");
       contenedor.innerHTML = html;
 
-      // Cargar CSS dinámicamente
       const estilo = document.createElement("link");
       estilo.rel = "stylesheet";
       estilo.href = "/components/juegos/juegos-view/juegos-view.css";
       document.head.appendChild(estilo);
 
-      // Cargar script dinámicamente
       const script = document.createElement("script");
       script.src = "/components/juegos/juegos-view/juegos-view.js";
       script.onload = () => {
@@ -247,7 +243,6 @@
         estilo.href =
           "/components/membresia/bannerMembresia/bannerMembresia.css";
         document.head.appendChild(estilo);
-        // Cargar script dinámicamente
         const script = document.createElement("script");
         script.src = "/components/membresia/bannerMembresia/bannerMembresia.js";
         script.onload = () => {
@@ -284,57 +279,47 @@
   ];
 
   function huboFestivoEntreSemanaEstaSemana(zona = "America/Bogota") {
-    // Fecha actual en la zona correcta
     const ahoraLocal = new Date(
       new Date().toLocaleString("en-US", { timeZone: zona }),
     );
-    const diaSemana = ahoraLocal.getDay(); // 0=Dom, 1=Lun, ... 6=Sáb
+    const diaSemana = ahoraLocal.getDay();
 
-    // Lunes de ESTA semana
-    const diffHastaLunes = (diaSemana + 6) % 7; // Lunes → 0, Martes →1, ..., Domingo →6
+    const diffHastaLunes = (diaSemana + 6) % 7;
     const lunes = new Date(ahoraLocal);
     lunes.setDate(ahoraLocal.getDate() - diffHastaLunes);
 
-    // Sábado de esta semana (lunes + 5 días)
     const sabado = new Date(lunes);
     sabado.setDate(lunes.getDate() + 5);
 
-    const inicio = lunes.toISOString().split("T")[0]; // YYYY-MM-DD
+    const inicio = lunes.toISOString().split("T")[0];
     const fin = sabado.toISOString().split("T")[0];
 
-    // Ver si algún festivo está entre lunes y sábado
     return festivosCO.some((f) => f >= inicio && f <= fin);
   }
 
   function validateCalimahor() {
     const contenedor = document.getElementById("disponible_cas_calima");
 
-    // ⏰ Fecha actual en Bogotá
     const ahora = new Date(
       new Date().toLocaleString("en-US", { timeZone: zona }),
     );
-    const diaSemana = ahora.getDay(); // 0=Dom, 1=Lun, ...
+    const diaSemana = ahora.getDay();
     const fechaActual = ahora.toISOString().split("T")[0];
 
-    // 🧮 Obtener fecha del siguiente lunes
     const proxLunes = new Date(ahora);
     proxLunes.setDate(ahora.getDate() + ((1 - diaSemana + 7) % 7 || 7));
     const fechaLunes = proxLunes.toISOString().split("T")[0];
 
-    // 💡 Determinar si el lunes es festivo
     const lunesEsFestivo = festivosCO.includes(fechaLunes);
 
-    // 🔧 Definir horario según la regla
-    let abre = "08:00"; // hora de apertura normal (domingo 8 AM)
-    let cierra = "03:00"; // cierre lunes 3 AM (si lunes no es festivo)
+    let abre = "08:00";
+    let cierra = "03:00";
 
-    // Si el lunes es festivo → domingo 24 h
     if (diaSemana === 0 && lunesEsFestivo) {
       abre = "00:00";
       cierra = "23:59";
     }
 
-    // 🧩 Validar si está dentro del horario
     validateOpenClose(abre, cierra, contenedor);
   }
 
@@ -643,7 +628,6 @@
       zona: "America/Bogota",
     };
 
-    // ⏰ Obtener hora local actual
     const ahora = new Date().toLocaleTimeString("es-CO", {
       timeZone: horario.zona,
       hour12: false,
@@ -651,7 +635,6 @@
       minute: "2-digit",
     });
 
-    // 🔍 Convertir a minutos para comparar fácilmente
     function aMinutos(hora) {
       const [h, m] = hora.split(":").map(Number);
       return h * 60 + m;
@@ -661,13 +644,11 @@
     const abreMin = aMinutos(horario.abre);
     const cierraMin = aMinutos(horario.cierra);
 
-    // 💡 Permite horarios normales o que cruzan medianoche
     const abierto =
       abreMin < cierraMin
         ? ahoraMin >= abreMin && ahoraMin < cierraMin
         : ahoraMin >= abreMin || ahoraMin < cierraMin;
 
-    // 🎯 Mostrar estado
     if (contenedor) {
       contenedor.textContent = abierto ? "ABIERTO" : "CERRADO";
       contenedor.style.color = abierto ? "lime" : "red";
