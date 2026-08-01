@@ -1,9 +1,21 @@
 .content-politica {
     width: 100%;
-    background-color: white;
     border-radius: 20px;
     padding: 30px;
     margin: 30px 0;
+}
+
+._content_politicas_datos_ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+._content_politicas_datos_ img {
+    width: 60%;
+    pointer-events: none;
 }
 
 .content-politica h1,
@@ -40,4 +52,11 @@
 .content-politica ul li {
     margin-bottom: 8px;
     text-align: justify;
+}
+
+@media(max-width: 768px) {
+    ._content_politicas_datos_ img {
+        width: 100%;
+        pointer-events: none;
+    }
 }

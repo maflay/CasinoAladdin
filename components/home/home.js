@@ -1,26 +1,3 @@
-// (() => {
-//   fetch("/components/slider-juegos/slider-juegos.html")
-//     .then((res) => res.text())
-//     .then((html) => {
-//       const contenedor = document.getElementById("section-start-slider-juegos");
-//       contenedor.innerHTML = html;
-
-//       const estilo = document.createElement("link");
-//       estilo.rel = "stylesheet";
-//       estilo.href = "/components/slider-juegos/slider-juegos.css";
-//       document.head.appendChild(estilo);
-//       // Cargar script dinámicamente
-//       const script = document.createElement("script");
-//       script.src = "/components/slider-juegos/slider-juegos.js";
-//       script.onload = () => {
-//         if (typeof window.inicializarSliderUbicaciones === "function") {
-//           window.inicializarSliderUbicaciones();
-//         }
-//       };
-//       document.body.appendChild(script);
-//     });
-// })();
-
 (() => {
   fetch("/components/promociones/promocion-view/promocion-view.html")
     .then((res) => res.text())
@@ -44,10 +21,6 @@
       document.body.appendChild(script);
     });
 })();
-
-function toPromociones() {
-  navegarA("promociones");
-}
 
 (() => {
   if (document.getElementById("juegos-view-seccion")) {
@@ -100,26 +73,6 @@ function toPromociones() {
       });
   }
 })();
-
-itemnavidad();
-
-function itemnavidad() {
-  const fechaCompleta = new Date().toLocaleString("es-CO", {
-    timeZone: "America/Bogota",
-    month: "long",
-  });
-
-  const fechaAño = new Date().toLocaleString("es-CO", {
-    timeZone: "America/Bogota",
-    year: "numeric",
-  });
-
-  document.getElementById("año_diciembre").textContent = fechaAño;
-
-  if (fechaCompleta == "diciembre") {
-    document.getElementById("navidad_home").style.display = "flex";
-  }
-}
 
 seccionUbicaciones();
 
@@ -214,22 +167,6 @@ function seccionMembresia() {
 }
 
 (() => {
-  let _seccion_tesla_insta_ = document.getElementById("_seccion_tesla_insta_");
-  const fechaCompleta = new Date().toLocaleString("es-CO", {
-    timeZone: "America/Bogota",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  });
-  const [fecha, hora] = fechaCompleta.split(", ");
-
-  if (fecha >= "29/05/2026") {
-    _seccion_tesla_insta_.style.display = "none";
-  }
-
   const currentHash = window.location.hash;
   if (currentHash == "#inicio") {
     history.replaceState(

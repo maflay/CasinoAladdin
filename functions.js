@@ -64,6 +64,7 @@ const PageLoader = {
     if (!ruta) {
       mainContent.innerHTML = `<p>Ruta no encontrada: ${clave}</p>`;
       loading.style.display = "none";
+      navegarA("inicio");
       return;
     }
 
