@@ -259,16 +259,16 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
   },
-  // matchperfecto: {
-  //   html: "/components/promociones/promocion/match-perfecto.html",
-  //   css: "/components/promociones/promocion/promocion.css",
-  //   js: "/components/promociones/promocion/promocion.js",
-  // },
-  // flechazocupido: {
-  //   html: "/components/promociones/promocion/flechazo-cupido.html",
-  //   css: "/components/promociones/promocion/promocion.css",
-  //   js: "/components/promociones/promocion/promocion.js",
-  // },
+  matchperfecto: {
+    html: "/components/promociones/promocion/match-perfecto.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  flechazocupido: {
+    html: "/components/promociones/promocion/flechazo-cupido.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
   hacemosgrande: {
     html: "/components/promociones/promocion/hacemos-grande.html",
     css: "/components/promociones/promocion/promocion.css",
