@@ -612,7 +612,6 @@
       }
     });
   }
-console.log("entro a entrevista digital");
   foto_entre.addEventListener("change", () => {
     let _name_pinture_ = document.getElementById("_name_pinture_");
     let foto_entre_val = foto_entre.files?.[0];
