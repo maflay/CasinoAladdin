@@ -279,6 +279,7 @@ input.valid {
 
     .btn_tomar_foto {
         display: flex;
+        bottom: 95px;
     }
 
     .content_img_entrevista h2 {
@@ -321,7 +322,7 @@ input.valid {
         display: flex;
     }
 
-    .view_input_pic{
+    .view_input_pic {
         opacity: 0;
     }
 

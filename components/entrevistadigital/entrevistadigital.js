@@ -612,4 +612,16 @@
       }
     });
   }
+
+  foto_entre.addEventListener("change", () => {
+    let _name_pinture_ = document.getElementById("_name_pinture_");
+    let foto_entre_val = foto_entre.files?.[0];
+
+    if (foto_entre_val) {
+      const nombreOriginal = foto_entre_val.name;
+      _name_pinture_.textContent = nombreOriginal;
+    } else {
+      _name_pinture_.textContent = "Ningún archivo seleccionado";
+    }
+  });
 })();
