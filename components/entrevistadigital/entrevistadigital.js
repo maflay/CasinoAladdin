@@ -623,19 +623,4 @@
       _name_pinture_.textContent = "Ningún archivo seleccionado";
     }
   });
-
-  console.log("test");
-  console.log("test");
-  console.log("test");
-  console.log("test");
-  console.log("test");
-  console.log("test");
-  console.log("test");
-  console.log("test");
-  console.log("test");
-  console.log("test");
-  console.log("test");
-  console.log("test");
-
-
 })();
