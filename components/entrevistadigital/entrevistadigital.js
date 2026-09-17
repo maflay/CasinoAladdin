@@ -105,7 +105,6 @@
     });
   }
 
-  // Comprime la imagen: redimensiona y baja calidad
   function compressImage(
     file,
     { maxWidth = 800, maxHeight = 800, quality = 0.7 } = {},
@@ -120,7 +119,6 @@
           let width = img.width;
           let height = img.height;
 
-          // Mantener proporción pero limitar tamaño
           const ratio = Math.min(maxWidth / width, maxHeight / height, 1);
           width = width * ratio;
           height = height * ratio;
@@ -130,10 +128,8 @@
           canvas.height = height;
           const ctx = canvas.getContext("2d");
 
-          // Dibujar imagen escalada
           ctx.drawImage(img, 0, 0, width, height);
 
-          // Sacar dataURL comprimido en JPG
           const dataUrl = canvas.toDataURL("image/jpeg", quality);
           resolve(dataUrl);
         };
@@ -600,7 +596,7 @@
             loader.style.display = "none";
             Swal.fire({
               title: "Error en el envio!",
-              html: `No se pudo enviar el registro por favor intentalo mas tarde, o puedes dirigirte a la sección<a href="#trabajaconosotros"></a> .`,
+              html: `No se pudo enviar el registro por favor intentalo mas tarde, o puedes dirigirte a la sección<a href="#trabajaconosotros">Trabaja con nosotros</a> .`,
               icon: "success",
               allowOutsideClick: false,
               customClass: {
