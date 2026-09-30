@@ -279,6 +279,11 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
   },
+    calabazaencantada: {
+    html: "/components/promociones/promocion/calabaza_encantada.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
   losnueveportales: {
     html: "/components/promociones/promocion/losnueveportales.html",
     css: "/components/promociones/promocion/promocion.css",
