@@ -279,7 +279,7 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
   },
-    calabazaencantada: {
+  calabazaencantada: {
     html: "/components/promociones/promocion/calabaza_encantada.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
@@ -428,5 +428,15 @@ const rutasLimpias = {
     html: "/components/reglamento_interno/reglamento.html",
     css: "/components/reglamento_interno/reglamento.css",
     js: "/components/reglamento_interno/reglamento.js",
+  },
+  fiebrefutbolera: {
+    html: "/components/promociones/promocion/fiebre_futbolera.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  dragonimperial: {
+    html: "/components/promociones/promocion/dragon_imperial.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
   },
 };
