@@ -81,6 +81,14 @@ const PageLoader = {
         if (ruta.css) cargarEstiloVista(ruta.css);
         if (ruta.js) cargarScriptVista(ruta.js);
 
+        if (typeof gtag === "function") {
+          gtag("event", "page_view", {
+            page_title: clave.charAt(0).toUpperCase() + clave.slice(1),
+            page_location: window.location.href,
+            page_path: window.location.pathname + window.location.hash,
+          });
+        }
+
         const iniciarAnimaciones = () => {
           animarScrollConObserver(".titulo", "y");
           animarScrollConObserver(".titulor", "x-right");

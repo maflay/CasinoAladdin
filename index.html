@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="/styles/fonts.css">
   <link rel="stylesheet" href="/components/header/header.css">
   <link rel="stylesheet" href="/components/footer/footer.css">
-  <link rel="stylesheet" href="/components/juegos/juegos.css" as="style">
-  <link rel="stylesheet" href="/components/casinos/casinos.css" as="style">
-  <link rel="stylesheet" href="/components/contact/contacto.css" as="style">
-  <link rel="stylesheet" href="/components/home/home.css" as="style">
-  <link rel="stylesheet" href="/components/institucional/politica.css" as="style">
-  <link rel="stylesheet" href="/components/membresia/membresia.css" as="style">
-  <link rel="stylesheet" href="/components/promociones/promociones.css" as="style">
+  <link rel="stylesheet" href="/components/juegos/juegos.css">
+  <link rel="stylesheet" href="/components/casinos/casinos.css">
+  <link rel="stylesheet" href="/components/contact/contacto.css">
+  <link rel="stylesheet" href="/components/home/home.css">
+  <link rel="stylesheet" href="/components/institucional/politica.css">
+  <link rel="stylesheet" href="/components/membresia/membresia.css">
+  <link rel="stylesheet" href="/components/promociones/promociones.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Italiana&display=swap" rel="stylesheet">
@@ -23,17 +23,15 @@
   <meta property="og:title" content="Casino Aladdin" />
   <meta property="og:description" content="Haz hecho click." />
   <meta property="og:image" content="https://vivealaddin.com/resources/ubicacion-comodin.jpg" />
-  <!-- <meta property="og:image" content="https://casinoaladdin.netlify.app/resources/ubicacion-comodin.jpg" /> -->
   <meta property="og:type" content="website" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type" content="image/png" />
-  <!-- Meta Pixel Code -->
   <script>
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -46,12 +44,16 @@
   </script>
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1479299882274156&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
 
+  <!-- GA -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBR2K6H3LF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  <!-- CSS de Bootstrap -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    gtag('config', 'G-QBR2K6H3LF');
+  </script>
 </head>
 
 <body onbeforeunload="mostrarLoader()">
@@ -77,14 +79,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs" type="module"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script> -->
   <script src="functions.js"></script>
 
 </body>
